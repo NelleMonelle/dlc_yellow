@@ -63,7 +63,7 @@ return {
             cutscene:text("* - HUMAN.", "normal", "axis")
             if cutscene:getCharacter("jamm") then
                 cutscene:showNametag("Jamm")
-                cutscene:text("* Since when being a human is a crime?!", "determined", "jamm")
+                cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
                 cutscene:showNametag("Axis")
                 cutscene:text("[color:FF00FF]* ACCESSING MEMORY BANK_", nil, "axis")
                 cutscene:hideNametag()
