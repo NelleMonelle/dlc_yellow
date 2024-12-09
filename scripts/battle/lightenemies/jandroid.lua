@@ -94,6 +94,7 @@ function Jandroid:onAct(battler, name)
             self.dialogue_override = "St_amwrrks\nNeed_/ scruBbed\n0"
             return "* Cleaning Jandroid wouldn't\ndo any good at this point."
         else
+            self.wave_override = "jandroid/garbage_cans"
             local rnd = Utils.pick({1, 2})
             if rnd == 1 then
                 self.dialogue_override = "NO YOU!!"
