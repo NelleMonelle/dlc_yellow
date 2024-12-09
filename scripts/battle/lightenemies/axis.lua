@@ -69,7 +69,9 @@ function Axis:onDefeat(damage, battler)
 end
 
 function Axis:onAct(battler, name)
-    if name == "Brace" then
+    if name == "Check" then
+        return "* AXIS -- "..self.check
+    elseif name == "Brace" then
         return "* You ready your trusty shield\nfor whatever awaits."
     elseif name == "Scrutinize" then
         local rnd = math.random(1, 3)

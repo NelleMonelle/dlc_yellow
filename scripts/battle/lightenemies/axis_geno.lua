@@ -14,7 +14,11 @@ function Axis:init()
     self.experience = 200
     self.spare_percentage = 0
 
-    self.progress = 0
+    if Game:getFlag("steamworks_kills") == 20 then
+        self.geno_aborted = false
+    else
+        self.geno_aborted = true
+    end
 
     self.display_damage_on_miss = true
 
@@ -53,15 +57,9 @@ function Axis:init()
     self.damage_offset = {0, 42}
 end
 
-function Axis:onTurnStart()
-    if self.progress == 1 then
-        Game.battle:setState("ENEMYDIALOGUE")
-        Game.battle:startCutscene("axis_geno", "death_laser")
-    end
-end
-
-function Axis:onTurnEnd()
-    self.progress = self.progress + 1
+function Axis:spare(pacify)
+    Assets.playSound("vaporized")
+    self:defeat("SPARED", false)
 end
 
 function Axis:onDefeat(damage, battler)
@@ -77,7 +75,9 @@ function Axis:getAttackDamage(damage, battler, points)
 end
 
 function Axis:onAct(battler, name)
-    if name == "Push" then
+    if name == "Check" then
+        return "* AXIS -- "..self.check
+    elseif name == "Push" then
         return "* You pressure Axis' defense but\nhe stands firm."
     elseif name == "Taunt" then
         return {
@@ -94,6 +94,50 @@ function Axis:onAct(battler, name)
     end
 
     return super:onAct(self, battler, name)
+end
+
+function Axis:getEnemyDialogue()
+    if self.geno_aborted then
+        if Game.battle.encounter.turns_passed == 7 then
+            return "HoW L0NG ARE wE\nGOInG TO DO\nTHIS?"
+        elseif Game.battle.encounter.turns_passed == 8 then
+            return {"I DID nOT THiNK\nBOTS COuLD GET\nTIR3D.", "BUT HeRE I AM.\nTIRED AS [heck]."}
+        elseif Game.battle.encounter.turns_passed == 9 then
+            return "STILL_ GoiNG,. ."
+        elseif Game.battle.encounter.turns_passed == 10 and not self.tired then
+            return {"\"hey axis please\ndo another sick\nattack.\"", "OK BuT JUST\nBEC4USE Y0U ASKED\nNIcELY."}
+        end
+    end
+    return nil
+end
+
+function Axis:getNextWaves()
+    if self.tired then
+        return nil
+    elseif Game.battle.encounter.turns_passed == 0 then
+        return {"axis/axis_g_first"}
+    elseif Game.battle.encounter.turns_passed == 1 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 2 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 3 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 4 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 5 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 6 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 7 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 8 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 9 then
+        return {"axis/axis_g_second"}
+    elseif Game.battle.encounter.turns_passed == 10 then
+        return {"axis/axis_g_second"}
+    end
+    return nil
 end
 
 return Axis

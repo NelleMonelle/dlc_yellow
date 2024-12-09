@@ -32,7 +32,7 @@ return {
             Game.battle:setState("VICTORY")
         end, true)
     end,
-    death_laser = function(cutscene, battler, enemy)
+    fight_end = function(cutscene, battler, enemy)
         local axis = Game.battle:getEnemyBattler("axis_geno")
         cutscene:wait(1)
         local speech = {
@@ -148,6 +148,46 @@ return {
         Game:setFlag("axis_geno_done", true)
         cutscene:after(function()
             Game.battle:setState("TRANSITIONOUT")
+        end, true)
+    end,
+    tired = function(cutscene, battler, enemy)
+        local axis = Game.battle:getEnemyBattler("axis_geno")
+        Game.battle.music:stop()
+        local speech = {
+            "OK.",
+            "OK. .. .",
+            "LET M3 CATCH\nmY STEAM.",
+            ". . .",
+            "I THINK. .",
+            "IT is TIME\nFOR A BrEAK..\n. . ."
+        }
+        cutscene:battlerText(axis, speech)
+
+        axis:setSprite("lightbattle/nocharge_melancholy")
+
+        local lid = Sprite("world/npcs/steamworks/axis/lightbattle/lid")
+        local relative_pos_x, relative_pos_y = axis:getRelativePos(axis.width / 2, axis.height / 2)
+        lid:setPosition(relative_pos_x, relative_pos_y)
+        lid.layer = BATTLE_LAYERS["above_ui"] + 5
+        lid:setOrigin(0.5, 0.5)
+        lid:setScale(2, 2)
+        axis.parent:addChild(lid)
+        lid.physics.direction = math.rad(Utils.random(360))
+        lid.physics.speed = 7
+        lid.physics.gravity = 0.2
+        Assets.playSound("swoosh")
+        lid:fadeOutAndRemove(1)
+
+        axis.tired = true
+        axis:addMercy(100)
+        axis:removeAct("Toughen")
+        axis:removeAct("Taunt")
+        axis:removeAct("Push")
+
+        Game.battle:setState("TURNDONE")
+        cutscene:wait(0.2)
+        cutscene:after(function()
+            Game.battle:setState("ACTIONSELECT")
         end, true)
     end
 }

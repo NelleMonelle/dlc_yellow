@@ -9,6 +9,8 @@ function Axis:init()
 
     self:addEnemy("axis_geno")
 
+	self.turns_passed = 0
+
 	self.number_timer = 0
 	self.number_timer_max = Utils.random(25, 45, 0.5)
 	
@@ -132,6 +134,24 @@ function Axis:drawBackground()
         love.graphics.rectangle("line", 18 + offset, sine + 118, 101, 118)
         offset = offset + 101
     end]]
+end
+
+function Axis:beforeStateChange(old, new)
+    if old == "DEFENDINGEND" and new ~= "DEFENDINGEND" then
+		if self.turns_passed == 10 then
+			if Game.battle:getEnemyBattler("axis_geno").geno_aborted then
+				if not Game.battle:getEnemyBattler("axis_geno").tired then
+					Game.battle:setState("NONE")
+					Game.battle:startCutscene("axis_geno", "tired")
+			    end
+			else
+				Game.battle:setState("NONE")
+				Game.battle:startCutscene("axis_geno", "fight_end")
+			end
+		else
+			self.turns_passed = self.turns_passed + 1
+        end
+    end
 end
 
 return Axis
