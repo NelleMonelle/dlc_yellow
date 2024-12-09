@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="26" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="17">
+ <editorsettings>
+  <export target="../../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/11/data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="treading_lightly"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/steamworks.tsx"/>
+ <tileset firstgid="1497" source="../../../tilesets/steamworks_objects.tsx"/>
+ <layer id="1" name="ground" width="26" height="12">
+  <data encoding="csv">
+479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,
+479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,
+479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,
+479,479,511,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,513,
+479,479,446,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,655,649,649,649,649,649,
+479,479,446,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,649,
+479,479,446,688,689,688,689,688,689,688,689,688,689,688,689,689,688,689,689,689,689,688,689,689,688,689,
+479,479,446,35,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,
+479,479,446,69,70,38,104,104,104,104,104,104,104,104,104,104,104,104,104,104,104,104,104,104,104,104,
+479,479,446,69,70,71,694,445,445,445,445,445,445,445,445,445,445,445,445,445,445,445,445,445,445,445,
+479,479,446,69,70,71,444,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,
+479,479,446,69,70,71,444,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479,479
+</data>
+ </layer>
+ <layer id="2" name="overlay" width="26" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,263,0,205,0,258,259,260,261,0,297,0,0,205,0,0,0,0,0,0,0,0,0,0,
+0,0,0,297,0,273,0,0,0,0,0,0,0,0,0,273,0,0,0,0,0,0,0,0,0,0,
+0,0,0,263,0,273,0,0,0,0,0,0,0,0,0,273,0,0,0,0,0,0,0,0,0,0,
+0,0,0,227,0,0,0,0,0,293,0,0,0,0,0,0,0,0,259,260,261,0,0,0,0,0,
+0,0,0,261,0,0,0,0,0,0,0,0,0,327,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,156,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,190,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,224,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="3" name="collision">
+  <object id="1" x="240" y="360" width="800" height="120"/>
+  <object id="2" x="80" y="240" width="960" height="40"/>
+  <object id="3" x="80" y="280" width="40" height="200"/>
+ </objectgroup>
+ <objectgroup id="6" name="objects">
+  <object id="9" gid="1549" x="518" y="238" width="42" height="46"/>
+  <object id="10" gid="1550" x="434" y="234" width="52" height="38"/>
+  <object id="11" gid="1551" x="358" y="238" width="44" height="34"/>
+  <object id="12" gid="1552" x="270" y="242" width="62" height="56"/>
+ </objectgroup>
+ <objectgroup id="4" name="objects_party">
+  <object id="4" name="transition" x="1000" y="280" width="40" height="80">
+   <properties>
+    <property name="map" value="steamworks/10"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+  <object id="5" name="transition" x="120" y="440" width="120" height="40">
+   <properties>
+    <property name="map" value="steamworks/12"/>
+    <property name="marker" value="up"/>
+   </properties>
+  </object>
+  <object id="13" name="interactable" x="520" y="240" width="40" height="40">
+   <properties>
+    <property name="text">* Excellence in Engineering
+Award: Dr. Rutherford-Oscar</property>
+   </properties>
+  </object>
+  <object id="14" name="interactable" x="440" y="240" width="40" height="40">
+   <properties>
+    <property name="text">* Decency in Engineering Award:
+Prof. Daniels</property>
+   </properties>
+  </object>
+  <object id="15" name="interactable" x="360" y="240" width="40" height="40">
+   <properties>
+    <property name="text">* You Tried in Engineering
+Award: Mr. Chujin Ketsukane</property>
+   </properties>
+  </object>
+  <object id="16" name="interactable" x="280" y="240" width="40" height="40">
+   <properties>
+    <property name="text1" value="* Greatness in C--"/>
+    <property name="text2">* (You can't make out the
+rest.)</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="6" name="right" x="960" y="320">
+   <point/>
+  </object>
+  <object id="7" name="down" x="180" y="400">
+   <point/>
+  </object>
+  <object id="8" name="spawn" x="880" y="320">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

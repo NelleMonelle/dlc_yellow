@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="38" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="14">
+ <editorsettings>
+  <export target="36.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="name" value="A Road Ahead"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/steamworks.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="38" height="12">
+  <data encoding="csv">
+0,0,0,0,0,895,0,0,0,895,0,0,0,895,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,929,0,0,0,929,0,0,0,929,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,895,0,0,0,895,0,0,0,895,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,895,0,0,0,895,0,0,0,895,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,929,0,0,0,929,0,0,0,929,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,895,0,0,0,895,0,0,0,895,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,895,0,0,0,895,0,0,0,895,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+960,960,960,960,961,929,959,960,961,929,959,960,961,929,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+886,886,886,886,923,960,922,886,923,960,922,886,923,960,960,960,960,960,961,893,891,891,891,891,892,891,891,891,892,891,891,891,0,0,0,0,0,0,
+920,920,920,920,920,920,920,920,920,920,920,920,920,920,920,920,920,920,921,927,925,926,925,925,925,926,925,925,925,925,925,925,925,0,0,0,0,0,
+963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,964,0,929,0,0,929,0,0,929,0,0,929,0,0,929,0,0,0,0,0,
+963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,963,964,0,895,0,0,895,0,0,895,0,0,895,0,0,895,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="3" name="collision">
+  <object id="1" x="360" y="280" width="40" height="40"/>
+  <object id="2" x="200" y="280" width="40" height="40"/>
+  <object id="3" x="0" y="240" width="560" height="40"/>
+  <object id="4" x="0" y="400" width="1520" height="40"/>
+  <object id="5" x="520" y="280" width="1000" height="40"/>
+ </objectgroup>
+ <objectgroup id="4" name="objects">
+  <object id="7" name="transition" x="0" y="280" width="40" height="120">
+   <properties>
+    <property name="map" value="steamworks/37"/>
+    <property name="marker" value="right"/>
+   </properties>
+  </object>
+  <object id="10" name="transition" x="1440" y="320" width="40" height="80">
+   <properties>
+    <property name="map" value="steamworks/35"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+  <object id="13" name="savepoint" x="460" y="301">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="8" name="left" x="80" y="340">
+   <point/>
+  </object>
+  <object id="9" name="spawn" x="460" y="360">
+   <point/>
+  </object>
+  <object id="11" name="right" x="1400" y="360">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

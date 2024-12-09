@@ -1,0 +1,34 @@
+{
+    "id": "dlc_yellow",
+    "name": "Undertale Yellow DLC",
+    "subtitle": "",
+
+    "version": "v1.0.0",
+    "engineVer": "v0.9.0-dev",
+
+    "chapter": 2,
+
+    "map": "steamworks/01",
+
+    "party": ["kris", "susie", "noelle"],
+
+    "hardReset": false,
+
+    "hidden": false,
+
+    "setWindowTitleAndIcon": null,
+
+    "config": {
+        "kristal": {
+          "lightCurrency": "Gold",
+          "lightCurrencyShort": "G"
+        },
+        "magical-glass": {
+            "default_battle_system": ["undertale", true],
+            "shared_light_exp": true,
+            "light_battle_tp": true,
+            "always_show_magic": true,
+            "gauge_style": "undertale"
+        }
+    }
+}
