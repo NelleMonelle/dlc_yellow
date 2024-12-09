@@ -1,9 +1,10 @@
 {
     "id": "dlc_yellow",
-    "name": "Undertale Yellow DLC",
-    "subtitle": "",
+    "name": "DLC Yellow",
+    "subtitle": "Explore new underground locations as they are after the events of Undertale Yellow's true pacifist ending. WARNING! The DLC is unfinished as of writing this, so you may encounter errors and stuff.",
+    "creator": "NelleMonelle",
 
-    "version": "v1.0.0",
+    "version": "v0.0.1",
     "engineVer": "v0.9.0-dev",
 
     "chapter": 2,
@@ -17,6 +18,14 @@
     "hidden": false,
 
     "setWindowTitleAndIcon": null,
+
+    "dlc": {
+        "extraBinCodes": {
+            "STMWORKS": true
+        },
+        "worldMap": {},
+        "bosses": {}
+    },
 
     "config": {
         "kristal": {
