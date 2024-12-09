@@ -245,7 +245,7 @@ function Sousborg:getNextWaves()
     return super.getNextWaves(self)
 end
 
-function Sousborg:onHurt(damage, battler)
+--[[function Sousborg:onHurt(damage, battler)
     self:toggleOverlay(true)
     if Game.battle.tension_bar.visible then
         Game:giveTension(battler.tp_gain or 0)
@@ -276,6 +276,6 @@ function Sousborg:onHurt(damage, battler)
     if self.health <= (self.max_health * self.spare_percentage) then
         self.mercy = 100
     end
-end
+end]]
 
 return Sousborg
