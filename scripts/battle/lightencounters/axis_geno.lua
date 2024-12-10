@@ -55,10 +55,12 @@ function Axis:update()
     for _,particle in ipairs(self.number_particles) do
         particle.y = particle.y + (DTMULT * 5)
 		particle.lifetime = particle.lifetime + DTMULT
-		if particle.lifetime < 45 then
-			particle.color = Utils.mergeColor({0, 1, 0, 0}, {1, 1, 0, 0.8}, particle.lifetime/45)
-		else
-			particle.color = Utils.mergeColor({1, 1, 0, 0.8}, {1, 0.625, 0.25, 0}, (particle.lifetime-45)/45)
+		if particle.lifetime >= 0 then
+			if particle.lifetime < 45 then
+				particle.color = Utils.mergeColor({0, 1, 0, 0}, {1, 1, 0, 0.8}, particle.lifetime/45)
+			else
+				particle.color = Utils.mergeColor({1, 1, 0, 0.8}, {1, 0.625, 0.25, 0}, (particle.lifetime-45)/45)
+			end
 		end
 
         if particle.lifetime >= 90 then
@@ -94,7 +96,7 @@ function Axis:update()
 			end
 		end
 		for i = 1, 10 do
-			table.insert(self.number_particles, {x = number_x, y = number_y, color = {0, 1, 0, 0}, lifetime = 0, size = number_size, index = Utils.pick({1, 2})})
+			table.insert(self.number_particles, {x = number_x, y = number_y, color = {0, 1, 0, 0}, lifetime = -(i-1)*(number_size*2), size = number_size, index = Utils.pick({1, 2})})
 			number_y = number_y - number_size*10
 		end
 	end
@@ -110,7 +112,7 @@ function Axis:update()
 			end
 		end
 		for i = 1, 10 do
-			table.insert(self.number_particles, {x = number_x, y = number_y, color = {0, 1, 0, 0}, lifetime = 0, size = number_size, index = Utils.pick({1, 2})})
+			table.insert(self.number_particles, {x = number_x, y = number_y, color = {0, 1, 0, 0}, lifetime = -(i-1)*(number_size*2), size = number_size, index = Utils.pick({1, 2})})
 			number_y = number_y - number_size*10
 		end
 	end
