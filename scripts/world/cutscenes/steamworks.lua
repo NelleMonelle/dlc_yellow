@@ -18,6 +18,8 @@ return {
         Game:setFlag("axis_met", true)
     end,
     axis_second_meeting = function(cutscene, event)
+        local noel_data = Noel:loadNoel()
+
         local leader = Game.world.player
         local axis = cutscene:getCharacter("axis")
         local trapdoor = Game.world.map:getEvent("stw_trapdoor")
@@ -26,12 +28,10 @@ return {
         cutscene:detachFollowers()
 
         cutscene:walkTo(leader, event.x + event.width, event.y + event.height/2, 0.5, "left")
-        cutscene:walkTo(cutscene:getCharacter(Game.party[2].id), event.x + event.width + 30, event.y + event.height/2, 0.5, "left")
-        if Game.party[3] then
-            cutscene:walkTo(cutscene:getCharacter(Game.party[3].id), event.x + event.width + 60, event.y + event.height/2, 0.5, "left")
-        end
-        if Game.party[4] then
-            cutscene:walkTo(cutscene:getCharacter(Game.party[4].id), event.x + event.width + 90, event.y + event.height/2, 0.5, "left")
+        for i = 2, #Game.party do
+            local offset = (i - 1) * 30
+            local member = Game.party[i].id
+            cutscene:walkTo(cutscene:getCharacter(member), event.x + event.width + offset, event.y + event.height / 2, 0.5, "left")
         end
 
         cutscene:wait(1)
@@ -108,6 +108,12 @@ return {
             cutscene:text("* ENJOY YOUR ISOLATION,[wait:5]\nHUMAN.", "normal", "axis")
             cutscene:hideNametag()
 
+            local noel_not_fall
+            if noel_data and noel_data.steamworks and noel_data.steamworks.fallen == 1 then
+                cutscene:wait(cutscene:walkTo(cutscene:getCharacter("noel"), event.x + event.width + 120, event.y + event.height / 2, 0.5, "left"))
+                noel_not_fall = true
+            end
+
             Game.world.music:stop()
             trapdoor:setSprite("world/maps/steamworks/small_objects/12_trapdoor", 1/10)
             cutscene:wait(0.5)
@@ -118,17 +124,31 @@ return {
             for _,member in ipairs(Game.party) do
                 local chara = Game.world:getCharacter(member.id)
                 if chara then
-                    chara.sprite:setFacing("down")
+                    if member.id == "noel" and noel_not_fall == true then
+                    else
+                        chara.sprite:setFacing("down")
+                    end
                 end
             end
 
             cutscene:wait(0.1)
             cutscene:attachCamera()
             cutscene:wait(1)
+
+            local noel_umbrella
             if cutscene:getCharacter("noel") then
-                Assets.playSound("wing")
-                cutscene:getCharacter("noel"):setSprite("brella")
-                cutscene:wait(0.5)
+                if noel_data and not noel_not_fall == true then
+                    if noel_data.steamworks and noel_data.steamworks.fallen == 1 then
+                        Assets.playSound("wing")
+                        cutscene:getCharacter("noel"):setSprite("brella")
+                        cutscene:wait(0.5)
+                        noel_umbrella = true
+                    else
+                        local noel = cutscene:getCharacter("noel")
+                        local save = {steamworks = {fallen = 1,},}
+                        Noel:saveNoel(save)
+                    end
+                end
             end
             Game.world.camera.keep_in_bounds = false
             Assets.playSound("fall_trapdoor")
@@ -143,7 +163,12 @@ return {
                 if chara then
                     chara.alpha = 0.75
                     if member.id == "noel" then
-                        cutscene:slideTo(chara, chara.x, chara.y + 400, 1)
+                        if noel_not_fall == true then
+                        elseif noel_umbrella == true then
+                            cutscene:slideTo(chara, chara.x, chara.y + 400, 1)
+                        else
+                            cutscene:slideTo(chara, chara.x, chara.y + 800, 1)
+                        end
                     else
                         cutscene:slideTo(chara, chara.x, chara.y + 800, 1)
                     end
