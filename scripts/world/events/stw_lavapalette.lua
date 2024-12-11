@@ -2,21 +2,7 @@ local SteamworksLavaPalette, super = Class(Event)
 
 function SteamworksLavaPalette:init(x, y, width, height)
 	super.init(self,x,y,width,height)
-	self.pal_shader = love.graphics.newShader( -- load the shader
-	[[
-	extern vec4 base_palette[16];
-	extern vec4 live_palette[16];
-
-	vec4 effect(vec4 color, Image image, vec2 uvs, vec2 screen_coords) {
-		vec4 pixel = Texel(image, uvs);
-		for(int i = 0; i < 16; ++i){
-			vec4 color = base_palette[i];
-			if(all(lessThan(abs(pixel - color), vec4(0.001))))
-				return live_palette[i];
-		}
-		return pixel;
-	}
-	]] )
+	self.pal_shader = Assets.newShader("palette")
 	self.characters = {}
 end
 
