@@ -110,8 +110,18 @@ return {
 
             local noel_not_fall
             if noel_data and noel_data.steamworks and noel_data.steamworks.fallen == 1 then
-                cutscene:wait(cutscene:walkTo(cutscene:getCharacter("noel"), event.x + event.width + 120, event.y + event.height / 2, 0.5, "left"))
-                noel_not_fall = true
+                local can_go = true
+                for i = 1, #Game.party do
+                    if Game.party[i].id == "noel" then
+                        if Game.party[i+1] then
+                            can_go = false
+                        end
+                    end
+                end 
+                if can_go == true then
+                    cutscene:wait(cutscene:walkTo(cutscene:getCharacter("noel"), event.x + event.width + 120, event.y + event.height / 2, 0.5, "left"))
+                    noel_not_fall = true
+                end
             end
 
             Game.world.music:stop()
