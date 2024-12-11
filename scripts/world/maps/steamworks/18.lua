@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 22,
-  nextobjectid = 66,
+  nextobjectid = 69,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -465,6 +465,32 @@ return {
           height = 58,
           rotation = 0,
           gid = 1555,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 67,
+          name = "stw_screenglow",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 68,
+          name = "stw_lavapalette",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
           visible = true,
           properties = {}
         }

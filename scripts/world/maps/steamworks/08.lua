@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 15,
-  nextobjectid = 47,
+  nextobjectid = 49,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -30,7 +30,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1514,
+      firstgid = 1535,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -224,7 +224,7 @@ return {
           width = 142,
           height = 196,
           rotation = 0,
-          gid = 1514,
+          gid = 1535,
           visible = true,
           properties = {}
         },
@@ -238,7 +238,7 @@ return {
           width = 146,
           height = 88,
           rotation = 0,
-          gid = 1518,
+          gid = 1539,
           visible = true,
           properties = {}
         },
@@ -252,7 +252,7 @@ return {
           width = 162,
           height = 134,
           rotation = 0,
-          gid = 1558,
+          gid = 1579,
           visible = true,
           properties = {}
         },
@@ -295,6 +295,32 @@ return {
           height = 40,
           rotation = 0,
           gid = 301,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 47,
+          name = "stw_screenglow",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 48,
+          name = "stw_lavapalette",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
           visible = true,
           properties = {}
         }
