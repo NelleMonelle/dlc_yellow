@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 27,
+  nextobjectid = 28,
   properties = {
     ["light"] = true
   },
@@ -48,6 +48,19 @@ return {
           height = 480,
           rotation = 0,
           gid = 11,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 27,
+          name = "stw_room35embers",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
           visible = true,
           properties = {}
         }
