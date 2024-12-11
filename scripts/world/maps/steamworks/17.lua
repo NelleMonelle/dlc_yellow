@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 24,
-  nextobjectid = 81,
+  nextobjectid = 84,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -30,7 +30,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1532,
+      firstgid = 1535,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -433,7 +433,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
-          gid = 1572,
+          gid = 1575,
           visible = true,
           properties = {}
         },
@@ -447,7 +447,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
-          gid = 1572,
+          gid = 1575,
           visible = true,
           properties = {}
         },
@@ -461,7 +461,7 @@ return {
           width = 76,
           height = 88,
           rotation = 0,
-          gid = 1541,
+          gid = 1544,
           visible = true,
           properties = {}
         },
@@ -475,7 +475,7 @@ return {
           width = 88,
           height = 196,
           rotation = 0,
-          gid = 1537,
+          gid = 1540,
           visible = true,
           properties = {}
         },
@@ -489,7 +489,7 @@ return {
           width = 88,
           height = 196,
           rotation = 0,
-          gid = 1537,
+          gid = 1540,
           visible = true,
           properties = {}
         },
@@ -503,7 +503,33 @@ return {
           width = 114,
           height = 64,
           rotation = 0,
-          gid = 1568,
+          gid = 1571,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 82,
+          name = "stw_screenglow",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 83,
+          name = "stw_lavapalette",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
           visible = true,
           properties = {}
         }
@@ -1357,7 +1383,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
-          gid = 1572,
+          gid = 1575,
           visible = true,
           properties = {}
         },
