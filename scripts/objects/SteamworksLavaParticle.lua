@@ -11,7 +11,7 @@ function SteamworksLavaParticle:init(x, y)
 	self.sprite:setScale(Utils.random(0.05, 0.075)*2)
     self:addChild(self.sprite)
 	self.sprite.color = {1, 0.596078431372549, 1, 0.7}
-	self.physics.speed = Utils.random(0.7, 0.9)
+	self.physics.speed = Utils.random(0.7, 0.9)*2
 	self.physics.direction = math.rad(Utils.random(-83, -97))
 end
 
@@ -27,6 +27,7 @@ function SteamworksLavaParticle:update()
 		self.sprite.color = Utils.mergeColor({1, 0.596078431372549, 1, 0.7}, {1, 1, 1, 0.7}, self.lifetime/(self.max_lifetime/2))
 	else
 		self.sprite.color = Utils.mergeColor({1, 1, 1, 0.7}, {0.9725490196078431, 0.9019607843137255, 1, 0}, (self.lifetime-(self.max_lifetime/2))/(self.max_lifetime/2))
+		self.sprite.alpha = self.sprite.color[4]
 	end
 	self.lifetime = self.lifetime + DTMULT
 	if self.lifetime > self.max_lifetime then
