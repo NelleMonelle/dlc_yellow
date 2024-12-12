@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   name = "steamworks_objects",
   class = "",
   tilewidth = 200,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 79,
+  tilecount = 109,
   tiles = {
     {
       id = 13,
@@ -662,6 +662,312 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/23_tables_2.png",
       width = 54,
       height = 58
+    },
+    {
+      id = 79,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_1.png",
+      width = 17,
+      height = 12,
+      animation = {
+        {
+          tileid = 79,
+          duration = 150
+        },
+        {
+          tileid = 80,
+          duration = 150
+        },
+        {
+          tileid = 81,
+          duration = 150
+        },
+        {
+          tileid = 82,
+          duration = 150
+        },
+        {
+          tileid = 83,
+          duration = 150
+        },
+        {
+          tileid = 84,
+          duration = 150
+        },
+        {
+          tileid = 85,
+          duration = 150
+        },
+        {
+          tileid = 86,
+          duration = 150
+        },
+        {
+          tileid = 87,
+          duration = 150
+        },
+        {
+          tileid = 88,
+          duration = 150
+        }
+      }
+    },
+    {
+      id = 80,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_2.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 81,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_3.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 82,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_4.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 83,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_5.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 84,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_6.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 85,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_7.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 86,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_8.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 87,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_9.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 88,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_10.png",
+      width = 17,
+      height = 12
+    },
+    {
+      id = 89,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_1.png",
+      width = 18,
+      height = 15,
+      animation = {
+        {
+          tileid = 89,
+          duration = 150
+        },
+        {
+          tileid = 90,
+          duration = 150
+        },
+        {
+          tileid = 91,
+          duration = 150
+        },
+        {
+          tileid = 92,
+          duration = 150
+        },
+        {
+          tileid = 93,
+          duration = 150
+        },
+        {
+          tileid = 94,
+          duration = 150
+        },
+        {
+          tileid = 95,
+          duration = 150
+        },
+        {
+          tileid = 96,
+          duration = 150
+        },
+        {
+          tileid = 97,
+          duration = 150
+        },
+        {
+          tileid = 98,
+          duration = 150
+        }
+      }
+    },
+    {
+      id = 90,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_2.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 91,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_3.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 92,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_4.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 93,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_5.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 94,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_6.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 95,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_7.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 96,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_8.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 97,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_9.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 98,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_10.png",
+      width = 18,
+      height = 15
+    },
+    {
+      id = 99,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_1.png",
+      width = 19,
+      height = 22,
+      animation = {
+        {
+          tileid = 99,
+          duration = 150
+        },
+        {
+          tileid = 100,
+          duration = 150
+        },
+        {
+          tileid = 101,
+          duration = 150
+        },
+        {
+          tileid = 102,
+          duration = 150
+        },
+        {
+          tileid = 103,
+          duration = 150
+        },
+        {
+          tileid = 104,
+          duration = 150
+        },
+        {
+          tileid = 105,
+          duration = 150
+        },
+        {
+          tileid = 106,
+          duration = 150
+        },
+        {
+          tileid = 107,
+          duration = 150
+        },
+        {
+          tileid = 108,
+          duration = 150
+        }
+      }
+    },
+    {
+      id = 100,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_2.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 101,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_3.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 102,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_4.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 103,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_5.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 104,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_6.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 105,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_7.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 106,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_8.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 107,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_9.png",
+      width = 19,
+      height = 22
+    },
+    {
+      id = 108,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_10.png",
+      width = 19,
+      height = 22
     }
   }
 }

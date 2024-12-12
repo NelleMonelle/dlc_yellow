@@ -9,8 +9,8 @@ return {
   height = 17,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 9,
-  nextobjectid = 19,
+  nextlayerid = 10,
+  nextobjectid = 29,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld",
@@ -28,6 +28,12 @@ return {
       firstgid = 1497,
       filename = "../../tilesets/steamworks_objects_big.tsx",
       exportfilename = "../../tilesets/steamworks_objects_big.lua"
+    },
+    {
+      name = "steamworks_objects",
+      firstgid = 1535,
+      filename = "../../tilesets/steamworks_objects.tsx",
+      exportfilename = "../../tilesets/steamworks_objects.lua"
     }
   },
   layers = {
@@ -66,6 +72,36 @@ return {
         177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177,
         177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177,
         177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 9,
+      name = "objects_below",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 780,
+          y = 650,
+          width = 36,
+          height = 30,
+          rotation = 0,
+          gid = 1624,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
@@ -156,6 +192,90 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 19,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 570,
+          width = 36,
+          height = 30,
+          rotation = 0,
+          gid = 1624,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 230,
+          width = 36,
+          height = 30,
+          rotation = 0,
+          gid = 1624,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 23,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 538,
+          y = 622,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1614,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 320,
+          y = 344,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1614,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 27,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 380,
+          y = 644,
+          width = 38,
+          height = 44,
+          rotation = 0,
+          gid = 1634,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 28,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 500,
+          y = 304,
+          width = 38,
+          height = 44,
+          rotation = 0,
+          gid = 1634,
           visible = true,
           properties = {}
         }

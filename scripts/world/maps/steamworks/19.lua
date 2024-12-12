@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 43,
+  nextobjectid = 49,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld",
@@ -28,6 +28,12 @@ return {
       firstgid = 1497,
       filename = "../../tilesets/steamworks_objects_big.tsx",
       exportfilename = "../../tilesets/steamworks_objects_big.lua"
+    },
+    {
+      name = "steamworks_objects",
+      firstgid = 1535,
+      filename = "../../tilesets/steamworks_objects.tsx",
+      exportfilename = "../../tilesets/steamworks_objects.lua"
     }
   },
   layers = {
@@ -178,6 +184,76 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 43,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 710,
+          y = 124,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1614,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 44,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 464,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1614,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 45,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1480,
+          y = 384,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1614,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1420,
+          y = 130,
+          width = 36,
+          height = 30,
+          rotation = 0,
+          gid = 1624,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 48,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 760,
+          y = 384,
+          width = 38,
+          height = 44,
+          rotation = 0,
+          gid = 1634,
           visible = true,
           properties = {}
         }

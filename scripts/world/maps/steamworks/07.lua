@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 14,
-  nextobjectid = 17,
+  nextobjectid = 18,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
