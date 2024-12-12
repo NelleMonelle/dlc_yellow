@@ -88,7 +88,16 @@ return {
                 cutscene:text("* THAT IS NO MATTER.", "normal", "axis")
                 cutscene:text("* I WILL SCAN YOUR FACE\nWITH MY LIE DETECTOR.", "normal", "axis")
                 cutscene:hideNametag()
-                cutscene:wait(3)
+				local src = Assets.playSound("elevator")
+				src:setPitch(2)
+				leader:addFX(AxisScanFX({1,1,1}, leader.sprite.height), "axis_scan")
+				while leader:getFX("axis_scan"):isActive() do
+					leader:getFX("axis_scan"):addScanProgress()
+					Assets.playSound("spearappear")
+				    cutscene:wait(2/30)
+				end
+				leader:removeFX("axis_scan")
+                cutscene:wait(0.5)
                 cutscene:showNametag("Axis")
                 cutscene:text("* INCREDIBLE.", "normal", "axis")
                 cutscene:text("* YOU HAVE THE MOST\nEMOTIONLESS FACE I HAVE\nEVER SEEN.", "normal", "axis")

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="21" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="28">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="21" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="39">
  <editorsettings>
-  <export target="../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/18b.lua" format="lua"/>
+  <export target="18b.lua" format="lua"/>
  </editorsettings>
  <properties>
   <property name="light" type="bool" value="true"/>
@@ -115,6 +115,16 @@
   <object id="25" gid="1560" x="366" y="396" width="48" height="36"/>
   <object id="26" name="stw_screenglow" x="0" y="0" width="40" height="40"/>
   <object id="27" name="stw_lavapalette" x="40" y="0" width="40" height="40"/>
+  <object id="28" gid="1576" x="240" y="584" width="34" height="24"/>
+  <object id="30" gid="1576" x="240" y="164" width="34" height="24"/>
+  <object id="31" gid="1576" x="680" y="284" width="34" height="24"/>
+  <object id="32" gid="1576" x="700" y="564" width="34" height="24"/>
+  <object id="33" gid="1576" x="200" y="904" width="34" height="24"/>
+  <object id="34" gid="1586" x="120" y="710" width="36" height="30"/>
+  <object id="35" gid="1586" x="600" y="630" width="36" height="30"/>
+  <object id="36" gid="1586" x="140" y="450" width="36" height="30"/>
+  <object id="37" gid="1596" x="576" y="236" width="38" height="44"/>
+  <object id="38" gid="1596" x="606" y="496" width="38" height="44"/>
  </objectgroup>
  <objectgroup id="4" name="collision">
   <object id="1" x="320" y="600" width="40" height="200"/>
