@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.0",
   name = "steamworks_objects",
   class = "",
   tilewidth = 200,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 109,
+  tilecount = 111,
   tiles = {
     {
       id = 13,
@@ -662,6 +662,18 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/23_tables_2.png",
       width = 54,
       height = 58
+    },
+    {
+      id = 109,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/27_fountain.png",
+      width = 103,
+      height = 80
+    },
+    {
+      id = 110,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png",
+      width = 118,
+      height = 107
     },
     {
       id = 79,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects_big" tilewidth="1400" tileheight="600" tilecount="38" columns="0">
+<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects_big" tilewidth="1400" tileheight="600" tilecount="39" columns="0">
  <editorsettings>
   <export target="steamworks_objects_big.lua" format="lua"/>
  </editorsettings>
@@ -146,6 +146,9 @@
  </tile>
  <tile id="37">
   <image source="../../../assets/sprites/world/maps/steamworks/23_office_exit.png" width="312" height="364"/>
+ </tile>
+ <tile id="38">
+  <image source="../../../assets/sprites/world/maps/steamworks/26_greenhouse_entrance.png" width="343" height="350"/>
  </tile>
  <tile id="10">
   <image source="../../../assets/sprites/world/maps/steamworks/35_bg.png" width="1400" height="240"/>
