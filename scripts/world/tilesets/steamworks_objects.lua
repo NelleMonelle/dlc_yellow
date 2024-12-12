@@ -671,43 +671,43 @@ return {
       animation = {
         {
           tileid = 79,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 80,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 81,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 82,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 83,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 84,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 85,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 86,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 87,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 88,
-          duration = 200
+          duration = 150
         }
       }
     },
@@ -773,43 +773,43 @@ return {
       animation = {
         {
           tileid = 89,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 90,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 91,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 92,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 93,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 94,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 95,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 96,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 97,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 98,
-          duration = 200
+          duration = 150
         }
       }
     },
@@ -875,43 +875,43 @@ return {
       animation = {
         {
           tileid = 99,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 100,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 101,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 102,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 103,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 104,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 105,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 106,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 107,
-          duration = 200
+          duration = 150
         },
         {
           tileid = 108,
-          duration = 200
+          duration = 150
         }
       }
     },

@@ -297,16 +297,16 @@
  <tile id="79">
   <image width="17" height="12" source="../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_1.png"/>
   <animation>
-   <frame tileid="79" duration="200"/>
-   <frame tileid="80" duration="200"/>
-   <frame tileid="81" duration="200"/>
-   <frame tileid="82" duration="200"/>
-   <frame tileid="83" duration="200"/>
-   <frame tileid="84" duration="200"/>
-   <frame tileid="85" duration="200"/>
-   <frame tileid="86" duration="200"/>
-   <frame tileid="87" duration="200"/>
-   <frame tileid="88" duration="200"/>
+   <frame tileid="79" duration="150"/>
+   <frame tileid="80" duration="150"/>
+   <frame tileid="81" duration="150"/>
+   <frame tileid="82" duration="150"/>
+   <frame tileid="83" duration="150"/>
+   <frame tileid="84" duration="150"/>
+   <frame tileid="85" duration="150"/>
+   <frame tileid="86" duration="150"/>
+   <frame tileid="87" duration="150"/>
+   <frame tileid="88" duration="150"/>
   </animation>
  </tile>
  <tile id="80">
@@ -339,16 +339,16 @@
  <tile id="89">
   <image width="18" height="15" source="../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_b_1.png"/>
   <animation>
-   <frame tileid="89" duration="200"/>
-   <frame tileid="90" duration="200"/>
-   <frame tileid="91" duration="200"/>
-   <frame tileid="92" duration="200"/>
-   <frame tileid="93" duration="200"/>
-   <frame tileid="94" duration="200"/>
-   <frame tileid="95" duration="200"/>
-   <frame tileid="96" duration="200"/>
-   <frame tileid="97" duration="200"/>
-   <frame tileid="98" duration="200"/>
+   <frame tileid="89" duration="150"/>
+   <frame tileid="90" duration="150"/>
+   <frame tileid="91" duration="150"/>
+   <frame tileid="92" duration="150"/>
+   <frame tileid="93" duration="150"/>
+   <frame tileid="94" duration="150"/>
+   <frame tileid="95" duration="150"/>
+   <frame tileid="96" duration="150"/>
+   <frame tileid="97" duration="150"/>
+   <frame tileid="98" duration="150"/>
   </animation>
  </tile>
  <tile id="90">
@@ -381,16 +381,16 @@
  <tile id="99">
   <image width="19" height="22" source="../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_1.png"/>
   <animation>
-   <frame tileid="99" duration="200"/>
-   <frame tileid="100" duration="200"/>
-   <frame tileid="101" duration="200"/>
-   <frame tileid="102" duration="200"/>
-   <frame tileid="103" duration="200"/>
-   <frame tileid="104" duration="200"/>
-   <frame tileid="105" duration="200"/>
-   <frame tileid="106" duration="200"/>
-   <frame tileid="107" duration="200"/>
-   <frame tileid="108" duration="200"/>
+   <frame tileid="99" duration="150"/>
+   <frame tileid="100" duration="150"/>
+   <frame tileid="101" duration="150"/>
+   <frame tileid="102" duration="150"/>
+   <frame tileid="103" duration="150"/>
+   <frame tileid="104" duration="150"/>
+   <frame tileid="105" duration="150"/>
+   <frame tileid="106" duration="150"/>
+   <frame tileid="107" duration="150"/>
+   <frame tileid="108" duration="150"/>
   </animation>
  </tile>
  <tile id="100">
