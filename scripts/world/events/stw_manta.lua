@@ -56,11 +56,13 @@ function SteamworksManta:postLoad(parent)
 			self.checkpoint_collider = LineCollider(self,44,44,44,44+20)
 		end
 		if self.riding_manta then
+			local index = 1
 			for _,follower in ipairs(Game.world.followers) do
-				local npcx, npcy = self:getFollowerPos(self.dir, i, #Game.party)
+				local npcx, npcy = self:getFollowerPos(self.dir, index, #Game.party)
 				follower.x = npcx
 				follower.y = npcy
 				follower:setFacing(self.dir)
+				index = index + 1
 			end
 			local plx, ply = self:getPlayerPos(self.dir)
 			Game.world.player.x = plx
@@ -390,11 +392,13 @@ function SteamworksManta:moveInDirection(dir)
 			self.checkpoint_collider = LineCollider(self,44,44,44,44+20)
 		end
 		if self.riding_manta then
+			local index = 1
 			for _,follower in ipairs(Game.world.followers) do
-				local npcx, npcy = self:getFollowerPos(self.dir, i, #Game.party)
+				local npcx, npcy = self:getFollowerPos(self.dir, index, #Game.party)
 				follower.x = npcx
 				follower.y = npcy
 				follower:setFacing(self.dir)
+				index = index + 1
 			end
 			local plx, ply = self:getPlayerPos(self.dir)
 			Game.world.player.x = plx
