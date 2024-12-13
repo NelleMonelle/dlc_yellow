@@ -2318,18 +2318,11 @@ function lib:init()
                 Draw.setColor(PALETTE["world_gray"])
             end
             love.graphics.print("CELL", 84, 188 + (36 * 2))
-            
-            if Mod.libs["light_menu_talk"] then
-                if Kristal.getLibConfig("light_menu_talk", "have_talk_when_alone") or not Kristal.getLibConfig("light_menu_talk", "have_talk_when_alone") and #Game.party > 1 then
-                    Draw.setColor(PALETTE["world_text"])
-                    love.graphics.print("TALK", 84, 188 + (36 * 3))
-                end
-            end
+            Draw.setColor(PALETTE["world_text"])
+            love.graphics.print("TALK", 84, 188 + (36 * 3))
         else
-            if Mod.libs["light_menu_talk"] then
-                Draw.setColor(PALETTE["world_text"])
-                love.graphics.print("TALK", 84, 188 + (36 * 2))
-            end
+            Draw.setColor(PALETTE["world_text"])
+            love.graphics.print("TALK", 84, 188 + (36 * 2))
         end
 
         if self.state == "MAIN" then
