@@ -1,14 +1,20 @@
 return function(cutscene)
     if Game.world.map.id == "steamworks/01" then
-        if Game.world:getCharacter("susie") then
+        if Game.world:getCharacter("susie_lw") then
             cutscene:showNametag("Susie")
             cutscene:text("* Dang,[wait:5] this place is kinda...[wait:10] creepy.", "nervous_side", "susie")
             cutscene:hideNametag()
         end
     elseif Game.world.map.id == "steamworks/06" then
-        if Game.world:getCharacter("susie") then
+        if Game.world:getCharacter("susie_lw") then
             cutscene:showNametag("Susie")
-            cutscene:text("* Dang,[wait:5] this place is kinda...[wait:10] creepy.", "nervous_side", "susie")
+            cutscene:text("* Woah,[wait:5] it's kinda hot in here...", "surprise", "susie")
+            cutscene:text("* Also,[wait:5] what is this pink goo...?", "suspicious", "susie")
+            if Game.world:getCharacter("jamm_lw") then
+                cutscene:showNametag("Jamm")
+                cutscene:text("* Maybe the coolant?", "look_left", "jamm")
+                cutscene:text("* Any complex has to cool down somehow after all...", "look_left", "jamm")
+            end
             cutscene:hideNametag()
         end
     elseif Game.world.map.id == "steamworks/06b" then
@@ -26,6 +32,16 @@ return function(cutscene)
             else
                 cutscene:text("* What?", "neutral", "noel")
             end
+        end
+    elseif Game.world.map.id == "steamworks/09" then
+        if Game.world:getCharacter("susie_lw") then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Dang,[wait:5] we're kinda high up...", "nervous_side", "susie")
+            if Game.world:getCharacter("jamm_lw") then
+                cutscene:showNametag("Jamm")
+                cutscene:text("* Then I hope nobody here is scared of heights.", "look_left", "jamm")
+            end
+            cutscene:hideNametag()
         end
     else
         cutscene:text("* Your voice echoes aimlessly.")

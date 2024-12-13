@@ -50,7 +50,7 @@ return {
         Game.world.music:play("enter_axis")
         cutscene:showNametag("Axis")
         cutscene:text("* FOUND YOU.", "normal", "axis")
-        if cutscene:getCharacter("susie") then
+        if cutscene:getCharacter("susie_lw") then
             cutscene:showNametag("Susie")
             cutscene:text("* The hell do you need from us?!", "angry", "susie")
             cutscene:text("* Just piss off,[wait:5] dude.", "annoyed", "susie")
@@ -59,14 +59,15 @@ return {
         cutscene:text("* YOUR CRIMES ARE AS\nFOLLOWS:", "normal", "axis")
         cutscene:text("* - TRESPASSING ON\nPRIVATE PROPERTY.", "normal", "axis")
         cutscene:text("* - RESISTING ARREST.", "normal", "axis")
-        if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm") then
+        if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") then
             cutscene:text("* - HUMAN.", "normal", "axis")
-            if cutscene:getCharacter("jamm") then
+            if cutscene:getCharacter("jamm_lw") then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
                 cutscene:showNametag("Axis")
                 cutscene:text("[color:FF00FF]* ACCESSING MEMORY BANK_", nil, "axis")
                 cutscene:hideNametag()
+                Assets.playSound("uty_cant_select", 2)
                 cutscene:wait(1)
                 cutscene:showNametag("Axis")
                 cutscene:text("[color:FF00FF]* MEMORY BANK BLOCKED_", nil, "axis")
@@ -99,13 +100,19 @@ return {
 				leader:removeFX("axis_scan")
                 cutscene:wait(0.5)
                 cutscene:showNametag("Axis")
-                cutscene:text("* INCREDIBLE.", "normal", "axis")
-                cutscene:text("* YOU HAVE THE MOST\nEMOTIONLESS FACE I HAVE\nEVER SEEN.", "normal", "axis")
-                cutscene:text("* I WILL JUST HAVE TO GO\nWITH MY NON-EXISTENT GUT\nAND SAY YOU WERE LYING.", "normal", "axis")
+                if Game.party[1].id == "hero" or Game.party[1].id == "kris" then
+                    cutscene:text("* INCREDIBLE.", "normal", "axis")
+                    cutscene:text("* YOU HAVE THE MOST\nEMOTIONLESS FACE I HAVE\nEVER SEEN.", "normal", "axis")
+                    cutscene:text("* I WILL JUST HAVE TO GO\nWITH MY NON-EXISTENT GUT\nAND SAY YOU WERE LYING.", "normal", "axis")
+                else
+                    cutscene:text("* AHA.[wait:5] I SEE NERVOUSNESS IN YOUR FACE.", "normal", "axis")
+                    cutscene:text("* THAT MEANS YOU WERE LYING.", "normal", "axis")
+                    cutscene:text("* OH WELL THEN.", "normal", "axis")
+                end
             elseif opinion == 2 then
-                if cutscene:getCharacter("susie") then
+                if cutscene:getCharacter("susie_lw") then
                     cutscene:showNametag("Susie")
-                    --cutscene:getCharacter("susie"):setSprite("exasperated_left")
+                    --cutscene:getCharacter("susie_lw"):setSprite("exasperated_left")
                     cutscene:text("* (WHY'D YOU SAY THAT!?)", "teeth", "susie")
                     cutscene:showNametag("Axis")
                 end
@@ -114,7 +121,11 @@ return {
                 cutscene:text("* YOUR CRIMES WILL BE\nREPORTED TO AN\nAUTHORITY.", "normal", "axis")
                 cutscene:text("* OH WAIT,[wait:5] THAT IS ME.", "normal", "axis")
             end
-            cutscene:text("* ENJOY YOUR ISOLATION,[wait:5]\nHUMAN.", "normal", "axis")
+            if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") then
+                cutscene:text("* ENJOY YOUR ISOLATION,[wait:5]\nHUMAN.", "normal", "axis")
+            else
+                cutscene:text("* ENJOY YOUR ISOLATION.", "normal", "axis")
+            end
             cutscene:hideNametag()
 
             local noel_not_fall
@@ -172,8 +183,8 @@ return {
             Game.world.camera.keep_in_bounds = false
             Assets.playSound("fall_trapdoor")
 
-            if cutscene:getCharacter("susie") then
-                cutscene:getCharacter("susie"):setSprite("fall")
+            if cutscene:getCharacter("susie_lw") then
+                cutscene:getCharacter("susie_lw"):setSprite("fall")
                 Assets.playSound("sussurprise")
             end
 
@@ -346,9 +357,9 @@ return {
     vendy_shop = function(cutscene, event)
         Game.world:lightShopTransition("vendy")
     end,
-    room_06 = function(cutscene, event) -- you're not???
-        if Game:getFlag(noel_party) == true then
-            cutscene:text("* Oh, I'm pink now.", "neutral", "noel")
+    noel_06 = function(cutscene, event) -- okay now you are
+        if Game.world:getCharacter("noel") then
+            cutscene:text("* Oh,[wait:5] I'm pink now.", "neutral", "noel")
         end
     end,
     manta = function(cutscene, event) -- manta cutscene WIP
