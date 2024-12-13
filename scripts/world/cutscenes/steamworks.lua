@@ -209,10 +209,10 @@ return {
         Game:setFlag("axis_second_met", true)
     end,
     basement_door = function(cutscene, event)
-        if Game:getFlag("basement_trapped") and Game:getFlag("axis_basement_caught") == 2 then
-            cutscene:text("* (The door is locked.)")
-        else
+        if Game:getFlag("basement_trapped") and Game:getFlag("axis_basement_caught") ~= 2 then
             Game.world:mapTransition("steamworks/13b")
+        else
+            cutscene:text("* (The door is locked.)")
         end
     end,
     basement_axis = function(cutscene, event)
