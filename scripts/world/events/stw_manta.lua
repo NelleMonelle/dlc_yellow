@@ -84,6 +84,7 @@ function SteamworksManta:postLoad(parent)
 					self.x = checkpoint.x
 					self.y = checkpoint.y
 					self.dir = checkpoint.spawn_dir
+					checkpoint.active = true
 				end
 			end
 		end
@@ -204,7 +205,7 @@ function SteamworksManta:onInteract(chara, dir)
 			for i = 2, #Game.party do
 				local member = Game.party[i].id
 				local npcx, npcy = self:getFollowerPos(self.dir, i-1, #Game.party)
-				cutscene:wait(cutscene:walkToSpeed(cutscene:getCharacter(member), npcx, npcy, 6, self.dir))
+				cutscene:wait(cutscene:walkTo(cutscene:getCharacter(member), npcx, npcy, 0.5, self.dir))
 			end
 			for _,checkpoint in ipairs(self.world.map:getEvents("stw_manta_checkpoint")) do
 				if self:collidesWith(checkpoint) then
