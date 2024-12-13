@@ -9,8 +9,8 @@ return {
   height = 30,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 12,
-  nextobjectid = 41,
+  nextlayerid = 14,
+  nextobjectid = 54,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -334,6 +334,126 @@ return {
         0, 0, 634, 635, 636, 0, 293, 0, 0, 0, 0, 0, 0, 0, 0, 499, 500, 501, 224, 225, 226,
         0, 0, 668, 669, 670, 0, 236, 0, 0, 0, 0, 0, 0, 0, 236, 0, 0, 0, 258, 259, 260,
         0, 0, 0, 0, 0, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 13,
+      name = "objects_mantaglass",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 45,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 360,
+          width = 280,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 480,
+          width = 360,
+          height = 280,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 47,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 480,
+          width = 360,
+          height = 280,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 48,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 360,
+          width = 280,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 49,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 440,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 51,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 440,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 52,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 480,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 53,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 480,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {

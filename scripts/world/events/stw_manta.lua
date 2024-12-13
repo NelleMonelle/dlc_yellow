@@ -12,6 +12,7 @@ function SteamworksManta:init(data)
 	self.player_speed_x = 0
 	self.player_speed_y = 0
 	self.is_manta = true
+	Game:setFlag("manta_glass", false)
 	Game.world:addChild(self.arrows)
 end
 
@@ -200,6 +201,7 @@ function SteamworksManta:onInteract(chara, dir)
 			Game.world.camera.target = self
 			local camattach = cutscene:attachCamera()
 			cutscene:detachFollowers()
+			Game:setFlag("manta_glass", true)
 			local plx, ply = self:getPlayerPos(self.dir)
 			cutscene:wait(cutscene:walkToSpeed(leader, plx, ply, 6, self.dir))
 			for i = 2, #Game.party do
@@ -213,6 +215,7 @@ function SteamworksManta:onInteract(chara, dir)
 					self.arrows:setProperties(checkpoint.up_free, checkpoint.down_free, checkpoint.left_free, checkpoint.right_free, checkpoint.can_dock)
 				end
 			end
+			Game:setFlag("manta_glass", false)
 			cutscene:wait(camattach)
 			Game:setFlag("manta_riding", true)
 			Game:setFlag("manta_dir", self.dir)

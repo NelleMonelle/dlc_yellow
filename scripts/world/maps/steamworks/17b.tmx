@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="62" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="50">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="62" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="74">
  <editorsettings>
   <export target="17b.lua" format="lua"/>
  </editorsettings>
@@ -122,6 +122,14 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup color="#0000ff" id="16" name="objects_mantaglass">
+  <object id="64" name="mantaglass" x="1080" y="360" width="280" height="240"/>
+  <object id="65" name="mantaglass" x="1080" y="600" width="120" height="40"/>
+  <object id="66" name="mantaglass" x="1080" y="680" width="120" height="40"/>
+  <object id="70" name="mantaglass" x="1360" y="360" width="40" height="120"/>
+  <object id="71" name="mantaglass" x="1440" y="360" width="400" height="120"/>
+  <object id="73" name="mantaglass" x="1480" y="480" width="360" height="240"/>
+ </objectgroup>
  <objectgroup id="15" name="objects">
   <object id="32" gid="1553" x="266" y="292" width="166" height="140"/>
   <object id="33" gid="1554" x="248" y="670" width="50" height="42"/>
