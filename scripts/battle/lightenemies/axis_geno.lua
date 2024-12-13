@@ -33,7 +33,7 @@ function Axis:init()
         "[wave:3][speed:0.5]....."
     }]]
 
-    self.check = "ATK 19 DEF 15"
+    self.check = "ATK "..self.attack.." DEF "..self.defense
 
     self.text = {
         "* Can't hold out forever.",

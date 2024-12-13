@@ -43,7 +43,7 @@ function Goosic:init()
         "BiT OF A\nH-H-HARSH nOISE\nCOMPLAINT/ /"
     }
 
-    self.check = "ATK 12 DEF 8\n* Music drives the mood."
+    self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* Music drives the mood."
 
     self.text = {
         "* Goosic slowly scratches a\nrecord with its needle. The\nsound is unbearable.",
@@ -76,7 +76,9 @@ function Goosic:getDamageVoice()
 end
 
 function Goosic:onAct(battler, name)
-    if name == "Vibe" then
+    if name == "Check" then
+        return "* GOOSIC -- "..self.check
+    elseif name == "Vibe" then
         if self.low_health == true then
             return "* You calm yourself in the midst\nof the battle."
         else

@@ -31,7 +31,7 @@ function TellyVis:init()
         "T/Time to;?\nGo on coMmercial\nbreak. ... ."
     }
 
-    self.check = "ATK 12 DEF 12\n* Can't live with or without\none another."
+    self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* Can't live with or without\none another."
 
     self.text = {
         "* Telly-Vis are debating which\nseason of the news is superior.",
@@ -61,7 +61,9 @@ function TellyVis:init()
 end
 
 function TellyVis:onAct(battler, name)
-    if name == "Watch" then
+    if name == "Check" then
+        return "* TELLYVIS -- "..self.check
+    elseif name == "Watch" then
         if self.low_health == true then
             self.dialogue_override = "Th.i>s is- my\nf-f-favorite shoOw/"
             return "* Nothing on."

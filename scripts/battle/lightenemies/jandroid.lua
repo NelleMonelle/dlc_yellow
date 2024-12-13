@@ -45,7 +45,7 @@ function Jandroid:init()
         "LLLet's\n;-:_\nWassh up"
     }
 
-    self.check = "ATK 11 DEF 7\n* \"Hygiene\" is not in their\nvocabulary."
+    self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* \"Hygiene\" is not in their\nvocabulary."
 
     self.text = {
         "* Jandroid wrings out their\nmop... over their head.",
@@ -76,7 +76,9 @@ function Jandroid:getDamageVoice()
 end
 
 function Jandroid:onAct(battler, name)
-    if name == "Question" then
+    if name == "Check" then
+        return "* JANDROID -- "..self.check
+    elseif name == "Question" then
         if self.low_health == true then
             self.dialogue_override = "W//what\nwas_That? /("
             return "* You ask Jandroid how they're\nstill functioning."

@@ -27,7 +27,7 @@ function Ceroba:init()
         "ceroba/flower_spiral"
     }
 
-    self.check = "ATK 13 DEF 21\n* Nothing left."
+    self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* Nothing left."
 
     self.text = {
         "* There is no hope.",
@@ -63,7 +63,7 @@ end
 
 function Ceroba:onAct(battler, name)
     if name == "Check" then
-        return "* CEROBA -- ATK 13 DEF 21\n* Nothing left."
+        return "* CEROBA -- "..self.check
     elseif name == "Resist" then
         return "* You hold your ground against\nthe magic."
     elseif name == "Calm" then

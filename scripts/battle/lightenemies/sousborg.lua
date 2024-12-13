@@ -35,7 +35,7 @@ function Sousborg:init()
         "Sw/>.eet _or\nSAVory?"
     }
 
-    self.check = "ATK 12 DEF 12\n* A recipe for disaster."
+    self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* A recipe for disaster."
 
     self.text = {
         "* Looks like you're on the\nchopping block!",
@@ -76,7 +76,9 @@ function Sousborg:getDamageVoice()
 end
 
 function Sousborg:onAct(battler, name)
-    if name == "Crack" then
+    if name == "Check" then
+        return "* SOUSBORG -- "..self.check
+    elseif name == "Crack" then
         if self.low_health == true then
             return "* You toss Sousborg's cooking\ninto the garbage."
         else

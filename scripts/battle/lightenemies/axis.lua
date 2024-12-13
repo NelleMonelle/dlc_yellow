@@ -30,7 +30,7 @@ function Axis:init()
         "[wave:3][speed:0.5]....."
     }]]
 
-    self.check = "ATK 13 DEF 12\n* Today means the Surface."
+    self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* Today means the Surface."
 
     self.text = {
         "* The air thickens.",
