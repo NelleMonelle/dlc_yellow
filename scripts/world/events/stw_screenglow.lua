@@ -1,8 +1,8 @@
 local SteamworksScreenGlow, super = Class(Event)
 
-function SteamworksScreenGlow:init(x, y, width, height, properties)
-	super.init(self, x, y, width, height)
-	local properties = properties or {}
+function SteamworksScreenGlow:init(data)
+	super.init(self, data.x, data.y, data.width, data.height)
+	local properties = data.properties or {}
     self:setPosition(0,0)
     self:setParallax(0,0)
     self:setSize(SCREEN_WIDTH, SCREEN_HEIGHT)

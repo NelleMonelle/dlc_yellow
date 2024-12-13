@@ -23,7 +23,7 @@ function SteamworksLavaPalette:onAdd(parent)
 						r,g,b,a = pal_spr:getPixel(x - 1, 1)
 						table.insert(live_pal, {r,g,b,a})
 					end
-					obj:addFX(SteamworksPaletteFX(self.pal_shader, base_pal, live_pal), "steamworks_pal")
+					obj:addFX(PaletteFX(self.pal_shader, base_pal, live_pal), "steamworks_pal")
 				end
 			end
 		end

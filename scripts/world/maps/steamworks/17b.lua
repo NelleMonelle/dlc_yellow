@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 42,
+  nextobjectid = 50,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -30,7 +30,7 @@ return {
     },
     {
       name = "steamworks_objects_big",
-      firstgid = 1576,
+      firstgid = 1606,
       filename = "../../tilesets/steamworks_objects_big.tsx",
       exportfilename = "../../tilesets/steamworks_objects_big.lua"
     }
@@ -320,7 +320,7 @@ return {
           width = 232,
           height = 386,
           rotation = 0,
-          gid = 1607,
+          gid = 1637,
           visible = true,
           properties = {}
         },
@@ -349,6 +349,26 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 49,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 1900,
+          y = 300,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "left",
+            ["dock_x"] = 1800,
+            ["dock_y"] = 280,
+            ["right"] = true,
+            ["spawn_dir"] = "left",
+            ["spawn_id"] = 5
+          }
         }
       }
     },
@@ -644,19 +664,32 @@ return {
       objects = {
         {
           id = 1,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 2440,
-          y = 260,
+          x = 2480,
+          y = 240,
           width = 40,
-          height = 80,
+          height = 160,
           rotation = 0,
           visible = true,
           properties = {
             ["map"] = "steamworks/17",
             ["marker"] = "left"
           }
+        },
+        {
+          id = 42,
+          name = "stw_manta",
+          type = "",
+          shape = "rectangle",
+          x = 2480,
+          y = 960,
+          width = 140,
+          height = 140,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

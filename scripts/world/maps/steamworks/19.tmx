@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="43" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="49">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="43" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="51">
  <editorsettings>
   <export target="19.lua" format="lua"/>
  </editorsettings>
@@ -10,7 +10,7 @@
  </properties>
  <tileset firstgid="1" source="../../tilesets/steamworks.tsx"/>
  <tileset firstgid="1497" source="../../tilesets/steamworks_objects_big.tsx"/>
- <tileset firstgid="1535" source="../../tilesets/steamworks_objects.tsx"/>
+ <tileset firstgid="1536" source="../../tilesets/steamworks_objects.tsx"/>
  <layer id="1" name="lake" width="43" height="12">
   <data encoding="csv">
 177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,
@@ -27,6 +27,13 @@
 177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177
 </data>
  </layer>
+ <objectgroup id="9" name="objects_lake">
+  <object id="43" gid="1615" x="710" y="124" width="34" height="24"/>
+  <object id="44" gid="1615" x="240" y="464" width="34" height="24"/>
+  <object id="45" gid="1615" x="1480" y="384" width="34" height="24"/>
+  <object id="46" gid="1625" x="1420" y="130" width="36" height="30"/>
+  <object id="48" gid="1635" x="760" y="384" width="38" height="44"/>
+ </objectgroup>
  <layer id="2" name="ground" width="43" height="12">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,360,0,0,0,0,457,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,496,0,0,0,
@@ -63,11 +70,6 @@
   <object id="36" gid="1532" x="-140" y="380" width="624" height="520"/>
   <object id="41" name="stw_screenglow" x="0" y="440" width="40" height="40"/>
   <object id="42" name="stw_lavapalette" x="40" y="440" width="40" height="40"/>
-  <object id="43" gid="1614" x="710" y="124" width="34" height="24"/>
-  <object id="44" gid="1614" x="240" y="464" width="34" height="24"/>
-  <object id="45" gid="1614" x="1480" y="384" width="34" height="24"/>
-  <object id="46" gid="1624" x="1420" y="130" width="36" height="30"/>
-  <object id="48" gid="1634" x="760" y="384" width="38" height="44"/>
  </objectgroup>
  <objectgroup id="5" name="collision">
   <object id="7" x="520" y="280" width="360" height="40"/>
@@ -102,7 +104,7 @@
     <property name="marker" value="right"/>
    </properties>
   </object>
-  <object id="33" name="transition" x="1680" y="220" width="40" height="40">
+  <object id="33" name="transition_manta" x="1720" y="160" width="40" height="160">
    <properties>
     <property name="map" value="steamworks/18"/>
     <property name="marker" value="left"/>
@@ -122,6 +124,17 @@
   </object>
   <object id="35" name="savepoint" x="420" y="161">
    <point/>
+  </object>
+  <object id="49" name="stw_manta" x="1720" y="480" width="140" height="140"/>
+  <object id="50" name="stw_manta_checkpoint" x="1060" y="240" width="40" height="40">
+   <properties>
+    <property name="dock_dir" value="left"/>
+    <property name="dock_x" type="int" value="960"/>
+    <property name="dock_y" type="int" value="220"/>
+    <property name="right" type="bool" value="true"/>
+    <property name="spawn_dir" value="left"/>
+    <property name="spawn_id" type="int" value="11"/>
+   </properties>
   </object>
  </objectgroup>
  <objectgroup id="7" name="markers">

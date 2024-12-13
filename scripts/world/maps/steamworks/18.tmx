@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="59" height="23" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="69">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="59" height="23" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="75">
  <editorsettings>
   <export target="18.lua" format="lua"/>
  </editorsettings>
@@ -177,19 +177,19 @@
   <object id="65" x="998" y="320" width="74" height="28"/>
  </objectgroup>
  <objectgroup id="9" name="objects_party">
-  <object id="30" name="transition" x="600" y="0" width="40" height="40">
+  <object id="30" name="transition_manta" x="520" y="-40" width="200" height="40">
    <properties>
     <property name="map" value="steamworks/18b"/>
     <property name="marker" value="down"/>
    </properties>
   </object>
-  <object id="31" name="transition" x="880" y="880" width="40" height="40">
+  <object id="31" name="transition_manta" x="800" y="920" width="200" height="40">
    <properties>
     <property name="map" value="steamworks/17"/>
     <property name="marker" value="up"/>
    </properties>
   </object>
-  <object id="32" name="transition" x="0" y="700" width="40" height="40">
+  <object id="32" name="transition_manta" x="-40" y="640" width="40" height="200">
    <properties>
     <property name="map" value="steamworks/19"/>
     <property name="marker" value="right"/>
@@ -201,6 +201,47 @@
     <property name="cutscene" value="steamworks.boba_npc"/>
    </properties>
    <point/>
+  </object>
+  <object id="69" name="stw_manta" x="2360" y="920" width="140" height="140"/>
+  <object id="70" name="stw_manta_checkpoint" x="900" y="720" width="40" height="40">
+   <properties>
+    <property name="dock_dir" value="up"/>
+    <property name="dock_x" type="int" value="900"/>
+    <property name="dock_y" type="int" value="580"/>
+    <property name="down" type="bool" value="true"/>
+    <property name="left" type="bool" value="true"/>
+    <property name="right" type="bool" value="true"/>
+    <property name="spawn_dir" value="up"/>
+    <property name="spawn_id" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="71" name="stw_manta_checkpoint" x="620" y="720" width="40" height="40">
+   <properties>
+    <property name="left" type="bool" value="true"/>
+    <property name="right" type="bool" value="true"/>
+    <property name="up" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="73" name="stw_manta_checkpoint" x="1620" y="720" width="40" height="40">
+   <properties>
+    <property name="dock_dir" value="up"/>
+    <property name="dock_x" type="int" value="1620"/>
+    <property name="dock_y" type="int" value="580"/>
+    <property name="left" type="bool" value="true"/>
+    <property name="right" type="bool" value="true"/>
+    <property name="spawn_dir" value="up"/>
+    <property name="spawn_id" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="74" name="stw_manta_checkpoint" x="2020" y="720" width="40" height="40">
+   <properties>
+    <property name="dock_dir" value="up"/>
+    <property name="dock_x" type="int" value="2020"/>
+    <property name="dock_y" type="int" value="580"/>
+    <property name="left" type="bool" value="true"/>
+    <property name="spawn_dir" value="up"/>
+    <property name="spawn_id" type="int" value="8"/>
+   </properties>
   </object>
  </objectgroup>
  <objectgroup id="21" name="objects_overlay">

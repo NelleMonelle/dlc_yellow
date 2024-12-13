@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 22,
-  nextobjectid = 69,
+  nextobjectid = 75,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -983,12 +983,12 @@ return {
       objects = {
         {
           id = 30,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 600,
-          y = 0,
-          width = 40,
+          x = 520,
+          y = -40,
+          width = 200,
           height = 40,
           rotation = 0,
           visible = true,
@@ -999,12 +999,12 @@ return {
         },
         {
           id = 31,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 880,
-          y = 880,
-          width = 40,
+          x = 800,
+          y = 920,
+          width = 200,
           height = 40,
           rotation = 0,
           visible = true,
@@ -1015,13 +1015,13 @@ return {
         },
         {
           id = 32,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 0,
-          y = 700,
+          x = -40,
+          y = 640,
           width = 40,
-          height = 40,
+          height = 200,
           rotation = 0,
           visible = true,
           properties = {
@@ -1043,6 +1043,99 @@ return {
           properties = {
             ["actor"] = "steamworks_boba_npc",
             ["cutscene"] = "steamworks.boba_npc"
+          }
+        },
+        {
+          id = 69,
+          name = "stw_manta",
+          type = "",
+          shape = "rectangle",
+          x = 2360,
+          y = 920,
+          width = 140,
+          height = 140,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 70,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 900,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "up",
+            ["dock_x"] = 900,
+            ["dock_y"] = 580,
+            ["down"] = true,
+            ["left"] = true,
+            ["right"] = true,
+            ["spawn_dir"] = "up",
+            ["spawn_id"] = 6
+          }
+        },
+        {
+          id = 71,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 620,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["left"] = true,
+            ["right"] = true,
+            ["up"] = true
+          }
+        },
+        {
+          id = 73,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 1620,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "up",
+            ["dock_x"] = 1620,
+            ["dock_y"] = 580,
+            ["left"] = true,
+            ["right"] = true,
+            ["spawn_dir"] = "up",
+            ["spawn_id"] = 7
+          }
+        },
+        {
+          id = 74,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 2020,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "up",
+            ["dock_x"] = 2020,
+            ["dock_y"] = 580,
+            ["left"] = true,
+            ["spawn_dir"] = "up",
+            ["spawn_id"] = 8
           }
         }
       }

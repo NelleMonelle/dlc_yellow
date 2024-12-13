@@ -1,11 +1,10 @@
----@class ShaderFX : FXBase
----@overload fun(shader:string|love.Shader,vars?:table,transformed?:boolean,priority?:number) : ShaderFX
+---@class PaletteFX : FXBase
 
 -- This might quite be possibly the worst thing ever.
 -- Can't use ShaderFX due to a bug so HERE WE GOOOOOOO
-local SteamworksPaletteFX, super = Class(FXBase)
+local PaletteFX, super = Class(FXBase)
 
-function SteamworksPaletteFX:init(shader, base_pal, live_pal, transformed, priority)
+function PaletteFX:init(shader, base_pal, live_pal, transformed, priority)
     super.init(self, priority or 0)
 
     if type(shader) == "string" then
@@ -23,7 +22,7 @@ function SteamworksPaletteFX:init(shader, base_pal, live_pal, transformed, prior
     self.vars = vars or {}
 end
 
-function SteamworksPaletteFX:draw(texture)
+function PaletteFX:draw(texture)
     local last_shader = love.graphics.getShader()
     love.graphics.setShader(self.shader)
 	self.shader:send("base_palette", unpack(self.base_pal))
@@ -32,4 +31,4 @@ function SteamworksPaletteFX:draw(texture)
     love.graphics.setShader(last_shader)
 end
 
-return SteamworksPaletteFX
+return PaletteFX

@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 9,
-  nextobjectid = 49,
+  nextlayerid = 10,
+  nextobjectid = 51,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld",
@@ -31,7 +31,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1535,
+      firstgid = 1536,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -67,6 +67,92 @@ return {
         177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177,
         177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177,
         177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177, 177
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 9,
+      name = "objects_lake",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 43,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 710,
+          y = 124,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1615,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 44,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 464,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1615,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 45,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1480,
+          y = 384,
+          width = 34,
+          height = 24,
+          rotation = 0,
+          gid = 1615,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1420,
+          y = 130,
+          width = 36,
+          height = 30,
+          rotation = 0,
+          gid = 1625,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 48,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 760,
+          y = 384,
+          width = 38,
+          height = 44,
+          rotation = 0,
+          gid = 1635,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
@@ -184,76 +270,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 43,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 710,
-          y = 124,
-          width = 34,
-          height = 24,
-          rotation = 0,
-          gid = 1614,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 44,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 240,
-          y = 464,
-          width = 34,
-          height = 24,
-          rotation = 0,
-          gid = 1614,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 45,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1480,
-          y = 384,
-          width = 34,
-          height = 24,
-          rotation = 0,
-          gid = 1614,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 46,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1420,
-          y = 130,
-          width = 36,
-          height = 30,
-          rotation = 0,
-          gid = 1624,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 48,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 760,
-          y = 384,
-          width = 38,
-          height = 44,
-          rotation = 0,
-          gid = 1634,
           visible = true,
           properties = {}
         }
@@ -577,13 +593,13 @@ return {
         },
         {
           id = 33,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 1680,
-          y = 220,
+          x = 1720,
+          y = 160,
           width = 40,
-          height = 40,
+          height = 160,
           rotation = 0,
           visible = true,
           properties = {
@@ -635,6 +651,39 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 49,
+          name = "stw_manta",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 480,
+          width = 140,
+          height = 140,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 50,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 1060,
+          y = 240,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "left",
+            ["dock_x"] = 960,
+            ["dock_y"] = 220,
+            ["right"] = true,
+            ["spawn_dir"] = "left",
+            ["spawn_id"] = 11
+          }
         }
       }
     },
