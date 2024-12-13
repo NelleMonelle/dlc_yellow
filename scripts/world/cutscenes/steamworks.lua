@@ -350,5 +350,27 @@ return {
         if Game:getFlag(noel_party) == true then
             cutscene:text("* Oh, I'm pink now.", "neutral", "noel")
         end
+    end,
+    manta = function(cutscene, event) -- manta cutscene WIP
+        local manta = Game.world.map:getEvent("stw_manta")
+		Game.world.music:fade(0, 0.25)
+		Assets.playSound("manta_startup")
+		manta.x = 2200
+		manta.y = 960
+		manta:moveInDirection("right")
+		cutscene:wait(function() return manta:isStopped() end)
+		cutscene:wait(0.25)
+		Game.world.music:fade(1, 0.75)
+        cutscene:showNametag("Manta")
+		if #Game.party == 1 then
+			cutscene:text("* The-The-The floor is lava,\ntraveler!")
+		else
+			cutscene:text("* The-The-The floor is lava,\ntravelers!")
+		end
+        cutscene:text("* I am sorry to say I failed the\ngame some time ago-bzzt. ")
+        cutscene:text("* H-However-r, you do not have\nto! I will ferry you across the\nlake-bzzt!")
+        cutscene:hideNametag()
+        Game:setFlag("manta_met", true)
+        Game:setFlag("manta_spawn_id", 1)
     end
 }

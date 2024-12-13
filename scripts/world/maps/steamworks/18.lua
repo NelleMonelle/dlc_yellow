@@ -9,8 +9,8 @@ return {
   height = 23,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 22,
-  nextobjectid = 69,
+  nextlayerid = 23,
+  nextobjectid = 107,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -200,6 +200,165 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 22,
+      name = "objects_mantaglass",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 93,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 720,
+          y = 440,
+          width = 120,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 94,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 960,
+          y = 440,
+          width = 200,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 95,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1160,
+          y = 400,
+          width = 280,
+          height = 240,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 96,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1440,
+          y = 440,
+          width = 120,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 97,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 440,
+          width = 40,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 98,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 400,
+          width = 40,
+          height = 240,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 102,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 2080,
+          y = 240,
+          width = 80,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 103,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1960,
+          y = 240,
+          width = 80,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 104,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1960,
+          y = 120,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 105,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 2120,
+          y = 320,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 106,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 2080,
+          y = 440,
+          width = 80,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
@@ -983,12 +1142,12 @@ return {
       objects = {
         {
           id = 30,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 600,
-          y = 0,
-          width = 40,
+          x = 520,
+          y = -40,
+          width = 200,
           height = 40,
           rotation = 0,
           visible = true,
@@ -999,12 +1158,12 @@ return {
         },
         {
           id = 31,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 880,
-          y = 880,
-          width = 40,
+          x = 800,
+          y = 920,
+          width = 200,
           height = 40,
           rotation = 0,
           visible = true,
@@ -1015,13 +1174,13 @@ return {
         },
         {
           id = 32,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 0,
-          y = 700,
+          x = -40,
+          y = 640,
           width = 40,
-          height = 40,
+          height = 200,
           rotation = 0,
           visible = true,
           properties = {
@@ -1043,6 +1202,99 @@ return {
           properties = {
             ["actor"] = "steamworks_boba_npc",
             ["cutscene"] = "steamworks.boba_npc"
+          }
+        },
+        {
+          id = 69,
+          name = "stw_manta",
+          type = "",
+          shape = "rectangle",
+          x = 2360,
+          y = 920,
+          width = 140,
+          height = 140,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 70,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 900,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "up",
+            ["dock_x"] = 900,
+            ["dock_y"] = 580,
+            ["down"] = true,
+            ["left"] = true,
+            ["right"] = true,
+            ["spawn_dir"] = "up",
+            ["spawn_id"] = 6
+          }
+        },
+        {
+          id = 71,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 620,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["left"] = true,
+            ["right"] = true,
+            ["up"] = true
+          }
+        },
+        {
+          id = 73,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 1620,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "up",
+            ["dock_x"] = 1620,
+            ["dock_y"] = 580,
+            ["left"] = true,
+            ["right"] = true,
+            ["spawn_dir"] = "up",
+            ["spawn_id"] = 7
+          }
+        },
+        {
+          id = 74,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 2020,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "up",
+            ["dock_x"] = 2020,
+            ["dock_y"] = 580,
+            ["left"] = true,
+            ["spawn_dir"] = "up",
+            ["spawn_id"] = 8
           }
         }
       }

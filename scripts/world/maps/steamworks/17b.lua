@@ -9,8 +9,8 @@ return {
   height = 24,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 16,
-  nextobjectid = 42,
+  nextlayerid = 17,
+  nextobjectid = 74,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -30,7 +30,7 @@ return {
     },
     {
       name = "steamworks_objects_big",
-      firstgid = 1576,
+      firstgid = 1606,
       filename = "../../tilesets/steamworks_objects_big.tsx",
       exportfilename = "../../tilesets/steamworks_objects_big.lua"
     }
@@ -215,6 +215,100 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 16,
+      name = "objects_mantaglass",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 64,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 360,
+          width = 280,
+          height = 240,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 65,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 600,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 66,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 680,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 70,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1360,
+          y = 360,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 71,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1440,
+          y = 360,
+          width = 400,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 73,
+          name = "mantaglass",
+          type = "",
+          shape = "rectangle",
+          x = 1480,
+          y = 480,
+          width = 360,
+          height = 240,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 15,
       name = "objects",
       class = "",
@@ -320,7 +414,7 @@ return {
           width = 232,
           height = 386,
           rotation = 0,
-          gid = 1607,
+          gid = 1637,
           visible = true,
           properties = {}
         },
@@ -349,6 +443,26 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 49,
+          name = "stw_manta_checkpoint",
+          type = "",
+          shape = "rectangle",
+          x = 1900,
+          y = 300,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dock_dir"] = "left",
+            ["dock_x"] = 1800,
+            ["dock_y"] = 280,
+            ["right"] = true,
+            ["spawn_dir"] = "left",
+            ["spawn_id"] = 5
+          }
         }
       }
     },
@@ -644,19 +758,32 @@ return {
       objects = {
         {
           id = 1,
-          name = "transition",
+          name = "transition_manta",
           type = "",
           shape = "rectangle",
-          x = 2440,
-          y = 260,
+          x = 2480,
+          y = 240,
           width = 40,
-          height = 80,
+          height = 160,
           rotation = 0,
           visible = true,
           properties = {
             ["map"] = "steamworks/17",
             ["marker"] = "left"
           }
+        },
+        {
+          id = 42,
+          name = "stw_manta",
+          type = "",
+          shape = "rectangle",
+          x = 2480,
+          y = 960,
+          width = 140,
+          height = 140,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
