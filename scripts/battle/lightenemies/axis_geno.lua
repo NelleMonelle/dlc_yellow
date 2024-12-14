@@ -98,7 +98,7 @@ function Axis:onAct(battler, name)
 end
 
 function Axis:hurt(amount, battler, on_defeat, color, anim, attacked)
-    Assets.playSound("graze", 2)
+    Assets.playSound("graze", 2, 0.8)
     local message
     message = self:lightStatusMessage("damage", amount, color or (battler and {battler.chara:getLightDamageColor()}))
     if message and anim then
