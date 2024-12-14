@@ -1,3 +1,4 @@
+---@class LightEncounter : Class
 local LightEncounter = Class()
 
 function LightEncounter:init()

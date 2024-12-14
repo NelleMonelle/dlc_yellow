@@ -55,6 +55,7 @@ function Axis:init()
     self.gauge_size = {250, 18}
 
     self.damage_offset = {0, 42}
+    self.can_shake = false
 end
 
 function Axis:spare(pacify)
@@ -94,6 +95,21 @@ function Axis:onAct(battler, name)
     end
 
     return super:onAct(self, battler, name)
+end
+
+function Axis:hurt(amount, battler, on_defeat, color, anim, attacked)
+    Assets.playSound("graze", 2, 0.8)
+    local message
+    message = self:lightStatusMessage("damage", amount, color or (battler and {battler.chara:getLightDamageColor()}))
+    if message and anim then
+        message:resetPhysics()
+    end
+    self.health = self.health - amount
+
+    self:onHurt(amount, battler)
+
+    self:checkHealth(on_defeat, amount, battler)
+    return
 end
 
 function Axis:getEnemyDialogue()
