@@ -19,7 +19,8 @@ function Axis:init()
     else
         self.geno_aborted = true
     end
-
+	
+	self.show_hp = false
     self.display_damage_on_miss = true
 
     self.dialogue_bubble = "ut_wide"
@@ -98,18 +99,32 @@ function Axis:onAct(battler, name)
 end
 
 function Axis:hurt(amount, battler, on_defeat, color, anim, attacked)
-    Assets.playSound("trash_can_hit")
-    local message
-    message = self:lightStatusMessage("damage", amount, color or (battler and {battler.chara:getLightDamageColor()}))
-    if message and anim then
-        message:resetPhysics()
+    if Game.battle:getCurrentAction() and Game.battle:getCurrentAction().action == "SPELL" then
+        battler.delay_turn_end = true
     end
-    self.health = self.health - amount
+    if attacked ~= false then
+        attacked = true
+    end
+	local message
+	if attacked then
+		Assets.playSound("trash_can_hit")
+		message = self:lightStatusMessage("damage", amount, color or (battler and {battler.chara:getLightDamageColor()}))
+		if message and anim then
+			message:resetPhysics()
+		end
+		self.health = self.health - amount
 
-    self:onHurt(amount, battler)
+		self:onHurt(amount, battler)
 
-    self:checkHealth(on_defeat, amount, battler)
-    return
+		self:checkHealth(on_defeat, amount, battler)
+		return
+	else
+        message = self:lightStatusMessage("msg", "miss", color or (battler and {battler.chara:getLightMissColor()}))
+        if message and anim then
+            message:resetPhysics()
+        end
+        return
+	end
 end
 
 function Axis:getEnemyDialogue()

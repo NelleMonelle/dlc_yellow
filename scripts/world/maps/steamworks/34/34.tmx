@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="78" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="22">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="78" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="33">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -11,6 +11,9 @@
  <tileset firstgid="1" source="../../../tilesets/steamworks.tsx"/>
  <tileset firstgid="1497" source="../../../tilesets/steamworks_objects_big.tsx"/>
  <tileset firstgid="1537" source="../../../tilesets/steamworks_objects.tsx"/>
+ <objectgroup id="11" name="objects_bg">
+  <object id="28" name="stw_room34bg" x="0" y="0" width="40" height="40"/>
+ </objectgroup>
  <layer id="1" name="Tile Layer 1" width="78" height="12">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -46,6 +49,7 @@
  <objectgroup id="7" name="objects">
   <object id="16" gid="1536" x="0" y="480" width="424" height="480"/>
   <object id="17" gid="1648" x="592" y="290" width="94" height="164"/>
+  <object id="27" x="0" y="0" width="40" height="40"/>
  </objectgroup>
  <objectgroup id="3" name="collision">
   <object id="1" x="0" y="400" width="3120" height="40"/>
@@ -110,4 +114,11 @@ chasm of rock and steel.)</property>
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="9" name="objects_pipes">
+  <object id="22" name="pipe" gid="1654" x="3580" y="480" width="88" height="480"/>
+  <object id="23" name="pipe" gid="1654" x="3280" y="480" width="88" height="480"/>
+  <object id="30" name="pipe" gid="1654" x="2280" y="480" width="88" height="480"/>
+  <object id="31" name="pipe" gid="1654" x="1280" y="480" width="88" height="480"/>
+  <object id="32" name="pipe" gid="1654" x="680" y="480" width="88" height="480"/>
+ </objectgroup>
 </map>

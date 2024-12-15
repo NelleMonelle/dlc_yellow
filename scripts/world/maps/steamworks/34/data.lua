@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 9,
-  nextobjectid = 22,
+  nextlayerid = 14,
+  nextobjectid = 33,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly",
@@ -37,6 +37,35 @@ return {
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 11,
+      name = "objects_bg",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 28,
+          name = "stw_room34bg",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
     {
       type = "tilelayer",
       x = 0,
@@ -140,6 +169,19 @@ return {
           height = 164,
           rotation = 0,
           gid = 1648,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 27,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
           visible = true,
           properties = {}
         }
@@ -428,6 +470,92 @@ return {
         0, 0, 0, 0, 0, 0, 722, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 9,
+      name = "objects_pipes",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 22,
+          name = "pipe",
+          type = "",
+          shape = "rectangle",
+          x = 3580,
+          y = 480,
+          width = 88,
+          height = 480,
+          rotation = 0,
+          gid = 1654,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 23,
+          name = "pipe",
+          type = "",
+          shape = "rectangle",
+          x = 3280,
+          y = 480,
+          width = 88,
+          height = 480,
+          rotation = 0,
+          gid = 1654,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 30,
+          name = "pipe",
+          type = "",
+          shape = "rectangle",
+          x = 2280,
+          y = 480,
+          width = 88,
+          height = 480,
+          rotation = 0,
+          gid = 1654,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "pipe",
+          type = "",
+          shape = "rectangle",
+          x = 1280,
+          y = 480,
+          width = 88,
+          height = 480,
+          rotation = 0,
+          gid = 1654,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 32,
+          name = "pipe",
+          type = "",
+          shape = "rectangle",
+          x = 680,
+          y = 480,
+          width = 88,
+          height = 480,
+          rotation = 0,
+          gid = 1654,
+          visible = true,
+          properties = {}
+        }
       }
     }
   }
