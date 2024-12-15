@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="200" tileheight="240" tilecount="119" columns="0">
+<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="200" tileheight="240" tilecount="120" columns="0">
  <editorsettings>
   <export target="steamworks_objects.lua" format="lua"/>
  </editorsettings>
@@ -317,6 +317,9 @@
  </tile>
  <tile id="110">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png" width="118" height="107"/>
+ </tile>
+ <tile id="119">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/33_bridge.png" width="180" height="42"/>
  </tile>
  <tile id="117">
   <image source="../../../assets/sprites/world/events/steamworks/34_pipe.png" width="44" height="240"/>
