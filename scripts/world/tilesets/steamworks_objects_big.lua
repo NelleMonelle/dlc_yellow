@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 39,
+  tilecount = 40,
   tiles = {
     {
       id = 0,
@@ -350,6 +350,12 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/26_greenhouse_entrance.png",
       width = 343,
       height = 350
+    },
+    {
+      id = 39,
+      image = "../../../assets/sprites/world/maps/steamworks/34_furnace_entrance.png",
+      width = 212,
+      height = 240
     },
     {
       id = 10,

@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 111,
+  tilecount = 113,
   tiles = {
     {
       id = 13,
@@ -674,6 +674,18 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png",
       width = 118,
       height = 107
+    },
+    {
+      id = 111,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/34_broken_vendy.png",
+      width = 47,
+      height = 82
+    },
+    {
+      id = 112,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/35_trashcan.png",
+      width = 27,
+      height = 31
     },
     {
       id = 79,

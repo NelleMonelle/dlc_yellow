@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.0",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 28,
+  nextobjectid = 30,
   properties = {
     ["light"] = true
   },
@@ -20,6 +20,12 @@ return {
       firstgid = 1,
       filename = "../../../tilesets/steamworks_objects_big.tsx",
       exportfilename = "../../../tilesets/steamworks_objects_big.lua"
+    },
+    {
+      name = "steamworks_objects",
+      firstgid = 41,
+      filename = "../../../tilesets/steamworks_objects.tsx",
+      exportfilename = "../../../tilesets/steamworks_objects.lua"
     }
   },
   layers = {
@@ -142,6 +148,20 @@ return {
             ["cutscene"] = "furnace.backtrack_blocker",
             ["once"] = false
           }
+        },
+        {
+          id = 28,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1298,
+          y = 224,
+          width = 54,
+          height = 62,
+          rotation = 0,
+          gid = 153,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -411,6 +431,19 @@ return {
             { x = 0, y = -40 },
             { x = 40, y = -40 }
           },
+          properties = {}
+        },
+        {
+          id = 29,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1306,
+          y = 196,
+          width = 38,
+          height = 24,
+          rotation = 0,
+          visible = true,
           properties = {}
         }
       }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="200" tileheight="200" tilecount="111" columns="0">
+<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="200" tileheight="200" tilecount="113" columns="0">
  <editorsettings>
   <export target="steamworks_objects.lua" format="lua"/>
  </editorsettings>
@@ -299,6 +299,12 @@
  </tile>
  <tile id="110">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png" width="118" height="107"/>
+ </tile>
+ <tile id="111">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/34_broken_vendy.png" width="47" height="82"/>
+ </tile>
+ <tile id="112">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/35_trashcan.png" width="27" height="31"/>
  </tile>
  <tile id="79">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_1.png" width="17" height="12"/>

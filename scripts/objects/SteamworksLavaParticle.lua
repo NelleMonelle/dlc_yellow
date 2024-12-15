@@ -7,7 +7,7 @@ function SteamworksLavaParticle:init(x, y)
 	local part_life = (self.room_width + 100) / 0.8
 	self.max_lifetime = Utils.random(part_life*0.75, part_life)
 	self.lifetime = 0
-    self.sprite = Sprite("world/events/stw_flare_part")
+    self.sprite = Sprite("world/events/steamworks/flare_part")
 	self.sprite:setScale(Utils.random(0.05, 0.075)*2)
     self:addChild(self.sprite)
 	self.sprite.color = {1, 0.596078431372549, 1, 0.7}
