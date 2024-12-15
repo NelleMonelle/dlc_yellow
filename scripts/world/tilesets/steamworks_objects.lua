@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.0",
   name = "steamworks_objects",
   class = "",
   tilewidth = 200,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 118,
+  tilecount = 119,
   tiles = {
     {
       id = 13,
@@ -728,6 +728,12 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/34_broken_vendy.png",
       width = 47,
       height = 82
+    },
+    {
+      id = 118,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/34_furnace_entrance_front.png",
+      width = 34,
+      height = 45
     },
     {
       id = 112,
