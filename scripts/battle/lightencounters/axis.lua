@@ -13,6 +13,8 @@ function Axis:init()
     self.can_flee = false
 end
 
+function Axis:drawBackground() end -- leave it empty to NOT draw the rectangle background
+
 function Axis:onBattleInit()
 	self.bg = Game.battle:addChild(AxisBattleBackground())
 	self.bg:setLayer(-101)
