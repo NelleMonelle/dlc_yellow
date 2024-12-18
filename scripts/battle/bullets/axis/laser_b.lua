@@ -27,8 +27,11 @@ function AxisLaserBlue:onCollide(soul)
 end
 
 function AxisLaserBlue:update()
-
     local soul = Game.battle.soul
+
+    if self.bounce == false then
+        goto ending
+    end
 	if not condition(soul) then
 		self.grazed = true
 	end
@@ -57,6 +60,7 @@ function AxisLaserBlue:update()
         end
     end
 
+    ::ending::
     super.update(self)
 end
 
