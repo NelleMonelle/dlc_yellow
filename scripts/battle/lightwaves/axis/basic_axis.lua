@@ -9,7 +9,7 @@ function Basic:onStart()
     --Game.battle:swapSoul(GreenSoul())
     self.timer:every(1/2, function()
 
-        local bullet = self:spawnBullet("steamworks/axis_ball", Utils.random(Game.battle.arena.left, Game.battle.arena.right), 0, math.rad(90), 6)
+        local bullet = self:spawnBullet("axis/ball", Utils.random(Game.battle.arena.left, Game.battle.arena.right), 0, math.rad(90), 6)
 
         bullet.remove_offscreen = false
     end)
