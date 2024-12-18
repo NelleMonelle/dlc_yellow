@@ -12,13 +12,13 @@ function Basic:onStart()
     self.timer:every(1/2, function()
         local rnd = math.random(1, 4)
         if rnd == 1 then
-            self:spawnBullet("steamworks/axis_ball", Game.battle.arena.right, Utils.random(Game.battle.arena.top, Game.battle.arena.bottom), math.rad(math.random(140, 220)), 8)
+            self:spawnBullet("axis/ball", Game.battle.arena.right, Utils.random(Game.battle.arena.top, Game.battle.arena.bottom), math.rad(math.random(140, 220)), 8)
         elseif rnd == 2 then
-            self:spawnBullet("steamworks/axis_ball", Utils.random(Game.battle.arena.left, Game.battle.arena.right), Game.battle.arena.bottom, math.rad(math.random(230, 310)), 8)
+            self:spawnBullet("axis/ball", Utils.random(Game.battle.arena.left, Game.battle.arena.right), Game.battle.arena.bottom, math.rad(math.random(230, 310)), 8)
         elseif rnd == 3 then
-            self:spawnBullet("steamworks/axis_ball", Game.battle.arena.left, Utils.random(Game.battle.arena.top, Game.battle.arena.bottom), math.rad(math.random(-40, 40)), 8)
+            self:spawnBullet("axis/ball", Game.battle.arena.left, Utils.random(Game.battle.arena.top, Game.battle.arena.bottom), math.rad(math.random(-40, 40)), 8)
         else
-            self:spawnBullet("steamworks/axis_ball", Utils.random(Game.battle.arena.left, Game.battle.arena.right), Game.battle.arena.top, math.rad(math.random(50, 130)), 8)
+            self:spawnBullet("axis/ball", Utils.random(Game.battle.arena.left, Game.battle.arena.right), Game.battle.arena.top, math.rad(math.random(50, 130)), 8)
         end
     end)
 end
