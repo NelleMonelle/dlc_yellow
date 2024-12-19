@@ -9,8 +9,8 @@ return {
   height = 30,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 8,
-  nextobjectid = 18,
+  nextlayerid = 9,
+  nextobjectid = 19,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -21,6 +21,12 @@ return {
       firstgid = 1,
       filename = "../../../tilesets/steamworks.tsx",
       exportfilename = "../../../tilesets/steamworks.lua"
+    },
+    {
+      name = "steamworks_objects",
+      firstgid = 1497,
+      filename = "../../../tilesets/steamworks_objects.tsx",
+      exportfilename = "../../../tilesets/steamworks_objects.lua"
     }
   },
   layers = {
@@ -42,10 +48,10 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        525, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
-        525, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
-        525, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
-        525, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
+        0, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
+        0, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
+        0, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
+        0, 0, 0, 0, 0, 525, 0, 0, 0, 0, 0, 0, 0, 525, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -95,8 +101,8 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        516, 517, 516, 521, 520, 516, 516, 517, 516, 516, 518, 516, 516, 517, 516, 516,
-        586, 550, 550, 553, 552, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550,
+        0, 0, 0, 0, 520, 516, 516, 517, 516, 516, 518, 516, 516, 517, 516, 516,
+        0, 0, 0, 0, 552, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550,
         0, 0, 0, 0, 0, 0, 523, 550, 522, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 523, 551, 522, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 523, 550, 556, 0, 0, 0, 0, 0, 0, 0,
@@ -122,6 +128,36 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 8,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 18,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -440,
+          y = 200,
+          width = 600,
+          height = 280,
+          rotation = 0,
+          gid = 1617,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
@@ -261,7 +297,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 3,
-      name = "objects",
+      name = "objects_party",
       class = "",
       visible = true,
       opacity = 1,
