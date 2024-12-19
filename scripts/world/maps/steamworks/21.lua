@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 18,
-  nextobjectid = 167,
+  nextobjectid = 173,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -25,8 +25,7 @@ return {
     {
       name = "steamworks_chase",
       firstgid = 1497,
-      filename = "../../tilesets/steamworks_chase.tsx",
-      exportfilename = "../../tilesets/steamworks_chase.lua"
+      filename = "../../tilesets/steamworks_chase.tsx"
     },
     {
       name = "steamworks_objects_big",
@@ -36,7 +35,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1810,
+      firstgid = 1813,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -376,7 +375,7 @@ return {
           width = 86,
           height = 230,
           rotation = 0,
-          gid = 1877,
+          gid = 1880,
           visible = true,
           properties = {}
         },
@@ -390,7 +389,7 @@ return {
           width = 86,
           height = 230,
           rotation = 0,
-          gid = 1878,
+          gid = 1881,
           visible = true,
           properties = {}
         },
@@ -404,7 +403,7 @@ return {
           width = 86,
           height = 230,
           rotation = 0,
-          gid = 1878,
+          gid = 1881,
           visible = true,
           properties = {}
         },
@@ -418,7 +417,7 @@ return {
           width = 152,
           height = 120,
           rotation = 0,
-          gid = 1879,
+          gid = 1882,
           visible = true,
           properties = {}
         },
@@ -432,7 +431,7 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1880,
+          gid = 1883,
           visible = true,
           properties = {}
         },
@@ -446,7 +445,7 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1881,
+          gid = 1884,
           visible = true,
           properties = {}
         },
@@ -460,7 +459,7 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1883,
+          gid = 1886,
           visible = true,
           properties = {}
         },
@@ -474,7 +473,7 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1882,
+          gid = 1885,
           visible = true,
           properties = {}
         }
@@ -2364,6 +2363,32 @@ return {
           y = 1376,
           width = 80,
           height = 24,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 171,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 2760,
+          y = 1840,
+          width = 160,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 172,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 2800,
+          y = 1800,
+          width = 120,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}

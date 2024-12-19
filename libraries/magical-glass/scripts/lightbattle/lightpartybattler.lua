@@ -114,19 +114,30 @@ function LightPartyBattler:hurt(amount, exact, color, options)
             amount = math.ceil((amount * self:getElementReduction(element)))
         end
 
-        self:removeHealth(amount)
+        if self.chara.id == "noel" then
+            self:noel_damage(amount)
+        else
+            self:removeHealth(amount)
+        end
     else
+        -- We're targeting everyone.
         if not exact then
             amount = self:calculateDamage(amount)
+            -- we don't have elements right now
             local element = 0
             amount = math.ceil((amount * self:getElementReduction(element)))
 
             if self.defending then
-                amount = math.ceil((3 * amount) / 4)
+                amount = math.ceil((3 * amount) / 4) -- Slightly different than the above
             end
         end
-        
-        self:removeHealthBroken(amount)
+
+        if self.chara.id == "noel" then
+            self:noel_damage(amount) -- Use a seprate function for a secret character that nobody will ever find on a regular playthrough.
+        else
+            self:removeHealthBroken(amount) -- Use a separate function for cleanliness
+        end
+
     end
 
     Game.battle:shakeCamera(2, 2, 0.35)
@@ -324,6 +335,36 @@ function LightPartyBattler:update()
     end
 
     super.update(self)
+end
+
+function LightPartyBattler:noel_damage(amount) -- DO NOT QUESTION MY CHOICES
+    local meth = love.math.random(1, 3) --random number for hit chance
+    if meth == 1 then -- haha, funny noel/null damage joke thingy
+        Assets.playSound("awkward")
+        Assets.playSound("voice/noel-#")
+        self:removeHealth(0)
+    else-- haha, 10 times the pain and funny noise
+        Assets.playSound("voice/noel-#")
+        self:removeHealth(amount * 10)
+    end
+    if self.noel_hit_counter and self.noel_hit_counter > 5 and self.chara.health >= 1 then -- for if noel decides you fucking suck at dodging
+        Assets.playSound("voice/stop_getting_hit")
+        Assets.playSound("grab")
+        Assets.playSound("alert")
+        Assets.playSound("impact")
+        Assets.playSound("jump")
+        Assets.playSound("locker")
+        Assets.playSound("petrify")
+        Assets.playSound("ominous")
+        Assets.playSound("rudebuster_hit")
+        Assets.playSound("rudebuster_swing")
+        love.window.setTitle("STOP GETTING HIT")
+        self.noel_hit_counter = -1
+    elseif self.noel_hit_counter then
+        self.noel_hit_counter = self.noel_hit_counter + 1
+    else 
+        self.noel_hit_counter = 1
+    end
 end
 
 return LightPartyBattler

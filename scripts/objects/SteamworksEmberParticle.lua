@@ -6,7 +6,7 @@ function SteamworksEmberParticle:init(x, y)
 	self.room_height = (Game.world.map.height * Game.world.map.tile_height)
 	self.max_lifetime = Utils.random(100, 300)
 	self.lifetime = 0
-    self.sprite = Sprite("world/events/stw_flare_part")
+    self.sprite = Sprite("world/events/steamworks/flare_part")
 	self.sprite:setScale(Utils.random(0.2, 1)*0.4)
     self:addChild(self.sprite)
 	self.sprite.color = {1, 0.196078431372549, 0.196078431372549, 1}

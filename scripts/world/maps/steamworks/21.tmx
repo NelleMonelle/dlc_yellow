@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="110" height="54" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="167">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="110" height="54" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="173">
  <editorsettings>
   <export target="../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/21.lua" format="lua"/>
  </editorsettings>
@@ -10,7 +10,7 @@
  <tileset firstgid="1" source="../../tilesets/steamworks.tsx"/>
  <tileset firstgid="1497" source="../../tilesets/steamworks_chase.tsx"/>
  <tileset firstgid="1773" source="../../tilesets/steamworks_objects_big.tsx"/>
- <tileset firstgid="1810" source="../../tilesets/steamworks_objects.tsx"/>
+ <tileset firstgid="1813" source="../../tilesets/steamworks_objects.tsx"/>
  <layer id="1" name="ground" width="110" height="54">
   <data encoding="csv">
 255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,
@@ -245,14 +245,14 @@
  </layer>
  <objectgroup id="17" name="objects">
   <object id="158" gid="1809" x="3272" y="948" width="1056" height="848"/>
-  <object id="159" gid="1877" x="202" y="1476" width="86" height="230"/>
-  <object id="160" gid="1878" x="120" y="1476" width="86" height="230"/>
-  <object id="161" gid="1878" x="40" y="1476" width="86" height="230"/>
-  <object id="162" gid="1879" x="1142" y="1346" width="152" height="120"/>
-  <object id="163" gid="1880" x="2156" y="768" width="128" height="128"/>
-  <object id="164" gid="1881" x="2408" y="1220" width="128" height="128"/>
-  <object id="165" gid="1883" x="832" y="734" width="128" height="128"/>
-  <object id="166" gid="1882" x="454" y="796" width="128" height="128"/>
+  <object id="159" gid="1880" x="202" y="1476" width="86" height="230"/>
+  <object id="160" gid="1881" x="120" y="1476" width="86" height="230"/>
+  <object id="161" gid="1881" x="40" y="1476" width="86" height="230"/>
+  <object id="162" gid="1882" x="1142" y="1346" width="152" height="120"/>
+  <object id="163" gid="1883" x="2156" y="768" width="128" height="128"/>
+  <object id="164" gid="1884" x="2408" y="1220" width="128" height="128"/>
+  <object id="165" gid="1886" x="832" y="734" width="128" height="128"/>
+  <object id="166" gid="1885" x="454" y="796" width="128" height="128"/>
  </objectgroup>
  <objectgroup id="3" name="collision">
   <object id="3" x="4280" y="200" width="40" height="560"/>
@@ -446,6 +446,8 @@
   <object id="155" x="120" y="1440" width="68" height="36"/>
   <object id="156" x="40" y="1440" width="68" height="36"/>
   <object id="157" x="2320" y="1376" width="80" height="24"/>
+  <object id="171" x="2760" y="1840" width="160" height="40"/>
+  <object id="172" x="2800" y="1800" width="120" height="40"/>
  </objectgroup>
  <objectgroup id="4" name="objects_party">
   <object id="1" name="transition" x="4164" y="200" width="72" height="40">

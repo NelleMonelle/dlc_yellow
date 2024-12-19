@@ -198,6 +198,9 @@ function lib:preInit()
         ["player_karma_health_bg"] = {192/255, 0, 0, 1},
         ["player_karma_health"] = COLORS.fuchsia,
         
+        ["player_health_bg_dark"] = PALETTE["action_health_bg"],
+        ["player_karma_health_dark"] = COLORS.silver,
+        
         ["player_defending_text"] = COLORS.aqua,
         ["player_action_text"] = COLORS.yellow,
         ["player_down_text"] = COLORS.red,
@@ -390,7 +393,7 @@ function lib:init()
         orig(self, ...)
         lib.map_transitioning = false
         if lib.viewing_image then
-            local facing = Game.world and Game.world.player and Game.world.player.facing or "down"
+            local facing = Game.world.player and Game.world.player.facing or "down"
             for _,party in ipairs(Utils.mergeMultiple(Game.stage:getObjects(Player), Game.stage:getObjects(Follower))) do
                 party:remove()
             end
@@ -1041,29 +1044,36 @@ function lib:init()
         end
         local src = Assets.stopAndPlaySound(self.getLightAttackSound and self:getLightAttackSound() or "laz_c") 
         src:setPitch(self.getLightAttackPitch and self:getLightAttackPitch() or 1)
-
-        local sprite = Sprite(self.getLightAttackSprite and self:getLightAttackSprite() or "effects/attack/strike")
+        -- local sprite = Sprite(self.getLightAttackSprite and self:getLightAttackSprite() or "effects/attack/strike")
+        local sprite = Sprite(Game:isLight() and (self.getLightAttackSprite and self:getLightAttackSprite() or "effects/attack/strike") or battler.chara:getAttackSprite() or "effects/attack/cut") -- dark stuff here
         sprite.battler_id = battler and Game.battle:getPartyIndex(battler.chara.id) or nil
         table.insert(enemy.dmg_sprites, sprite)
-        local scale = (stretch * 2) - 0.5
-        sprite:setScale(scale)
         sprite:setOrigin(0.5)
+        if Game:isLight() then -- dark stuff here
+            sprite:setScale(stretch * 2 - 0.5)
+            sprite.color = {battler.chara:getLightAttackColor()}
+        else
+            sprite:setScale(2)
+        end
         local relative_pos_x, relative_pos_y = enemy:getRelativePos((enemy.width / 2) - (#Game.battle.attackers - 1) * 5 / 2 + (Utils.getIndex(Game.battle.attackers, battler) - 1) * 5, (enemy.height / 2) - 8)
         sprite:setPosition(relative_pos_x + enemy.dmg_sprite_offset[1], relative_pos_y + enemy.dmg_sprite_offset[2])
         sprite.layer = BATTLE_LAYERS["above_ui"] + 5
-        sprite.color = {battler.chara:getLightAttackColor()}
         enemy.parent:addChild(sprite)
-        sprite:play((math.sqrt(stretch) / 4) / 1.5, false, function(this)
+        -- sprite:play((math.sqrt(stretch) / 4) / 1.5, false, function(this)
+        sprite:play(Game:isLight() and ((math.sqrt(stretch) / 4) / 1.5) or 1/8, false, function(this) -- dark stuff here
             local sound = enemy:getDamageSound() or "damage"
             if sound and type(sound) == "string" and (damage > 0 or enemy.always_play_damage_sound) then
                 Assets.stopAndPlaySound(sound)
             end
             enemy:hurt(damage, battler)
 
-            battler.chara:onLightAttackHit(enemy, damage)
+            if Game:isLight() then -- dark stuff here
+                battler.chara:onLightAttackHit(enemy, damage)
+            else
+                battler.chara:onAttackHit(enemy, damage)
+            end
             this:remove()
             Utils.removeFromTable(enemy.dmg_sprites, this)
-            
 
             Game.battle:finishActionBy(battler)
         end)
@@ -3094,7 +3104,7 @@ function lib:setSeriousMode(v)
 end
 
 function lib:onFootstep(char, num)
-    if self.encounters_enabled and Game.world.player and char == Game.world.player then
+    if self.encounters_enabled and self.in_encounter_zone and Game.world.player and char == Game.world.player then
         self.steps_until_encounter = self.steps_until_encounter - 1
     end
 end
@@ -3127,7 +3137,7 @@ function lib:postUpdate()
     end
     if not Game.battle then
         if lib.random_encounter then
-            lib:createRandomEncounter(lib.random_encounter):resetSteps()
+            lib:createRandomEncounter(lib.random_encounter):resetSteps(false)
             lib.random_encounter = nil
         end
     end

@@ -10,9 +10,9 @@ end
 function Basic:onStart()
     --group 1
     self.timer:after(1/3, function()
-        local bullet1 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x, Game.battle.arena.y - 148)
-        local bullet2 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x - 23, Game.battle.arena.y - 156)
-        local bullet3 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x + 23, Game.battle.arena.y - 156)
+        local bullet1 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x, Game.battle.arena.y - 148)
+        local bullet2 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 23, Game.battle.arena.y - 156)
+        local bullet3 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 23, Game.battle.arena.y - 156)
         self.timer:after(1/2, function()
             Assets.playSound("swoosh")
             bullet1.physics.direction = math.pi / 2 --go down
@@ -33,9 +33,9 @@ function Basic:onStart()
 
     -- group 2
     self.timer:after(1.85, function()
-        local bullet4 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x - 90, Game.battle.arena.y - 70)
-        local bullet5 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y - 45)
-        local bullet6 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y - 95)
+        local bullet4 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 90, Game.battle.arena.y - 70)
+        local bullet5 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y - 45)
+        local bullet6 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y - 95)
         self.timer:after(1/2, function()
             Assets.playSound("swoosh")
             bullet4.physics.direction = 0 --go right
@@ -56,9 +56,9 @@ function Basic:onStart()
 
     -- group 3
     self.timer:after(3.25, function()
-        local bullet7 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.left, Game.battle.arena.bottom)
-        local bullet8 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.left - 13, Game.battle.arena.bottom - 20)
-        local bullet9 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.left + 3, Game.battle.arena.bottom + 20)
+        local bullet7 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.left, Game.battle.arena.bottom)
+        local bullet8 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.left - 13, Game.battle.arena.bottom - 20)
+        local bullet9 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.left + 3, Game.battle.arena.bottom + 20)
         self.timer:after(1/2, function()
             Assets.playSound("swoosh")
             bullet7.physics.direction = -math.pi * 0.25 --go left
@@ -79,9 +79,9 @@ function Basic:onStart()
 
     -- group 4
     self.timer:after(4.85, function()
-        local bullet10 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x + 90, Game.battle.arena.y - 70)
-        local bullet11 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y - 45)
-        local bullet12 = self:spawnBullet("steamworks/axis_ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y - 95)
+        local bullet10 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 90, Game.battle.arena.y - 70)
+        local bullet11 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y - 45)
+        local bullet12 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y - 95)
         self.timer:after(1/2, function()
             Assets.playSound("swoosh")
             bullet10.physics.direction = math.pi --go left

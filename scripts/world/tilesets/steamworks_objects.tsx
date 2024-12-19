@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="200" tileheight="200" tilecount="111" columns="0">
+<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="200" tileheight="240" tilecount="120" columns="0">
  <editorsettings>
   <export target="steamworks_objects.lua" format="lua"/>
  </editorsettings>
@@ -138,6 +138,24 @@
  </tile>
  <tile id="33">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/smallgear_4.png" width="19" height="19"/>
+ </tile>
+ <tile id="113">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_1.png" width="20" height="20"/>
+  <animation>
+   <frame tileid="113" duration="100"/>
+   <frame tileid="114" duration="100"/>
+   <frame tileid="115" duration="100"/>
+   <frame tileid="116" duration="100"/>
+  </animation>
+ </tile>
+ <tile id="114">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_2.png" width="20" height="20"/>
+ </tile>
+ <tile id="115">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_3.png" width="20" height="20"/>
+ </tile>
+ <tile id="116">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_4.png" width="20" height="20"/>
  </tile>
  <tile id="34">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/VentDecor.png" width="118" height="112"/>
@@ -299,6 +317,21 @@
  </tile>
  <tile id="110">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png" width="118" height="107"/>
+ </tile>
+ <tile id="119">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/33_bridge.png" width="180" height="42"/>
+ </tile>
+ <tile id="117">
+  <image source="../../../assets/sprites/world/events/steamworks/34_pipe.png" width="44" height="240"/>
+ </tile>
+ <tile id="111">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/34_broken_vendy.png" width="47" height="82"/>
+ </tile>
+ <tile id="118">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/34_furnace_entrance_front.png" width="34" height="45"/>
+ </tile>
+ <tile id="112">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/35_trashcan.png" width="27" height="31"/>
  </tile>
  <tile id="79">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_a_1.png" width="17" height="12"/>

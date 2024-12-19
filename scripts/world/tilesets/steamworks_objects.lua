@@ -5,7 +5,7 @@ return {
   name = "steamworks_objects",
   class = "",
   tilewidth = 200,
-  tileheight = 200,
+  tileheight = 240,
   spacing = 0,
   margin = 0,
   columns = 0,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 111,
+  tilecount = 120,
   tiles = {
     {
       id = 13,
@@ -330,6 +330,48 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/smallgear_4.png",
       width = 19,
       height = 19
+    },
+    {
+      id = 113,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_1.png",
+      width = 20,
+      height = 20,
+      animation = {
+        {
+          tileid = 113,
+          duration = 100
+        },
+        {
+          tileid = 114,
+          duration = 100
+        },
+        {
+          tileid = 115,
+          duration = 100
+        },
+        {
+          tileid = 116,
+          duration = 100
+        }
+      }
+    },
+    {
+      id = 114,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_2.png",
+      width = 20,
+      height = 20
+    },
+    {
+      id = 115,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_3.png",
+      width = 20,
+      height = 20
+    },
+    {
+      id = 116,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/darkgear_4.png",
+      width = 20,
+      height = 20
     },
     {
       id = 34,
@@ -674,6 +716,36 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png",
       width = 118,
       height = 107
+    },
+    {
+      id = 119,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/33_bridge.png",
+      width = 180,
+      height = 42
+    },
+    {
+      id = 117,
+      image = "../../../assets/sprites/world/events/steamworks/34_pipe.png",
+      width = 44,
+      height = 240
+    },
+    {
+      id = 111,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/34_broken_vendy.png",
+      width = 47,
+      height = 82
+    },
+    {
+      id = 118,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/34_furnace_entrance_front.png",
+      width = 34,
+      height = 45
+    },
+    {
+      id = 112,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/35_trashcan.png",
+      width = 27,
+      height = 31
     },
     {
       id = 79,
