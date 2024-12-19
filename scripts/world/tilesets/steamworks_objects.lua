@@ -4,7 +4,7 @@ return {
   tiledversion = "1.11.0",
   name = "steamworks_objects",
   class = "",
-  tilewidth = 200,
+  tilewidth = 300,
   tileheight = 240,
   spacing = 0,
   margin = 0,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 120,
+  tilecount = 119,
   tiles = {
     {
       id = 13,
@@ -622,18 +622,6 @@ return {
       height = 25
     },
     {
-      id = 65,
-      image = "../../../assets/sprites/world/maps/steamworks/small_objects/20_lightbeam_big.png",
-      width = 132,
-      height = 95
-    },
-    {
-      id = 66,
-      image = "../../../assets/sprites/world/maps/steamworks/small_objects/20_lightbeam_big_bottom.png",
-      width = 112,
-      height = 41
-    },
-    {
       id = 67,
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/21_locker.png",
       width = 43,
@@ -714,8 +702,14 @@ return {
     {
       id = 110,
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png",
-      width = 118,
-      height = 107
+      width = 88,
+      height = 73
+    },
+    {
+      id = 120,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/30_bridge.png",
+      width = 300,
+      height = 140
     },
     {
       id = 119,

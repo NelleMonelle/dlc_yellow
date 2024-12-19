@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="200" tileheight="240" tilecount="120" columns="0">
+<tileset version="1.10" tiledversion="1.11.0" name="steamworks_objects" tilewidth="300" tileheight="240" tilecount="119" columns="0">
  <editorsettings>
   <export target="steamworks_objects.lua" format="lua"/>
  </editorsettings>
@@ -270,12 +270,6 @@
  <tile id="64">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/vent.png" width="35" height="25"/>
  </tile>
- <tile id="65">
-  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/20_lightbeam_big.png" width="132" height="95"/>
- </tile>
- <tile id="66">
-  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/20_lightbeam_big_bottom.png" width="112" height="41"/>
- </tile>
  <tile id="67">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/21_locker.png" width="43" height="115"/>
  </tile>
@@ -316,7 +310,10 @@
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/27_fountain.png" width="103" height="80"/>
  </tile>
  <tile id="110">
-  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png" width="118" height="107"/>
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/29_machine.png" width="88" height="73"/>
+ </tile>
+ <tile id="120">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/30_bridge.png" width="300" height="140"/>
  </tile>
  <tile id="119">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/33_bridge.png" width="180" height="42"/>

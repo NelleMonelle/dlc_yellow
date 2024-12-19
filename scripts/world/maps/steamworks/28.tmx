@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="44" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="33">
+ <editorsettings>
+  <export target="28.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="greenhouse"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/steamworks_garden.tsx"/>
+ <tileset firstgid="530" source="../../tilesets/steamworks_dead_bots.tsx"/>
+ <tileset firstgid="566" source="../../tilesets/steamworks.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="44" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+7,2,3,4,5,6,7,2,3,4,5,6,7,2,3,4,5,6,7,2,3,4,5,6,7,2,3,4,5,6,7,2,3,4,5,6,7,2,3,4,5,6,7,8,
+33,26,27,30,31,32,33,27,28,29,30,31,32,33,30,31,32,33,26,27,30,31,26,27,32,33,28,29,30,31,32,33,30,31,30,31,26,27,28,29,30,31,32,33,
+58,51,52,55,56,57,58,52,53,54,55,56,57,58,55,56,57,58,51,52,55,56,51,52,57,58,53,54,55,56,57,58,55,56,55,56,51,52,53,54,55,56,57,58,
+83,76,77,80,81,82,83,77,78,79,80,81,82,83,80,81,82,83,76,77,80,81,76,77,82,83,78,79,80,81,82,83,80,81,80,81,76,77,78,79,80,81,82,83,
+108,101,102,105,106,107,108,102,103,104,105,106,107,108,105,106,107,108,101,102,105,106,101,102,107,108,103,104,105,106,107,108,105,106,105,106,101,102,103,104,105,106,107,108,
+152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,
+152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,
+152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,
+152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,
+0,0,0,0,0,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,
+0,0,0,0,0,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,152,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="44" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,10,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,11,12,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,
+0,0,862,35,0,0,0,0,0,0,0,0,828,0,0,0,0,0,0,36,37,0,0,0,0,0,0,34,35,0,0,0,0,0,0,0,0,828,0,0,0,0,37,0,
+0,0,0,0,0,0,0,0,0,0,0,0,862,0,0,0,0,0,0,0,62,0,0,0,0,0,0,59,0,0,0,0,0,0,0,0,0,862,0,0,0,0,62,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,201,
+0,167,0,165,166,203,0,0,0,165,166,167,0,0,0,0,0,0,167,167,0,0,202,0,0,0,0,203,0,0,165,166,0,0,0,0,0,0,205,0,165,166,167,0,
+0,192,0,190,191,0,167,167,0,190,191,192,0,165,166,167,0,203,192,192,0,165,166,167,0,0,165,166,167,0,190,191,0,167,0,0,165,166,167,0,190,191,192,0,
+0,0,0,0,13,0,192,192,0,0,0,0,0,190,191,192,0,0,0,0,0,190,191,192,0,0,190,191,192,0,0,0,0,192,0,0,190,191,192,0,0,0,0,0,
+0,0,0,0,38,0,0,0,0,0,0,203,0,0,0,0,205,0,0,0,201,0,0,0,0,203,0,0,0,0,0,0,0,0,0,0,202,0,0,0,0,0,203,0,
+0,0,0,0,0,0,0,202,0,13,0,0,201,0,13,0,0,0,0,13,0,0,0,0,13,0,0,203,0,13,0,0,0,0,13,0,0,0,0,13,0,0,0,0,
+0,0,0,0,0,0,0,0,0,38,0,0,0,0,38,0,0,0,0,38,0,0,0,0,38,0,0,0,0,38,0,0,0,0,38,0,0,0,0,38,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="Tile Layer 3" width="44" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,404,405,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,229,230,231,0,0,0,0,0,0,229,230,231,0,0,0,0,0,0,229,230,231,0,0,0,0,0,0,229,230,231,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,254,255,256,0,0,0,0,0,0,254,255,256,0,0,0,0,0,0,254,255,256,0,0,0,0,0,0,254,255,256,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,279,280,281,0,0,0,0,0,0,279,280,281,0,0,0,0,0,0,279,280,281,0,0,0,0,0,0,279,280,281,0,0,0,0,0,0,0,0,
+307,308,307,307,308,309,304,305,306,307,308,307,308,308,309,304,305,306,307,308,308,307,307,309,304,305,306,0,307,308,307,308,309,304,305,306,307,307,308,307,308,309,0,0,
+333,333,332,332,333,334,329,330,331,332,333,332,333,333,334,329,330,331,332,333,333,332,332,334,329,330,331,332,332,333,332,333,334,329,330,331,332,332,333,333,333,334,0,0,
+358,358,357,357,358,359,354,355,356,357,358,357,358,358,359,354,355,356,357,358,358,357,357,359,354,355,356,357,357,358,357,358,359,354,355,356,357,357,358,358,358,359,0,0,
+0,0,0,0,0,0,379,380,0,0,0,0,0,0,0,379,380,0,0,0,0,0,0,0,379,380,0,0,0,0,0,0,0,379,380,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="7" name="Tile Layer 4" width="44" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,540,541,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,556,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,560,561,0,0,0,0,0,542,0,0,0,0,0,0,0,0,0,0,0,533,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,532,0,0,0,0,0,0,0,0,0,0,558,559,0,0,0,0,0,0,0,0,0,0,549,550,551,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="collision">
+  <object id="1" x="200" y="560" width="1560" height="40"/>
+  <object id="2" x="160" y="480" width="40" height="120"/>
+  <object id="3" x="0" y="480" width="160" height="40"/>
+  <object id="4" x="0" y="280" width="1760" height="40"/>
+  <object id="5" x="162" y="464" width="38" height="16"/>
+  <object id="6" x="362" y="544" width="38" height="16"/>
+  <object id="7" x="562" y="544" width="38" height="16"/>
+  <object id="8" x="762" y="544" width="38" height="16"/>
+  <object id="9" x="962" y="544" width="38" height="16"/>
+  <object id="10" x="1162" y="544" width="38" height="16"/>
+  <object id="11" x="1362" y="544" width="38" height="16"/>
+  <object id="12" x="1562" y="544" width="38" height="16"/>
+  <object id="13" x="0" y="320" width="240" height="28"/>
+  <object id="14" x="336" y="320" width="264" height="28"/>
+  <object id="15" x="696" y="320" width="264" height="28"/>
+  <object id="16" x="1056" y="320" width="264" height="28"/>
+  <object id="17" x="1416" y="320" width="264" height="28"/>
+  <object id="29" x="728" y="510" width="24" height="10"/>
+ </objectgroup>
+ <objectgroup id="5" name="objects">
+  <object id="18" name="transition" x="1720" y="320" width="40" height="240">
+   <properties>
+    <property name="map" value="steamworks/27"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+  <object id="19" name="transition" x="0" y="348" width="40" height="132">
+   <properties>
+    <property name="map" value="steamworks/29"/>
+    <property name="marker" value="right"/>
+   </properties>
+  </object>
+  <object id="23" name="interactable" x="1326" y="320" width="84" height="16">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="* To: [color:008080]Science Division"/>
+    <property name="text2">* Employees have reported the
+generator is showing more wear
+than ever.</property>
+    <property name="text3">* The engineers predict the
+machine won't last longer than
+one year from now.</property>
+    <property name="text4">* I need you to speed up the
+testing of alternate power
+sources.</property>
+    <property name="text5" value="* The Underground depends on it."/>
+    <property name="text6" value="* - Head Office"/>
+   </properties>
+  </object>
+  <object id="27" name="interactable" x="1182" y="478" width="52" height="36">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="* (A grown-over robot.)"/>
+    <property name="text2">* (You can almost make out a face
+on its screen.)</property>
+   </properties>
+  </object>
+  <object id="28" name="interactable" x="688" y="478" width="40" height="42">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="* (A grown-over robot.)"/>
+    <property name="text2">* (You avoid touching some
+exposed wires on their back.)</property>
+   </properties>
+  </object>
+  <object id="30" name="interactable" x="496" y="360" width="44" height="38">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="* (A grown-over robot.)"/>
+    <property name="text2">* (Seems more forgotten than the
+rest.)</property>
+   </properties>
+  </object>
+  <object id="31" name="interactable" x="404" y="448" width="72" height="30">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="* (A grown-over robot.)"/>
+    <property name="text2">* (This one looks like it could
+cut you.)</property>
+   </properties>
+  </object>
+  <object id="32" name="interactable" x="246" y="482" width="28" height="38">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="* (A grown-over robot.)"/>
+    <property name="text2">* (You notice a small hat resting
+on top of them.)</property>
+   </properties>
+  </object>
+  <object id="26" name="interactable" x="246" y="320" width="84" height="16">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="* To: [color:008080]Science Division"/>
+    <property name="text2">* The plants should suffice as a
+temporary solution.</property>
+    <property name="text3">* I've heard one of our top
+scientists is working toward a
+new compound.</property>
+    <property name="text4">* One made from special energy.
+It could be the key we need.</property>
+    <property name="text5">* Much more time is necessary to
+develop it properly, however.</property>
+    <property name="text6">* As for the proposed &quot;Greenhouse
+Division&quot;, I have an idea.</property>
+    <property name="text7">* Cheaper, more efficient, and
+trustworthy.</property>
+    <property name="text8">* I'll send you some blueprints
+shortly. Thank you for your
+time and research.</property>
+    <property name="text9" value="* - Head Office"/>
+   </properties>
+  </object>
+  <object id="24" name="interactable" x="966" y="320" width="84" height="16">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="[color:008080]* To: [color:reset]Head Office"/>
+    <property name="text2">[color:008080]* More tests are underway, both
+biological and mechanical.</property>
+    <property name="text3">[color:008080]* We don't know which direction
+will ultimately be best for
+monsterkind yet.</property>
+    <property name="text4">[color:008080]* However, the chemistry lab did
+have a breakthrough regarding a
+white plant.</property>
+    <property name="text5">[color:008080]* I'll get back to you on that
+once further testing has
+commenced.</property>
+    <property name="text6" value="[color:008080]* - Science Division"/>
+   </properties>
+  </object>
+  <object id="25" name="interactable" x="606" y="320" width="84" height="16">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1" value="[color:008080]* To: [color:reset]Head Office"/>
+    <property name="text2" value="[color:008080]* I think we've got it!"/>
+    <property name="text3">[color:008080]* The white plants have proven
+able to generate electricity at
+a fantastic rate!</property>
+    <property name="text4">[color:008080]* The only issues are that they
+grow four times faster than
+normal flora...</property>
+    <property name="text5">[color:008080]* ...and once their power is
+drained, they wilt into a dark,
+sticky substance.</property>
+    <property name="text6">[color:008080]* If this is greenlit, we will
+need a new division to tend to
+these plants.</property>
+    <property name="text7">[color:008080]* Otherwise, working conditions
+will suffer greatly.</property>
+    <property name="text8" value="[color:008080]* - Science Division"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="markers">
+  <object id="20" name="left" x="80" y="400">
+   <point/>
+  </object>
+  <object id="21" name="right" x="1680" y="440">
+   <point/>
+  </object>
+  <object id="22" name="spawn" x="1560" y="440">
+   <point/>
+  </object>
+ </objectgroup>
+</map>
