@@ -383,5 +383,47 @@ return {
         cutscene:hideNametag()
         Game:setFlag("manta_met", true)
         Game:setFlag("manta_spawn_id", 1)
-    end
+    end,
+    split_path = function(cutscene, event)
+        cutscene:wait(cutscene:walkTo(Game.world.player, Game.world.player.x - 220, Game.world.player.y, 2, "left"))
+        cutscene:wait(1)
+        Game.world.player:setFacing("up")
+        cutscene:wait(1)
+        if cutscene:getCharacter("susie_lw") then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Huh.[wait:5] A split path.", "neutral_side", "susie")
+            cutscene:text("* I'd say we should go into the opened door.", "small_smile", "susie")
+            cutscene:text("* Cuz if it's open...[wait:5] This means that someone has already been there.", "closed_grin", "susie")
+            cutscene:text("* And they probably did all the puzzles and stuff there.", "smile", "susie")
+            cutscene:text("* So it'll be an easy route.", "small_smile", "susie")
+            if cutscene:getCharacter("jamm_lw") then
+                cutscene:showNametag("Jamm")
+                cutscene:text("* I wouldn't be so sure,[wait:5] Susie.", "look_left", "jamm")
+                cutscene:showNametag("Susie")
+                cutscene:text("* Why's that?", "nervous_side", "susie")
+                cutscene:showNametag("Jamm")
+                cutscene:text("* That opened path might be a trap set up by Axis.", "nervous_left", "jamm")
+                cutscene:text("* Maybe he expects us to go there so he could ambush us.", "determined", "jamm")
+                cutscene:showNametag("Susie")
+                cutscene:text("* Dang,[wait:5] you might be right.", "nervous_side", "susie")
+                cutscene:text("* But I suppose the choice is still up to the leader.", "neutral_side", "susie")
+            end
+            cutscene:hideNametag()
+        elseif cutscene:getCharacter("jamm_lw") then
+            cutscene:showNametag("Jamm")
+            cutscene:text("* I'd say we should go into the upper path.", "neutral", "jamm")
+            cutscene:text("* Because that opened path is kind of suspicious...", "nervous_left", "jamm")
+            cutscene:text("* It might be a trap set up by Axis.", "look_left", "jamm")
+            cutscene:hideNametag()
+        end
+    end,
+    chem_door = function(cutscene, event)
+        cutscene:wait(1)
+        Game.world.map:getEvent("stw_chem_door"):setSprite("world/maps/steamworks/small_objects/31_door", 1/10)
+        Assets.playSound("sliding_door_open")
+        cutscene:wait(0.5)
+        Game.world.map:getEvent("stw_chem_door"):setSprite("world/maps/steamworks/small_objects/31_door_5")
+        cutscene:wait(1)
+        Game:setFlag("31_chem_door_opened", true)
+    end,
 }
