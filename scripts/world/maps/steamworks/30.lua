@@ -480,7 +480,7 @@ return {
           visible = true,
           properties = {
             ["map"] = "steamworks/30b",
-            ["marker"] = "up"
+            ["marker"] = "right"
           }
         },
         {

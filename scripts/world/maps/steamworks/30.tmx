@@ -105,7 +105,7 @@
   <object id="15" name="transition" x="0" y="280" width="40" height="80">
    <properties>
     <property name="map" value="steamworks/30b"/>
-    <property name="marker" value="up"/>
+    <property name="marker" value="right"/>
    </properties>
   </object>
   <object id="27" gid="520" x="1300" y="280" width="40" height="40"/>
