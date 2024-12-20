@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="33" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="23">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="33" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="25">
  <editorsettings>
   <export target="31.lua" format="lua"/>
  </editorsettings>
@@ -69,6 +69,12 @@
    <point/>
   </object>
   <object id="13" name="spawn" x="700" y="600">
+   <point/>
+  </object>
+  <object id="23" name="factory" x="360" y="640">
+   <point/>
+  </object>
+  <object id="24" name="chem_lab" x="700" y="440">
    <point/>
   </object>
  </objectgroup>

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 23,
+  nextobjectid = 25,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -383,6 +383,32 @@ return {
           shape = "point",
           x = 700,
           y = 600,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 23,
+          name = "factory",
+          type = "",
+          shape = "point",
+          x = 360,
+          y = 640,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "chem_lab",
+          type = "",
+          shape = "point",
+          x = 700,
+          y = 440,
           width = 0,
           height = 0,
           rotation = 0,
