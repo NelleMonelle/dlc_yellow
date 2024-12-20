@@ -11,7 +11,7 @@ function Vendy:init()
         self.buy_menu_text = "[emote:face_happy]Choose an\nitem!"
         self.buy_refuse_text = "[emote:face_happy]Changed your\nmind?"
         self.buy_text = "[emote:face_happy]Item\ndispensed!"
-        self.buy_too_expensive_text = "[emote:face_uhh]* You do not have enough money\n:["
+        self.buy_too_expensive_text = "[emote:face_uhh]You do not have enough money\n:["
         self.buy_no_space_text = "[emote:face_uhh]You do not\nhave enough\nspace :["
         self.talk_text = "[emote:face_happy]* Yes?"
         self.sell_no_selling_text = {
@@ -84,7 +84,7 @@ function Vendy:startTalk(talk)
                 "* From refrigerators to washing\nmachines,[wait:5] the assembly line\nmakes it easy for monsters to\ntake it easy!",
                 "* And do not forget the second\nfloor which specializes in\nsmelting materials mined around\nthe Underground into the\ncurrency known as G.",
                 "* It's what makes the economy\nrun as adequately as it does!",
-                "* From the Chemistry Wing to the\nGreenhouse, there is a job for\neveryone!",
+                "* From the Chemistry Wing to the\nGreenhouse,[wait:5] there is a job for\neveryone!",
                 "* The Steamworks:[wait:5] Tomorrow means\nthe Surface!"
             })
         else
