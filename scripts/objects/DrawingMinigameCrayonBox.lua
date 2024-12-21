@@ -7,7 +7,7 @@ function DrawingMinigameCrayonBox:init()
     self.texture_crayons = Assets.getFrames("id_minigame/crayon")
     self.box_clock = 0
     self.crayons = {}
-    local x,y = 28,15
+    local x,y = 28,20
     for i=1,8 do
 
         x, y = x + 8, y + 1.5
