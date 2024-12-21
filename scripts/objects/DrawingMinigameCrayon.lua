@@ -1,7 +1,7 @@
 ---@class DrawingMinigameCrayon: Sprite
 local DrawingMinigameCrayon, super = Class(Sprite)
 
--- TODO: get the actual colors for 3-8
+-- TODO: get the actual colors for 3-7
 local crayon_colors = {
     {213/255, 222/255,231/255},
     {137/255, 163/255, 187/255},
@@ -10,7 +10,7 @@ local crayon_colors = {
     {1,1,0},
     {1,0,0},
     {.5,0,0},
-    {.2,0,0},
+    {54/255, 0/255, 0/255},
 }
 
 function DrawingMinigameCrayon:init(color_id,x,y)
