@@ -27,7 +27,6 @@ function DrawingMinigame:update()
     if Input.pressed("menu") then
         self.canvas:newImageData():encode("png", "saves/stworks_id_"..Game.save_id..".png")
         self.done = true
-        self:remove()
     end
 end
 

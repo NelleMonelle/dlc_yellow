@@ -9,10 +9,21 @@ return {
             cutscene:text("* (They seemed to be in the\nmiddle of creating a new\nSteamworks ID.)")
             local opinion = cutscene:textChoicer("* (Finish their work?)\n", {"Yes", "    No"})
             if opinion == 1 then
-                Game.world.music:fade(0, 0.5)
+                Game.world.music:fade(0, 2)
                 local minigame = Game.world:spawnObject(DrawingMinigame("id_minigame/crayon_id"))
+                minigame.active = false
+                minigame.alpha = 0
+                cutscene.world.timer:tween(2, minigame, {alpha = 1})
+                cutscene:wait(2)
+                local mus = Music("build_a_bot")
+                minigame.active = true
+
                 cutscene:wait(function() return minigame.done end)
-                Game.world.music:fade(1, 0.5)
+                minigame:fadeOutAndRemove(1)
+                mus:fade(0, 1)
+                cutscene:wait(1)
+                mus:remove()
+                Game.world.music:fade(1, 1)
                 Game.inventory:addItem("steamworks_id")
                 Game:setFlag("got_steamworks_id", true)
             end
