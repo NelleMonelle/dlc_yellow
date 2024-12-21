@@ -24,7 +24,13 @@ function item:init()
 end
 
 function item:onWorldUse()
-    Game.world:openMenu(ImageViewer("id_minigame/crayon_id"))
+    ---@type Sprite
+    local viewer = ImageViewer("id_minigame/crayon_id")
+    local ok, texture = pcall(love.graphics.newImage, "saves/stworks_id_"..Game.save_id..".png")
+    if ok then viewer:setTexture(texture) end
+    viewer:setPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+    viewer:setOrigin(.5)
+    Game.world:openMenu(viewer)
     return false
 end
 
