@@ -10,7 +10,7 @@ return {
             local opinion = cutscene:textChoicer("* (Finish their work?)\n", {"Yes", "    No"})
             if opinion == 1 then
                 Game.world.music:fade(0, 2)
-                local minigame = Game.world:spawnObject(DrawingMinigame("id_minigame/crayon_id"), WORLD_LAYERS["ui"])
+                local minigame = Game.world:spawnObject(DrawingMinigame("id_minigame/crayon_id", "stworks_id"), WORLD_LAYERS["ui"])
                 minigame.active = false
                 minigame.alpha = 0
                 cutscene.world.timer:tween(2, minigame, {alpha = 1})

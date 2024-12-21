@@ -1,8 +1,11 @@
 ---@class DrawingMinigame: Object
 local DrawingMinigame, super = Class(Object)
 
-function DrawingMinigame:init(sprite)
+function DrawingMinigame:init(sprite, savename, new_only)
+    self.savename = savename
     local base_texture = Assets.getTexture(sprite)
+    local ok, old_texture = pcall(love.graphics.newImage, "saves/"..savename.."_"..Game.save_id..".png")
+    if ok and not new_only then base_texture = old_texture end
     super.init(self,0,0, base_texture:getWidth(), base_texture:getHeight())
     self.canvas = love.graphics.newCanvas(self:getSize())
     Draw.pushCanvas(self.canvas)
@@ -50,7 +53,7 @@ function DrawingMinigame:update()
     end
     Draw.popCanvas()
     if Input.pressed("menu") and not Input.ctrl() then
-        self.canvas:newImageData():encode("png", "saves/stworks_id_"..Game.save_id..".png")
+        self.canvas:newImageData():encode("png", "saves/"..savename.."_"..Game.save_id..".png")
         self.done = true
     end
 end
