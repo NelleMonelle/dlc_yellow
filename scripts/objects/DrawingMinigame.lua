@@ -53,7 +53,7 @@ function DrawingMinigame:update()
     end
     Draw.popCanvas()
     if Input.pressed("menu") and not Input.ctrl() then
-        self.canvas:newImageData():encode("png", "saves/"..savename.."_"..Game.save_id..".png")
+        self.canvas:newImageData():encode("png", "saves/"..self.savename.."_"..Game.save_id..".png")
         self.done = true
     end
 end
