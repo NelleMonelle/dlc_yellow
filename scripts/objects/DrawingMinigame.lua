@@ -18,6 +18,7 @@ function DrawingMinigame:init(sprite)
     self.cursor:setOrigin(0,0)
     self.current_color = {213/255, 222/255,231/255}
     self.crayons = self:addChild(DrawingMinigameCrayonBox())
+    self.size = 2
 end
 
 function DrawingMinigame:draw()
@@ -43,7 +44,7 @@ function DrawingMinigame:update()
             --(self.cursor.x, self.cursor.y,prev_cur_x,prev_cur_y
             local x = Utils.lerp(self.cursor.x, prev_cur_x, i)
             local y = Utils.lerp(self.cursor.y, prev_cur_y, i)
-            love.graphics.rectangle("fill", x-4, y-4, 8, 8)
+            love.graphics.rectangle("fill", x-(self.size/2), y-(self.size/2), self.size, self.size)
         end
     end
     Draw.popCanvas()
