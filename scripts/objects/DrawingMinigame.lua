@@ -1,3 +1,4 @@
+---@class DrawingMinigame: Object
 local DrawingMinigame, super = Class(Object)
 
 function DrawingMinigame:init(sprite)
@@ -12,7 +13,11 @@ function DrawingMinigame:init(sprite)
     self:setOrigin(.5,0)
     self:setPosition(SCREEN_WIDTH/2, 30)
     self.cursor = self:addChild(Sprite("id_minigame/crayon_cursor"))
+    self.cursor.layer = 5
+    self.cursor:setHitbox(0,0,1,1)
     self.cursor:setOrigin(0,0)
+    self.current_color = {213/255, 222/255,231/255}
+    self.crayons = self:addChild(DrawingMinigameCrayonBox())
 end
 
 function DrawingMinigame:draw()
@@ -23,7 +28,7 @@ end
 function DrawingMinigame:update()
     local prev_cur_x, prev_cur_y = self.cursor.x, self.cursor.y
     if Input.usingGamepad() then
-        if Utils.dist(0,0,Input.gamepad_left_x, Input.gamepad_left_y) > 0.2 then
+        if Utils.dist(0,0,Input.gamepad_left_x, Input.gamepad_left_y) > 0.3 then
             self.cursor:move(Input.gamepad_left_x, Input.gamepad_left_y, DT * 150)
         end
     else
@@ -31,10 +36,9 @@ function DrawingMinigame:update()
     end
     super.update(self)
     Draw.pushCanvas(self.canvas)
-    if Input.mouseDown(1) then
+    if Input.mouseDown(1) or Input.down("confirm") then
         local x,y = Input.getMousePosition()
-        love.graphics.setLineWidth(8)
-        love.graphics.setLineJoin("miter")
+        Draw.setColor(self.current_color)
         for i=0, 1, 1/math.floor(Utils.dist(self.cursor.x, self.cursor.y,prev_cur_x,prev_cur_y)+1) do
             --(self.cursor.x, self.cursor.y,prev_cur_x,prev_cur_y
             local x = Utils.lerp(self.cursor.x, prev_cur_x, i)
