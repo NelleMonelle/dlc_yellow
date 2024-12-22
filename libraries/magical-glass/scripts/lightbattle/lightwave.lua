@@ -3,12 +3,13 @@ local LightWave, super = Class(Wave)
 function LightWave:init()
     super.init(self)
     
-    self.allow_duplicates = false
+    self.allow_duplicates = true
 
     self.has_soul = true
     self.darken = false
     self.auto_clear = true
     self.has_arena = true
+    self.fullscreen = false
     
     self.soul_start_x = nil
     self.soul_start_y = nil

@@ -133,9 +133,9 @@ function LightActionButton:select()
             Game.battle:setState("MENUSELECT", "SPELL")
         end
     elseif self.type == "item" then
+        Game.battle:clearMenuItems()
         Game.battle.current_menu_columns = 2
         Game.battle.current_menu_rows = 2
-        Game.battle:clearMenuItems()
         for i, item in ipairs(Game.inventory:getStorage("items")) do
             Game.battle:addMenuItem({
                 ["name"] = item:getName(),
@@ -167,9 +167,9 @@ function LightActionButton:select()
             Game.battle:setState("MENUSELECT", "ITEM")
         end
     elseif self.type == "mercy" then
+        Game.battle:clearMenuItems()
         Game.battle.current_menu_columns = 1
         Game.battle.current_menu_rows = 3
-        Game.battle:clearMenuItems()
         Game.battle:addMenuItem({
             ["name"] = "Spare",
             ["special"] = "spare",
@@ -191,7 +191,7 @@ function LightActionButton:select()
                 ["special"] = "defend",
                 ["callback"] = function(menu_item)
                     Game.battle:toggleSoul(false)
-                    Game.battle:pushAction("DEFEND", nil, {tp = Game.battle.tension_bar.visible and -16 or 0})
+                    Game.battle:pushAction("DEFEND", nil, {tp = Game.battle.tension and -16 or 0})
                 end
             })
         end

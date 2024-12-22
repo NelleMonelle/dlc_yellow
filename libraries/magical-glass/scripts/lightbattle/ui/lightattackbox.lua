@@ -40,7 +40,7 @@ function LightAttackBox:createBolts()
         lane.attacked = false
         lane.score = 0
         lane.stretch = nil
-        lane.direction = Game.battle.multi_mode and "left" or lane.weapon and lane.weapon.getLightBoltDirection and lane.weapon:getLightBoltDirection() or Game:isLight() and "right" or Utils.pick({"right", "left"})
+        lane.direction = Game.battle.multi_mode and "left" or lane.weapon and lane.weapon.getLightBoltDirection and lane.weapon:getLightBoltDirection() or Utils.pick({"right", "left"})
 
         if (lane.weapon and lane.weapon.getLightBoltCount and lane.weapon:getLightBoltCount() or 1) > 1 then
             lane.attack_type = "shoe"
@@ -238,6 +238,9 @@ function LightAttackBox:miss(battler)
 end
 
 function LightAttackBox:update()
+    super.update(self)
+
+    if Game.battle == nil then return end -- prevents a crash
 
     self.timer = self.timer + DTMULT
 
@@ -286,8 +289,6 @@ function LightAttackBox:update()
             end
         end
     end
-
-    super.update(self)
 end
 
 function LightAttackBox:draw()

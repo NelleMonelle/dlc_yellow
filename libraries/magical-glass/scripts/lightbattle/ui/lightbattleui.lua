@@ -101,6 +101,9 @@ function LightBattleUI:init()
     end
     
     self.flee_text = Text("", 62, 15, nil, nil, {["font"] = "main_mono"})
+    if not Game:isLight() then
+        self.flee_text.style = "dark"
+    end
     self.flee_text.line_offset = 4
     Game.battle.arena:addChild(self.flee_text)
     
@@ -814,7 +817,7 @@ function LightBattleUI:drawState()
             Draw.draw(self.arrow_sprite, 45, 10 - (math.sin(Kristal.getTime()*6) * 2), 0, 1, -1)
         end
     elseif state == "FLEEING" or state == "TRANSITIONOUT" then
-        local message = Game.battle.encounter:getUsedFleeMessage() or ""
+        local message = Game.battle.encounter.used_flee_message or ""
         self.flee_text:setText("[shake:"..MagicalGlassLib.light_battle_shake_text.."]" .. message)
     end
 
@@ -823,9 +826,9 @@ end
 function LightBattleUI:update()
     if self.help_window then
         if math.ceil(self.help_window.y) < 280 then
-            self.help_window.visible = true
+            self.help_window:toggleVisibility(true)
         else
-            self.help_window.visible = false
+            self.help_window:toggleVisibility(false)
         end
     end
 end

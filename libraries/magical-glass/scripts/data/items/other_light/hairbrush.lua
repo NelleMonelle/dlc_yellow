@@ -1,11 +1,10 @@
-local item, super = Class(LightEquipItem, "light/hairbrush")
+local item, super = Class(LightEquipItem, "custom/hairbrush")
 
 function item:init()
     super.init(self)
 
     -- Display name
     self.name = "Hairbrush"
-    self.short_name = "Hirbrush"
     self.serious_name = "Brush"
 
     -- Item type (item, key, weapon, armor)

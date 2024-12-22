@@ -9,12 +9,13 @@ function LightPartyBattler:init(chara)
     self.action = nil
 
     self.defending = false
-    self.hurting = false
 
     self.is_down = false
     self.sleeping = false
 
     self.targeted = false
+    
+    self.has_save = false
     
     -- Karma (KR) calculations
     self.karma = 0
@@ -28,22 +29,14 @@ function LightPartyBattler:canTarget()
     return (not self.is_down)
 end
 
-function LightPartyBattler:onTurnStart()
-    if Game.battle.turn_count == 1 then
-        self:onBattleStart()
-    end
-end
-
-function LightPartyBattler:calculateDamage(amount, min, cap)
+function LightPartyBattler:calculateDamage(amount)
     local def = self.chara:getStat("defense")
     local max_hp = self.chara:getStat("health")
+    local hp = self.chara:getHealth()
+    
     if Game:isLight() then
-        for i = 21, math.min(max_hp, 99) do
-            if i % 10 == 0 or i == 21 then
-                amount = amount + 1
-            end
-        end
-        amount = Utils.round((amount - def) / 5)
+        local bonus = MagicalGlassLib.bonus_damage ~= false and hp > 20 and math.min(1 + math.floor((hp - 20) / 10), 8) or 0
+        amount = Utils.round(amount / 5 + bonus - def / 5)
     else
         local threshold_a = (max_hp / 5)
         local threshold_b = (max_hp / 8)
@@ -60,14 +53,6 @@ function LightPartyBattler:calculateDamage(amount, min, cap)
                 break
             end
         end
-    end
-    
-    if min and amount < min then
-        amount = min
-    end
-
-    if cap and amount > cap then
-        amount = cap
     end
 
     return math.max(amount, 1)
@@ -120,15 +105,13 @@ function LightPartyBattler:hurt(amount, exact, color, options)
             self:removeHealth(amount)
         end
     else
-        -- We're targeting everyone.
         if not exact then
             amount = self:calculateDamage(amount)
-            -- we don't have elements right now
             local element = 0
             amount = math.ceil((amount * self:getElementReduction(element)))
 
             if self.defending then
-                amount = math.ceil((3 * amount) / 4) -- Slightly different than the above
+                amount = math.ceil((3 * amount) / 4)
             end
         end
 
@@ -137,10 +120,9 @@ function LightPartyBattler:hurt(amount, exact, color, options)
         else
             self:removeHealthBroken(amount) -- Use a separate function for cleanliness
         end
-
     end
 
-    Game.battle:shakeCamera(2, 2, 0.35)
+    Game.battle:shakeCamera(2, 2, 0.35, 1)
 end
 
 function LightPartyBattler:removeHealth(amount)
@@ -248,9 +230,10 @@ function LightPartyBattler:addKarma(amount)
 end
 
 function LightPartyBattler:toggleSaveButton(value)
+    self.has_save = value and true or false
     for _,action_box in ipairs(Game.battle.battle_ui.action_boxes) do
         if action_box.battler == self then
-            for _,button in ipairs(action_box.buttons) do
+            for _,button in ipairs(action_box.buttons or {}) do
                 if button.type == "act" then
                     button.rainbow = value and true or false
                     if value then
@@ -263,6 +246,7 @@ function LightPartyBattler:toggleSaveButton(value)
                     button:setColor(1, 1, 1, 1)
                 end
             end
+            break
         end
     end
 end

@@ -16,7 +16,7 @@ function character:init()
     }
 
     -- Default light world equipment item IDs (saves current equipment)
-    self.lw_weapon_default = "light/ring"
+    self.lw_weapon_default = "custom/ring"
     self.lw_armor_default = "light/wristwatch"
     
     if Kristal.getLibConfig("magical-glass", "debug") then
@@ -34,6 +34,15 @@ function character:init()
         self.undertale_movement = true
     end
 
+end
+
+if Kristal.getLibConfig("magical-glass", "debug") then
+    function character:onTurnStart(battler)
+        super.onTurnStart(self, battler)
+        if self:getFlag("auto_attack", false) then
+            Game.battle:pushForcedAction(battler, "AUTOATTACK", Game.battle:getActiveEnemies()[1], nil, {points = 150})
+        end
+    end
 end
 
 function character:lightLVStats()

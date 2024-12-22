@@ -41,6 +41,9 @@ function LightEncounter:init()
     
     -- Whether Karma (KR) UI changes will appear.
     self.karma_mode = false
+    
+    -- Whether "* But it refused." will replace the game over and revive the player.
+    self.invincible = false
 
     -- Whether the flee command is available at the mercy button
     self.can_flee = true
@@ -54,8 +57,6 @@ function LightEncounter:init()
         "* Don't slow me down.", --1/20
         "* Escaped..." --17/20
     }
-
-    self.used_flee_message = nil
 end
 
 function LightEncounter:onSoulTransition()
@@ -192,6 +193,7 @@ function LightEncounter:storyWave()
 end
 
 function LightEncounter:setBattleState()
+    if Game.battle.forced_victory then return end
     if self.story then
         Game.battle:setState("ENEMYDIALOGUE")
         Game.battle.soul.can_move = true
@@ -218,11 +220,6 @@ function LightEncounter:onCharacterTurn(battler, undo) end
 
 function LightEncounter:onFlee()
     Assets.playSound("escaped")
-    
-    for _,battler in ipairs(Game.battle.party) do
-        battler.chara:setHealth(battler.chara:getHealth() - battler.karma)
-        battler.karma = 0
-    end
     
     local money = self:getVictoryMoney(Game.battle.money) or Game.battle.money
     local xp = self:getVictoryXP(Game.battle.xp) or Game.battle.xp
@@ -375,10 +372,6 @@ end
 
 function LightEncounter:getFleeMessage()
     return self.flee_messages[math.min(Utils.random(1, 20, 1), #self.flee_messages)]
-end
-
-function LightEncounter:getUsedFleeMessage()
-    return self.used_flee_message
 end
 
 function LightEncounter:getEncounterText()

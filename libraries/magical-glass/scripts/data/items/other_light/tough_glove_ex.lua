@@ -1,12 +1,12 @@
-local item, super = Class(LightEquipItem, "ut_weapons/tough_glove_ex")
+local item, super = Class(LightEquipItem, "custom/tough_glove_ex")
 
 function item:init()
     super.init(self)
 
     -- Display name
     self.name = "Tough Glove EX"
-    self.short_name = "TuffGloveEX"
-    self.serious_name = "Glove EX"
+    self.short_name = "TuffGlvEX"
+    self.serious_name = "GlvEX"
 
     -- Item type (item, key, weapon, armor)
     self.type = "weapon"
@@ -14,19 +14,19 @@ function item:init()
     self.light = true
 
     -- Shop description
-    self.shop = "Slap 'em."
+    self.shop = "Slap 'em,\nbetter!"
     -- Default shop price (sell price is halved)
-    self.price = 50
+    self.price = 180
     -- Default shop sell price
-    self.sell_price = 50
+    self.sell_price = 60
     -- Whether the item can be sold
     self.can_sell = true
 
     -- Item description text (unused by light items outside of debug menu)
-    self.description = "A worn pink leather glove.\nFor five-fingered folk."
+    self.description = "A worn pink leather glove.\nFor five-fingered folk.\nAttacks with multiple bolts, which allows it to deal more damage."
 
     -- Light world check text
-    self.check = "Weapon AT 5\n* A worn pink leather glove.[wait:10]\nFor five-fingered folk."
+    self.check = {"Weapon AT 5\n* A worn pink leather glove.[wait:10]\nFor five-fingered folk.", "* Attacks with multiple bolts, which allows it to deal more damage."}
 
     -- Where this item can be used (world, battle, all, or none)
     self.usable_in = "all"
@@ -39,14 +39,13 @@ function item:init()
 
     self.light_bolt_count = 4
     self.light_bolt_speed = 8
-    self.light_bolt_speed_variance = nil
-    self.light_bolt_direction = "random"
+    self.light_bolt_direction = "right"
     self.light_bolt_miss_threshold = 4
-    self.light_multibolt_variance = {{15}, {50}, {85}}
+    self.light_multibolt_variance = {{15, 50}, {85, 120}, {155, 190}}
     
     self.bolt_count = 4
     self.bolt_speed = 4
-    self.multibolt_variance = 30
+    self.multibolt_variance = {{30, 60}}
 
     self.attack_sound = "punchstrong"
 
@@ -92,6 +91,7 @@ function item:onLightBoltHit(lane)
         small_punch.layer = BATTLE_LAYERS["above_ui"] + 5
         small_punch.color = {battler.chara:getLightMultiboltAttackColor()}
         small_punch:setPosition(enemy:getRelativePos((love.math.random(enemy.width)), (love.math.random(enemy.height))))
+        Game.battle:shakeAttackSprite(small_punch)
         enemy.parent:addChild(small_punch)
         small_punch:play(2/30, false, function(s) s:remove(); Utils.removeFromTable(enemy.dmg_sprites, small_punch) end)
     end
@@ -114,16 +114,15 @@ function item:onLightAttack(battler, enemy, damage, stretch, crit)
     sprite.color = {battler.chara:getLightMultiboltAttackColor()}
     enemy.parent:addChild(sprite)
 
-    if crit then
-        Assets.stopAndPlaySound("saber3", 0.7)
-    end
+    if battler.chara:getWeapon() then -- attacking without a weapon
+        if crit then
+            sprite:setColor(1, 1, 130/255)
+            Assets.stopAndPlaySound("saber3")
+        end
 
-    Game.battle.timer:during(1, function()
-        sprite.x = sprite.x - 2 * DTMULT
-        sprite.y = sprite.y - 2 * DTMULT
-        sprite.x = sprite.x + Utils.random(4) * DTMULT
-        sprite.y = sprite.y + Utils.random(4) * DTMULT
-    end)
+        Game.battle:shakeCamera(2, 2, 0.35, 1)
+    end
+    Game.battle:shakeAttackSprite(sprite)
 
     sprite:play(2/30, false, function(this)   
         local sound = enemy:getDamageSound() or "damage"

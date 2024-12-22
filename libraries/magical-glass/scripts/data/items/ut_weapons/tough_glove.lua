@@ -91,17 +91,9 @@ function item:onLightAttack(battler, enemy, damage, stretch, crit)
         sprite.layer = BATTLE_LAYERS["above_ui"] + 5
         sprite.color = {battler.chara:getLightMultiboltAttackColor()}
         enemy.parent:addChild(sprite)
-
-        if crit then
-            Assets.stopAndPlaySound("saber3", 0.7)
-        end
-
-        Game.battle.timer:during(1, function()
-            sprite.x = sprite.x - 2 * DTMULT
-            sprite.y = sprite.y - 2 * DTMULT
-            sprite.x = sprite.x + Utils.random(4) * DTMULT
-            sprite.y = sprite.y + Utils.random(4) * DTMULT
-        end)
+        
+        Game.battle:shakeCamera(2, 2, 0.35, 1)
+        Game.battle:shakeAttackSprite(sprite)
 
         sprite:play(2/30, false, function(this)
             local sound = enemy:getDamageSound() or "damage"
@@ -166,7 +158,7 @@ function item:onLightAttack(battler, enemy, damage, stretch, crit)
                 if sound and type(sound) == "string" and (damage > 0 or enemy.always_play_damage_sound) then
                     Assets.stopAndPlaySound(sound)
                 end
-                local new_damage = math.ceil(damage * (punches / self.attack_punches))
+                local new_damage = math.ceil((crit and Utils.round(damage * (21/22)) or damage) * (punches / self.attack_punches))
                 enemy:hurt(new_damage, battler)
         
                 if punches < self.attack_punches and damage <= 0 then
@@ -226,6 +218,7 @@ function item:onLightAttack(battler, enemy, damage, stretch, crit)
                         small_punch.color = {battler.chara:getLightMultiboltAttackColor()}
                         small_punch:setPosition(enemy:getRelativePos((love.math.random(enemy.width)), (love.math.random(enemy.height))))
                         enemy.parent:addChild(small_punch)
+                        Game.battle:shakeAttackSprite(small_punch)
                         small_punch:play(2/30, false, function(s) s:remove(); Utils.removeFromTable(enemy.dmg_sprites, small_punch) end)
                     else
                         if damage <= 0 then
@@ -236,6 +229,7 @@ function item:onLightAttack(battler, enemy, damage, stretch, crit)
                         src:setPitch(self:getLightAttackPitch() or 1)
                         
                         local punch = Sprite("effects/attack/hyperfist")
+                        Game.battle:shakeCamera(2, 2, 0.35, 1)
                         punch.battler_id = battler and Game.battle:getPartyIndex(battler.chara.id) or nil
                         table.insert(enemy.dmg_sprites, punch)
                         punch:setOrigin(0.5)
@@ -244,6 +238,7 @@ function item:onLightAttack(battler, enemy, damage, stretch, crit)
                         local relative_pos_x, relative_pos_y = enemy:getRelativePos((enemy.width / 2) - (#Game.battle.attackers - 1) * 5 / 2 + (Utils.getIndex(Game.battle.attackers, battler) - 1) * 5, (enemy.height / 2))
                         punch:setPosition(relative_pos_x + enemy.dmg_sprite_offset[1], relative_pos_y + enemy.dmg_sprite_offset[2])
                         enemy.parent:addChild(punch)
+                        Game.battle:shakeAttackSprite(punch)
                         punch:play(2/30, false, function(s) s:remove(); Utils.removeFromTable(enemy.dmg_sprites, punch) finishAttack() end)
                     end
 

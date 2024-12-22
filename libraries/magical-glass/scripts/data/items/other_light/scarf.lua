@@ -1,4 +1,4 @@
-local item, super = Class(LightEquipItem, "light/scarf")
+local item, super = Class(LightEquipItem, "custom/scarf")
 
 function item:init()
     super.init(self)
@@ -20,9 +20,11 @@ function item:init()
     -- Where this item can be used (world, battle, all, or none)
     self.usable_in = "all"
     
-    self.price = 200
+    self.price = 100
     
     self.shop_magic = true
+    
+    self.light_bolt_direction = "random"
 
     -- Equip bonuses (for weapons and armor)
     self.bonuses = {
