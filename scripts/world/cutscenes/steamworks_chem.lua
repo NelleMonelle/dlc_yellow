@@ -10,6 +10,8 @@ return {
             local opinion = cutscene:textChoicer("* (Finish their work?)\n", {"Yes", "    No"})
             if opinion == 1 then
                 Game.world.music:fade(0, 2)
+				local cursor_hack = Kristal.Config["alwaysShowCursor"] -- God damn it
+				Kristal.Config["alwaysShowCursor"] = false
                 local minigame = Game.world:spawnObject(DrawingMinigame("id_minigame/crayon_id", "stworks_id"), WORLD_LAYERS["ui"])
                 minigame.active = false
                 minigame.alpha = 0
@@ -24,6 +26,7 @@ return {
                 cutscene:wait(1)
                 mus:remove()
                 Game.world.music:fade(1, 1)
+				Kristal.Config["alwaysShowCursor"] = cursor_hack
                 Game.inventory:addItem("steamworks_id")
                 Game:setFlag("got_steamworks_id", true)
             end

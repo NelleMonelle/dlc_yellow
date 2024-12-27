@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   name = "steamworks_objects",
   class = "",
   tilewidth = 300,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 119,
+  tilecount = 125,
   tiles = {
     {
       id = 13,
@@ -662,6 +662,42 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/21_wall_crack_4.png",
       width = 64,
       height = 64
+    },
+    {
+      id = 121,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/office_doors_1.png",
+      width = 36,
+      height = 49
+    },
+    {
+      id = 122,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/office_doors_2.png",
+      width = 36,
+      height = 49
+    },
+    {
+      id = 123,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/office_doors_3.png",
+      width = 36,
+      height = 49
+    },
+    {
+      id = 124,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/office_doors_4.png",
+      width = 36,
+      height = 49
+    },
+    {
+      id = 125,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/office_doors_5.png",
+      width = 36,
+      height = 49
+    },
+    {
+      id = 126,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/office_doors_6.png",
+      width = 36,
+      height = 49
     },
     {
       id = 74,

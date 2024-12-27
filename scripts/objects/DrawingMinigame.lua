@@ -19,7 +19,7 @@ function DrawingMinigame:init(sprite, savename, new_only)
     self.cursor.layer = 5
     self.cursor:setHitbox(0,0,1,1)
     self.cursor:setOrigin(0,0)
-    self.current_color = {213/255, 222/255,231/255}
+    self.current_color = {62/255, 55/255, 207/255}
     self.crayons = self:addChild(DrawingMinigameCrayonBox())
     self.size = 2
     self:addChild(Text(Input.getText("menu")..": Finish",200,210)):setScale(.5)

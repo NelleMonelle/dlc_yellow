@@ -14,9 +14,6 @@ function SteamworksRoom34BG:init(x, y, width, height, properties)
 	self.siner = 0
 	self.frame = 0
 	self.gradient_shader = Assets.newShader("alphagradientv")
-	self.gradient_shader:send("scale", 1)
-	self.gradient_shader:sendColor("from", {237/255, 0, 143/255, 0})
-	self.gradient_shader:sendColor("to", {1, 1, 0, 0.7})
 end
 
 function SteamworksRoom34BG:update()
@@ -34,6 +31,9 @@ function SteamworksRoom34BG:draw()
 	local last_shader = love.graphics.getShader()
 
 	love.graphics.setShader(self.gradient_shader)
+	self.gradient_shader:send("scale", 1)
+	self.gradient_shader:sendColor("from", {237/255, 0, 143/255, 0})
+	self.gradient_shader:sendColor("to", {1, 1, 0, 0.7})
 	local ry = (self.room_height/1.05) + self.siner
 	-- I have to cheat in a "rectangle" here lol
 	Draw.draw(self.fill, 0, ry, 0, self.room_width, SCREEN_HEIGHT-ry)

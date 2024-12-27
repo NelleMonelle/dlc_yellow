@@ -968,7 +968,7 @@ function LightBattle:onStateChange(old,new)
         if self.state_reason ~= "DONTPROCESS" then
             self:tryProcessNextAction()
         end
-    elseif new == "MENUSELECT" then
+    elseif new == "MENUSELECT" or new == "SOUSBORG" then -- ugly hack lmao
         if self.battle_ui.help_window then
             self.battle_ui.help_window:setTension(0)
         end

@@ -177,8 +177,9 @@ function LightBattleUI:drawState()
     end
     self.flee_text:setText("")
     
-    if state == "MENUSELECT" then
-    
+	-- ugly hack lmao
+    if state == "MENUSELECT" or state == "SOUSBORG" then
+	
         local page = Game.battle:isPagerMenu() and math.ceil(Game.battle.current_menu_x / Game.battle.current_menu_columns) - 1 or math.ceil(Game.battle.current_menu_y / Game.battle.current_menu_rows) - 1
         local max_page = math.ceil(#Game.battle.menu_items / (Game.battle.current_menu_columns * Game.battle.current_menu_rows)) - 1
 
