@@ -24,14 +24,15 @@ function actor:init()
     self.can_blush = false
 
     self.talk_sprites = {
-        ["down"] = 0.25,
-        ["up"] = 0.25,
-        ["left"] = 0.25,
-        ["right"] = 0.25
+        ["down"] = 0.15,
+        ["up"] = 0.15,
+        ["left"] = 0.15,
+        ["right"] = 0.15
     }
 
     self.animations = {
         ["rise"] = {"rise", 0.1, false, {after = "down"}},
+        ["sink"] = {"sink", 0.1, false},
     }
 
     self.offsets = {

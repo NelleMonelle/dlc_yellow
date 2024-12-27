@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="78" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="33">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="78" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="36">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -10,7 +10,7 @@
  </properties>
  <tileset firstgid="1" source="../../../tilesets/steamworks.tsx"/>
  <tileset firstgid="1497" source="../../../tilesets/steamworks_objects_big.tsx"/>
- <tileset firstgid="1537" source="../../../tilesets/steamworks_objects.tsx"/>
+ <tileset firstgid="1540" source="../../../tilesets/steamworks_objects.tsx"/>
  <objectgroup id="11" name="objects_bg">
   <object id="28" name="stw_room34bg" x="0" y="0" width="40" height="40"/>
  </objectgroup>
@@ -48,7 +48,7 @@
  </layer>
  <objectgroup id="7" name="objects">
   <object id="16" gid="1536" x="-2" y="480" width="424" height="480"/>
-  <object id="17" gid="1648" x="592" y="290" width="94" height="164"/>
+  <object id="17" gid="1651" x="592" y="290" width="94" height="164"/>
   <object id="27" x="0" y="0" width="40" height="40"/>
  </objectgroup>
  <objectgroup id="3" name="collision">
@@ -86,6 +86,25 @@ the machine's screen...)</property>
 chasm of rock and steel.)</property>
    </properties>
   </object>
+  <object id="33" name="npc" x="780" y="280">
+   <properties>
+    <property name="actor" value="flowey"/>
+    <property name="flagcheck" value="!flowey_prefurnace_met"/>
+    <property name="sprite" value="prerise"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="34" name="script" x="840" y="320" width="20" height="80">
+   <properties>
+    <property name="cutscene" value="steamworks.flowey_prefurnace"/>
+   </properties>
+  </object>
+  <object id="35" name="trash_can_lid" x="680" y="360">
+   <properties>
+    <property name="cond" value="not Game:getFlag(&quot;got_lid&quot;) and not Game:getFlag(&quot;axis_hurt&quot;)"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="5" name="markers">
   <object id="12" name="left" x="120" y="360">
@@ -115,10 +134,10 @@ chasm of rock and steel.)</property>
 </data>
  </layer>
  <objectgroup id="9" name="objects_pipes">
-  <object id="22" name="pipe" gid="1654" x="3580" y="480" width="88" height="480"/>
-  <object id="23" name="pipe" gid="1654" x="3280" y="480" width="88" height="480"/>
-  <object id="30" name="pipe" gid="1654" x="2280" y="480" width="88" height="480"/>
-  <object id="31" name="pipe" gid="1654" x="1280" y="480" width="88" height="480"/>
-  <object id="32" name="pipe" gid="1654" x="680" y="480" width="88" height="480"/>
+  <object id="22" name="pipe" gid="1657" x="3580" y="480" width="88" height="480"/>
+  <object id="23" name="pipe" gid="1657" x="3280" y="480" width="88" height="480"/>
+  <object id="30" name="pipe" gid="1657" x="2280" y="480" width="88" height="480"/>
+  <object id="31" name="pipe" gid="1657" x="1280" y="480" width="88" height="480"/>
+  <object id="32" name="pipe" gid="1657" x="680" y="480" width="88" height="480"/>
  </objectgroup>
 </map>

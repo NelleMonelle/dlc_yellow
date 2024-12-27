@@ -426,4 +426,28 @@ return {
         cutscene:wait(1)
         Game:setFlag("31_chem_door_opened", true)
     end,
+    flowey_prefurnace = function(cutscene, event)
+        local flowey = cutscene:getCharacter("flowey")
+        Game.world.map:getEvent(18).visible = false
+        flowey:setAnimation("rise")
+        cutscene:wait(0.5)
+        flowey:setSprite("down")
+        cutscene:wait(0.5)
+        cutscene:text("* Hey there.", "nice", flowey)
+        cutscene:text("* Seems like you're approaching the end of this place.", "niceside", flowey)
+        if Game:getFlag("axis_hurt") then
+            cutscene:text("* I'd give you something to help you out...", "plainside", flowey)
+            cutscene:text("* But seems like you're doing good on your own.", "smirk", flowey)
+        else
+            cutscene:text("* And,[wait:5] don't ask me how...", "plain", flowey)
+            cutscene:text("* But I just thought you'd need this lid.", "smirk", flowey)
+        end
+        cutscene:text("* Alright,[wait:5] see ya!", "wink", flowey)
+        flowey:setAnimation("sink")
+        cutscene:wait(0.5)
+        flowey:remove()
+        cutscene:wait(0.5)
+        Game.world.map:getEvent(18).visible = true
+        Game:setFlag("flowey_prefurnace_met", true)
+    end,
 }
