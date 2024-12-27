@@ -15,6 +15,8 @@ local crayon_colors = {
 function DrawingMinigameCrayon:init(color_id,x,y)
     super.init(self,"id_minigame/crayon_"..color_id, x,y)
     self.color_id = color_id
+	self.y_offset = 0
+	self.alpha = 0
     self:setHitbox(8,15,6.5,40)
 end
 
@@ -23,19 +25,31 @@ function DrawingMinigameCrayon:update()
     ---@type DrawingMinigame
     ---@diagnostic disable-next-line: assign-type-mismatch
     local minigame = self.parent.parent
-    if self:collidesWith(minigame.cursor) and (Input.mousePressed(1) or Input.pressed("confirm")) then
-        minigame.current_color = crayon_colors[self.color_id]
-        Assets.playSound("crayon_select")
-    end
+	self.alpha = minigame.alpha
+	if minigame.active_fake then
+		if self:collidesWith(minigame.cursor) and (Input.mousePressed(1) or Input.pressed("confirm")) then
+			minigame.current_color = crayon_colors[self.color_id]
+			minigame.current_crayon = self.color_id
+			minigame.crayon_indicator:setSprite("id_minigame/size_crayon_"..minigame.current_crayon)
+			Assets.playSound("crayon_select")
+			self.y_offset = -10
+		end
+	end
 end
 
 function DrawingMinigameCrayon:draw()
     ---@type DrawingMinigame
     ---@diagnostic disable-next-line: assign-type-mismatch
     local minigame = self.parent.parent
-    if self:collidesWith(minigame.cursor) then
-        love.graphics.translate(0,-5)
-    end
+	if minigame.active_fake then
+		if self:collidesWith(minigame.cursor) then
+			self.y_offset = Utils.lerp(self.y_offset, -5, 0.25*DTMULT)
+		else
+			self.y_offset = Utils.lerp(self.y_offset, 0, 0.15*DTMULT)
+		end
+	end
+    love.graphics.translate(0,self.y_offset)
+    Draw.setColor(1,1,1,self.alpha)
     super.draw(self)
     if DEBUG_RENDER and self.collider then
         self.collider:draw()
