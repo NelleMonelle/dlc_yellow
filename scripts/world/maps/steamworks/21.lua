@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 18,
-  nextobjectid = 173,
+  nextobjectid = 185,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -35,7 +35,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1813,
+      firstgid = 1816,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -375,7 +375,7 @@ return {
           width = 86,
           height = 230,
           rotation = 0,
-          gid = 1880,
+          gid = 1883,
           visible = true,
           properties = {}
         },
@@ -389,7 +389,7 @@ return {
           width = 86,
           height = 230,
           rotation = 0,
-          gid = 1881,
+          gid = 1884,
           visible = true,
           properties = {}
         },
@@ -403,7 +403,7 @@ return {
           width = 86,
           height = 230,
           rotation = 0,
-          gid = 1881,
+          gid = 1884,
           visible = true,
           properties = {}
         },
@@ -417,7 +417,7 @@ return {
           width = 152,
           height = 120,
           rotation = 0,
-          gid = 1882,
+          gid = 1885,
           visible = true,
           properties = {}
         },
@@ -431,7 +431,7 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1883,
+          gid = 1886,
           visible = true,
           properties = {}
         },
@@ -445,7 +445,7 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1884,
+          gid = 1887,
           visible = true,
           properties = {}
         },
@@ -459,7 +459,7 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1886,
+          gid = 1889,
           visible = true,
           properties = {}
         },
@@ -473,7 +473,49 @@ return {
           width = 128,
           height = 128,
           rotation = 0,
-          gid = 1885,
+          gid = 1888,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 177,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 2526,
+          y = 804,
+          width = 72,
+          height = 98,
+          rotation = 0,
+          gid = 1937,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 178,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1980,
+          y = 804,
+          width = 72,
+          height = 98,
+          rotation = 0,
+          gid = 1938,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 179,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1020,
+          y = 804,
+          width = 72,
+          height = 98,
+          rotation = 0,
+          gid = 1939,
           visible = true,
           properties = {}
         }
@@ -2440,6 +2482,58 @@ return {
             ["map"] = "steamworks/22",
             ["marker"] = "right"
           }
+        },
+        {
+          id = 176,
+          name = "shadowarea",
+          type = "",
+          shape = "rectangle",
+          x = 3280,
+          y = 0,
+          width = 1040,
+          height = 960,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 182,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 2526,
+          y = 760,
+          width = 72,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 183,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 1980,
+          y = 760,
+          width = 72,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 184,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 1020,
+          y = 760,
+          width = 72,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

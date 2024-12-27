@@ -7,10 +7,10 @@ function DrawingMinigameCrayonBox:init()
     self.texture_crayons = Assets.getFrames("id_minigame/crayon")
     self.box_clock = 0
     self.crayons = {}
-    local x,y = 28,20
+    local x,y = 27,17
     for i=1,8 do
 
-        x, y = x + 8, y + 1.5
+        x, y = x + 9, y + 2
         local crayon = self:addChild(DrawingMinigameCrayon(i, x, y+30))
         crayon:slideTo(x,y, 0.5)
         table.insert(self.crayons, crayon)
