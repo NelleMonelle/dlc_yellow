@@ -10,14 +10,14 @@ function actor:init()
 
     self.use_light_battler_sprite = true
 
-    self.hitbox = {0, 25, 19, 14}
+    self.hitbox = {0, 64, 45, 20}
 
     self.color = {1, 0, 0}
 
     self.flip = nil
 
     self.path = "battle/lightenemies/sousborg"
-    self.default = "npc"
+    self.default = "npc_1"
 
     self.voice = nil
     self.portrait_path = nil
@@ -29,9 +29,7 @@ function actor:init()
         ["npc"] = 0.2,
     }
 
-    self.animations = {
-        ["npc"] = {"npc", 0.2, true},
-    }
+    self.animations = {}
 
     self.offsets = {
         ["npc"]  = {0, 0},

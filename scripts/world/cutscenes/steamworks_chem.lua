@@ -30,5 +30,25 @@ return {
                 Game:setFlag("got_steamworks_id", true)
             end
         end
+    end,
+    cake = function(cutscene, event)
+        if Game:getFlag("chem_got_cake") then
+            cutscene:text("* (It's empty now.)")
+        else
+            cutscene:text("* (You would like some Cake but\nyou'd rather not alert Axis.)")
+            local outcome = cutscene:textChoicer("* (Risk it?)\n", {"Yes", "    No"})
+            if outcome == 1 then
+                Game.world.music:fade(0, 10/30)
+                Assets.playSound("chem_cake_take")
+                cutscene:wait(3.5)
+                Game.world.map:getEvent("stw_cake"):setSprite("world/events/steamworks/chem_03_cake_2")
+                Game.inventory:addItem("uty_items/cake")
+                Game:setFlag("chem_got_cake", true)
+                Game.world.music:fade(1, 10/30)
+                cutscene:text("* (...Phew.)")
+            else
+                cutscene:text("* (Better safe than sorry.)")
+            end
+        end
     end
 }
