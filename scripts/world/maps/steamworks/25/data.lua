@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 19,
+  nextobjectid = 26,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -157,6 +157,96 @@ return {
           gid = 1617,
           visible = true,
           properties = {}
+        },
+        {
+          id = 20,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 181,
+          y = 328,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 3
+          }
+        },
+        {
+          id = 21,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 181,
+          y = 616,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 3
+          }
+        },
+        {
+          id = 22,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 181,
+          y = 916,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 3
+          }
+        },
+        {
+          id = 23,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 421,
+          y = 328,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 3
+          }
+        },
+        {
+          id = 24,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 421,
+          y = 616,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 3
+          }
+        },
+        {
+          id = 25,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 421,
+          y = 916,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 3
+          }
         }
       }
     },

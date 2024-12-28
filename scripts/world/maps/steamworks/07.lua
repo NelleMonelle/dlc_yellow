@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 14,
-  nextobjectid = 18,
+  nextobjectid = 21,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -254,6 +254,36 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 19,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 863,
+          y = 96,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 2
+          }
+        },
+        {
+          id = 20,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 807,
+          y = 96,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 2
+          }
         }
       }
     },

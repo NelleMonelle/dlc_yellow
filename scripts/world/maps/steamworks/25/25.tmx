@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="16" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="19">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="26">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -79,6 +79,42 @@
  </layer>
  <objectgroup id="8" name="objects">
   <object id="18" gid="1617" x="-440" y="200" width="600" height="280"/>
+  <object id="20" name="stw_steampipe" x="181" y="328">
+   <properties>
+    <property name="type" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="21" name="stw_steampipe" x="181" y="616">
+   <properties>
+    <property name="type" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="22" name="stw_steampipe" x="181" y="916">
+   <properties>
+    <property name="type" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="23" name="stw_steampipe" x="421" y="328">
+   <properties>
+    <property name="type" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="24" name="stw_steampipe" x="421" y="616">
+   <properties>
+    <property name="type" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="25" name="stw_steampipe" x="421" y="916">
+   <properties>
+    <property name="type" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="2" name="collision">
   <object id="1" x="0" y="1080" width="600" height="40"/>

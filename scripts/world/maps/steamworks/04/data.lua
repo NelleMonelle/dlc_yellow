@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 14,
-  nextobjectid = 41,
+  nextobjectid = 46,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -24,7 +24,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 17,
+      firstgid = 44,
       filename = "../../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../../tilesets/steamworks_objects.lua"
     }
@@ -128,7 +128,7 @@ return {
           width = 148,
           height = 30,
           rotation = 0,
-          gid = 30,
+          gid = 57,
           visible = true,
           properties = {}
         }
@@ -234,7 +234,7 @@ return {
           type = "",
           shape = "point",
           x = 428,
-          y = 561,
+          y = 514,
           width = 0,
           height = 0,
           rotation = 0,
@@ -270,6 +270,36 @@ return {
           gid = 4,
           visible = true,
           properties = {}
+        },
+        {
+          id = 44,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 58,
+          y = 716,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 4
+          }
+        },
+        {
+          id = 45,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 600,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 5
+          }
         }
       }
     },

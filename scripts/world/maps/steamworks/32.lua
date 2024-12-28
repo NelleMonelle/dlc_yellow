@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -24,7 +24,7 @@ return {
     },
     {
       name = "steamworks",
-      firstgid = 43,
+      firstgid = 44,
       filename = "../../tilesets/steamworks.tsx",
       exportfilename = "../../tilesets/steamworks.lua"
     }
@@ -236,7 +236,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          gid = 562,
+          gid = 563,
           visible = true,
           properties = {}
         },
@@ -250,7 +250,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          gid = 633,
+          gid = 634,
           visible = true,
           properties = {}
         }

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 13,
+  nextobjectid = 19,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -233,6 +233,96 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 13,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 1039,
+          y = 362,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 2
+          }
+        },
+        {
+          id = 14,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 1099,
+          y = 362,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 1
+          }
+        },
+        {
+          id = 15,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 985,
+          y = 362,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 1
+          }
+        },
+        {
+          id = 16,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 199,
+          y = 362,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 2
+          }
+        },
+        {
+          id = 17,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 259,
+          y = 362,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 1
+          }
+        },
+        {
+          id = 18,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 145,
+          y = 362,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 1
+          }
         }
       }
     },
