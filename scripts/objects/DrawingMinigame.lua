@@ -53,6 +53,7 @@ function DrawingMinigame:reset()
 	if self.active_fake then
 		Assets.playSound("mail_unpin")
 		Draw.pushCanvas(self.canvas)
+		love.graphics.clear()
 		Draw.draw(self.reset_texture)
 		Draw.popCanvas()
 	end
