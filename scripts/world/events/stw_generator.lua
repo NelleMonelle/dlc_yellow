@@ -1,14 +1,20 @@
-local Elevator, super = Class(Event)
+local SteamworksGenerator, super = Class(Event)
 
-function Elevator:init(data)
+function SteamworksGenerator:init(data)
     super.init(self, data.center_x, data.center_y, data.width, data.height)
 
     self:setOrigin(0.5, 0.5)
-    self:setSprite("world/maps/steamworks/04_generator_pink", 1/15)
+    self:setSprite("world/maps/steamworks/04_generator_pink_top", 1/15)
 
-    --[[Game.world.timer:after(1/30, function ()
-        self.layer = 0.3
-    end)]]
+    self.btm_sprite  = self:addChild(Sprite("world/maps/steamworks/04_generator_pink"))
+	self.btm_sprite:play(1/15, true)
+	self.btm_sprite:setScale(2)
+	self.btm_sprite.layer = 0.3
 end
 
-return Elevator
+
+function SteamworksGenerator:update()
+    super.update(self)
+end
+
+return SteamworksGenerator

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="22" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="41">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="22" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="46">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -8,7 +8,7 @@
   <property name="music" value="steamworks_overworld"/>
  </properties>
  <tileset firstgid="1" source="../../../tilesets/steamworks_objects_big.tsx"/>
- <tileset firstgid="17" source="../../../tilesets/steamworks_objects.tsx"/>
+ <tileset firstgid="44" source="../../../tilesets/steamworks_objects.tsx"/>
  <objectgroup id="10" name="objects_bg">
   <object id="35" gid="2" x="0" y="1040" width="880" height="1040"/>
  </objectgroup>
@@ -17,7 +17,7 @@
  </objectgroup>
  <objectgroup id="13" name="objects">
   <object id="38" gid="5" x="0" y="256" width="874" height="256"/>
-  <object id="39" gid="30" x="366" y="118" width="148" height="30"/>
+  <object id="39" gid="57" x="366" y="118" width="148" height="30"/>
  </objectgroup>
  <objectgroup id="3" name="objects_party">
   <object id="1" name="transition" x="346" y="1018" width="188" height="22">
@@ -51,12 +51,24 @@
 overtime to provide power.)</property>
    </properties>
   </object>
-  <object id="40" name="stw_generator" x="428" y="561">
+  <object id="40" name="stw_generator" x="428" y="514">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="12" name="objects_overlay">
   <object id="37" gid="4" x="0" y="1040" width="880" height="342"/>
+  <object id="44" name="stw_steampipe" x="58" y="716">
+   <properties>
+    <property name="type" type="int" value="4"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="45" name="stw_steampipe" x="0" y="600">
+   <properties>
+    <property name="type" type="int" value="5"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="2" name="collision">
   <object id="7" x="880" y="600" width="40" height="160"/>

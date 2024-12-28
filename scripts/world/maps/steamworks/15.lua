@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 29,
+  nextobjectid = 31,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld",
@@ -31,7 +31,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1535,
+      firstgid = 1540,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -98,7 +98,7 @@ return {
           width = 36,
           height = 30,
           rotation = 0,
-          gid = 1624,
+          gid = 1629,
           visible = true,
           properties = {}
         }
@@ -205,7 +205,7 @@ return {
           width = 36,
           height = 30,
           rotation = 0,
-          gid = 1624,
+          gid = 1629,
           visible = true,
           properties = {}
         },
@@ -219,7 +219,7 @@ return {
           width = 36,
           height = 30,
           rotation = 0,
-          gid = 1624,
+          gid = 1629,
           visible = true,
           properties = {}
         },
@@ -233,7 +233,7 @@ return {
           width = 34,
           height = 24,
           rotation = 0,
-          gid = 1614,
+          gid = 1619,
           visible = true,
           properties = {}
         },
@@ -247,7 +247,7 @@ return {
           width = 34,
           height = 24,
           rotation = 0,
-          gid = 1614,
+          gid = 1619,
           visible = true,
           properties = {}
         },
@@ -261,7 +261,7 @@ return {
           width = 38,
           height = 44,
           rotation = 0,
-          gid = 1634,
+          gid = 1639,
           visible = true,
           properties = {}
         },
@@ -275,7 +275,7 @@ return {
           width = 38,
           height = 44,
           rotation = 0,
-          gid = 1634,
+          gid = 1639,
           visible = true,
           properties = {}
         }
@@ -457,6 +457,21 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 30,
+          name = "stw_steampipe",
+          type = "",
+          shape = "point",
+          x = 813,
+          y = 642,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = 2
+          }
         }
       }
     },
