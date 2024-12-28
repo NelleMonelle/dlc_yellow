@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 22,
+  nextobjectid = 23,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -25,8 +25,7 @@ return {
     {
       name = "steamworks_chem",
       firstgid = 1497,
-      filename = "../../../tilesets/steamworks_chem.tsx",
-      exportfilename = "../../../tilesets/steamworks_chem.lua"
+      filename = "../../../tilesets/steamworks_chem.tsx"
     },
     {
       name = "chem_factory_stuff",
@@ -372,6 +371,19 @@ return {
             ["cutscene"] = "steamworks_chem.cabinet_04",
             ["solid"] = true
           }
+        },
+        {
+          id = 22,
+          name = "stw_hermitcabinet",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 172,
+          width = 80,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

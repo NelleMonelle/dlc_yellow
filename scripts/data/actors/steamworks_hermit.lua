@@ -31,13 +31,14 @@ function actor:init()
 
     self.offsets = {}
 
+	self.staff_timer = 0
 end
 
 function actor:onSpriteDraw(sprite)
     super.onSpriteDraw(sprite)
-
-    --help how do I make it play
-    Draw.draw(Assets.getTexture("world/npcs/steamworks/hermit_staff_1"), -32, -26, 0, 1, 1)--:play(1/10)
+	local staff_spr = Assets.getFrames("world/npcs/steamworks/hermit_staff")
+	self.staff_timer = self.staff_timer + DTMULT
+    Draw.draw(staff_spr[(math.floor(self.staff_timer/3)%30)+1], -32, -26, 0, 1, 1)
 end
 
 return actor
