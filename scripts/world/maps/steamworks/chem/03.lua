@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 56,
+  nextobjectid = 62,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle",
@@ -26,8 +26,13 @@ return {
     {
       name = "steamworks_chem",
       firstgid = 1497,
-      filename = "../../../tilesets/steamworks_chem.tsx",
-      exportfilename = "../../../tilesets/steamworks_chem.lua"
+      filename = "../../../tilesets/steamworks_chem.tsx"
+    },
+    {
+      name = "steamworks_objects",
+      firstgid = 1722,
+      filename = "../../../tilesets/steamworks_objects.tsx",
+      exportfilename = "../../../tilesets/steamworks_objects.lua"
     }
   },
   layers = {
@@ -932,6 +937,74 @@ return {
           properties = {
             ["cutscene"] = "steamworks_chem.cake"
           }
+        },
+        {
+          id = 56,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1444,
+          y = 364,
+          width = 72,
+          height = 98,
+          rotation = 0,
+          gid = 1848,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 58,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 330,
+          y = 284,
+          width = 72,
+          height = 98,
+          rotation = 0,
+          gid = 1846,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 59,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 124,
+          y = 286,
+          width = 72,
+          height = 98,
+          rotation = 0,
+          gid = 1847,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 60,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 124,
+          y = 240,
+          width = 72,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 61,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 330,
+          y = 240,
+          width = 72,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
