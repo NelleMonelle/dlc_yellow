@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="31" height="22" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="49">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="31" height="22" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="50">
  <editorsettings>
   <export target="05.lua" format="lua"/>
  </editorsettings>
@@ -182,6 +182,9 @@
    <point/>
   </object>
   <object id="48" name="spawn" x="620" y="360">
+   <point/>
+  </object>
+  <object id="49" name="door" x="620" y="320">
    <point/>
   </object>
  </objectgroup>

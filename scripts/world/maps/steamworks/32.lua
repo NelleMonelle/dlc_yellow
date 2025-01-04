@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.0",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 20,
+  nextobjectid = 23,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -177,6 +177,32 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1200,
+          y = 240,
+          width = 8,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1272,
+          y = 240,
+          width = 8,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -208,6 +234,22 @@ return {
           properties = {
             ["map"] = "steamworks/33",
             ["marker"] = "right"
+          }
+        },
+        {
+          id = 20,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1208,
+          y = 240,
+          width = 64,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "steamworks/chem/07",
+            ["marker"] = "down"
           }
         }
       }

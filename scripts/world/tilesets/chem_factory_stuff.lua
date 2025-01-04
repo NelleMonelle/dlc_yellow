@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 4,
+  tilecount = 6,
   tiles = {
     {
       id = 0,
@@ -48,6 +48,18 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/chem_hermit_room.png",
       width = 320,
       height = 320
+    },
+    {
+      id = 4,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/chem_plant.png",
+      width = 19,
+      height = 41
+    },
+    {
+      id = 5,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/chem_id_reader.png",
+      width = 9,
+      height = 11
     }
   }
 }

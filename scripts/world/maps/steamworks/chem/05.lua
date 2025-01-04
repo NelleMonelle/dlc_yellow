@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 49,
+  nextobjectid = 50,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -25,8 +25,7 @@ return {
     {
       name = "steamworks_chem",
       firstgid = 1497,
-      filename = "../../../tilesets/steamworks_chem.tsx",
-      exportfilename = "../../../tilesets/steamworks_chem.lua"
+      filename = "../../../tilesets/steamworks_chem.tsx"
     }
   },
   layers = {
@@ -874,6 +873,19 @@ return {
           shape = "point",
           x = 620,
           y = 360,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 49,
+          name = "door",
+          type = "",
+          shape = "point",
+          x = 620,
+          y = 320,
           width = 0,
           height = 0,
           rotation = 0,
