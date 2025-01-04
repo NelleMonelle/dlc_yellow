@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.0" name="chem_factory_stuff" tilewidth="320" tileheight="320" tilecount="6" columns="0">
+<tileset version="1.10" tiledversion="1.11.0" name="chem_factory_stuff" tilewidth="320" tileheight="320" tilecount="8" columns="0">
  <editorsettings>
   <export target="chem_factory_stuff.lua" format="lua"/>
  </editorsettings>
@@ -21,5 +21,11 @@
  </tile>
  <tile id="5">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/chem_id_reader.png" width="9" height="11"/>
+ </tile>
+ <tile id="6">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_01_reception.png" width="109" height="131"/>
+ </tile>
+ <tile id="7">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_01_reception_b.png" width="231" height="151"/>
  </tile>
 </tileset>
