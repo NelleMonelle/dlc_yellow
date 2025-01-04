@@ -36,7 +36,7 @@ function LightAttackBox:createBolts()
         lane.battler = battler
         lane.bolts = {}
         lane.weapon = battler.chara:getWeapon()
-        lane.speed = lane.weapon and lane.weapon.getLightBoltSpeed and lane.weapon:getLightBoltSpeed() or 11 + (not Game.battle.multi_mode and Utils.random(0, 2, 1) or 0)
+        lane.speed = lane.weapon and lane.weapon.getLightBoltSpeed and lane.weapon:getLightBoltSpeed() or 11 + (not Game.battle.multi_mode and Utils.random(0, 2, 1) or 1)
         lane.attacked = false
         lane.score = 0
         lane.stretch = nil
@@ -71,9 +71,9 @@ function LightAttackBox:createBolts()
                 end
             else
                 if lane.direction == "left" then
-                    bolt = LightAttackBar(start_x + (lane.weapon and lane.weapon.getLightMultiboltVariance and lane.weapon:getLightMultiboltVariance(i - 1) or 74 + 90 * (i - 2)), 319, battler, scale_y)
+                    bolt = LightAttackBar(start_x + (lane.weapon and lane.weapon.getLightMultiboltVariance and lane.weapon:getLightMultiboltVariance(i - 1) or 84 + 100 * (i - 2)), 319, battler, scale_y)
                 else
-                    bolt = LightAttackBar(start_x - (lane.weapon and lane.weapon.getLightMultiboltVariance and lane.weapon:getLightMultiboltVariance(i - 1) or 74 + 90 * (i - 2)), 319, battler, scale_y)
+                    bolt = LightAttackBar(start_x - (lane.weapon and lane.weapon.getLightMultiboltVariance and lane.weapon:getLightMultiboltVariance(i - 1) or 84 + 100 * (i - 2)), 319, battler, scale_y)
                 end
                 bolt.sprite:setSprite(bolt.inactive_sprite)
             end
