@@ -41,13 +41,13 @@
   <object id="18" name="transition" x="266" y="580" width="60" height="40">
    <properties>
     <property name="map" value="steamworks/factory/01"/>
-    <property name="marker" value="down"/>
+    <property name="marker" value="right"/>
    </properties>
   </object>
   <object id="19" name="transition" x="234" y="598" width="60" height="40">
    <properties>
     <property name="map" value="steamworks/factory/01"/>
-    <property name="marker" value="down"/>
+    <property name="marker" value="right"/>
    </properties>
   </object>
   <object id="20" name="script" x="640" y="440" width="120" height="40">

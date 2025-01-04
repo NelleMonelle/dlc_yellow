@@ -285,7 +285,7 @@ return {
           visible = true,
           properties = {
             ["map"] = "steamworks/factory/01",
-            ["marker"] = "down"
+            ["marker"] = "right"
           }
         },
         {
@@ -301,7 +301,7 @@ return {
           visible = true,
           properties = {
             ["map"] = "steamworks/factory/01",
-            ["marker"] = "down"
+            ["marker"] = "right"
           }
         },
         {
