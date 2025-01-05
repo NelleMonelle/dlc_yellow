@@ -1,4 +1,4 @@
-local actor, super = Class(Actor, "goosicenemy")
+local actor, super = Class(Actor, "goosic_b")
 
 function actor:init()
     super.init(self)

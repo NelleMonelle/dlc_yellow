@@ -15,7 +15,7 @@ function Sousborg:init()
         if enemies_left <= 0 then
             mus_pitch = 1
         else
-            mus_pitch = (((enemies_left / 7) * 10) * 0.1)
+            mus_pitch = (enemies_left / 7)
         end
         MUSIC_PITCHES["genobattle_yellow"] = mus_pitch
         self.music = "genobattle_yellow"

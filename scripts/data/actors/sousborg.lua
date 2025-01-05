@@ -16,8 +16,8 @@ function actor:init()
 
     self.flip = nil
 
-    self.path = "battle/lightenemies/sousborg"
-    self.default = "npc_1"
+    self.path = "world/npcs/steamworks"
+    self.default = "sousborg_1"
 
     self.voice = nil
     self.portrait_path = nil
@@ -26,14 +26,12 @@ function actor:init()
     self.can_blush = false
 
     self.talk_sprites = {
-        ["npc"] = 0.2,
+        ["sousborg"] = 0.2,
     }
 
     self.animations = {}
 
-    self.offsets = {
-        ["npc"]  = {0, 0},
-    }
+    self.offsets = {}
 
 end
 

@@ -14,8 +14,8 @@ function actor:init()
 
     self.flip = nil
 
-    self.path = "battle/lightenemies/tellyvis"
-    self.default = "npc_1"
+    self.path = "world/npcs/steamworks"
+    self.default = "tellyvis_1"
 
     self.voice = nil
     self.portrait_path = nil
@@ -23,15 +23,13 @@ function actor:init()
 
     self.can_blush = false
 
-    self.talk_sprites = {}
-
-    self.animations = {
-        ["talk"] = {"npc", 1/2, true},
+    self.talk_sprites = {
+        ["tellyvis"] = 0.2,
     }
 
-    self.offsets = {
-        ["npc"]  = {0, 0},
-    }
+    self.animations = {}
+
+    self.offsets = {}
 
 end
 

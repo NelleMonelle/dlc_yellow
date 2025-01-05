@@ -4,7 +4,7 @@ function Jandroid:init()
     super:init(self)
 
     self.name = "Jandroid"
-    self:setActor("jandroidenemy")
+    self:setActor("jandroid_b")
 
     self.max_health = 150
     self.health = 150
@@ -219,7 +219,7 @@ function Jandroid:onHurtEnd()
     end
     if self.low_health == false and self.health <= (self.max_health * self.low_health_percentage) then
         self.low_health = true
-        self:setActor("jandroidenemy_hurt")
+        self:setActor("jandroid_b_hurt")
     end
 end
 

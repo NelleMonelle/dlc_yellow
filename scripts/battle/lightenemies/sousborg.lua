@@ -4,7 +4,7 @@ function Sousborg:init()
     super:init(self)
 
     self.name = "Sousborg"
-    self:setActor("sousborgenemy")
+    self:setActor("sousborg_b")
 
     self.max_health = 180
     self.health = 180
@@ -236,7 +236,7 @@ function Sousborg:onHurtEnd()
             self:removeAct("Season")
         end
         self.low_health = true
-        self:setActor("sousborgenemy_hurt")
+        self:setActor("sousborg_b_hurt")
     end
 end
 

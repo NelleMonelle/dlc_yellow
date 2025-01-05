@@ -4,7 +4,7 @@ function TellyVis:init()
     super:init(self)
 
     self.name = "Telly-Vis"
-    self:setActor("tellyvisenemy")
+    self:setActor("tellyvis_b")
 
     self.max_health = 160
     self.health = 160
@@ -216,7 +216,7 @@ function TellyVis:onHurtEnd()
     end
     if self.low_health == false and self.health <= (self.max_health * self.low_health_percentage) then
         self.low_health = true
-        self:setActor("tellyvisenemy_hurt")
+        self:setActor("tellyvis_b_hurt")
     end
 end
 

@@ -4,7 +4,7 @@ function Goosic:init()
     super:init(self)
 
     self.name = "Goosic"
-    self:setActor("goosicenemy")
+    self:setActor("goosic_b")
 
     self.max_health = 160
     self.health = 160
@@ -261,7 +261,7 @@ function Goosic:onHurtEnd()
     end
     if self.low_health == false and self.health <= (self.max_health * self.low_health_percentage) then
         self.low_health = true
-        self:setActor("goosicenemy_hurt")
+        self:setActor("goosic_b_hurt")
     end
 end
 
