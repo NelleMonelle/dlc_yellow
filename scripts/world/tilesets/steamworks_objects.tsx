@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="steamworks_objects" tilewidth="300" tileheight="240" tilecount="125" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="steamworks_objects" tilewidth="300" tileheight="240" tilecount="126" columns="0">
  <editorsettings>
   <export target="steamworks_objects.lua" format="lua"/>
  </editorsettings>
@@ -308,6 +308,9 @@
  </tile>
  <tile id="126">
   <image width="36" height="49" source="../../../assets/sprites/world/maps/steamworks/small_objects/office_doors_6.png"/>
+ </tile>
+ <tile id="127">
+  <image width="64" height="62" source="../../../assets/sprites/world/maps/steamworks/small_objects/chem_05_door_bg.png"/>
  </tile>
  <tile id="74">
   <image width="40" height="20" source="../../../assets/sprites/world/maps/steamworks/small_objects/23_shop_mark.png"/>

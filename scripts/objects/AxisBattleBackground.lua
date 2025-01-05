@@ -88,7 +88,7 @@ function AxisBattleBackground:update()
 				number_x = number_x + 20
 			end
 		end
-		for i = 1, 8 do
+		for i = 1, 10 do
 			table.insert(self.number_particles, {x = number_x, y = number_y, color = {0, 1, 0, 0}, lifetime = -(i-1)*(number_size*2), size = number_size, index = Utils.pick({1, 2})})
 			number_y = number_y - number_size*10
 		end
@@ -104,7 +104,7 @@ function AxisBattleBackground:update()
 				number_x = number_x + 20
 			end
 		end
-		for i = 1, 8 do
+		for i = 1, 10 do
 			table.insert(self.number_particles, {x = number_x, y = number_y, color = {0, 1, 0, 0}, lifetime = -(i-1)*(number_size*2), size = number_size, index = Utils.pick({1, 2})})
 			number_y = number_y - number_size*10
 		end

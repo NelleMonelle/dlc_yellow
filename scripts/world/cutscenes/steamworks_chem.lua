@@ -142,4 +142,29 @@ return {
             end
         end
     end,
+    chem_05_door = function(cutscene, event)
+		if not Game:getFlag("chem_05_acid_used") then
+			if not Game:getFlag("chem_got_acid") then
+				cutscene:text("* (A complex lock mechanism\nblocks your exit.)")
+			else
+				cutscene:text("* (A complex lock mechanism\nblocks your exit.)")
+				local choice = cutscene:textChoicer("* (Use the ACID?)\n", {"Yes", "    No"})
+				if choice == 1 then
+					cutscene:text("* (You use the ACID to ACID\naway at the DOOR.)")
+					Game.inventory:removeItem("uty_items/h_acid")
+					local door = Game.world.map:getEvent("stw_chem_05_door")
+					door:setSprite("world/maps/steamworks/small_objects/chem_05_door")
+					door.sprite:play(1 / 10, false)
+					cutscene:wait(function() return door.sprite.frame == 6 end)
+					Assets.playSound("puzzle_icemelt")
+					cutscene:wait(function() return door.sprite.frame == 17 end)
+					Assets.playSound("sliding_door_open")
+					cutscene:wait(0.5)
+					cutscene:text("* TODO: Axis cutscene here.")
+					door.solid = false
+					Game:setFlag("chem_05_acid_used", true)
+				end
+			end
+		end
+    end,
 }
