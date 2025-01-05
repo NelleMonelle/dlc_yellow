@@ -107,7 +107,7 @@ function LightBattleUI:init()
     self.flee_text.line_offset = 4
     Game.battle.arena:addChild(self.flee_text)
     
-    self.status_display = LightStatusDisplay(0, 390, Game.battle.encounter.story and not Game.battle.multi_mode)
+    self.status_display = LightStatusDisplay(0, 390, Game.battle.encounter.event and not Game.battle.multi_mode)
     self.status_display.layer = BATTLE_LAYERS["below_ui"] + 1
     Game.battle:addChild(self.status_display)
 end
@@ -177,9 +177,8 @@ function LightBattleUI:drawState()
     end
     self.flee_text:setText("")
     
-	-- ugly hack lmao
-    if state == "MENUSELECT" or state == "SOUSBORG" then
-	
+    if state == "MENUSELECT" then
+    
         local page = Game.battle:isPagerMenu() and math.ceil(Game.battle.current_menu_x / Game.battle.current_menu_columns) - 1 or math.ceil(Game.battle.current_menu_y / Game.battle.current_menu_rows) - 1
         local max_page = math.ceil(#Game.battle.menu_items / (Game.battle.current_menu_columns * Game.battle.current_menu_rows)) - 1
 
@@ -475,8 +474,8 @@ function LightBattleUI:drawState()
                 if enemy.rainbow_name then
                     enemy_special_text:setColor(1, 1, 1)
                     local colors = {}
-                    for i = 1, 5 do
-                        table.insert(colors, {Utils.hslToRgb((Kristal.getTime() / 1 + (i-1) * 0.2) % 1, 1, 0.7)})
+                    for i = 1, 4 do
+                        table.insert(colors, {Utils.hslToRgb((Kristal.getTime() / 1 + (i-1) * 0.25) % 1, 1, 0.73)})
                     end
                     enemy_special_text:setGradientColors(colors)
                     if enemy_special_text.enemy ~= enemy or enemy_special_text.enemy_name ~= enemy.name .. (enemy.index and " " .. enemy.index or "") then
@@ -548,8 +547,8 @@ function LightBattleUI:drawState()
                 if self.style == "undertale" then
                     local name_length = 0
                     for _,enemy in ipairs(enemies) do
-                        if enemy and string.len(enemy.name) > name_length then
-                            name_length = string.len(enemy.name)
+                        if enemy and string.len(enemy.name) + (enemy.rainbow_name and 2 or 0) > name_length then
+                            name_length = string.len(enemy.name) + (enemy.rainbow_name and 2 or 0)
                         end
                     end
                     local hp_x = 190 + (name_length * 16)

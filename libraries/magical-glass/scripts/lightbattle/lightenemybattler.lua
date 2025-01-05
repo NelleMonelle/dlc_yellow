@@ -54,6 +54,10 @@ function LightEnemyBattler:init(actor, use_overlay)
     -- Whether this enemy display name will have a wavy-rainbow effect like Asriel Dreemurr
     self.rainbow_name = false
     
+    -- Whether this enemy will always take 0 damage (MISS on attack)
+    -- In addition, calls self:onDodge() when using a damage spell, item or act (or anything else)
+    self.immune_to_damage = false
+    
     -- The the enemy's damage sprites
     self.dmg_sprites = {}
     -- The offset of this enemy's damage sprites
@@ -391,12 +395,27 @@ function LightEnemyBattler:onMercy(battler)
             self:spare()
             return true
         else
-            if self.spare_points ~= 0 or Kristal.getLibConfig("magical-glass", "multi_deltarune_spare") and Game.battle.multi_mode then
+            if self.spare_points ~= 0 or battler.manual_spare then
                 self:addMercy(self.spare_points)
             end
             return false
         end
     end
+end
+
+function LightEnemyBattler:mercyFlash(color)
+    color = color or MagicalGlassLib.spare_color or {1, 1, 0}
+
+    local recolor = self:addFX(RecolorFX())
+    Game.battle.timer:during(8/30, function()
+        recolor.color = Utils.lerp(recolor.color, color, 0.12 * DTMULT)
+    end, function()
+        Game.battle.timer:during(8/30, function()
+            recolor.color = Utils.lerp(recolor.color, {1, 1, 1}, 0.16 * DTMULT)
+        end, function()
+            self:removeFX(recolor)
+        end)
+    end)
 end
 
 function LightEnemyBattler:onSave(battler) end
@@ -528,11 +547,17 @@ function LightEnemyBattler:hurt(amount, battler, on_defeat, color, anim, attacke
     if self.defeated then
         return
     end
-    if Game.battle:getCurrentAction() and Game.battle:getCurrentAction().action == "SPELL" then
-        battler.delay_turn_end = true
-    end
     if attacked ~= false then
         attacked = true
+    end
+    if self.immune_to_damage then
+        amount = 0
+        if attacked and (Game.battle:getCurrentAction() and not Utils.containsValue({"SPELL", "ATTACK", "AUTOATTACK"}, Game.battle:getCurrentAction().action) or not battler) then
+            self:onDodge(battler, true)
+        end
+    end
+    if Game.battle:getCurrentAction() and Game.battle:getCurrentAction().action == "SPELL" then
+        battler.delay_turn_end = true
     end
     local message
     if amount <= 0 then
@@ -679,6 +704,9 @@ function LightEnemyBattler:getAttackDamage(damage, lane, points, stretch)
             lane.battler.tp_gain = 3
         end
     end
+    if self.immune_to_damage then
+        total_damage = 0
+    end
     if not self.post_health then
         self.post_health = self.health
     end
@@ -699,10 +727,10 @@ end
 function LightEnemyBattler:onHurt(damage, battler)
     self.hurt_timer = 1
     self:toggleOverlay(true)
-    if Game.battle.tension then
+    if battler then
         Game:giveTension(Utils.round(self:getAttackTension(battler.tp_gain or 0)))
+        battler.tp_gain = 0
     end
-    battler.tp_gain = 0
     if self.actor.use_light_battler_sprite then
         if not self:getActiveSprite():setAnimation("lightbattle_hurt") then
             self:toggleOverlay(false)
@@ -1005,7 +1033,7 @@ function LightEnemyBattler:setActor(actor, use_overlay)
     if self.overlay_sprite then self:removeChild(self.overlay_sprite) end
 
     if self.actor.use_light_battler_sprite then
-        self.sprite = self.actor:createLightBattleSprite()
+        self.sprite = self.actor:createLightBattleSprite(self)
     else
         self.sprite = self.actor:createSprite()
     end
@@ -1044,6 +1072,10 @@ function LightEnemyBattler:getSpritePart(part, parent)
 end
 
 function LightEnemyBattler:update()
+    if self.sprite and self.overlay_sprite then
+        self.overlay_sprite:setPosition(self.sprite:getPosition())
+    end
+
     if self.actor then
         self.actor:onBattleUpdate(self)
     end
