@@ -59,9 +59,9 @@ return {
         cutscene:text("* YOUR CRIMES ARE AS\nFOLLOWS:", "normal", "axis")
         cutscene:text("* - TRESPASSING ON\nPRIVATE PROPERTY.", "normal", "axis")
         cutscene:text("* - RESISTING ARREST.", "normal", "axis")
-        if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") then
+        if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
             cutscene:text("* - HUMAN.", "normal", "axis")
-            if cutscene:getCharacter("jamm_lw") then
+            if cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
                 cutscene:showNametag("Axis")
@@ -121,7 +121,7 @@ return {
                 cutscene:text("* YOUR CRIMES WILL BE\nREPORTED TO AN\nAUTHORITY.", "normal", "axis")
                 cutscene:text("* OH WAIT,[wait:5] THAT IS ME.", "normal", "axis")
             end
-            if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") then
+            if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
                 cutscene:text("* ENJOY YOUR ISOLATION,[wait:5]\nHUMAN.", "normal", "axis")
             else
                 cutscene:text("* ENJOY YOUR ISOLATION.", "normal", "axis")
@@ -396,7 +396,7 @@ return {
             cutscene:text("* Cuz if it's open...[wait:5] This means that someone has already been there.", "closed_grin", "susie")
             cutscene:text("* And they probably did all the puzzles and stuff there.", "smile", "susie")
             cutscene:text("* So it'll be an easy route.", "small_smile", "susie")
-            if cutscene:getCharacter("jamm_lw") then
+            if cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* I wouldn't be so sure,[wait:5] Susie.", "look_left", "jamm")
                 cutscene:showNametag("Susie")
@@ -409,7 +409,7 @@ return {
                 cutscene:text("* But I suppose the choice is still up to the leader.", "neutral_side", "susie")
             end
             cutscene:hideNametag()
-        elseif cutscene:getCharacter("jamm_lw") then
+        elseif cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
             cutscene:showNametag("Jamm")
             cutscene:text("* I'd say we should go into the upper path.", "neutral", "jamm")
             cutscene:text("* Because that opened path is kind of suspicious...", "nervous_left", "jamm")
