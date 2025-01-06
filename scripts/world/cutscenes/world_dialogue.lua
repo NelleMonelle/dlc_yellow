@@ -10,10 +10,10 @@ return function(cutscene)
             cutscene:showNametag("Susie")
             cutscene:text("* Woah,[wait:5] it's kinda hot in here...", "surprise", "susie")
             cutscene:text("* Also,[wait:5] what is this pink goo...?", "suspicious", "susie")
-            if Game.world:getCharacter("jamm_lw") then
+            if Game.world:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Maybe the coolant?", "look_left", "jamm")
-                cutscene:text("* Any complex has to cool down somehow after all...", "look_left", "jamm")
+                cutscene:text("* Anything complex has to cool down somehow...", "look_left", "jamm")
             end
             cutscene:hideNametag()
         end
@@ -37,9 +37,12 @@ return function(cutscene)
         if Game.world:getCharacter("susie_lw") then
             cutscene:showNametag("Susie")
             cutscene:text("* Dang,[wait:5] we're kinda high up...", "nervous_side", "susie")
-            if Game.world:getCharacter("jamm_lw") then
+            if Game.world:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Then I hope nobody here is scared of heights.", "look_left", "jamm")
+				if cutscene:getCharacter("jammarcy_light") then
+					cutscene:text("* (Don't look down, Marcy...)", "nervous_left", "jamm")
+				end
             end
             cutscene:hideNametag()
         end
