@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   name = "chem_factory_stuff",
   class = "",
   tilewidth = 320,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 8,
+  tilecount = 24,
   tiles = {
     {
       id = 0,
@@ -72,6 +72,102 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_01_reception_b.png",
       width = 231,
       height = 151
+    },
+    {
+      id = 8,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_broken_belt.png",
+      width = 192,
+      height = 117
+    },
+    {
+      id = 9,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_cerobas_monitor.png",
+      width = 38,
+      height = 60
+    },
+    {
+      id = 10,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_control_station_conveyor.png",
+      width = 70,
+      height = 88
+    },
+    {
+      id = 11,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_control_station_teeter.png",
+      width = 70,
+      height = 88
+    },
+    {
+      id = 12,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_conveyor_belt.png",
+      width = 208,
+      height = 96
+    },
+    {
+      id = 13,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_conveyor_indicator_idle.png",
+      width = 14,
+      height = 12
+    },
+    {
+      id = 14,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_conveyor_stamp_blue.png",
+      width = 30,
+      height = 48
+    },
+    {
+      id = 15,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_conveyor_stamp_red.png",
+      width = 30,
+      height = 48
+    },
+    {
+      id = 16,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_conveyor_top.png",
+      width = 108,
+      height = 60
+    },
+    {
+      id = 17,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_seesaw.png",
+      width = 100,
+      height = 17
+    },
+    {
+      id = 18,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_seesaw_light.png",
+      width = 16,
+      height = 24
+    },
+    {
+      id = 19,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_teeter_chute_blue.png",
+      width = 92,
+      height = 122
+    },
+    {
+      id = 20,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_teeter_chute_red.png",
+      width = 92,
+      height = 121
+    },
+    {
+      id = 21,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_02_teeter_package_pipe.png",
+      width = 60,
+      height = 76
+    },
+    {
+      id = 22,
+      image = "../../../assets/sprites/world/maps/steamworks/factory_02_bg.png",
+      width = 200,
+      height = 176
+    },
+    {
+      id = 23,
+      image = "../../../assets/sprites/world/maps/steamworks/factory_02_big_funny_pipe.png",
+      width = 207,
+      height = 249
     }
   }
 }
