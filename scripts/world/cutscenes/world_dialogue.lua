@@ -6,6 +6,12 @@ return function(cutscene)
         if susie then
             cutscene:showNametag("Susie")
             cutscene:text("* Dang,[wait:5] this place is kinda...[wait:10] creepy.", "nervous_side", "susie")
+            if jammarcy then
+                cutscene:showNametag("Marcy")
+                cutscene:text("* Marcy is scared,[wait:5] papa...", "disturbed", "marcy")
+                cutscene:showNametag("Jamm")
+                cutscene:text("* Don't worry,[wait:5] Marcy.[wait:10]\n* We'll get through this.", "look_left", "jamm")
+            end
             cutscene:hideNametag()
         end
     elseif Game.world.map.id == "steamworks/06" then
@@ -44,7 +50,7 @@ return function(cutscene)
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Then I hope nobody here is scared of heights.", "look_left", "jamm")
 				if jammarcy then
-					cutscene:text("* (Don't look down, Marcy...)", "nervous_left", "jamm")
+					cutscene:text("* (Don't look down,[wait:5] Marcy...)", "nervous_left", "jamm")
 				end
             end
             cutscene:hideNametag()
@@ -69,6 +75,11 @@ return function(cutscene)
             cutscene:text("* Did they just suddenly turned off and were left here?", "suspicious", "susie")
             cutscene:text("* Why would anybody just leave those things lying around?", "suspicious", "susie")
             cutscene:text("* That's just weird.", "annoyed", "susie")
+			if jamm or jammarcy then
+                cutscene:showNametag("Jamm")
+                cutscene:text("* You have to keep in mind this place is abandoned.", "neutral", "jamm")
+                cutscene:text("* Can't imagine the bots can self-sustain for...[wait:5] How long now?", "nervous_left", "jamm")
+			end
             cutscene:hideNametag()
         end
     elseif Game.world.map.id == "steamworks/29" then
@@ -85,7 +96,7 @@ return function(cutscene)
             cutscene:text("* About time.[wait:5] I was starting to get tired of it.", "annoyed", "susie")
             if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
-                cutscene:text("* Same.", "look_left", "jamm")
+                cutscene:text("* Can't believe I'm saying this,[wait:5] but...[wait:5] Same.", "stern", "jamm")
             end
             cutscene:hideNametag()
         end
