@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.1" name="chem_factory_stuff" tilewidth="320" tileheight="320" tilecount="24" columns="0">
+<tileset version="1.10" tiledversion="1.11.1" name="chem_factory_stuff" tilewidth="320" tileheight="320" tilecount="31" columns="0">
  <editorsettings>
   <export target="chem_factory_stuff.lua" format="lua"/>
  </editorsettings>
@@ -75,5 +75,26 @@
  </tile>
  <tile id="23">
   <image source="../../../assets/sprites/world/maps/steamworks/factory_02_big_funny_pipe.png" width="207" height="249"/>
+ </tile>
+ <tile id="24">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_coin_maker_machine.png" width="315" height="134"/>
+ </tile>
+ <tile id="29">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_coin_maker_machine_top.png" width="129" height="41"/>
+ </tile>
+ <tile id="25">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_dumpster.png" width="117" height="104"/>
+ </tile>
+ <tile id="26">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_empty_cache.png" width="32" height="32"/>
+ </tile>
+ <tile id="27">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_furnace.png" width="103" height="95"/>
+ </tile>
+ <tile id="28">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_screen_shattered.png" width="25" height="42"/>
+ </tile>
+ <tile id="30">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_wire.png" width="73" height="21"/>
  </tile>
 </tileset>
