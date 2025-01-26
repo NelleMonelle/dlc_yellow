@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="50" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="23">
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="50" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="24">
  <editorsettings>
   <export target="32.lua" format="lua"/>
  </editorsettings>
@@ -36,6 +36,9 @@
     <property name="map" value="steamworks/chem/07"/>
     <property name="marker" value="down"/>
    </properties>
+  </object>
+  <object id="23" name="stw_factory_elevator" x="1680" y="560">
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="7" name="objects_overparty">

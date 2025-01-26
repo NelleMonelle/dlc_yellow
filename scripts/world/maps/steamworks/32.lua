@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 23,
+  nextobjectid = 24,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -251,6 +251,19 @@ return {
             ["map"] = "steamworks/chem/07",
             ["marker"] = "down"
           }
+        },
+        {
+          id = 23,
+          name = "stw_factory_elevator",
+          type = "",
+          shape = "point",
+          x = 1680,
+          y = 560,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

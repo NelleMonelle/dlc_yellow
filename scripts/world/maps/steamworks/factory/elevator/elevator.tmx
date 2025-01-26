@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="5">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../../../../tilesets/chem_factory_stuff.tsx"/>
+ <objectgroup id="2" name="objects">
+  <object id="1" gid="32" x="254" y="396" width="130" height="316"/>
+ </objectgroup>
+ <objectgroup id="3" name="objects_party">
+  <object id="3" name="npc" x="319" y="196">
+   <properties>
+    <property name="actor" value="screenface"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="4" name="stw_factory_elevator_overlay" x="319" y="396">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="markers">
+  <object id="2" name="spawn" x="320" y="600">
+   <point/>
+  </object>
+ </objectgroup>
+</map>
