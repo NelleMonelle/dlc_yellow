@@ -87,6 +87,12 @@ function Elevator:onEnter()
             Game.world.music.volume = 1
             setAllFacing("up")
             cutscene:text("[wave:2][color:green]* Heeello!!![wait:5] I welcome you into\nmy body!!!", nil, sf)
+            if Game.world:getCharacter("dess") then
+                Game.world.music:pause()
+                cutscene:wait(1)
+                cutscene:text("* erm....[wait:5] akwaaardddddd", "neutral_b", "dess")
+                Game.world.music:resume()
+            end
             cutscene:text("[wave:2][color:green]* Where ever would you like to\ngo??", nil, sf)
             cutscene:text("[wave:2][color:green]* The available destinations are:", nil, sf)
             cutscene:text("[wave:2][color:green]* \"Offices\"", nil, sf)
