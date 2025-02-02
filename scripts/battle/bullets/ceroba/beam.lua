@@ -20,11 +20,18 @@ function CerobaBeam:init(x, y, rot, dur)
     end)
 end
 
--- need to somehow damage party members for 3 MAX HP
---[[function CerobaBeam:onDamage(soul)
-    -- need
+function CerobaBeam:onDamage(soul)
+    if soul.inv_timer > 0 then else
+        soul.inv_timer = self.inv_timer
+        Assets.playSound("ceroba_hurt_red")
+        local alive_battlers = Utils.filter(Game.battle.party, function(battler) return not battler.is_down end)
+        for _,battler in ipairs(alive_battlers) do
+            battler:hurt(3, true)
+            battler.chara:addStatBuff("health", -3)
+        end
+    end
     return {}
-end]]
+end
 
 function CerobaBeam:update()
     super.update(self)
