@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="55" height="50" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="86">
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="55" height="50" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="87">
  <editorsettings>
   <export target="37.lua" format="lua"/>
  </editorsettings>
@@ -402,6 +402,9 @@ to see through.)</property>
    <point/>
   </object>
   <object id="72" name="right" x="2120" y="1000">
+   <point/>
+  </object>
+  <object id="86" name="down" x="1440" y="1920">
    <point/>
   </object>
  </objectgroup>

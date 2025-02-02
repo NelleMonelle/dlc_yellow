@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 20,
-  nextobjectid = 86,
+  nextobjectid = 87,
   properties = {
     ["light"] = true,
     ["music"] = "the_wild_east",
@@ -1464,6 +1464,19 @@ return {
           shape = "point",
           x = 2120,
           y = 1000,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 86,
+          name = "down",
+          type = "",
+          shape = "point",
+          x = 1440,
+          y = 1920,
           width = 0,
           height = 0,
           rotation = 0,
