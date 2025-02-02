@@ -9,6 +9,8 @@ function Warning:init(x, y, dir, speed)
     -- Speed the bullet moves (pixels per frame at 30FPS)
     self.physics.speed = speed
 
+    self.collider = nil
+
     self.destroy_on_hit = false
     self.sprite:setAnimation({"battle/bullets/warning_exclamation_mark", 1/30, false})
     self:setScale(1, 1)

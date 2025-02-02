@@ -8,44 +8,27 @@ function CerobaBeam:init(x, y, rot, dur)
     self.rotation_num = rot or 0
     self.duration = dur or 1
 
-    self.beam = Rectangle(x, y, 640, 40)
+    self.beam = Rectangle(x or 0, y or 0, 640, 40)
     self.beam.color = {1,1,1}
     self.beam.rotation = math.rad(self.rotation_num)
     Game.battle:addChild(self.beam)
 
     self:setHitbox(0, 0, 640, 20)
-    Assets.playSound("kamehamehablast")
+    Assets.playSound("kamehamehacharge")
+    Game.battle.timer:after(0.5, function()
+        Assets.playSound("kamehamehablast")
+    end)
 end
 
-function CerobaBeam:onDamage(soul)
-    local damage = self:getDamage()
-    if damage > 0 then
-        local battlers = Game.battle:hurt(damage, false, self:getTarget())
-        soul.inv_timer = self.inv_timer
-        soul:onDamage(self, damage)
-        return battlers
-    end
+-- need to somehow damage party members for 3 MAX HP
+--[[function CerobaBeam:onDamage(soul)
+    -- need
     return {}
-end
+end]]
 
 function CerobaBeam:update()
     super.update(self)
-
-    Game.battle.timer:every(0.1, function()
-        local smt = 1
-        if smt == 1 then
-            smt = 2
-            self.beam.graphics.grow_y = 0.1
-        else
-            smt = 1
-            self.beam.graphics.grow_y = -0.1
-        end
-    end)
-
-    Game.battle.timer:after(self.duration, function()
-        self.beam:remove()
-        self:remove()
-    end)
+    --idk how to do that HELP
 
 end
 
