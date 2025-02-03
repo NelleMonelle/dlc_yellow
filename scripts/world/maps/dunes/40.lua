@@ -6,70 +6,52 @@ return {
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 16,
-  height = 28,
+  height = 24,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 5,
-  nextobjectid = 10,
+  nextlayerid = 6,
+  nextobjectid = 9,
   properties = {
     ["light"] = true,
-    ["music"] = "abandoned"
+    ["music"] = "deltarune/wind"
   },
   tilesets = {
     {
-      name = "steamworks",
+      name = "dunes_stuff",
       firstgid = 1,
-      filename = "../../../tilesets/steamworks.tsx",
-      exportfilename = "../../../tilesets/steamworks.lua"
+      filename = "../../tilesets/dunes_stuff.tsx",
+      exportfilename = "../../tilesets/dunes_stuff.lua"
     }
   },
   layers = {
     {
-      type = "tilelayer",
-      x = 0,
-      y = 0,
-      width = 16,
-      height = 28,
-      id = 1,
-      name = "Tile Layer 1",
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "objects_bg",
       class = "",
       visible = true,
       opacity = 1,
-      offsetx = 20,
+      offsetx = 0,
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      encoding = "lua",
-      data = {
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 440, 0, 94, 95, 96, 0, 440, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 407, 0, 94, 95, 96, 0, 407, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 407, 0, 94, 95, 96, 0, 407, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 407, 0, 94, 95, 96, 0, 407, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 440, 0, 94, 95, 96, 0, 440, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 94, 95, 96, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 128, 129, 130, 0, 0, 0, 0, 0, 0, 0
+      objects = {
+        {
+          id = 8,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 960,
+          width = 640,
+          height = 960,
+          rotation = 0,
+          gid = 8,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
@@ -87,40 +69,27 @@ return {
       properties = {},
       objects = {
         {
+          id = 1,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 0,
+          width = 40,
+          height = 960,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
           id = 2,
           name = "",
           type = "",
           shape = "rectangle",
-          x = 380,
+          x = 400,
           y = 0,
           width = 40,
-          height = 1120,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 3,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 220,
-          y = 0,
-          width = 40,
-          height = 1120,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 4,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 220,
-          y = 1120,
-          width = 200,
-          height = 40,
+          height = 960,
           rotation = 0,
           visible = true,
           properties = {}
@@ -131,7 +100,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 3,
-      name = "objects",
+      name = "objects_party",
       class = "",
       visible = true,
       opacity = 1,
@@ -142,34 +111,34 @@ return {
       properties = {},
       objects = {
         {
-          id = 6,
+          id = 3,
           name = "transition",
           type = "",
           shape = "rectangle",
-          x = 260,
+          x = 240,
           y = 0,
-          width = 120,
+          width = 160,
           height = 40,
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "steamworks/02",
+            ["map"] = "dunes/41",
             ["marker"] = "down"
           }
         },
         {
-          id = 8,
+          id = 4,
           name = "transition",
           type = "",
           shape = "rectangle",
-          x = 260,
-          y = 1080,
-          width = 120,
+          x = 240,
+          y = 920,
+          width = 160,
           height = 40,
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "dunes/43",
+            ["map"] = "dunes/39",
             ["marker"] = "up"
           }
         }
@@ -191,11 +160,11 @@ return {
       objects = {
         {
           id = 5,
-          name = "spawn",
+          name = "down",
           type = "",
           shape = "point",
           x = 320,
-          y = 1000,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -203,7 +172,7 @@ return {
           properties = {}
         },
         {
-          id = 7,
+          id = 6,
           name = "up",
           type = "",
           shape = "point",
@@ -216,12 +185,12 @@ return {
           properties = {}
         },
         {
-          id = 9,
-          name = "down",
+          id = 7,
+          name = "spawn",
           type = "",
           shape = "point",
           x = 320,
-          y = 1040,
+          y = 800,
           width = 0,
           height = 0,
           rotation = 0,
