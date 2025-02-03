@@ -5,6 +5,7 @@ function Basic:init()
     self:setArenaSize(140, 140)
     self:setArenaPosition(319, 340) -- orig 320, 385
     self.time = 10
+    self.darken = true
     self.sequence = "ooboobooboobooboob"
     self.counter = 0
 end

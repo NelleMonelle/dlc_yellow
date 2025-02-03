@@ -27,7 +27,7 @@ function Axis:init()
     self.dialogue_offset = {-30, 10}
 
     self.waves = {
-        "axis/axis_g_first"
+        "axis_genocide/1"
     }
 
     --[[self.dialogue = {
@@ -146,27 +146,27 @@ function Axis:getNextWaves()
     if self.tired then
         return nil
     elseif Game.battle.encounter.turns_passed == 0 then
-        return {"axis/axis_g_first"}
+        return {"axis_genocide/1"}
     elseif Game.battle.encounter.turns_passed == 1 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/2"}
     elseif Game.battle.encounter.turns_passed == 2 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/3"}
     elseif Game.battle.encounter.turns_passed == 3 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/4"}
     elseif Game.battle.encounter.turns_passed == 4 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/5"}
     elseif Game.battle.encounter.turns_passed == 5 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/6"}
     elseif Game.battle.encounter.turns_passed == 6 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/7"}
     elseif Game.battle.encounter.turns_passed == 7 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/8"}
     elseif Game.battle.encounter.turns_passed == 8 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/9"}
     elseif Game.battle.encounter.turns_passed == 9 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/10"}
     elseif Game.battle.encounter.turns_passed == 10 then
-        return {"axis/axis_g_second"}
+        return {"axis_genocide/1"}
     end
     return nil
 end

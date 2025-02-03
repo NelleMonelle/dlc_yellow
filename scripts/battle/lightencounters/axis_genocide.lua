@@ -3,11 +3,11 @@ local Axis, super = Class(LightEncounter)
 function Axis:init()
     super:init(self)
 
-    self.text = "* Axis Model 014, ready to\ndefend."
+    self.text = "* Axis Model 014,[wait:5] ready to\ndefend."
 
     self.music = "guns_blazing_geno"
 
-    self:addEnemy("axis_geno")
+    self:addEnemy("axis_g")
 
 	self.turns_passed = 0
 
@@ -61,8 +61,8 @@ end
 function Axis:beforeStateChange(old, new)
     if old == "DEFENDINGEND" and new ~= "DEFENDINGEND" then
 		if self.turns_passed == 10 then
-			if Game.battle:getEnemyBattler("axis_geno").geno_aborted then
-				if not Game.battle:getEnemyBattler("axis_geno").tired then
+			if Game.battle:getEnemyBattler("axis_g").geno_aborted then
+				if not Game.battle:getEnemyBattler("axis_g").tired then
 					Game.battle:setState("NONE")
 					Game.battle:startCutscene("axis_geno", "tired")
 			    end

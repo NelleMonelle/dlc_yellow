@@ -3,16 +3,17 @@ local Basic, super = Class(LightWave)
 function Basic:init()
     super:init(self)
     self:setArenaSize(160, 160)
-    self:setArenaPosition(319, 360) -- orig 320, 385
+    --self:setArenaPosition(319, 360) -- orig 320, 385
     self.time = 8
+    self.darken = true
 end
 
 function Basic:onStart()
     --group 1
     self.timer:after(1/3, function()
-        local bullet1 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x, Game.battle.arena.y - 148)
-        local bullet2 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 23, Game.battle.arena.y - 156)
-        local bullet3 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 23, Game.battle.arena.y - 156)
+        local bullet1 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x, Game.battle.arena.y - 74)
+        local bullet2 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 23, Game.battle.arena.y - 78)
+        local bullet3 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 23, Game.battle.arena.y - 78)
         self.timer:after(1/2, function()
             Assets.playSound("swoosh")
             bullet1.physics.direction = math.pi / 2 --go down
@@ -33,9 +34,9 @@ function Basic:onStart()
 
     -- group 2
     self.timer:after(1.85, function()
-        local bullet4 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 90, Game.battle.arena.y - 70)
-        local bullet5 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y - 45)
-        local bullet6 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y - 95)
+        local bullet4 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 90, Game.battle.arena.y)
+        local bullet5 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y - 25)
+        local bullet6 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x - 93, Game.battle.arena.y + 25)
         self.timer:after(1/2, function()
             Assets.playSound("swoosh")
             bullet4.physics.direction = 0 --go right
@@ -79,9 +80,9 @@ function Basic:onStart()
 
     -- group 4
     self.timer:after(4.85, function()
-        local bullet10 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 90, Game.battle.arena.y - 70)
-        local bullet11 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y - 45)
-        local bullet12 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y - 95)
+        local bullet10 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 90, Game.battle.arena.y)
+        local bullet11 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y - 25)
+        local bullet12 = self:spawnBullet("axis/ball_bouncy", Game.battle.arena.x + 93, Game.battle.arena.y + 25)
         self.timer:after(1/2, function()
             Assets.playSound("swoosh")
             bullet10.physics.direction = math.pi --go left
