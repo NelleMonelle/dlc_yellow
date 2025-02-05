@@ -18,7 +18,7 @@ function item:init(inventory)
     -- Default shop sell price
     self.sell_price = 0
     -- Whether the item can be sold
-    self.can_sell = true
+    self.can_sell = false
 
     -- Item description text (unused by light items outside of debug menu)
     self.description = "(An extremely dangerous compound. Handle with caution.)"

@@ -49,10 +49,7 @@ end
 
 function item:getWorldUseText(target)
     if target.id == Game.party[1].id then
-        return {
-            "* (You put the gunpowder in your\nmouth and nearly choke to\ndeath.)",
-            "* (...HP fully restored.)"
-        }
+        return "* (You put the gunpowder in your\nmouth and nearly choke to\ndeath.)"
     else
         return "* ("..target:getName().." puts the gunpowder in their\nmouth and nearly chokes to\ndeath.)"
     end

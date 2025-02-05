@@ -17,7 +17,7 @@ function item:init(inventory)
 
     self.price = 22
     -- Default shop sell price
-    self.sell_price = 15
+    self.sell_price = 25
     -- Whether the item can be sold
     self.can_sell = true
 
