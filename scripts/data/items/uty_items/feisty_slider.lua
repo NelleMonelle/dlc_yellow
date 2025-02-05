@@ -7,7 +7,7 @@ function item:init(inventory)
     self.use_method = "eat"
     -- Display name
     self.name = "Feisty Slider"
-    self.short_name = "FeistSlidr"
+    self.short_name = "F Slider"
 
     -- Item type (item, key, weapon, armor)
     self.type = "item"
@@ -37,19 +37,6 @@ function item:init(inventory)
     -- Will this item be instantly consumed in battles?
     self.instant = false
     
-end
-
-function item:onWorldUse(target)
-    target:heal(self:getWorldHealAmount())
-    Game.world:showText(self:getWorldUseText(target))
-    return true
-end
-
-function item:onLightBattleUse(target)
-    target:heal(self:getBattleHealAmount())
-    self:battleUseSound(user, target)
-    Game.battle:battleText(self:getLightBattleText(user, target))
-    return true
 end
 
 function item:getWorldUseText(target)

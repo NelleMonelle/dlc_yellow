@@ -37,19 +37,6 @@ function item:init(inventory)
     
 end
 
-function item:onWorldUse(target)
-    target:heal(self:getWorldHealAmount())
-    Game.world:showText(self:getWorldUseText(target))
-    return true
-end
-
-function item:onLightBattleUse(target)
-    target:heal(self:getBattleHealAmount())
-    self:battleUseSound(user, target)
-    Game.battle:battleText(self:getLightBattleText(user, target))
-    return true
-end
-
 function item:getWorldUseText(target)
     if target.id == Game.party[1].id then
         return {

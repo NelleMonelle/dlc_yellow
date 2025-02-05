@@ -55,16 +55,9 @@ function item:onWorldUse(target)
 end
 
 function item:onLightBattleUse(target)
-    Game.battle:startCutscene(function(cutscene)
-        local opinion = cutscene:textChoicer("* (Are you sure you want to\ndrink the acid?)", {"Yes", "    No"})
-        if opinion == 1 then
-            Assets.playSound("hurt")
-            Game:gameOver(320, 240)
-            return true
-        else
-            return false
-        end
-    end)
+    Assets.playSound("hurt")
+    Game:gameOver(320, 240)
+    return true
 end
 
 return item
