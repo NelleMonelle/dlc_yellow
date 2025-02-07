@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -381,53 +381,6 @@ return {
             ["solid"] = true,
             ["text1"] = "* (A faint face is burned into\nthe machine's screen...)",
             ["text2"] = "* (...staring out into the dim\nchasm of rock and steel.)"
-          }
-        },
-        {
-          id = 33,
-          name = "npc",
-          type = "",
-          shape = "point",
-          x = 780,
-          y = 280,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["actor"] = "flowey",
-            ["flagcheck"] = "!flowey_prefurnace_met",
-            ["sprite"] = "prerise"
-          }
-        },
-        {
-          id = 34,
-          name = "script",
-          type = "",
-          shape = "rectangle",
-          x = 840,
-          y = 320,
-          width = 20,
-          height = 80,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "steamworks.flowey_prefurnace"
-          }
-        },
-        {
-          id = 35,
-          name = "trash_can_lid",
-          type = "",
-          shape = "point",
-          x = 680,
-          y = 360,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cond"] = "not Game:getFlag(\"got_lid\") and not Game:getFlag(\"axis_hurt\")"
           }
         }
       }

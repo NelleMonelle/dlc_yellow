@@ -16,7 +16,7 @@ function actor:init()
 
     self.flip = nil
 
-    self.path = "world/npcs/steamworks/axis"
+    self.path = "battle/lightenemies/axis"
     self.default = "idle_body"
 
     self.voice = "axis"
@@ -28,13 +28,16 @@ function actor:init()
     self.talk_sprites = {}
 
     self.animations = {
-        ["idle_body"] = {"lightbattle/body", 1/6, true},
-        ["hurt"] = {"lightbattle/hurt", 1/6, true},
+        ["idle_body"] = {"body", 1/6, true},
+        ["hurt"] = {"hurt", 1/6, true},
+        ["charge"] = {"charge", 1/12, false, next="charge_hold"},
+        ["charge_hold"] = {"charge_hold", 1/12, true},
+        ["charge_release"] = {"charge_release", 1/12, false, next="idle_body"},
     }
 
     self.offsets = {
-        ["lightbattle/body"]  = {0, 0},
-        ["lightbattle/hurt"]  = {0, 0},
+        ["body"] = {0, 0},
+        ["hurt"] = {0, 0},
     }
 end
 

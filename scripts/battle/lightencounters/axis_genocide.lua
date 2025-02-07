@@ -55,7 +55,7 @@ end
 
 function Axis:onBattleInit()
 	self.bg = Game.battle:addChild(AxisBattleBackground())
-	self.bg:setLayer(-101)
+	self.bg:setLayer(LIGHT_BATTLE_LAYERS["below_battlers"])
 end
 
 function Axis:beforeStateChange(old, new)
