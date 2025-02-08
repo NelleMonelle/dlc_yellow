@@ -44,9 +44,9 @@ function actor:init()
     }
 
     self.offsets = {
-        ["riseanim"] = {0.5, -1},
-        ["riseanim2"] = {0.5, -1},
-        ["sinkanim"] = {0.5, -1},
+        ["riseanim"] = {0, -4},
+        ["riseanim2"] = {0, -4},
+        ["sinkanim"] = {0, -4},
     }
 end
 
