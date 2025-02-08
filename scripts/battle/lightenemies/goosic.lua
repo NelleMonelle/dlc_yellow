@@ -79,10 +79,10 @@ function Goosic:onAct(battler, name)
     if name == "Check" then
         return "* GOOSIC -- "..self.check
     elseif name == "Vibe" then
-        if self.low_health == true then
+        if self.low_health then
             return "* You calm yourself in the midst\nof the battle."
         else
-            if self.track_changed == false then
+            if not self.track_changed then
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
                     self.dialogue_override = "KEEP UP !\nKEEP UP !"
@@ -102,10 +102,10 @@ function Goosic:onAct(battler, name)
             end
         end
     elseif name == "Ignore" then
-        if self.low_health == true then
+        if self.low_health then
             return "* You tune Goosic out."
         else
-            if self.track_changed == false then
+            if not self.track_changed then
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
                     self.dialogue_override = "WHAT'S THAT ?\nMORE VOLUME ?"
@@ -124,10 +124,10 @@ function Goosic:onAct(battler, name)
             end
         end
     elseif name == "Needle" then
-        if self.low_health == true then
+        if self.low_health then
             return "* You try to move Goosic's needle\nbut it shocks you."
         else
-            if self.track_changed == false then
+            if not self.track_changed then
                 self.track_changed = true
                 self:addMercy(50)
                 local rnd = Utils.pick({1, 2})
@@ -151,18 +151,21 @@ function Goosic:onAct(battler, name)
         if battler.chara.id == "jamm" and Game:getFlag("dungeonkiller") then
             return "* Jamm refused to act."
         else
-            if self.low_health == true then
+            if self.low_health then
 				if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
 					return "* Jamm and Marcy calm themselves in the midst of battle."
 				end
                 return "* "..battler.chara:getName().." calms themselves in the\nmidst of the battle."
             else
-                if self.track_changed == false then
+                if not self.track_changed then
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
                         self.dialogue_override = "KEEP UP !\nKEEP UP !"
                     else
                         self.dialogue_override = "IF YOU CAN'T\nV-VIBE TO IT,\nGIVE IT U-U-UP !"
+                    end
+                    if battler.chara.id == "noelle" then
+                        return "* Noelle can't keep up with the music."
                     end
 					if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
 						return "*  Jamm and Marcy try to enjoy the music, but can't keep up."
@@ -175,6 +178,19 @@ function Goosic:onAct(battler, name)
                         self.dialogue_override = "Okay, yeah !\nI see you !"
                     else
                         self.dialogue_override = "Oh, now THIS\nis groovy !"
+                    end
+                    if battler.chara.id == "noelle" then
+                        if not self.noelle_acted then
+                            self.dialogue_override = "T-thanks deer girl!"
+                            Game.battle:startActCutscene(function(cutscene)
+                                cutscene:text("* Noelle compliments Goosic's music taste.")
+                                cutscene:text("* That melody seems nice...", "smile_closed", "noelle")
+                            end)
+                            self.noelle_acted = true
+                            return
+                        else
+                            return "* Noelle enjoys the music."
+                        end
                     end
 					if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
 						return "* Jamm and Marcy close their eyes and tap to the music."

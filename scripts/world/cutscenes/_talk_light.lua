@@ -1,11 +1,16 @@
 return function(cutscene)
     local susie = Game.world:getCharacter("susie_lw")
+    local noelle = Game.world:getCharacter("noelle_lw")
     local jamm = Game.world:getCharacter("jamm_lw")
     local jammarcy = cutscene:getCharacter("jammarcy_light")
     if Game.world.map.id == "steamworks/01" then
         if susie then
             cutscene:showNametag("Susie")
             cutscene:text("* Dang,[wait:5] this place is kinda...[wait:10] creepy.", "nervous_side", "susie")
+            if noelle then
+                cutscene:showNametag("Noelle")
+                cutscene:text("* I agree...", "what_smile", "noelle")
+            end
             if jammarcy then
                 cutscene:showNametag("Marcy")
                 cutscene:text("* Marcy is scared,[wait:5] papa...", "disturbed", "marcy")
@@ -18,6 +23,13 @@ return function(cutscene)
         if susie then
             cutscene:showNametag("Susie")
             cutscene:text("* Woah,[wait:5] it's kinda hot in here...", "surprise", "susie")
+            if noelle then
+                cutscene:showNametag("Noelle")
+                cutscene:text("* Totally.", "frown", "noelle")
+                cutscene:text("* I don't think I've felt heat like that...", "confused_surprise_b", "noelle")
+                cutscene:text("* Ever.", "confused_surprise", "noelle")
+                cutscene:showNametag("Susie")
+            end
             cutscene:text("* Also,[wait:5] what is this pink goo...?", "suspicious", "susie")
             if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
@@ -49,11 +61,18 @@ return function(cutscene)
             if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Then I hope nobody here is scared of heights.", "look_left", "jamm")
+                if noelle then
+                    cutscene:showNametag("Noelle")
+                    cutscene:text("* ...", "what_smile", "noelle")
+                end
 				if jammarcy then
 					cutscene:text("* (Don't look down,[wait:5] Marcy...)", "nervous_left", "jamm")
 				end
             end
             cutscene:hideNametag()
+        elseif noelle then
+            cutscene:showNametag("Noelle")
+            cutscene:text("* It's really...[wait:10] High in here,[wait:5] haha...", "what_smile", "noelle")
         end
     elseif Game.world.map.id == "steamworks/27" then
         if susie then
@@ -62,9 +81,17 @@ return function(cutscene)
                 cutscene:text("* WOAH.[wait:5] That's a lot of white...", "surprise", "susie")
                 cutscene:text("* Those plants seem to be everywhere around here...", "nervous_side", "susie")
                 cutscene:text("* I wonder if they taste like moss.", "small_smile", "susie")
+                if noelle then
+                    cutscene:showNametag("Noelle")
+                    cutscene:text("* I wonder if they're even edible.", "frown", "noelle")
+                end
                 Game:setFlag("talk_stw_27_susie", 1)
             else
                 cutscene:text("* Maybe I should try some of them...", "smirk", "susie")
+                if noelle then
+                    cutscene:showNametag("Noelle")
+                    cutscene:text("* (You shouldn't!!)", "smile_closed_b", "noelle")
+                end
             end
             cutscene:hideNametag()
         end
@@ -94,6 +121,11 @@ return function(cutscene)
             cutscene:showNametag("Susie")
             cutscene:text("* Seems like we're approaching the end of this place.", "neutral_side", "susie")
             cutscene:text("* About time.[wait:5] I was starting to get tired of it.", "annoyed", "susie")
+            if noelle then
+                cutscene:showNametag("Noelle")
+                cutscene:text("* I gotta admit...", "confused_surprise_b", "noelle")
+                cutscene:text("* That place really tired me out, haha...", "what_smile", "noelle")
+            end
             if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Can't believe I'm saying this,[wait:5] but...[wait:5] Same.", "stern", "jamm")
