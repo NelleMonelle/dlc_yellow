@@ -65,6 +65,7 @@ function Jandroid:init()
     self:registerAct("Question")
     self:registerAct("Clean")
     self:registerAct("Analyze")
+    self:registerMarcyAct("Roll")
 
     --self.gauge_size = {250, 20}
 
@@ -118,6 +119,20 @@ function Jandroid:onAct(battler, name)
             end
             return "* You look Jandroid over and\ntell them they need a shower."
         end
+    elseif name == "Roll" then
+		if self.dirtied_marcy then
+			return {
+				"* Marcy rolls around in the dirtiness...",
+				"* But Jandroid's guard is already lowered!"
+			}
+		else
+			self.defense = self.defense - 2
+			self.dirtied_marcy = true
+			return {
+				"* Marcy rolls around in the dirtiness...",
+				"* Jandroid sees this and lowers its guard a little."
+			}
+		end
     elseif name == "Standard" then
         if self.low_health == true then
             self.dialogue_override = "St_amwrrks\nNeed_/ scruBbed\n0"

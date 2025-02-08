@@ -58,6 +58,7 @@ function Dunebud:init()
     self:registerAct("Pat")
     self:registerAct("Jiggle")
     self:registerAct("Shoo")
+    self:registerMarcyAct("Build")
 
     --self.gauge_size = {250, 20}
 
@@ -98,6 +99,10 @@ function Dunebud:onAct(battler, name)
             self.dialogue_override = "Awawa~"
             return "* You shake Dunebud back and\nforth.\n* They giggle at you."
         end
+    elseif name == "Build" then
+        self:addMercy(100)
+        self.jiggled = true
+        return "* Marcy shapes Dunebud into a sandcastle.\n* They feel strong."
     elseif name == "Shoo" then
         if self.low_health then
             return "* You take a step at Dunebud to\nintimidate them.\n* They flinch a little."
