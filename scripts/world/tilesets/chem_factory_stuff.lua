@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 31,
+  tilecount = 37,
   tiles = {
     {
       id = 0,
@@ -210,6 +210,42 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_wire.png",
       width = 73,
       height = 21
+    },
+    {
+      id = 32,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk1.png",
+      width = 100,
+      height = 83
+    },
+    {
+      id = 33,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk4.png",
+      width = 80,
+      height = 72
+    },
+    {
+      id = 34,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk5.png",
+      width = 100,
+      height = 83
+    },
+    {
+      id = 36,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk5_chair.png",
+      width = 21,
+      height = 17
+    },
+    {
+      id = 35,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk6.png",
+      width = 64,
+      height = 88
+    },
+    {
+      id = 31,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/factory_elevator_bg.png",
+      width = 65,
+      height = 158
     }
   }
 }

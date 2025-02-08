@@ -80,7 +80,7 @@ function Jandroid:onAct(battler, name)
     if name == "Check" then
         return "* JANDROID -- "..self.check
     elseif name == "Question" then
-        if self.low_health == true then
+        if self.low_health then
             self.dialogue_override = "W//what\nwas_That? /("
             return "* You ask Jandroid how they're\nstill functioning."
         else
@@ -93,7 +93,7 @@ function Jandroid:onAct(battler, name)
             return "* You ask Jandroid what their\nprimary directive is."
         end
     elseif name == "Clean" then
-        if self.low_health == true then
+        if self.low_health then
             self.dialogue_override = "St_amwrrks\nNeed_/ scruBbed\n0"
             return "* Cleaning Jandroid wouldn't\ndo any good at this point."
         else
@@ -107,7 +107,7 @@ function Jandroid:onAct(battler, name)
             return "* You offer to give Jandroid\na scrub. They seem offended."
         end
     elseif name == "Analyze" then
-        if self.low_health == true then
+        if self.low_health then
             self.dialogue_override = "AaAAaoo/aa/.\nBzzt.\"<<<"
             return "* You look Jandroid over and\nnotice many missing screws."
         else
@@ -134,20 +134,45 @@ function Jandroid:onAct(battler, name)
 			}
 		end
     elseif name == "Standard" then
-        if self.low_health == true then
+        if self.low_health then
             self.dialogue_override = "St_amwrrks\nNeed_/ scruBbed\n0"
             return "* Cleaning Jandroid wouldn't\ndo any good at this point."
         else
-            local rnd = Utils.pick({1, 2})
-            if rnd == 1 then
-                self.dialogue_override = "NO YOU!!"
-            else
-                self.dialogue_override = "You are RUDE!\nTake THIS!!"
-            end
-			if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
+            self.wave_override = "jandroid/garbage_cans"
+            if battler.chara.id == "susie" then
+                self.wave_override = nil
+                if not self.susie_acted then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* (Man,[wait:5] they look hella dirty...)", "nervous_side", "susie")
+                        cutscene:text("* What's that look for?[wait:5] I'm not touching them.", "annoyed", "susie")
+                    end)
+                    self.susie_acted = true
+			    	return
+                else
+                    return "* Susie refuses to touch Jandroid."
+                end
+            elseif battler.chara.id == "noelle" then
+                if not self.noelle_acted then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* Oh,[wait:5] you look so dirty...", "what_smile", "noelle")
+                        cutscene:text("* Mind if I clean you a bit?", "confused_surprise", "noelle")
+                    end)
+                    self.noelle_acted = true
+			    	return
+                else
+                    return "* Noelle already cleaned Jandroid."
+                end
+			elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
 				return "* Jamm and Marcy offer to give Jandroid a scrub. They seem offended."
-			end
-            return "* "..battler.chara:getName().." offers to give Jandroid\na scrub. They seem offended."
+            else
+                local rnd = Utils.pick({1, 2})
+                if rnd == 1 then
+                    self.dialogue_override = "NO YOU!!"
+                else
+                    self.dialogue_override = "You are RUDE!\nTake THIS!!"
+                end
+                return "* "..battler.chara:getName().." offers to give Jandroid\na scrub. They seem offended."
+            end
         end
     end
 

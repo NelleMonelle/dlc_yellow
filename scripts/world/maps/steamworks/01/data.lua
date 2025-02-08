@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 8,
+  nextobjectid = 10,
   properties = {
     ["light"] = true,
     ["music"] = "abandoned"
@@ -156,6 +156,22 @@ return {
             ["map"] = "steamworks/02",
             ["marker"] = "down"
           }
+        },
+        {
+          id = 8,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 260,
+          y = 1080,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "dunes/43",
+            ["marker"] = "up"
+          }
         }
       }
     },
@@ -179,7 +195,7 @@ return {
           type = "",
           shape = "point",
           x = 320,
-          y = 1040,
+          y = 1000,
           width = 0,
           height = 0,
           rotation = 0,
@@ -193,6 +209,19 @@ return {
           shape = "point",
           x = 320,
           y = 80,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 9,
+          name = "down",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 1040,
           width = 0,
           height = 0,
           rotation = 0,

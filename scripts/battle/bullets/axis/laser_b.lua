@@ -1,9 +1,10 @@
 local AxisLaserBlue, super = Class(Bullet)
 
-function AxisLaserBlue:init(x, y, dir, speed)
+function AxisLaserBlue:init(x, y, dir, speed, rot)
     -- Last argument = sprite path
     super.init(self, x, y, "battle/bullets/axis/laser_blue")
 
+    self.rotation = math.rad(rot or 0)
     -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
     self.physics.direction = dir
     -- Speed the bullet moves (pixels per frame at 30FPS)

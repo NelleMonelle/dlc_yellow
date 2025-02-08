@@ -19,7 +19,7 @@ function Axis:init()
     self.battle_phase = 1
     self.axis_protected = false
     
-    self.dialogue_bubble = "ut_wide"
+    self.dialogue_bubble = "uty_2"
     self.dialogue_offset = {-30, 10}
 
     self.waves = {
@@ -88,10 +88,43 @@ function Axis:onAct(battler, name)
         Game.battle:startActCutscene("axis", "compliment_one")
         return
     elseif name == "Standard" then
-        if self.battle_phase == 9 then
-            return "* Perhaps it's better to speak together."
+        if battler.chara.id == "susie" then
+            if not self.susie_acted then
+                Game.battle:startActCutscene(function(cutscene)
+                    cutscene:text("* Susie tries to reason with Axis...")
+                    cutscene:text("* Hey uhh...", "nervous_side", "susie")
+                    cutscene:text("* I know we started off kinda badly...", "nervous", "susie")
+                    cutscene:text("* When you tried to apprehend us and stuff...", "shy", "susie")
+                    cutscene:text("* But how about you just let us go?", "neutral", "susie")
+                    cutscene:text("* I can promise you we won't come back here if you do.", "nervous_side", "susie")
+                    cutscene:battlerText(self, {
+                        "YOU SHOULD'VE\nDONE THAT FROM\nTHE BEGINNING.",
+                        "NOW IT'S TOO\nLATE FOR THAT.",
+                        "MY PROTOCOL IS\nALREADY SET\nON YOUR\nAPPREHENSION."
+                    })
+                    cutscene:text("* Guess we'll have to do this the hard way then.", "annoyed", "susie")
+                end)
+                self.susie_acted = true
+            else
+                return "* Susie doesn't want to try to reason again."
+            end
+        elseif battler.chara.id == "noelle" then
+            if not self.noelle_acted then
+                Game.battle:startActCutscene(function(cutscene)
+                    cutscene:text("* Noelle thinks about the situtaion...")
+                    cutscene:text("* (I'm actually not sure if we can convince him like that.)", "frown", "noelle")
+                    cutscene:text("* (He seems to be pretty angry right now...)", "confused", "noelle")
+                    cutscene:text("* (So reasoning might not work.)", "confused_surprise", "noelle")
+                    cutscene:text("* (Maybe we could tire him out?)", "confused", "noelle")
+                    cutscene:text("* (Wait,[wait:5] robots can't get tired,[wait:5] can they?)", "what_smile", "noelle")
+                end)
+                self.noelle_acted = true
+                return
+            else
+                return "* Noelle doesn't have anything more to say."
+            end
         else
-            return "* But there was nothing to say at the moment."
+            return "* But "..battler.chara:getName().." didn't know what to do."
         end
     end
 

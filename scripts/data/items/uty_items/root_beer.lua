@@ -7,7 +7,6 @@ function item:init(inventory)
     self.use_method = "drink"
     -- Display name
     self.name = "Root Beer"
-    self.short_name = "RootBeer"
 
     -- Item type (item, key, weapon, armor)
     self.type = "item"
@@ -18,7 +17,7 @@ function item:init(inventory)
 
     self.price = 22
     -- Default shop sell price
-    self.sell_price = 15
+    self.sell_price = 25
     -- Whether the item can be sold
     self.can_sell = true
 
@@ -37,19 +36,6 @@ function item:init(inventory)
     -- Will this item be instantly consumed in battles?
     self.instant = false
     
-end
-
-function item:onWorldUse(target)
-    target:heal(self:getWorldHealAmount())
-    Game.world:showText(self:getWorldUseText(target))
-    return true
-end
-
-function item:onLightBattleUse(target)
-    target:heal(self:getBattleHealAmount())
-    self:battleUseSound(user, target)
-    Game.battle:battleText(self:getLightBattleText(user, target))
-    return true
 end
 
 function item:getWorldUseText(target)

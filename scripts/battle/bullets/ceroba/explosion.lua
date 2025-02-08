@@ -3,6 +3,7 @@ local CerobaExplosion, super = Class(Bullet)
 function CerobaExplosion:init(x, y)
     super.init(self, x, y, "battle/bullets/ceroba/explosion")
 
+    self.collider = nil
     self.destroy_on_hit = false
     self.sprite:setAnimation({"battle/bullets/ceroba/explosion", 1/15, false})
     self:setScale(1, 1)

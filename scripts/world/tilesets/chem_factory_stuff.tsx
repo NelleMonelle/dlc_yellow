@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.1" name="chem_factory_stuff" tilewidth="320" tileheight="320" tilecount="31" columns="0">
+<tileset version="1.10" tiledversion="1.11.1" name="chem_factory_stuff" tilewidth="320" tileheight="320" tilecount="37" columns="0">
  <editorsettings>
   <export target="chem_factory_stuff.lua" format="lua"/>
  </editorsettings>
@@ -96,5 +96,23 @@
  </tile>
  <tile id="30">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_03_wire.png" width="73" height="21"/>
+ </tile>
+ <tile id="32">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk1.png" width="100" height="83"/>
+ </tile>
+ <tile id="33">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk4.png" width="80" height="72"/>
+ </tile>
+ <tile id="34">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk5.png" width="100" height="83"/>
+ </tile>
+ <tile id="36">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk5_chair.png" width="21" height="17"/>
+ </tile>
+ <tile id="35">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_04_desk6.png" width="64" height="88"/>
+ </tile>
+ <tile id="31">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/factory_elevator_bg.png" width="65" height="158"/>
  </tile>
 </tileset>

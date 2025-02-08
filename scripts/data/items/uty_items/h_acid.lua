@@ -18,7 +18,7 @@ function item:init(inventory)
     -- Default shop sell price
     self.sell_price = 0
     -- Whether the item can be sold
-    self.can_sell = true
+    self.can_sell = false
 
     -- Item description text (unused by light items outside of debug menu)
     self.description = "(An extremely dangerous compound. Handle with caution.)"
@@ -55,16 +55,9 @@ function item:onWorldUse(target)
 end
 
 function item:onLightBattleUse(target)
-    Game.battle:startCutscene(function(cutscene)
-        local opinion = cutscene:textChoicer("* (Are you sure you want to\ndrink the acid?)", {"Yes", "    No"})
-        if opinion == 1 then
-            Assets.playSound("hurt")
-            Game:gameOver(320, 240)
-            return true
-        else
-            return false
-        end
-    end)
+    Assets.playSound("hurt")
+    Game:gameOver(320, 240)
+    return true
 end
 
 return item

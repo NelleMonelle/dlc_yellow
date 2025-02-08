@@ -9,7 +9,7 @@
 
     "chapter": 2,
 
-    "map": "steamworks/01",
+    "map": "dunes/34",
 
     "party": ["kris", "susie", "noelle"],
 
@@ -21,7 +21,7 @@
 
     "dlc": {
         "extraBinCodes": {
-            "STMWORKS": true
+            "UTYELLOW": true
         },
         "worldMap": {},
         "bosses": {}

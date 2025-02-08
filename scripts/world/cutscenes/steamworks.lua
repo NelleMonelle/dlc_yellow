@@ -21,6 +21,7 @@ return {
         local noel_data = Noel:loadNoel()
 
         local leader = Game.world.player
+        local dess = cutscene:getCharacter("dess")
         local axis = cutscene:getCharacter("axis")
         local trapdoor = Game.world.map:getEvent("stw_trapdoor")
 
@@ -50,172 +51,213 @@ return {
         Game.world.music:play("enter_axis")
         cutscene:showNametag("Axis")
         cutscene:text("* FOUND YOU.", "normal", "axis")
-        if cutscene:getCharacter("susie_lw") then
-            cutscene:showNametag("Susie")
-            cutscene:text("* The hell do you need from us?!", "angry", "susie")
-            cutscene:text("* Just piss off,[wait:5] dude.", "annoyed", "susie")
+        if Game:isDessMode() then
+            cutscene:showNametag("Dess")
+            cutscene:text("* dang not you again.", "angry", "dess")
             cutscene:showNametag("Axis")
-        end
-        cutscene:text("* YOUR CRIMES ARE AS\nFOLLOWS:", "normal", "axis")
-        cutscene:text("* - TRESPASSING ON\nPRIVATE PROPERTY.", "normal", "axis")
-        cutscene:text("* - RESISTING ARREST.", "normal", "axis")
-        if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
-            cutscene:text("* - HUMAN.", "normal", "axis")
-            if cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
-                cutscene:showNametag("Jamm")
-                cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
-                cutscene:showNametag("Axis")
-                cutscene:text("[color:FF00FF]* ACCESSING MEMORY BANK_", nil, "axis")
-                cutscene:hideNametag()
-                Assets.playSound("uty_cant_select", 2)
-                cutscene:wait(1)
-                cutscene:showNametag("Axis")
-                cutscene:text("[color:FF00FF]* MEMORY BANK BLOCKED_", nil, "axis")
-                cutscene:text("* SORRY,[wait:5] BUT I AM UNABLE TO PROVIDE THE EXACT DATE.", "normal", "axis")
-                cutscene:showNametag("Jamm")
-                cutscene:text("* That was a rethorical question.", "nervous_left", "jamm")
-                cutscene:showNametag("Axis")
-                cutscene:text("* . . .", "normal", "axis")
-                cutscene:text("* ANYWAYS.", "normal", "axis")
-            end
-        end
-        if Game:getFlag("dessimation") then -- idk WIP
-            cutscene:text("* DESSIMATION LINE OR WHATEVER.", "normal", "axis")
-        else
-            cutscene:showNametag("Axis")
-            local opinion = cutscene:textChoicer("* HOW TO YOU PLEAD TO\nTHESE ACCUSATIONS?", {"Not guilty", "Guilty"}, "normal", "axis")
-            if opinion == 1 then
-                cutscene:text("* PLAYING TOUGH ARE WE?", "normal", "axis")
-                cutscene:text("* THAT IS NO MATTER.", "normal", "axis")
-                cutscene:text("* I WILL SCAN YOUR FACE\nWITH MY LIE DETECTOR.", "normal", "axis")
-                cutscene:hideNametag()
-				local src = Assets.playSound("elevator")
-				src:setPitch(2)
-				leader:addFX(AxisScanFX({1,1,1}, leader.sprite.height), "axis_scan")
-				while leader:getFX("axis_scan"):isActive() do
-					leader:getFX("axis_scan"):addScanProgress()
-					Assets.playSound("spearappear")
-				    cutscene:wait(2/30)
-				end
-				leader:removeFX("axis_scan")
-                cutscene:wait(0.5)
-                cutscene:showNametag("Axis")
-                if Game.party[1].id == "hero" or Game.party[1].id == "kris" then
-                    cutscene:text("* INCREDIBLE.", "normal", "axis")
-                    cutscene:text("* YOU HAVE THE MOST\nEMOTIONLESS FACE I HAVE\nEVER SEEN.", "normal", "axis")
-                    cutscene:text("* I WILL JUST HAVE TO GO\nWITH MY NON-EXISTENT GUT\nAND SAY YOU WERE LYING.", "normal", "axis")
-                else
-                    cutscene:text("* AHA.[wait:5] I SEE NERVOUSNESS IN YOUR FACE.", "normal", "axis")
-                    cutscene:text("* THAT MEANS YOU WERE LYING.", "normal", "axis")
-                    cutscene:text("* OH WELL THEN.", "normal", "axis")
-                end
-            elseif opinion == 2 then
-                if cutscene:getCharacter("susie_lw") then
-                    cutscene:showNametag("Susie")
-                    --cutscene:getCharacter("susie_lw"):setSprite("exasperated_left")
-                    cutscene:text("* (WHY'D YOU SAY THAT!?)", "teeth", "susie")
-                    cutscene:showNametag("Axis")
-                end
-                cutscene:text("* REALLY?", "normal", "axis")
-                cutscene:text("* THAT WAS EASY.", "normal", "axis")
-                cutscene:text("* YOUR CRIMES WILL BE\nREPORTED TO AN\nAUTHORITY.", "normal", "axis")
-                cutscene:text("* OH WAIT,[wait:5] THAT IS ME.", "normal", "axis")
-            end
-            if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
-                cutscene:text("* ENJOY YOUR ISOLATION,[wait:5]\nHUMAN.", "normal", "axis")
+            cutscene:text("* YES IT IS ME AGAIN.", "normal", "axis")
+            cutscene:text("* AND I SHALL PUT YOU UNDER ARREST.", "normal", "axis")
+            cutscene:showNametag("Dess")
+            if Game:getFlag("some_dessimation_condition") then
+                cutscene:text("* yeah no ain't no way", "angry", "dess")
             else
-                cutscene:text("* ENJOY YOUR ISOLATION.", "normal", "axis")
-            end
-            cutscene:hideNametag()
+                cutscene:text("* what did I even do bruh.", "eyebrow", "dess")
+                cutscene:hideNametag()
 
-            local noel_not_fall
-            if noel_data and noel_data.steamworks and noel_data.steamworks.fallen == 1 then
-                local can_go = true
-                for i = 1, #Game.party do
-                    if Game.party[i].id == "noel" then
-                        if Game.party[i+1] then
-                            can_go = false
+                Game.world.music:stop()
+                trapdoor:setSprite("world/maps/steamworks/small_objects/12_trapdoor", 1/10)
+                cutscene:wait(0.5)
+                Assets.playSound("trapdoor_open")
+                cutscene:wait(1.1)
+                trapdoor:setSprite("world/maps/steamworks/small_objects/12_trapdoor_16")
+                dess:setFacing("down")
+                cutscene:showNametag("Dess")
+                cutscene:text("* shit", "wtf_b", "dess")
+                cutscene:hideNametag()
+                Game.world.camera.keep_in_bounds = false
+                Assets.playSound("fall_trapdoor")
+
+                dess.alpha = 0.75
+                cutscene:slideTo(dess, dess.x, dess.y + 800, 1)
+                cutscene:wait(2)
+                cutscene:detachCamera()
+                cutscene:slideTo(dess, dess.x, dess.y + 800, 1)
+                cutscene:mapTransition("steamworks/13")
+                Game:setFlag("basement_trapped", true)
+            end
+        else
+            if cutscene:getCharacter("susie_lw") then
+                cutscene:showNametag("Susie")
+                cutscene:text("* The hell do you need from us?!", "angry", "susie")
+                cutscene:text("* Just piss off,[wait:5] dude.", "annoyed", "susie")
+                cutscene:showNametag("Axis")
+            end
+            cutscene:text("* YOUR CRIMES ARE AS\nFOLLOWS:", "normal", "axis")
+            cutscene:text("* - TRESPASSING ON\nPRIVATE PROPERTY.", "normal", "axis")
+            cutscene:text("* - RESISTING ARREST.", "normal", "axis")
+            if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
+                cutscene:text("* - HUMAN.", "normal", "axis")
+                if cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
+                    cutscene:showNametag("Jamm")
+                    cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
+                    cutscene:showNametag("Axis")
+                    cutscene:text("[color:FF00FF]* ACCESSING MEMORY BANK_", nil, "axis")
+                    cutscene:hideNametag()
+                    Assets.playSound("uty_cant_select", 2)
+                    cutscene:wait(1)
+                    cutscene:showNametag("Axis")
+                    cutscene:text("[color:FF00FF]* MEMORY BANK BLOCKED_", nil, "axis")
+                    cutscene:text("* SORRY,[wait:5] BUT I AM UNABLE TO PROVIDE THE EXACT DATE.", "normal", "axis")
+                    cutscene:showNametag("Jamm")
+                    cutscene:text("* That was a rethorical question.", "nervous_left", "jamm")
+                    cutscene:showNametag("Axis")
+                    cutscene:text("* . . .", "normal", "axis")
+                    cutscene:text("* ANYWAYS.", "normal", "axis")
+                end
+            end
+            if Game:getFlag("some_dessimation_condition") then -- idk WIP
+                cutscene:text("* DESSIMATION LINE OR WHATEVER.", "normal", "axis")
+            else
+                cutscene:showNametag("Axis")
+                local opinion = cutscene:textChoicer("* HOW TO YOU PLEAD TO\nTHESE ACCUSATIONS?", {"Not guilty", "Guilty"}, "normal", "axis")
+                if opinion == 1 then
+                    cutscene:text("* PLAYING TOUGH ARE WE?", "normal", "axis")
+                    cutscene:text("* THAT IS NO MATTER.", "normal", "axis")
+                    cutscene:text("* I WILL SCAN YOUR FACE\nWITH MY LIE DETECTOR.", "normal", "axis")
+                    cutscene:hideNametag()
+		    		local src = Assets.playSound("elevator")
+		    		src:setPitch(2)
+		    		leader:addFX(AxisScanFX({1,1,1}, leader.sprite.height), "axis_scan")
+		    		while leader:getFX("axis_scan"):isActive() do
+		    			leader:getFX("axis_scan"):addScanProgress()
+		    			Assets.playSound("spearappear")
+		    		    cutscene:wait(2/30)
+		    		end
+		    		leader:removeFX("axis_scan")
+                    cutscene:wait(0.5)
+                    cutscene:showNametag("Axis")
+                    if Game.party[1].id == "hero" or Game.party[1].id == "kris" then
+                        cutscene:text("* INCREDIBLE.", "normal", "axis")
+                        cutscene:text("* YOU HAVE THE MOST\nEMOTIONLESS FACE I HAVE\nEVER SEEN.", "normal", "axis")
+                        cutscene:text("* I WILL JUST HAVE TO GO\nWITH MY NON-EXISTENT GUT\nAND SAY YOU WERE LYING.", "normal", "axis")
+                    else
+                        cutscene:text("* AHA.[wait:5] I SEE NERVOUSNESS IN YOUR FACE.", "normal", "axis")
+                        cutscene:text("* THAT MEANS YOU WERE LYING.", "normal", "axis")
+                        cutscene:text("* OH WELL THEN.", "normal", "axis")
+                    end
+                elseif opinion == 2 then
+                    if cutscene:getCharacter("susie_lw") then
+                        cutscene:showNametag("Susie")
+                        --cutscene:getCharacter("susie_lw"):setSprite("exasperated_left")
+                        cutscene:text("* (WHY'D YOU SAY THAT!?)", "teeth", "susie")
+                        cutscene:showNametag("Axis")
+                    end
+                    cutscene:text("* REALLY?", "normal", "axis")
+                    cutscene:text("* THAT WAS EASY.", "normal", "axis")
+                    cutscene:text("* YOUR CRIMES WILL BE\nREPORTED TO AN\nAUTHORITY.", "normal", "axis")
+                    cutscene:text("* OH WAIT,[wait:5] THAT IS ME.", "normal", "axis")
+                end
+                if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
+                    cutscene:text("* ENJOY YOUR ISOLATION,[wait:5]\nHUMAN.", "normal", "axis")
+                else
+                    cutscene:text("* ENJOY YOUR ISOLATION.", "normal", "axis")
+                end
+                cutscene:hideNametag()
+
+                local noel_not_fall
+                if noel_data and noel_data.steamworks and noel_data.steamworks.fallen == 1 then
+                    local can_go = true
+                    for i = 1, #Game.party do
+                        if Game.party[i].id == "noel" then
+                            if Game.party[i+1] then
+                                can_go = false
+                            end
+                        end
+                    end 
+                    if can_go == true then
+                        cutscene:wait(cutscene:walkTo(cutscene:getCharacter("noel"), event.x + event.width + 120, event.y + event.height / 2, 0.5, "left"))
+                        noel_not_fall = true
+                    end
+                end
+
+                Game.world.music:stop()
+                trapdoor:setSprite("world/maps/steamworks/small_objects/12_trapdoor", 1/10)
+                cutscene:wait(0.5)
+                Assets.playSound("trapdoor_open")
+                cutscene:wait(1.1)
+                trapdoor:setSprite("world/maps/steamworks/small_objects/12_trapdoor_16")
+
+                for _,member in ipairs(Game.party) do
+                    local chara = Game.world:getCharacter(member.id)
+                    if chara then
+                        if member.id == "noel" and noel_not_fall == true then
+                        else
+                            chara.sprite:setFacing("down")
                         end
                     end
-                end 
-                if can_go == true then
-                    cutscene:wait(cutscene:walkTo(cutscene:getCharacter("noel"), event.x + event.width + 120, event.y + event.height / 2, 0.5, "left"))
-                    noel_not_fall = true
                 end
-            end
 
-            Game.world.music:stop()
-            trapdoor:setSprite("world/maps/steamworks/small_objects/12_trapdoor", 1/10)
-            cutscene:wait(0.5)
-            Assets.playSound("trapdoor_open")
-            cutscene:wait(1.1)
-            trapdoor:setSprite("world/maps/steamworks/small_objects/12_trapdoor_16")
+                cutscene:wait(0.1)
+                cutscene:attachCamera()
+                cutscene:wait(1)
 
-            for _,member in ipairs(Game.party) do
-                local chara = Game.world:getCharacter(member.id)
-                if chara then
-                    if member.id == "noel" and noel_not_fall == true then
-                    else
-                        chara.sprite:setFacing("down")
+                local noel_umbrella
+                if cutscene:getCharacter("noel") then
+                    if noel_data and not noel_not_fall == true then
+                        if noel_data.steamworks and noel_data.steamworks.fallen == 1 then
+                            Assets.playSound("wing")
+                            cutscene:getCharacter("noel"):setSprite("brella")
+                            cutscene:wait(0.5)
+                            noel_umbrella = true
+                        else
+                            local noel = cutscene:getCharacter("noel")
+                            local save = {steamworks = {fallen = 1,},}
+                            Noel:saveNoel(save)
+                        end
                     end
                 end
-            end
+                Game.world.camera.keep_in_bounds = false
+                Assets.playSound("fall_trapdoor")
 
-            cutscene:wait(0.1)
-            cutscene:attachCamera()
-            cutscene:wait(1)
-
-            local noel_umbrella
-            if cutscene:getCharacter("noel") then
-                if noel_data and not noel_not_fall == true then
-                    if noel_data.steamworks and noel_data.steamworks.fallen == 1 then
-                        Assets.playSound("wing")
-                        cutscene:getCharacter("noel"):setSprite("brella")
-                        cutscene:wait(0.5)
-                        noel_umbrella = true
-                    else
-                        local noel = cutscene:getCharacter("noel")
-                        local save = {steamworks = {fallen = 1,},}
-                        Noel:saveNoel(save)
-                    end
+                if cutscene:getCharacter("susie_lw") then
+                    cutscene:getCharacter("susie_lw"):setSprite("fall")
+                    Assets.playSound("sussurprise")
                 end
-            end
-            Game.world.camera.keep_in_bounds = false
-            Assets.playSound("fall_trapdoor")
 
-            if cutscene:getCharacter("susie_lw") then
-                cutscene:getCharacter("susie_lw"):setSprite("fall")
-                Assets.playSound("sussurprise")
-            end
+                if cutscene:getCharacter("noelle_lw") then
+                    cutscene:getCharacter("noelle_lw"):setSprite("shocked")
+                    Assets.playSound("noelle_scared")
+                end
 
-            for _,member in ipairs(Game.party) do
-                local chara = Game.world:getCharacter(member.id)
-                if chara then
-                    chara.alpha = 0.75
-                    if member.id == "noel" then
-                        if noel_not_fall == true then
-                        elseif noel_umbrella == true then
-                            cutscene:slideTo(chara, chara.x, chara.y + 400, 1)
+                for _,member in ipairs(Game.party) do
+                    local chara = Game.world:getCharacter(member.id)
+                    if chara then
+                        chara.alpha = 0.75
+                        if member.id == "noel" then
+                            if noel_not_fall == true then
+                            elseif noel_umbrella == true then
+                                cutscene:slideTo(chara, chara.x, chara.y + 400, 1)
+                            else
+                                cutscene:slideTo(chara, chara.x, chara.y + 800, 1)
+                            end
                         else
                             cutscene:slideTo(chara, chara.x, chara.y + 800, 1)
                         end
-                    else
-                        cutscene:slideTo(chara, chara.x, chara.y + 800, 1)
                     end
                 end
-            end
-            cutscene:wait(2)
-            cutscene:detachCamera()
-            for _,member in ipairs(Game.party) do
-                local chara = Game.world:getCharacter(member.id)
-                if chara then
-                    if member.id ~= "noel" then
-                        cutscene:slideTo(chara, chara.x, chara.y + 800, 1)
+                cutscene:wait(2)
+                cutscene:detachCamera()
+                for _,member in ipairs(Game.party) do
+                    local chara = Game.world:getCharacter(member.id)
+                    if chara then
+                        if member.id ~= "noel" then
+                            cutscene:slideTo(chara, chara.x, chara.y + 800, 1)
+                        end
                     end
                 end
+                cutscene:mapTransition("steamworks/13")
+                Game:setFlag("basement_trapped", true)
             end
-            cutscene:mapTransition("steamworks/13")
-            Game:setFlag("basement_trapped", true)
         end
         Game:setFlag("axis_second_met", true)
     end,
@@ -245,7 +287,7 @@ return {
             Game:setFlag("axis_basement_caught", 2)
         end
         cutscene:hideNametag()
-        
+
         cutscene:walkTo(axis, axis.x, axis.y + 200, 2, "down")
         Game.world:mapTransition("steamworks/13", "door")
     end,
@@ -425,29 +467,5 @@ return {
         Game.world.map:getEvent("stw_chem_door"):setSprite("world/maps/steamworks/small_objects/31_door_5")
         cutscene:wait(1)
         Game:setFlag("31_chem_door_opened", true)
-    end,
-    flowey_prefurnace = function(cutscene, event)
-        local flowey = cutscene:getCharacter("flowey")
-        Game.world.map:getEvent(18).visible = false
-        flowey:setAnimation("rise")
-        cutscene:wait(0.5)
-        flowey:setSprite("down")
-        cutscene:wait(0.5)
-        cutscene:text("* Hey there.", "nice", flowey)
-        cutscene:text("* Seems like you're approaching the end of this place.", "niceside", flowey)
-        if Game:getFlag("axis_hurt") then
-            cutscene:text("* I'd give you something to help you out...", "plainside", flowey)
-            cutscene:text("* But seems like you're doing good on your own.", "smirk", flowey)
-        else
-            cutscene:text("* And,[wait:5] don't ask me how...", "plain", flowey)
-            cutscene:text("* But I just thought you'd need this lid.", "smirk", flowey)
-        end
-        cutscene:text("* Alright,[wait:5] see ya!", "wink", flowey)
-        flowey:setAnimation("sink")
-        cutscene:wait(0.5)
-        flowey:remove()
-        cutscene:wait(0.5)
-        Game.world.map:getEvent(18).visible = true
-        Game:setFlag("flowey_prefurnace_met", true)
     end,
 }
