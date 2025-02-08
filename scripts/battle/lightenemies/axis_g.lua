@@ -92,7 +92,17 @@ function Axis:onAct(battler, name)
             "* Something stirs inside."
         }
     elseif name == "Standard" then
-        return "* But there was nothing to say."
+        if battler.chara.id == "susie" then
+            Game.battle:startActCutscene(function(cutscene)
+                cutscene:text("* ...", "annoyed_down", "susie")
+            end)
+        elseif battler.chara.id == "noelle" then
+            Game.battle:startActCutscene(function(cutscene)
+                cutscene:text("* ...", "sad_side", "noelle")
+            end)
+        else
+            return "* But "..battler.chara:getName().." had nothing to say."
+        end
     end
 
     return super:onAct(self, battler, name)
