@@ -124,13 +124,19 @@ function Jandroid:onAct(battler, name)
             return "* Cleaning Jandroid wouldn't\ndo any good at this point."
         else
             self.wave_override = "jandroid/garbage_cans"
-            local rnd = Utils.pick({1, 2})
-            if rnd == 1 then
-                self.dialogue_override = "NO YOU!!"
-            else
-                self.dialogue_override = "You are RUDE!\nTake THIS!!"
-            end
-            if battler.chara.id == "noelle" then
+            if battler.chara.id == "susie" then
+                self.wave_override = nil
+                if not self.susie_acted then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* (Man,[wait:5] they look hella dirty...)", "nervous_side", "susie")
+                        cutscene:text("* What's that look for?[wait:5] I'm not touching them.", "annoyed", "susie")
+                    end)
+                    self.susie_acted = true
+			    	return
+                else
+                    return "* Susie refuses to touch Jandroid."
+                end
+            elseif battler.chara.id == "noelle" then
                 if not self.noelle_acted then
                     Game.battle:startActCutscene(function(cutscene)
                         cutscene:text("* Oh,[wait:5] you look so dirty...", "what_smile", "noelle")
@@ -141,11 +147,17 @@ function Jandroid:onAct(battler, name)
                 else
                     return "* Noelle already cleaned Jandroid."
                 end
-			end
-			if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
+			elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
 				return "* Jamm and Marcy offer to give Jandroid a scrub. They seem offended."
-			end
-            return "* "..battler.chara:getName().." offers to give Jandroid\na scrub. They seem offended."
+            else
+                local rnd = Utils.pick({1, 2})
+                if rnd == 1 then
+                    self.dialogue_override = "NO YOU!!"
+                else
+                    self.dialogue_override = "You are RUDE!\nTake THIS!!"
+                end
+                return "* "..battler.chara:getName().." offers to give Jandroid\na scrub. They seem offended."
+            end
         end
     end
 

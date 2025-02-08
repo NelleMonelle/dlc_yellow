@@ -130,13 +130,18 @@ function TellyVis:onAct(battler, name)
             return "* Nothing on."
         else
             if not self.switched_channel then
-                local rnd = Utils.pick({1, 2})
-                if rnd == 1 then
-                    self.dialogue_override = "What are you\nstaring at?"
-                else
-                    self.dialogue_override = "There's nothing\non yet!"
-                end
-                if battler.chara.id == "noelle" then
+                if battler.chara.id == "susie" then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* Hm...", "neutral_side", "susie")
+                        cutscene:text("* Maybe a good slap on the side will make them work better!", "smile", "susie")
+                        self:addMercy(50)
+                        Assets.playSound("damage")
+                        self:shake(4)
+                        cutscene:wait(0.5)
+                    end)
+                    self.dialogue_override = "O-ow.[wait:5] Well,[wait:5] at least that helped."
+                    self.switched_channel = true
+                elseif battler.chara.id == "noelle" then
                     if not self.noelle_acted then
                         self.dialogue_override = "N-no! Don't turn me off!"
                         Game.battle:startActCutscene(function(cutscene)
@@ -148,20 +153,30 @@ function TellyVis:onAct(battler, name)
                     else
                         return "* Noelle doesn't think she can help Telly-Vis."
                     end
+                else
+                    local rnd = Utils.pick({1, 2})
+                    if rnd == 1 then
+                        self.dialogue_override = "What are you\nstaring at?"
+                    else
+                        self.dialogue_override = "There's nothing\non yet!"
+                    end
+                    return "* While this IS your favorite\nchannel, Telly-Vis don't look\namused."
                 end
-                return "* While this IS your favorite\nchannel, Telly-Vis don't look\namused."
             else
                 self:addMercy(50)
-                local rnd = Utils.pick({1, 2})
-                if rnd == 1 then
-                    self.dialogue_override = "Oh! Check\nthis out!"
-                else
-                    self.dialogue_override = "Here comes the\nbest part!"
-                end
-                if battler.chara.id == "noelle" then
+                if battler.chara.id == "susie" then
+                    return "* Susie watches the new program and finds it pretty entertaining."
+                elseif battler.chara.id == "noelle" then
                     return "* Noelle enjoys the program."
+                else
+                    local rnd = Utils.pick({1, 2})
+                    if rnd == 1 then
+                        self.dialogue_override = "Oh! Check\nthis out!"
+                    else
+                        self.dialogue_override = "Here comes the\nbest part!"
+                    end
+                    return "* Telly finds a show she thinks\nyou'll love."
                 end
-                return "* Telly finds a show she thinks\nyou'll love."
             end
         end
     end

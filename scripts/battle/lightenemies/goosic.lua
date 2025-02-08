@@ -148,53 +148,65 @@ function Goosic:onAct(battler, name)
             end
         end
     elseif name == "Standard" then
-        if battler.chara.id == "jamm" and Game:getFlag("dungeonkiller") then
-            return "* Jamm refused to act."
-        else
-            if self.low_health then
-				if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
-					return "* Jamm and Marcy calm themselves in the midst of battle."
-				end
-                return "* "..battler.chara:getName().." calms themselves in the\nmidst of the battle."
+        if self.low_health then
+			if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
+				return "* Jamm and Marcy calm themselves in the midst of battle."
             else
-                if not self.track_changed then
+                return "* "..battler.chara:getName().." calms themselves in the\nmidst of the battle."
+			end
+        else
+            if not self.track_changed then
+                if battler.chara.id == "susie" then
+                    return "* Susie is annoyed by the loud music."
+                elseif battler.chara.id == "noelle" then
+                    return "* Noelle can't keep up with the music."
+                elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
+					return "*  Jamm and Marcy try to enjoy the music, but can't keep up."
+				else
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
                         self.dialogue_override = "KEEP UP !\nKEEP UP !"
                     else
                         self.dialogue_override = "IF YOU CAN'T\nV-VIBE TO IT,\nGIVE IT U-U-UP !"
                     end
-                    if battler.chara.id == "noelle" then
-                        return "* Noelle can't keep up with the music."
-                    end
-					if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
-						return "*  Jamm and Marcy try to enjoy the music, but can't keep up."
-					end
                     return "* "..battler.chara:getName().." tries to enjoy the music\nbut can't keep up."
-                else
-                    self:addMercy(50)
+                end
+            else
+                self:addMercy(50)
+                if battler.chara.id == "susie" then
+                    if not self.susie_acted then
+                        Game.battle:startActCutscene(function(cutscene)
+                            cutscene:text("* Hm...[wait:5] Nice music for some dance moves.", "closed_grin", "susie")
+                            cutscene:text("* Susie shows off her dancing skills.")
+                            cutscene:text("* Heh,[wait:5] how's that?", "smile", "susie")
+                        end)
+                        self.dialogue_override = "Nice dance there :)"
+                        self.susie_acted = true
+                        return
+                    else
+                        return "* Susie has already danced enough."
+                    end
+                elseif battler.chara.id == "noelle" then
+                    if not self.noelle_acted then
+                        self.dialogue_override = "T-thanks deer girl!"
+                        Game.battle:startActCutscene(function(cutscene)
+                            cutscene:text("* Noelle compliments Goosic's music taste.")
+                            cutscene:text("* That melody seems nice...", "smile_closed", "noelle")
+                        end)
+                        self.noelle_acted = true
+                        return
+                    else
+                        return "* Noelle enjoys the music."
+                    end
+                elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
+					return "* Jamm and Marcy close their eyes and tap to the music."
+				else
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
                         self.dialogue_override = "Okay, yeah !\nI see you !"
                     else
                         self.dialogue_override = "Oh, now THIS\nis groovy !"
                     end
-                    if battler.chara.id == "noelle" then
-                        if not self.noelle_acted then
-                            self.dialogue_override = "T-thanks deer girl!"
-                            Game.battle:startActCutscene(function(cutscene)
-                                cutscene:text("* Noelle compliments Goosic's music taste.")
-                                cutscene:text("* That melody seems nice...", "smile_closed", "noelle")
-                            end)
-                            self.noelle_acted = true
-                            return
-                        else
-                            return "* Noelle enjoys the music."
-                        end
-                    end
-					if battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
-						return "* Jamm and Marcy close their eyes and tap to the music."
-					end
                     return "* "..battler.chara:getName().." closes their eyes and taps\ntheir foot to the music. Goosic\njoins them."
                 end
             end
