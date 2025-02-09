@@ -35,8 +35,10 @@ return {
 
         Game.battle.encounter:addEnemy("flowey", 140, 240)
         local flowey = Game.battle:getEnemyBattler("flowey")
+        flowey.animation_state=true
         flowey:setAnimation("riseanim")
         cutscene:wait(1)
+        flowey.animation_state=false
         cutscene:battlerText(flowey, "Howdy there!")
         flowey:setSprite("smirk")
         cutscene:battlerText(flowey, "Gee,[wait:5] I leave for\n5 seconds and\nyou're already\nin danger?")
@@ -68,6 +70,7 @@ return {
         flowey:setSprite("nice")
         cutscene:battlerText(flowey, "Good one!")
         cutscene:battlerText(flowey, "Now go get him!")
+        flowey.animation_state=true
         flowey:setAnimation("sinkanim")
         cutscene:wait(1)
         flowey:defeat("SPARED", false)

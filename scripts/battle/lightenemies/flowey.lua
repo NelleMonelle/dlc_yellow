@@ -13,6 +13,8 @@ function Flowey:init()
     self.money = 0
     self.experience = 0
 
+    self.animation_state = false
+
     self.dialogue_bubble = "ut_above"
     self.dialogue_offset = {-140, -110}
 
@@ -37,6 +39,19 @@ function Flowey:onAct(battler, name)
     end
 
     return super:onAct(self, battler, name)
+end
+
+function Flowey:update()
+    super:update(self)
+    if not self.animation_state then
+        if self.bubble and self.bubble:isTyping() then
+            if not self.sprite.playing then
+                self.sprite:play(4/30, true)
+            end
+        elseif self.sprite.playing then
+            self.sprite:stop()
+        end
+    end
 end
 
 return Flowey
