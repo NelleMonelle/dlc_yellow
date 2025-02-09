@@ -84,7 +84,7 @@ return {
     death = function(cutscene, battler, enemy)
         Game.battle.music:stop()
         local axis = Game.battle:getEnemyBattler("axis")
-        axis:getActiveSprite():setSprite("lightbattle/nocharge")
+        axis:getActiveSprite():setSprite("nocharge")
         cutscene:wait(1)
         --axis:toggleOverlay(false)
         local speech = {
@@ -123,7 +123,7 @@ return {
         cutscene:fadeOut(1, {color={1, 1, 1}})
         cutscene:wait(2.5)
         cutscene:fadeIn(0.1, {color={1, 1, 1}})
-        axis:getActiveSprite():setSprite("lightbattle/nocharge")
+        axis:getActiveSprite():setSprite("nocharge")
         cutscene:wait(1)
         local speech = {
             "[color:FF00FF]*BEEP BEEP*",
