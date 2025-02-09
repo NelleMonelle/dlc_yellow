@@ -45,6 +45,8 @@ function Axis:init()
     self.number_image = Assets.getFrames("ui/lightbattle/backgrounds/battle_axis_number")
 	
     self.can_flee = false
+
+	MagicalGlassLib.serious_mode = true
 end
 
 function Axis:drawBackground() end -- leave it empty to NOT draw the rectangle background
@@ -74,6 +76,14 @@ function Axis:beforeStateChange(old, new)
 			self.turns_passed = self.turns_passed + 1
         end
     end
+end
+
+function Axis:onReturnToWorld(events)
+	MagicalGlassLib.serious_mode = false
+end
+
+function Axis:getVictoryMoney(money)
+	return 0
 end
 
 return Axis
