@@ -45,7 +45,9 @@ function Axis:init()
     self.number_image = Assets.getFrames("ui/lightbattle/backgrounds/battle_axis_number")
 	
     self.can_flee = false
+end
 
+function Axis:onBattleInit()
 	MagicalGlassLib.serious_mode = true
 end
 
