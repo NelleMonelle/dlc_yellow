@@ -54,4 +54,8 @@ function Ceroba:beforeStateChange(old, new)
     end
 end
 
+function Ceroba:getVictoryMoney(money)
+	return 0
+end
+
 return Ceroba

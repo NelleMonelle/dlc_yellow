@@ -40,18 +40,26 @@ function item:init(inventory)
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return "* (You eat the Feisty Slider.[wait:5]\nMuch like the team,[wait:5] its flavor\nis...[wait:10] ambitious.)"
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return "* (You eat the Feisty Slider.[wait:5]\nMuch like the team,[wait:5] its flavor\nis...[wait:10] ambitious.)"
+        else
+            return "* ("..target:getName().." eats the Feisty Slider.)"
+        end
     else
-        return "* ("..target:getName().." eats the Feisty Slider.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return "* (You eat the Feisty Slider.[wait:5]\nMuch like the team,[wait:5] its flavor\nis...[wait:10] ambitious.)"
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return "* (You eat the Feisty Slider.[wait:5]\nMuch like the team,[wait:5] its flavor\nis...[wait:10] ambitious.)"
+        else
+            return "* ("..target.chara:getName().." eats the Feisty Slider.)"
+        end
     else
-        return "* ("..target.chara:getName().." eats the Feisty Slider.)"
+        return ""
     end
 end
 

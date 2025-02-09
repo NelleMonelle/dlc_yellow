@@ -39,18 +39,26 @@ function item:init(inventory)
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return "* (You drink the Icewater.[wait:5]\nDefinitely has a taste but you\ncan't describe it.)"
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return "* (You drink the Icewater.[wait:5]\nDefinitely has a taste but you\ncan't describe it.)"
+        else
+            return "* ("..target:getName().." drinks the Icewater.)"
+        end
     else
-        return "* ("..target:getName().." drinks the Icewater.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return "* (You drink the Icewater.[wait:5]\nDefinitely has a taste but you\ncan't describe it.)"
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return "* (You drink the Icewater.[wait:5]\nDefinitely has a taste but you\ncan't describe it.)"
+        else
+            return "* ("..target.chara:getName().." drinks the Icewater.)"
+        end
     else
-        return "* ("..target.chara:getName().." drinks the Icewater.)"
+        return ""
     end
 end
 

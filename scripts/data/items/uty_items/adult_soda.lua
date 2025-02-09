@@ -39,26 +39,34 @@ function item:init(inventory)
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return {
-            "* (You take a sip out of\nthe adult soda.)",
-            "* (...)",
-            "* (Tastes like water.)"
-        }
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return {
+                "* (You take a sip out of\nthe adult soda.)",
+                "* (...)",
+                "* (Tastes like water.)"
+            }
+        else
+            return "* ("..target:getName().." takes a sip out of\nthe adult soda.)"
+        end
     else
-        return "* ("..target:getName().." takes a sip out of\nthe adult soda.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return {
-            "* (You take a sip out of\nthe adult soda.)",
-            "* (...)",
-            "* (Tastes like water.)"
-        }
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return {
+                "* (You take a sip out of\nthe adult soda.)",
+                "* (...)",
+                "* (Tastes like water.)"
+            }
+        else
+            return "* ("..target.chara:getName().." takes a sip out of\nthe adult soda.)"
+        end
     else
-        return "* ("..target.chara:getName().." takes a sip out of\nthe adult soda.)"
+        return ""
     end
 end
 

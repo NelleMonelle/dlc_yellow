@@ -40,24 +40,32 @@ function item:init(inventory)
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return {
-            "* (You snack on the Gravity\nGranola.)",
-            "* (You can really taste all 9.8\nmeters!)"
-        }
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return {
+                "* (You snack on the Gravity\nGranola.)",
+                "* (You can really taste all 9.8\nmeters!)"
+            }
+        else
+            return "* ("..target:getName().." snacks on the Gravity\nGranola.)"
+        end
     else
-        return "* ("..target:getName().." snacks on the Gravity\nGranola.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return {
-            "* (You snack on the Gravity\nGranola.)",
-            "* (You can really taste all 9.8\nmeters!)"
-        }
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return {
+                "* (You snack on the Gravity\nGranola.)",
+                "* (You can really taste all 9.8\nmeters!)"
+            }
+        else
+            return "* ("..target.chara:getName().." snacks on the Gravity\nGranola.)"
+        end
     else
-        return "* ("..target.chara:getName().." snacks on the Gravity\nGranola.)"
+        return ""
     end
 end
 

@@ -39,18 +39,26 @@ function item:init(inventory)
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return "* (You down the Root Beer.[wait:5] The\ncarbonation tingles!)"
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return "* (You down the Root Beer.[wait:5] The\ncarbonation tingles!)"
+        else
+            return "* ("..target:getName().." downs the Root Beer.)"
+        end
     else
-        return "* ("..target:getName().." downs the Root Beer.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return "* (You down the Root Beer.[wait:5] The\ncarbonation tingles!)"
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return "* (You down the Root Beer.[wait:5] The\ncarbonation tingles!)"
+        else
+            return "* ("..target.chara:getName().." downs the Root Beer.)"
+        end
     else
-        return "* ("..target.chara:getName().." downs the Root Beer.)"
+        return ""
     end
 end
 

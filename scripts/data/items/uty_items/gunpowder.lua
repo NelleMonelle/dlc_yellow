@@ -40,32 +40,48 @@ function item:init(inventory)
 end
 
 function item:getLightWorldHealingText(target, amount)
-    return nil
+    if not MagicalGlassLib.serious_mode then
+        return nil
+    else
+        return super.getLightWorldHealingText(self, target, amount)
+    end
 end
 
 function item:getLightBattleHealingText(user, target, amount)
-    return nil
+    if not MagicalGlassLib.serious_mode then
+        return nil
+    else
+        return super.getLightBattleHealingText(self, user, target, amount)
+    end
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return "* (You put the gunpowder in your\nmouth and nearly choke to\ndeath.)"
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return "* (You put the gunpowder in your\nmouth and nearly choke to\ndeath.)"
+        else
+            return "* ("..target:getName().." puts the gunpowder in their\nmouth and nearly chokes to\ndeath.)"
+        end
     else
-        return "* ("..target:getName().." puts the gunpowder in their\nmouth and nearly chokes to\ndeath.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return {
-            "* (You put the gunpowder in your\nmouth and nearly choke to\ndeath.)",
-            "* (...HP fully restored.)"
-        }
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return {
+                "* (You put the gunpowder in your\nmouth and nearly choke to\ndeath.)",
+                "* (...HP fully restored.)"
+            }
+        else
+            return {
+                "* ("..target.chara:getName().." puts the gunpowder in their\nmouth and nearly chokes to\ndeath.)",
+                "* (...HP fully restored.)"
+            }
+        end
     else
-        return {
-            "* ("..target.chara:getName().." puts the gunpowder in their\nmouth and nearly chokes to\ndeath.)",
-            "* (...HP fully restored.)"
-        }
+        return ""
     end
 end
 

@@ -25,4 +25,8 @@ function Axis:onBattleInit()
 	self.bg:setLayer(LIGHT_BATTLE_LAYERS["below_battlers"])
 end
 
+function Axis:getVictoryMoney(money)
+	return 0
+end
+
 return Axis

@@ -44,18 +44,26 @@ function item:init(inventory)
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return "* (You eat the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return "* (You eat the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+        else
+            return "* ("..target:getName().." eats the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+        end
     else
-        return "* ("..target:getName().." eats the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return "* (You eat the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return "* (You eat the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+        else
+            return "* ("..target.chara:getName().." eats the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+        end
     else
-        return "* ("..target.chara:getName().." eats the Popato Chisps.[wait:5]\nThe crunch is deafening.)"
+        return ""
     end
 end
 

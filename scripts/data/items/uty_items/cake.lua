@@ -38,24 +38,32 @@ function item:init(inventory)
 end
 
 function item:getWorldUseText(target)
-    if target.id == Game.party[1].id then
-        return {
-            "* (You enjoy several slices of\ncake.)",
-            "* (Delicious!)"
-        }
+    if not MagicalGlassLib.serious_mode then
+        if target.id == Game.party[1].id then
+            return {
+                "* (You enjoy several slices of\ncake.)",
+                "* (Delicious!)"
+            }
+        else
+            return "* ("..target:getName().." enjoys several slices of\ncake.)"
+        end
     else
-        return "* ("..target:getName().." enjoys several slices of\ncake.)"
+        return ""
     end
 end
 
 function item:getLightBattleText(user, target)
-    if target.chara.id == Game.battle.party[1].chara.id then
-        return {
-            "* (You enjoy several slices of\ncake.)",
-            "* (Delicious!)"
-        }
+    if not MagicalGlassLib.serious_mode then
+        if target.chara.id == Game.battle.party[1].chara.id then
+            return {
+                "* (You enjoy several slices of\ncake.)",
+                "* (Delicious!)"
+            }
+        else
+            return "* ("..target.chara:getName().." enjoys several slices of\ncake.)"
+        end
     else
-        return "* ("..target.chara:getName().." enjoys several slices of\ncake.)"
+        return ""
     end
 end
 
