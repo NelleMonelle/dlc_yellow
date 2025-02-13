@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="18" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="25">
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="18" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="25">
  <editorsettings>
-  <export target="01.lua" format="lua"/>
+  <export target="../01.lua" format="lua"/>
  </editorsettings>
  <properties>
   <property name="light" type="bool" value="true"/>
   <property name="music" value="abandoned"/>
  </properties>
- <tileset firstgid="1" source="../../../tilesets/steamworks.tsx"/>
- <tileset firstgid="1497" source="../../../tilesets/steamworks_chase.tsx"/>
- <tileset firstgid="1773" source="../../../tilesets/chem_factory_stuff.tsx"/>
+ <tileset firstgid="1" source="../../../../tilesets/steamworks.tsx"/>
+ <tileset firstgid="1497" source="../../../../tilesets/steamworks_chase.tsx"/>
+ <tileset firstgid="1773" source="../../../../tilesets/chem_factory_stuff.tsx"/>
  <layer id="1" name="Tile Layer 1" width="18" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

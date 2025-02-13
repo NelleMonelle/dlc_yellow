@@ -28,6 +28,12 @@ return {
 				Kristal.Config["alwaysShowCursor"] = cursor_hack
                 Game.inventory:addItem("steamworks_id")
                 Game:setFlag("got_steamworks_id", true)
+                cutscene:wait(0.75)
+                cutscene:walkTo(Game.world.player, 300, Game.world.player.y, 0.5, "up")
+                cutscene:wait(1)
+                Assets.playSound("sliding_door_open")
+                Game.world.map:getTileLayer("door_closed").visible = false
+                cutscene:wait(1)
             end
         end
     end,

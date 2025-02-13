@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -19,19 +19,19 @@ return {
     {
       name = "steamworks",
       firstgid = 1,
-      filename = "../../../tilesets/steamworks.tsx",
-      exportfilename = "../../../tilesets/steamworks.lua"
+      filename = "../../../../tilesets/steamworks.tsx",
+      exportfilename = "../../../../tilesets/steamworks.lua"
     },
     {
       name = "steamworks_chase",
       firstgid = 1497,
-      filename = "../../../tilesets/steamworks_chase.tsx"
+      filename = "../../../../tilesets/steamworks_chase.tsx"
     },
     {
       name = "chem_factory_stuff",
       firstgid = 1773,
-      filename = "../../../tilesets/chem_factory_stuff.tsx",
-      exportfilename = "../../../tilesets/chem_factory_stuff.lua"
+      filename = "../../../../tilesets/chem_factory_stuff.tsx",
+      exportfilename = "../../../../tilesets/chem_factory_stuff.lua"
     }
   },
   layers = {
