@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 8,
+  nextobjectid = 9,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -25,8 +25,7 @@ return {
     {
       name = "steamworks_chem",
       firstgid = 1497,
-      filename = "../../../tilesets/steamworks_chem.tsx",
-      exportfilename = "../../../tilesets/steamworks_chem.lua"
+      filename = "../../../tilesets/steamworks_chem.tsx"
     }
   },
   layers = {
@@ -171,6 +170,24 @@ return {
           properties = {
             ["map"] = "steamworks/chem/01",
             ["marker"] = "door"
+          }
+        },
+        {
+          id = 8,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 300,
+          y = 440,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "goosic",
+            ["chase"] = true,
+            ["lightencounter"] = "goosic",
+            ["once"] = true
           }
         }
       }

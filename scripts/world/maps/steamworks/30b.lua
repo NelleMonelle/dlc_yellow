@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -189,7 +189,9 @@ return {
           visible = true,
           properties = {
             ["actor"] = "tellyvis",
-            ["lightencounter"] = "tellyvis"
+            ["chase"] = true,
+            ["lightencounter"] = "tellyvis",
+            ["once"] = true
           }
         }
       }

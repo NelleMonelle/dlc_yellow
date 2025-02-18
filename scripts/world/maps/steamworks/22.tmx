@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="120" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="10">
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="120" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="16">
  <editorsettings>
-  <export target="../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/22.lua" format="lua"/>
+  <export target="22.lua" format="lua"/>
  </editorsettings>
  <properties>
   <property name="light" type="bool" value="true"/>
@@ -77,6 +77,42 @@
     <property name="map" value="steamworks/21"/>
     <property name="marker" value="left"/>
    </properties>
+  </object>
+  <object id="10" name="enemy" x="3160" y="300">
+   <properties>
+    <property name="actor" value="jandroid"/>
+    <property name="group" value="jandroids_1"/>
+    <property name="lightencounter" value="jandroid_duo"/>
+    <property name="once" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="15" name="enemy" x="1360" y="300">
+   <properties>
+    <property name="actor" value="jandroid"/>
+    <property name="group" value="jandroids_2"/>
+    <property name="lightencounter" value="jandroid_duo"/>
+    <property name="once" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="11" name="enemy" x="3160" y="340">
+   <properties>
+    <property name="actor" value="jandroid"/>
+    <property name="group" value="jandroids_1"/>
+    <property name="lightencounter" value="jandroid_duo"/>
+    <property name="once" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="14" name="enemy" x="1360" y="340">
+   <properties>
+    <property name="actor" value="jandroid"/>
+    <property name="group" value="jandroids_2"/>
+    <property name="lightencounter" value="jandroid_duo"/>
+    <property name="once" type="bool" value="true"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="4" name="markers">

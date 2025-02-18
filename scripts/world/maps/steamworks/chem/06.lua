@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 27,
+  nextobjectid = 28,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle",
@@ -526,6 +526,24 @@ return {
           properties = {
             ["map"] = "steamworks/chem/05",
             ["marker"] = "door"
+          }
+        },
+        {
+          id = 27,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 240,
+          y = 280,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "tellyvis",
+            ["chase"] = true,
+            ["lightencounter"] = "tellyvis",
+            ["once"] = true
           }
         }
       }

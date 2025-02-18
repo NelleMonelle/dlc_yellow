@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 26,
+  nextobjectid = 28,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -359,6 +359,42 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 26,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 540,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
+          }
+        },
+        {
+          id = 27,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 620,
+          y = 540,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
+          }
         }
       }
     },

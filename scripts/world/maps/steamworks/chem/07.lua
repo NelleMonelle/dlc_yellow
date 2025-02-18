@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 29,
+  nextobjectid = 31,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -595,6 +595,42 @@ return {
           properties = {
             ["map"] = "steamworks/32",
             ["marker"] = "chem_lab"
+          }
+        },
+        {
+          id = 29,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 400,
+          y = 320,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
+          }
+        },
+        {
+          id = 30,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 340,
+          y = 720,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
           }
         }
       }

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 24,
+  nextobjectid = 26,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -264,6 +264,43 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 24,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 680,
+          y = 620,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroid_goosic",
+            ["lightencounter"] = "jandroid_goosic_duo",
+            ["once"] = true
+          }
+        },
+        {
+          id = 25,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 960,
+          y = 610,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "goosic",
+            ["chase"] = true,
+            ["group"] = "jandroid_goosic",
+            ["lightencounter"] = "jandroid_goosic_duo",
+            ["once"] = true
+          }
         }
       }
     },

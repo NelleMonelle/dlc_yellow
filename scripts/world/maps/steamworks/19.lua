@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 11,
-  nextobjectid = 57,
+  nextobjectid = 58,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld",
@@ -31,7 +31,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1536,
+      firstgid = 1540,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -93,7 +93,7 @@ return {
           width = 34,
           height = 24,
           rotation = 0,
-          gid = 1615,
+          gid = 1619,
           visible = true,
           properties = {}
         },
@@ -107,7 +107,7 @@ return {
           width = 34,
           height = 24,
           rotation = 0,
-          gid = 1615,
+          gid = 1619,
           visible = true,
           properties = {}
         },
@@ -121,7 +121,7 @@ return {
           width = 34,
           height = 24,
           rotation = 0,
-          gid = 1615,
+          gid = 1619,
           visible = true,
           properties = {}
         },
@@ -135,7 +135,7 @@ return {
           width = 36,
           height = 30,
           rotation = 0,
-          gid = 1625,
+          gid = 1629,
           visible = true,
           properties = {}
         },
@@ -149,7 +149,7 @@ return {
           width = 38,
           height = 44,
           rotation = 0,
-          gid = 1635,
+          gid = 1639,
           visible = true,
           properties = {}
         }
@@ -751,6 +751,23 @@ return {
             ["right"] = true,
             ["spawn_dir"] = "left",
             ["spawn_id"] = 11
+          }
+        },
+        {
+          id = 57,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 210,
+          y = 260,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["lightencounter"] = "jandroid",
+            ["once"] = true
           }
         }
       }

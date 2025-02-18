@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 13,
+  nextobjectid = 15,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -290,6 +290,43 @@ return {
           properties = {
             ["map"] = "steamworks/27",
             ["marker"] = "down"
+          }
+        },
+        {
+          id = 13,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 360,
+          y = 440,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "goosic",
+            ["chase"] = true,
+            ["group"] = "jandroid_goosic",
+            ["lightencounter"] = "jandroid_goosic_duo",
+            ["once"] = true
+          }
+        },
+        {
+          id = 14,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 680,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroid_goosic",
+            ["lightencounter"] = "jandroid_goosic_duo",
+            ["once"] = true
           }
         }
       }

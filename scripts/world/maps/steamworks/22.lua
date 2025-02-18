@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 10,
+  nextobjectid = 16,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -255,6 +255,78 @@ return {
           properties = {
             ["map"] = "steamworks/21",
             ["marker"] = "left"
+          }
+        },
+        {
+          id = 10,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 3160,
+          y = 300,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids_1",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
+          }
+        },
+        {
+          id = 15,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 1360,
+          y = 300,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids_2",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
+          }
+        },
+        {
+          id = 11,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 3160,
+          y = 340,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids_1",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
+          }
+        },
+        {
+          id = 14,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 1360,
+          y = 340,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["group"] = "jandroids_2",
+            ["lightencounter"] = "jandroid_duo",
+            ["once"] = true
           }
         }
       }

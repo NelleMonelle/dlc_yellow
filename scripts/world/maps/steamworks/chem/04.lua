@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 23,
+  nextobjectid = 24,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -384,6 +384,23 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 23,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 200,
+          y = 320,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jandroid",
+            ["lightencounter"] = "jandroid",
+            ["once"] = true
+          }
         }
       }
     },
