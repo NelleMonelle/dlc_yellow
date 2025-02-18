@@ -427,7 +427,7 @@ return {
         Game:setFlag("manta_spawn_id", 1)
     end,
     split_path = function(cutscene, event)
-        cutscene:wait(cutscene:walkTo(Game.world.player, Game.world.player.x - 220, Game.world.player.y, 2, "left"))
+        cutscene:wait(cutscene:walkTo(Game.world.player, 700, Game.world.player.y, 1.5, "left"))
         cutscene:wait(1)
         Game.world.player:setFacing("up")
         cutscene:wait(1)

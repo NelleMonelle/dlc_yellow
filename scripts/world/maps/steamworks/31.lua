@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 25,
+  nextobjectid = 26,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -220,6 +220,19 @@ return {
           y = 640,
           width = 40,
           height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 25,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 638,
+          width = 18,
+          height = 42,
           rotation = 0,
           visible = true,
           properties = {}
