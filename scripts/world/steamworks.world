@@ -1,0 +1,454 @@
+{
+    "maps": [
+        {
+            "fileName": "maps/steamworks/01/01.tmx",
+            "height": 1120,
+            "width": 640,
+            "x": 0,
+            "y": -80
+        },
+        {
+            "fileName": "maps/steamworks/02/02.tmx",
+            "height": 600,
+            "width": 1360,
+            "x": -840,
+            "y": -680
+        },
+        {
+            "fileName": "maps/steamworks/03/03.tmx",
+            "height": 1160,
+            "width": 840,
+            "x": -1680,
+            "y": -1320
+        },
+        {
+            "fileName": "maps/steamworks/04/04.tmx",
+            "height": 1040,
+            "width": 880,
+            "x": -1760,
+            "y": -2360
+        },
+        {
+            "fileName": "maps/steamworks/04_transition_b/04_transition_b.tmx",
+            "height": 480,
+            "width": 640,
+            "x": -2400,
+            "y": -2120
+        },
+        {
+            "fileName": "maps/steamworks/04_transition_c/04_transition_c.tmx",
+            "height": 480,
+            "width": 640,
+            "x": -880,
+            "y": -2120
+        },
+        {
+            "fileName": "maps/steamworks/04b/04b.tmx",
+            "height": 720,
+            "width": 760,
+            "x": -3160,
+            "y": -2320
+        },
+        {
+            "fileName": "maps/steamworks/04c/04c.tmx",
+            "height": 720,
+            "width": 680,
+            "x": -240,
+            "y": -2320
+        },
+        {
+            "fileName": "maps/steamworks/05/05.tmx",
+            "height": 1200,
+            "width": 800,
+            "x": -1720,
+            "y": -3560
+        },
+        {
+            "fileName": "maps/steamworks/05b.tmx",
+            "height": 600,
+            "width": 680,
+            "x": -2400,
+            "y": -3640
+        },
+        {
+            "fileName": "maps/steamworks/05c/05c.tmx",
+            "height": 600,
+            "width": 1120,
+            "x": -920,
+            "y": -3640
+        },
+        {
+            "fileName": "maps/steamworks/05d/05d.tmx",
+            "height": 600,
+            "width": 1480,
+            "x": 200,
+            "y": -3640
+        },
+        {
+            "fileName": "maps/steamworks/06.tmx",
+            "height": 1200,
+            "width": 1000,
+            "x": -1960,
+            "y": -4840
+        },
+        {
+            "fileName": "maps/steamworks/06b.tmx",
+            "height": 480,
+            "width": 1200,
+            "x": -3160,
+            "y": -4680
+        },
+        {
+            "fileName": "maps/steamworks/07.tmx",
+            "height": 520,
+            "width": 1640,
+            "x": -4800,
+            "y": -4680
+        },
+        {
+            "fileName": "maps/steamworks/08.tmx",
+            "height": 1200,
+            "width": 800,
+            "x": -5600,
+            "y": -5320
+        },
+        {
+            "fileName": "maps/steamworks/09/09.tmx",
+            "height": 720,
+            "width": 2000,
+            "x": -6800,
+            "y": -6160
+        },
+        {
+            "fileName": "maps/steamworks/10/10.tmx",
+            "height": 720,
+            "width": 1400,
+            "x": -8200,
+            "y": -6240
+        },
+        {
+            "fileName": "maps/steamworks/11/11.tmx",
+            "height": 480,
+            "width": 1040,
+            "x": -9240,
+            "y": -6080
+        },
+        {
+            "fileName": "maps/steamworks/12/12.tmx",
+            "height": 600,
+            "width": 1480,
+            "x": -10360,
+            "y": -5600
+        },
+        {
+            "fileName": "maps/steamworks/13/13.tmx",
+            "height": 1200,
+            "width": 1040,
+            "x": -10320,
+            "y": -4200
+        },
+        {
+            "fileName": "maps/steamworks/13b.tmx",
+            "height": 680,
+            "width": 640,
+            "x": -10040,
+            "y": -4880
+        },
+        {
+            "fileName": "maps/steamworks/14/14.tmx",
+            "height": 480,
+            "width": 960,
+            "x": -11320,
+            "y": -5560
+        },
+        {
+            "fileName": "maps/steamworks/15.tmx",
+            "height": 680,
+            "width": 1000,
+            "x": -12320,
+            "y": -5720
+        },
+        {
+            "fileName": "maps/steamworks/16.tmx",
+            "height": 800,
+            "width": 1200,
+            "x": -13520,
+            "y": -5680
+        },
+        {
+            "fileName": "maps/steamworks/17.tmx",
+            "height": 1960,
+            "width": 3080,
+            "x": -16600,
+            "y": -6360
+        },
+        {
+            "fileName": "maps/steamworks/17b.tmx",
+            "height": 960,
+            "width": 2480,
+            "x": -19160,
+            "y": -6000
+        },
+        {
+            "fileName": "maps/steamworks/17c.tmx",
+            "height": 840,
+            "width": 640,
+            "x": -16480,
+            "y": -4400
+        },
+        {
+            "fileName": "maps/steamworks/18.tmx",
+            "height": 920,
+            "width": 2360,
+            "x": -16120,
+            "y": -7360
+        },
+        {
+            "fileName": "maps/steamworks/18b.tmx",
+            "height": 1200,
+            "width": 840,
+            "x": -15920,
+            "y": -8640
+        },
+        {
+            "fileName": "maps/steamworks/19.tmx",
+            "height": 480,
+            "width": 1720,
+            "x": -17920,
+            "y": -6880
+        },
+        {
+            "fileName": "maps/steamworks/20/20.tmx",
+            "height": 480,
+            "width": 1640,
+            "x": -19560,
+            "y": -7000
+        },
+        {
+            "fileName": "maps/steamworks/21.tmx",
+            "height": 2160,
+            "width": 4400,
+            "x": -23560,
+            "y": -6520
+        },
+        {
+            "fileName": "maps/steamworks/22.tmx",
+            "height": 480,
+            "width": 4800,
+            "x": -28360,
+            "y": -5320
+        },
+        {
+            "fileName": "maps/steamworks/23.tmx",
+            "height": 720,
+            "width": 2480,
+            "x": -30840,
+            "y": -5560
+        },
+        {
+            "fileName": "maps/steamworks/24.tmx",
+            "height": 480,
+            "width": 1640,
+            "x": -32480,
+            "y": -5320
+        },
+        {
+            "fileName": "maps/steamworks/25/25.tmx",
+            "height": 1200,
+            "width": 640,
+            "x": -33120,
+            "y": -5280
+        },
+        {
+            "fileName": "maps/steamworks/25b/25b.tmx",
+            "height": 800,
+            "width": 1840,
+            "x": -34960,
+            "y": -4840
+        },
+        {
+            "fileName": "maps/steamworks/26.tmx",
+            "height": 1040,
+            "width": 1040,
+            "x": -36000,
+            "y": -5200
+        },
+        {
+            "fileName": "maps/steamworks/27.tmx",
+            "height": 760,
+            "width": 960,
+            "x": -36320,
+            "y": -5960
+        },
+        {
+            "fileName": "maps/steamworks/28.tmx",
+            "height": 640,
+            "width": 1760,
+            "x": -38080,
+            "y": -6040
+        },
+        {
+            "fileName": "maps/steamworks/29.tmx",
+            "height": 2920,
+            "width": 720,
+            "x": -38800,
+            "y": -8360
+        },
+        {
+            "fileName": "maps/steamworks/30.tmx",
+            "height": 800,
+            "width": 1640,
+            "x": -39080,
+            "y": -9160
+        },
+        {
+            "fileName": "maps/steamworks/30b.tmx",
+            "height": 480,
+            "width": 1240,
+            "x": -40320,
+            "y": -9160
+        },
+        {
+            "fileName": "maps/steamworks/31.tmx",
+            "height": 800,
+            "width": 1320,
+            "x": -41640,
+            "y": -9480
+        },
+        {
+            "fileName": "maps/steamworks/chem/01/01.tmx",
+            "height": 960,
+            "width": 720,
+            "x": -41320,
+            "y": -10440
+        },
+        {
+            "fileName": "maps/steamworks/chem/02.tmx",
+            "height": 1400,
+            "width": 640,
+            "x": -41400,
+            "y": -11840
+        },
+        {
+            "fileName": "maps/steamworks/chem/03.tmx",
+            "height": 640,
+            "width": 1680,
+            "x": -42560,
+            "y": -12480
+        },
+        {
+            "fileName": "maps/steamworks/chem/04.tmx",
+            "height": 480,
+            "width": 880,
+            "x": -43440,
+            "y": -12440
+        },
+        {
+            "fileName": "maps/steamworks/chem/05.tmx",
+            "height": 880,
+            "width": 1240,
+            "x": -44680,
+            "y": -12520
+        },
+        {
+            "fileName": "maps/steamworks/chem/06.tmx",
+            "height": 680,
+            "width": 1280,
+            "x": -45040,
+            "y": -13200
+        },
+        {
+            "fileName": "maps/steamworks/chem/07.tmx",
+            "height": 1000,
+            "width": 1120,
+            "x": -46160,
+            "y": -13200
+        },
+        {
+            "fileName": "maps/steamworks/chem/hermit.tmx",
+            "height": 640,
+            "width": 640,
+            "x": -43320,
+            "y": -13080
+        },
+        {
+            "fileName": "maps/steamworks/factory/01.tmx",
+            "height": 1040,
+            "width": 1520,
+            "x": -43160,
+            "y": -9800
+        },
+        {
+            "fileName": "maps/steamworks/factory/02.tmx",
+            "height": 1680,
+            "width": 1600,
+            "x": -43200,
+            "y": -11480
+        },
+        {
+            "fileName": "maps/steamworks/factory/03.tmx",
+            "height": 1720,
+            "width": 1640,
+            "x": -45040,
+            "y": -11360
+        },
+        {
+            "fileName": "maps/steamworks/factory/04.tmx",
+            "height": 1720,
+            "width": 1000,
+            "x": -46200,
+            "y": -10760
+        },
+        {
+            "fileName": "maps/steamworks/factory/elevator/elevator.tmx",
+            "height": 480,
+            "width": 640,
+            "x": -46040,
+            "y": -11320
+        },
+        {
+            "fileName": "maps/steamworks/32.tmx",
+            "height": 840,
+            "width": 2000,
+            "x": -47080,
+            "y": -12200
+        },
+        {
+            "fileName": "maps/steamworks/33.tmx",
+            "height": 800,
+            "width": 1160,
+            "x": -48240,
+            "y": -12000
+        },
+        {
+            "fileName": "maps/steamworks/34/34.tmx",
+            "height": 480,
+            "width": 3120,
+            "x": -51360,
+            "y": -11960
+        },
+        {
+            "fileName": "maps/steamworks/35/35.tmx",
+            "height": 480,
+            "width": 2800,
+            "x": -54160,
+            "y": -11880
+        },
+        {
+            "fileName": "maps/steamworks/36.tmx",
+            "height": 480,
+            "width": 1520,
+            "x": -55680,
+            "y": -11960
+        },
+        {
+            "fileName": "maps/steamworks/37.tmx",
+            "height": 480,
+            "width": 1560,
+            "x": -57240,
+            "y": -11960
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

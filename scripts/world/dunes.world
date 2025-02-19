@@ -1,0 +1,69 @@
+{
+    "maps": [
+        {
+            "fileName": "maps/dunes/34.tmx",
+            "height": 960,
+            "width": 1000,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "maps/dunes/36.tmx",
+            "height": 2000,
+            "width": 1800,
+            "x": 1000,
+            "y": -1200
+        },
+        {
+            "fileName": "maps/dunes/37.tmx",
+            "height": 2000,
+            "width": 2200,
+            "x": 760,
+            "y": -3200
+        },
+        {
+            "fileName": "maps/dunes/38.tmx",
+            "height": 1280,
+            "width": 2160,
+            "x": 2960,
+            "y": -3120
+        },
+        {
+            "fileName": "maps/dunes/39.tmx",
+            "height": 960,
+            "width": 1560,
+            "x": 3800,
+            "y": -4080
+        },
+        {
+            "fileName": "maps/dunes/40.tmx",
+            "height": 960,
+            "width": 640,
+            "x": 4680,
+            "y": -5040
+        },
+        {
+            "fileName": "maps/dunes/41.tmx",
+            "height": 1600,
+            "width": 640,
+            "x": 4680,
+            "y": -6640
+        },
+        {
+            "fileName": "maps/dunes/42.tmx",
+            "height": 1360,
+            "width": 1400,
+            "x": 4360,
+            "y": -8000
+        },
+        {
+            "fileName": "maps/dunes/43.tmx",
+            "height": 1480,
+            "width": 880,
+            "x": 5120,
+            "y": -9480
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}
