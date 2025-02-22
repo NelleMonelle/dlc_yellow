@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 126,
+  tilecount = 135,
   tiles = {
     {
       id = 13,
@@ -60,6 +60,60 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_chute_clean.png",
       width = 33,
       height = 100
+    },
+    {
+      id = 128,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_1.png",
+      width = 27,
+      height = 39
+    },
+    {
+      id = 129,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_2.png",
+      width = 27,
+      height = 39
+    },
+    {
+      id = 130,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_3.png",
+      width = 27,
+      height = 39
+    },
+    {
+      id = 131,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_4.png",
+      width = 27,
+      height = 39
+    },
+    {
+      id = 132,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_basket.png",
+      width = 32,
+      height = 29
+    },
+    {
+      id = 133,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_1.png",
+      width = 19,
+      height = 21
+    },
+    {
+      id = 134,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_2.png",
+      width = 7,
+      height = 9
+    },
+    {
+      id = 135,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_3.png",
+      width = 10,
+      height = 8
+    },
+    {
+      id = 136,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_4.png",
+      width = 7,
+      height = 9
     },
     {
       id = 25,

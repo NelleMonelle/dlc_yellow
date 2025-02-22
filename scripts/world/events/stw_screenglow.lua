@@ -44,11 +44,14 @@ function SteamworksScreenGlow:update()
 	end
 	if self.lava_particles then
 		self.part_timer = self.part_timer + DTMULT
-		local part_stream = self.room_width / 18.82
-		if self.part_timer >= math.floor(part_stream) then
+		if self.part_timer >= 1 then
 			self.part_timer = 0
-			local particle = SteamworksLavaParticle(Utils.random(0, self.room_width),self.room_height-1)
-			Game.world:addChild(particle)
+			local part_stream = self.room_width / 18.82
+			if love.math.random(math.floor(part_stream)) == 1 then
+				self.part_timer = 0
+				local particle = SteamworksLavaParticle(Utils.random(0, self.room_width),self.room_height-1)
+				Game.world:addChild(particle)
+			end
 		end
 	end
 end
