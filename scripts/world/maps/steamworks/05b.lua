@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 15,
+  nextobjectid = 46,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld"
@@ -127,6 +127,260 @@ return {
           gid = 1526,
           visible = true,
           properties = {}
+        },
+        {
+          id = 18,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 174,
+          y = 450,
+          width = 38,
+          height = 42,
+          rotation = 0,
+          gid = 1630,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 122,
+          y = 262,
+          width = 64,
+          height = 58,
+          rotation = 0,
+          gid = 1629,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 23,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 362,
+          y = 458,
+          width = 14,
+          height = 18,
+          rotation = 0,
+          gid = 1631,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 464,
+          y = 402,
+          width = 20,
+          height = 16,
+          rotation = 0,
+          gid = 1632,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 25,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 142,
+          y = 320,
+          width = 14,
+          height = 18,
+          rotation = 0,
+          gid = 1633,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 26,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 318,
+          y = 284,
+          width = 54,
+          height = 78,
+          rotation = 0,
+          gid = 1625,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 30,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 380,
+          y = 284,
+          width = 54,
+          height = 78,
+          rotation = 0,
+          gid = 1626,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 442,
+          y = 284,
+          width = 54,
+          height = 78,
+          rotation = 0,
+          gid = 1627,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 32,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 504,
+          y = 284,
+          width = 54,
+          height = 78,
+          rotation = 0,
+          gid = 1628,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 35,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 316,
+          y = 240,
+          width = 58,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["solid"] = true,
+            ["text"] = "* (The door is jammed shut.)"
+          }
+        },
+        {
+          id = 41,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 400,
+          width = 62,
+          height = 50,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["solid"] = true,
+            ["text1"] = "* (A pair of cargo jeans is\nstuck to the table. It's been\nthere a while.)"
+          }
+        },
+        {
+          id = 42,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 220,
+          width = 66,
+          height = 42,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["solid"] = true,
+            ["text"] = "* (The smell of the old,\nunwashed clothes makes you feel\nqueasy.)"
+          }
+        },
+        {
+          id = 43,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 378,
+          y = 240,
+          width = 58,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["solid"] = true,
+            ["text"] = "* (The door is jammed shut.)"
+          }
+        },
+        {
+          id = 44,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 240,
+          width = 58,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["solid"] = true,
+            ["text"] = "* (The door is jammed shut.)"
+          }
+        },
+        {
+          id = 45,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 502,
+          y = 240,
+          width = 58,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["solid"] = true,
+            ["text"] = "* (The door is jammed shut.)"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "objects_party",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 3,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "steamworks/05",
+            ["marker"] = "left"
+          }
         }
       }
     },
@@ -283,38 +537,32 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 5,
-      name = "objects_party",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
+        },
         {
-          id = 3,
-          name = "transition",
+          id = 33,
+          name = "",
           type = "",
           shape = "rectangle",
-          x = 640,
-          y = 360,
-          width = 40,
-          height = 80,
+          x = 316,
+          y = 240,
+          width = 244,
+          height = 40,
           rotation = 0,
           visible = true,
-          properties = {
-            ["map"] = "steamworks/05",
-            ["marker"] = "left"
-          }
+          properties = {}
+        },
+        {
+          id = 34,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 240,
+          width = 64,
+          height = 22,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

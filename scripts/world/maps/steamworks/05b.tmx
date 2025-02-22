@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="17" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="15">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="17" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="46">
  <editorsettings>
   <export target="05b.lua" format="lua"/>
  </editorsettings>
@@ -49,6 +49,63 @@
  </layer>
  <objectgroup id="7" name="objects">
   <object id="14" gid="1526" x="228" y="236" width="66" height="200"/>
+  <object id="18" gid="1630" x="174" y="450" width="38" height="42"/>
+  <object id="21" gid="1629" x="122" y="262" width="64" height="58"/>
+  <object id="23" gid="1631" x="362" y="458" width="14" height="18"/>
+  <object id="24" gid="1632" x="464" y="402" width="20" height="16"/>
+  <object id="25" gid="1633" x="142" y="320" width="14" height="18"/>
+  <object id="26" gid="1625" x="318" y="284" width="54" height="78"/>
+  <object id="30" gid="1626" x="380" y="284" width="54" height="78"/>
+  <object id="31" gid="1627" x="442" y="284" width="54" height="78"/>
+  <object id="32" gid="1628" x="504" y="284" width="54" height="78"/>
+  <object id="35" name="interactable" x="316" y="240" width="58" height="40">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text" value="* (The door is jammed shut.)"/>
+   </properties>
+  </object>
+  <object id="41" name="interactable" x="160" y="400" width="62" height="50">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text1">* (A pair of cargo jeans is
+stuck to the table. It's been
+there a while.)</property>
+   </properties>
+  </object>
+  <object id="42" name="interactable" x="120" y="220" width="66" height="42">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text">* (The smell of the old,
+unwashed clothes makes you feel
+queasy.)</property>
+   </properties>
+  </object>
+  <object id="43" name="interactable" x="378" y="240" width="58" height="40">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text" value="* (The door is jammed shut.)"/>
+   </properties>
+  </object>
+  <object id="44" name="interactable" x="440" y="240" width="58" height="40">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text" value="* (The door is jammed shut.)"/>
+   </properties>
+  </object>
+  <object id="45" name="interactable" x="502" y="240" width="58" height="40">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text" value="* (The door is jammed shut.)"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="objects_party">
+  <object id="3" name="transition" x="640" y="360" width="40" height="80">
+   <properties>
+    <property name="map" value="steamworks/05"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="4" name="collision">
   <object id="4" x="80" y="480" width="520" height="40"/>
@@ -65,14 +122,8 @@
   </object>
   <object id="12" x="286" y="410" width="40" height="58"/>
   <object id="13" x="160" y="400" width="120" height="66"/>
- </objectgroup>
- <objectgroup id="5" name="objects_party">
-  <object id="3" name="transition" x="640" y="360" width="40" height="80">
-   <properties>
-    <property name="map" value="steamworks/05"/>
-    <property name="marker" value="left"/>
-   </properties>
-  </object>
+  <object id="33" x="316" y="240" width="244" height="40"/>
+  <object id="34" x="120" y="240" width="64" height="22"/>
  </objectgroup>
  <objectgroup id="6" name="markers">
   <object id="1" name="right" x="600" y="400">

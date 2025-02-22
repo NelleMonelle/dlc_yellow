@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="steamworks_objects" tilewidth="300" tileheight="240" tilecount="126" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="steamworks_objects" tilewidth="300" tileheight="240" tilecount="135" columns="0">
  <editorsettings>
   <export target="steamworks_objects.lua" format="lua"/>
  </editorsettings>
@@ -21,6 +21,33 @@
  </tile>
  <tile id="29">
   <image width="33" height="100" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_chute_clean.png"/>
+ </tile>
+ <tile id="128">
+  <image width="27" height="39" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_1.png"/>
+ </tile>
+ <tile id="129">
+  <image width="27" height="39" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_2.png"/>
+ </tile>
+ <tile id="130">
+  <image width="27" height="39" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_3.png"/>
+ </tile>
+ <tile id="131">
+  <image width="27" height="39" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_washer_4.png"/>
+ </tile>
+ <tile id="132">
+  <image width="32" height="29" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_basket.png"/>
+ </tile>
+ <tile id="133">
+  <image width="19" height="21" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_1.png"/>
+ </tile>
+ <tile id="134">
+  <image width="7" height="9" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_2.png"/>
+ </tile>
+ <tile id="135">
+  <image width="10" height="8" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_3.png"/>
+ </tile>
+ <tile id="136">
+  <image width="7" height="9" source="../../../assets/sprites/world/maps/steamworks/small_objects/05b_laundry_4.png"/>
  </tile>
  <tile id="25">
   <image width="43" height="115" source="../../../assets/sprites/world/maps/steamworks/small_objects/05c_lockers_1.png"/>

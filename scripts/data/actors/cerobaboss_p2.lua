@@ -44,11 +44,38 @@ function actor:init()
         end,
         ["init"] = function(part)
             part.timer = 0
+			part.stretch = 1
+			part.mult = 2
+			part.stage = 1
         end,
         ["update"] = function(part)
             part.timer = part.timer + DTMULT
-
-            part.sprite.scale_y = (30+(math.sin(part.timer /20)))/30
+			local anim_time = 120
+			local anim_time_half = 60
+			if part.stage == 1 then
+				part.stretch = part.stretch + ((0.1 / anim_time_half) * part.mult) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch >= 1.1 then
+					part.stretch = 1.1
+					part.stage = 2
+					part.mult = 2
+				end
+			elseif part.stage == 2 then
+				part.stretch = part.stretch - (0.1 / anim_time_half) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch <= 1 then
+					part.stretch = 1
+					part.stage = 1
+					part.mult = 2
+				end
+			end
+			-- NOW PRESENTING THE WORST HACK EVER!!!
+			if part.sprite.parent.enemy.overlay_sprite.visible then
+				part.stretch = 1
+				part.stage = 1
+				part.mult = 2
+			end
+            part.sprite.scale_y = part.stretch
         end
     })
     
@@ -62,14 +89,40 @@ function actor:init()
         end,
         ["init"] = function(part)
             part.timer = 0
+			part.stretch = 1
+			part.mult = 2
+			part.stage = 1
         end,
         ["update"] = function(part)
             part.timer = part.timer + DTMULT
-
-            part.sprite.y = (-math.sin(part.timer/20) * 3) + 55
+			local anim_time = 120
+			local anim_time_half = 60
+			if part.stage == 1 then
+				part.stretch = part.stretch - ((0.1 / anim_time_half) * part.mult) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch <= 0.9 then
+					part.stretch = 0.9
+					part.stage = 2
+					part.mult = 2
+				end
+			elseif part.stage == 2 then
+				part.stretch = part.stretch + (0.1 / anim_time_half) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch >= 1 then
+					part.stretch = 1
+					part.stage = 1
+					part.mult = 2
+				end
+			end
+			if part.sprite.parent.enemy.overlay_sprite.visible then
+				part.stretch = 1
+				part.stage = 1
+				part.mult = 2
+			end
+            part.sprite.y = 55 * part.stretch
         end
     })
-
+	
     self:addLightBattlerPart("ponytail", {
         ["create_sprite"] = function()
             local sprite = Sprite(self.path.."/ponytail", 45, 63)
@@ -80,11 +133,37 @@ function actor:init()
         end,
         ["init"] = function(part)
             part.timer = 0
+			part.stretch = 1
+			part.mult = 2
+			part.stage = 1
         end,
         ["update"] = function(part)
             part.timer = part.timer + DTMULT
-
-            part.sprite.y = (-math.sin(part.timer/20) * 3) + 63
+			local anim_time = 120
+			local anim_time_half = 60
+			if part.stage == 1 then
+				part.stretch = part.stretch - ((0.1 / anim_time_half) * part.mult) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch <= 0.9 then
+					part.stretch = 0.9
+					part.stage = 2
+					part.mult = 2
+				end
+			elseif part.stage == 2 then
+				part.stretch = part.stretch + (0.1 / anim_time_half) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch >= 1 then
+					part.stretch = 1
+					part.stage = 1
+					part.mult = 2
+				end
+			end
+			if part.sprite.parent.enemy.overlay_sprite.visible then
+				part.stretch = 1
+				part.stage = 1
+				part.mult = 2
+			end
+            part.sprite.y = 63 * part.stretch
         end
     })
 
@@ -98,11 +177,37 @@ function actor:init()
         end,
         ["init"] = function(part)
             part.timer = 0
+			part.stretch = 1
+			part.mult = 2
+			part.stage = 1
         end,
         ["update"] = function(part)
             part.timer = part.timer + DTMULT
-
-            part.sprite.y = (-math.sin(part.timer/20) * 3) + 79
+			local anim_time = 120
+			local anim_time_half = 60
+			if part.stage == 1 then
+				part.stretch = part.stretch - ((0.1 / anim_time_half) * part.mult) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch <= 0.9 then
+					part.stretch = 0.9
+					part.stage = 2
+					part.mult = 2
+				end
+			elseif part.stage == 2 then
+				part.stretch = part.stretch + (0.1 / anim_time_half) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch >= 1 then
+					part.stretch = 1
+					part.stage = 1
+					part.mult = 2
+				end
+			end
+			if part.sprite.parent.enemy.overlay_sprite.visible then
+				part.stretch = 1
+				part.stage = 1
+				part.mult = 2
+			end
+            part.sprite.y = 79 * part.stretch
         end
     })
 
@@ -116,11 +221,37 @@ function actor:init()
         end,
         ["init"] = function(part)
             part.timer = 0
+			part.stretch = 1
+			part.mult = 2
+			part.stage = 1
         end,
         ["update"] = function(part)
             part.timer = part.timer + DTMULT
-
-            part.sprite.y = (-math.sin(part.timer/20) * 3) + 80
+			local anim_time = 120
+			local anim_time_half = 60
+			if part.stage == 1 then
+				part.stretch = part.stretch - ((0.1 / anim_time_half) * part.mult) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch <= 0.9 then
+					part.stretch = 0.9
+					part.stage = 2
+					part.mult = 2
+				end
+			elseif part.stage == 2 then
+				part.stretch = part.stretch + (0.1 / anim_time_half) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch >= 1 then
+					part.stretch = 1
+					part.stage = 1
+					part.mult = 2
+				end
+			end
+			if part.sprite.parent.enemy.overlay_sprite.visible then
+				part.stretch = 1
+				part.stage = 1
+				part.mult = 2
+			end
+            part.sprite.y = 80 * part.stretch
         end
     })
 
@@ -134,14 +265,39 @@ function actor:init()
         end,
         ["init"] = function(part)
             part.timer = 0
+			part.stretch = 1
+			part.mult = 2
+			part.stage = 1
         end,
         ["update"] = function(part)
             part.timer = part.timer + DTMULT
-
-            part.sprite.y = (-math.sin(part.timer/20) * 3) + 112
+			local anim_time = 120
+			local anim_time_half = 60
+			if part.stage == 1 then
+				part.stretch = part.stretch - ((0.1 / anim_time_half) * part.mult) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch <= 0.9 then
+					part.stretch = 0.9
+					part.stage = 2
+					part.mult = 2
+				end
+			elseif part.stage == 2 then
+				part.stretch = part.stretch + (0.1 / anim_time_half) * DTMULT
+				part.mult = part.mult - (2 / anim_time_half) * DTMULT
+				if part.stretch >= 1 then
+					part.stretch = 1
+					part.stage = 1
+					part.mult = 2
+				end
+			end
+			if part.sprite.parent.enemy.overlay_sprite.visible then
+				part.stretch = 1
+				part.stage = 1
+				part.mult = 2
+			end
+            part.sprite.y = 112 * part.stretch
         end
     })
-
 end
 
 return actor
