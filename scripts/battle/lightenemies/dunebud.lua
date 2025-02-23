@@ -138,13 +138,11 @@ function Dunebud:onDefeat(damage, battler)
     Game.battle.encounter.dunebud_kill_reaction = true
     Game.battle.encounter.kill_count = Game.battle.encounter.kill_count + 1
 
-    if not Game:getFlag("dunes_kills") then
-        Game:setFlag("dunes_kills", 1)
-    else
-        Game:setFlag("dunes_kills", Game:getFlag("dunes_kills") + 1)
-        if Game:getFlag("dunes_kills") == 20 then
-            MUSIC_PITCHES["vigorous_terrain"] = 0.5
-        end
+    Game:setFlag("dunes_kills", Game:getFlag("dunes_kills") + 1)
+    if Game:getFlag("dunes_kills") == 20 then
+        Game:setFlag("EMPTIED_DUNES", true)
+        MUSIC_PITCHES["vigorous_terrain"] = 0.25
+        MUSIC_PITCHES["steamworks_overworld"] = 0.5
     end
 end
 

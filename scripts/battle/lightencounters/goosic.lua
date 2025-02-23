@@ -5,10 +5,6 @@ function Goosic:init()
 
     self.text = "* Goosic has come to share some\nsounds."
 
-    if Game:getFlag("steamworks_kills") == nil then
-        Game:setFlag("steamworks_kills", 0)
-    end
-
     if Game:getFlag("steamworks_kills") >= 13 then
         local enemies_left = 20 - Game:getFlag("steamworks_kills")
         local mus_pitch

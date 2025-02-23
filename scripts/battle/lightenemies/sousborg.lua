@@ -182,6 +182,23 @@ function Sousborg:onAct(battler, name)
                 else
                     return "* Noelle already tried to offer her help."
                 end
+            elseif battler.chara.id == "dess" then
+                if not self.dess_acted then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* Oh,[wait:5] oh,[wait:5] chef bot!", "eurika", "dess")
+                        cutscene:text("* Cook me some nuts.", "smug", "dess")
+                        cutscene:battlerText(self, "Nuts?")
+                        cutscene:text("* DEEZ NUTS.", "swag", "dess")
+                        cutscene:battlerText(self, "[speed:0.1].....")
+                    end)
+                    self.dess_acted = true
+                    return
+                else
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* Nah,[wait:5] even robots are not stupid enough to fall for that twice.", "neutral_b", "dess")
+                    end)
+                    return
+                end
 			elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
                 self.dialogue_override = "No![wait:5] You doing it all wrong!"
 				return "* Jamm and Marcy try to help Sousborg\nwith cooking.[wait:5] They fail."
@@ -203,13 +220,10 @@ function Sousborg:onDefeat(damage, battler)
     sprite:stopShake()
     self:defeat("KILLED", true)
 
-    if not Game:getFlag("steamworks_kills") then
-        Game:setFlag("steamworks_kills", 1)
-    else
-        Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
-        if Game:getFlag("steamworks_kills") == 20 then
-            MUSIC_PITCHES["steamworks_overworld"] = 0.5
-        end
+    Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
+    if Game:getFlag("steamworks_kills") == 20 then
+        Game:setFlag("EMPTIED_STEAMWORKS", true)
+        MUSIC_PITCHES["steamworks_overworld"] = 0.25
     end
 
     Game.battle.timer:after(0.8, function()

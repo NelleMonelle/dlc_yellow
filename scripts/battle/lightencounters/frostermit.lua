@@ -5,12 +5,8 @@ function Frostermit:init()
 
     self.text = "* There is an igloo here."
 
-    if not Game:getFlag("l_snowdin_kills") then
-        Game:setFlag("l_snowdin_kills", 0)
-    end
-
-    if Game:getFlag("l_snowdin_kills") >= 13 then
-        local enemies_left = 20 - Game:getFlag("l_snowdin_kills")
+    if Game:getFlag("snowdin_yellow_kills") >= 13 then
+        local enemies_left = 20 - Game:getFlag("snowdin_yellow_kills")
         local mus_pitch
         if enemies_left <= 0 then
             mus_pitch = 1

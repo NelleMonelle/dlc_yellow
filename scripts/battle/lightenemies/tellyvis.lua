@@ -75,12 +75,12 @@ function TellyVis:onAct(battler, name)
                 else
                     self.dialogue_override = "There's nothing\non yet!"
                 end
-                return "* While this IS your favorite\nchannel, Telly-Vis don't look\namused."
+                return "* While this IS your favorite\nchannel,[wait:5] Telly-Vis don't look\namused."
             else
                 self:addMercy(50)
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
-                    self.dialogue_override = "Oh! Check\nthis out!"
+                    self.dialogue_override = "Oh![wait:5] Check\nthis out!"
                 else
                     self.dialogue_override = "Here comes the\nbest part!"
                 end
@@ -93,16 +93,16 @@ function TellyVis:onAct(battler, name)
         else
             local rnd = Utils.pick({1, 2})
             if rnd == 1 then
-                self.dialogue_override = "Am... Am I\nboring you?"
+                self.dialogue_override = "Am...[wait:5] Am I\nboring you?"
             else
-                self.dialogue_override = "Hey, buddy!\nI'm still here!"
+                self.dialogue_override = "Hey,[wait:5] buddy![wait:5]\nI'm still here!"
             end
             return "* You begin to drift off to the\ndismay of Telly.. "
         end
     elseif name == "Signal" then
         if self.low_health then
             self.dialogue_override = "/NeEd s[ome\nMaint/enan-ce . ,,"
-            return "* You see if Telly's antennas\nstill function. They do not."
+            return "* You see if Telly's antennas\nstill function.[wait:5] They do not."
         else
             if not self.switched_channel then
                 self:addMercy(50)
@@ -111,7 +111,7 @@ function TellyVis:onAct(battler, name)
                 if rnd == 1 then
                     self.dialogue_override = "Just what\nI needed!"
                 else
-                    self.dialogue_override = "Whoa, hey!\nI'm picking\nsomething up!"
+                    self.dialogue_override = "Whoa,[wait:5] hey![wait:5]\nI'm picking\nsomething up!"
                 end
                 return "* You help Telly finagle her\nantennas to find some\nprogramming."
             else
@@ -160,7 +160,7 @@ function TellyVis:onAct(battler, name)
                     else
                         self.dialogue_override = "There's nothing\non yet!"
                     end
-                    return "* While this IS your favorite\nchannel, Telly-Vis don't look\namused."
+                    return "* While this IS "..battler.chara:getName().."'s favorite\nchannel,[wait:5] Telly-Vis don't look\namused."
                 end
             else
                 self:addMercy(50)
@@ -171,11 +171,11 @@ function TellyVis:onAct(battler, name)
                 else
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
-                        self.dialogue_override = "Oh! Check\nthis out!"
+                        self.dialogue_override = "Oh![wait:5] Check\nthis out!"
                     else
                         self.dialogue_override = "Here comes the\nbest part!"
                     end
-                    return "* Telly finds a show she thinks\nyou'll love."
+                    return "* Telly finds a show she thinks\n"..battler.chara:getName().." will love."
                 end
             end
         end
@@ -192,13 +192,10 @@ function TellyVis:onDefeat(damage, battler)
     sprite:stopShake()
     self:defeat("KILLED", true)
 
-    if Game:getFlag("steamworks_kills") == nil then
-        Game:setFlag("steamworks_kills", 1)
-    else
-        Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
-        if Game:getFlag("steamworks_kills") == 20 then
-            MUSIC_PITCHES["steamworks_overworld"] = 0.5
-        end
+    Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
+    if Game:getFlag("steamworks_kills") == 20 then
+        Game:setFlag("EMPTIED_STEAMWORKS", true)
+        MUSIC_PITCHES["steamworks_overworld"] = 0.25
     end
 
     Game.battle.timer:after(0.8, function()

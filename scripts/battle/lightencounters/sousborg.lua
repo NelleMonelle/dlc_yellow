@@ -5,10 +5,6 @@ function Sousborg:init()
 
     self.text = "* Sousborg is ready to put your\nculinary skills to the test!"
 
-    if not Game:getFlag("steamworks_kills") then
-        Game:setFlag("steamworks_kills", 0)
-    end
-
     if Game:getFlag("steamworks_kills") >= 13 then
         local enemies_left = 20 - Game:getFlag("steamworks_kills")
         local mus_pitch

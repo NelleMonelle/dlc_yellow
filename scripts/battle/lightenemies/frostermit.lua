@@ -204,13 +204,11 @@ function Frostermit:onDefeat(damage, battler)
     Game.battle.encounter.frostermit_kill_reaction = true
     Game.battle.encounter.kill_count = Game.battle.encounter.kill_count + 1
 
-    if not Game:getFlag("l_snowdin_kills") then
-        Game:setFlag("l_snowdin_kills", 1)
-    else
-        Game:setFlag("l_snowdin_kills", Game:getFlag("l_snowdin_kills") + 1)
-        if Game:getFlag("l_snowdin_kills") == 20 then
-            MUSIC_PITCHES["snowfall"] = 0.5
-        end
+    Game:setFlag("snowdin_yellow_kills", Game:getFlag("snowdin_yellow_kills") + 1)
+    if Game:getFlag("snowdin_yellow_kills") == 20 then
+        Game:setFlag("EMPTIED_SNOWDIN_YELLOW", true)
+        MUSIC_PITCHES["snowfall"] = 0.25
+        MUSIC_PITCHES["vigorous_terrain"] = 0.5
     end
 end
 

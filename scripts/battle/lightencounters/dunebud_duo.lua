@@ -5,10 +5,6 @@ function Dunebud:init()
 
     self.text = "* Double trouble!"
 
-    if not Game:getFlag("dunes_kills") then
-        Game:setFlag("dunes_kills", 0)
-    end
-
     if Game:getFlag("dunes_kills") >= 13 then
         local enemies_left = 20 - Game:getFlag("dunes_kills")
         local mus_pitch

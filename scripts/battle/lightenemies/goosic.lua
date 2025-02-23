@@ -225,13 +225,10 @@ function Goosic:onDefeat(damage, battler)
     sprite:stopShake()
     self:defeat("KILLED", true)
 
-    if Game:getFlag("steamworks_kills") == nil then
-        Game:setFlag("steamworks_kills", 1)
-    else
-        Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
-        if Game:getFlag("steamworks_kills") == 20 then
-            MUSIC_PITCHES["steamworks_overworld"] = 0.5
-        end
+    Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
+    if Game:getFlag("steamworks_kills") == 20 then
+        Game:setFlag("EMPTIED_STEAMWORKS", true)
+        MUSIC_PITCHES["steamworks_overworld"] = 0.25
     end
 
     Game.battle.timer:after(1/2, function()
