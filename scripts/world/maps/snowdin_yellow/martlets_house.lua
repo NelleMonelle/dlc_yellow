@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 43,
+  nextobjectid = 47,
   properties = {
     ["light"] = true,
     ["music"] = "snowfall"
@@ -292,6 +292,32 @@ return {
           x = 0,
           y = 0,
           width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 45,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 266,
+          y = 696,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 552,
+          y = 652,
+          width = 80,
           height = 40,
           rotation = 0,
           visible = true,
