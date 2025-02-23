@@ -9,7 +9,7 @@ function item:init(inventory)
     self.name = "H. Acid"
 
     -- Item type (item, key, weapon, armor)
-    self.type = "item"
+    self.type = "key"
     -- Whether this item is for the light world
     self.light = true
 
@@ -52,6 +52,15 @@ function item:onWorldUse(target)
             return false
         end
     end)
+end
+
+function item:onToss()
+	if Game:getFlag("chem_got_acid") and not Game:getFlag("chem_05_acid_used") then
+		Game.world:showText("* (It wouldn't be wise to toss\naway the acid right now.)")
+		return false
+	else
+		super:onToss(self)
+	end
 end
 
 function item:onLightBattleUse(target)
