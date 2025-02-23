@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.1",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -907,7 +907,8 @@ return {
           visible = true,
           properties = {
             ["actor"] = "sousborg",
-            ["lightencounter"] = "sousborg"
+            ["lightencounter"] = "sousborg",
+            ["once"] = true
           }
         },
         {
