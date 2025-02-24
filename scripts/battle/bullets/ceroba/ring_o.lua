@@ -2,7 +2,7 @@ local CerobaRingOrange, super = Class(Bullet)
 
 function CerobaRingOrange:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super.init(self, x, y, "battle/bullets/ceroba/ring_orange")
+    super.init(self, x, y)
 
     -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
     self.physics.direction = dir
@@ -14,7 +14,11 @@ function CerobaRingOrange:init(x, y, dir, speed)
     --self:setHitbox(0, 0, self.width, 8)
 
     self.destroy_on_hit = false
-    self:setScale(1, 1)
+    self:setScale(0.1, 0.1)
+	self:setOrigin(0.5, 0.5)
+	self.scale = 0.1
+	self.circle_width = 0.04
+	self.fading = false
 end
 
 local function condition(soul)
@@ -33,8 +37,29 @@ function CerobaRingOrange:update()
 	if not condition(soul) then
 		self.grazed = true
 	end
+	
+	self.scale = self.scale + 0.2 * DTMULT
+	self.circle_width = self.circle_width + 0.02 * DTMULT
+	self.scale_x = self.scale
+	self.scale_y = self.scale
+	self.x = self.x - 5 * DTMULT
+	self.y = self.y - 5 * DTMULT
+	if self.scale >= 6 and not self.fading then
+		self:fadeOutAndRemove(0.25)
+		self.fading = true
+	end
 
     super.update(self)
+end
+
+function CerobaRingOrange:draw()
+	super.draw(self)
+    Draw.setColor({1, 0.625, 0.25, self.alpha})
+	love.graphics.setLineWidth(self.circle_width)
+	love.graphics.circle("line",26,26,18+self.scale)
+	if DEBUG_RENDER and self.collider then
+        self.collider:draw(1, 0, 0)
+    end
 end
 
 return CerobaRingOrange

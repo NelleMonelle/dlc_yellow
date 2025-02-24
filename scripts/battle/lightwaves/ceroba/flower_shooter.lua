@@ -47,18 +47,10 @@ function Basic:onStart()
                     self.nextringcolor = 2
                     -- blue ring
                     local ring_b = self:spawnBullet("ceroba/ring_b", self.bigflower_two.x, self.bigflower_two.y)
-                    ring_b.graphics.grow = 0.2
-                    self.timer:after(1, function()
-                        ring_b:fadeOutAndRemove(0.5)
-                    end)
                 else
                     self.nextringcolor = 1
                     -- orange ring
                     local ring_o = self:spawnBullet("ceroba/ring_o", self.bigflower_one.x, self.bigflower_one.y)
-                    ring_o.graphics.grow = 0.2
-                    self.timer:after(1, function()
-                        ring_o:fadeOutAndRemove(0.5)
-                    end)
                 end
             end)
         end
