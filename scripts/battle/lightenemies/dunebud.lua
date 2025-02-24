@@ -143,6 +143,19 @@ function Dunebud:onDefeat(damage, battler)
         Game:setFlag("EMPTIED_DUNES", true)
         MUSIC_PITCHES["vigorous_terrain"] = 0.25
         MUSIC_PITCHES["steamworks_overworld"] = 0.5
+    elseif Game:getFlag("dunes_kills") > 13 and Game:getFlag("dunes_kills") < 20 and #Game.battle.enemies > 0 then
+        Game.battle.timer:after(1, function()
+            local enemies_left = 20 - Game:getFlag("dunes_kills")
+            local mus_pitch = 1
+            if enemies_left > 0 then
+                mus_pitch = (enemies_left / 7)
+            end
+            Game.battle.music:setPitch(mus_pitch)
+        end)
+    elseif Game:getFlag("dunes_kills") == 13 and #Game.battle.enemies > 0 then
+        Game.battle.timer:after(1, function()
+            Game.battle.music:play("genobattle_yellow")
+        end)
     end
 end
 

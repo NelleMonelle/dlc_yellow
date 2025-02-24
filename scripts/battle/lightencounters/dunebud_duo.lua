@@ -7,10 +7,8 @@ function Dunebud:init()
 
     if Game:getFlag("dunes_kills") >= 13 then
         local enemies_left = 20 - Game:getFlag("dunes_kills")
-        local mus_pitch
-        if enemies_left <= 0 then
-            mus_pitch = 1
-        else
+        local mus_pitch = 1
+        if enemies_left > 0 then
             mus_pitch = (enemies_left / 7)
         end
         MUSIC_PITCHES["genobattle_yellow"] = mus_pitch
