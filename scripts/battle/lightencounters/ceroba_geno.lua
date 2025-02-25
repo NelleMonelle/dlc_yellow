@@ -52,6 +52,23 @@ function Ceroba:init()
 		table.insert(self.ember_particles, {sprite = self.ember_large, color = {228/255, 69/255, 101/255}, x = ember_x, y = ember_y, speed = ember_speed, direction = ember_dir, lifetime = 0, maxlife = 350})
 	end
 	self.part_timer = 0
+	
+	self.is_ceroba = true
+	self.arena_damage = false
+end
+
+function Ceroba:getNextWaves()
+    local waves = {}
+    for _,enemy in ipairs(Game.battle:getActiveEnemies()) do
+        local wave = enemy:selectWave()
+        if wave then
+            table.insert(waves, wave)
+        end
+    end
+	if self.arena_damage == true then
+		table.insert(waves, "ceroba/arena_damage")
+	end
+    return waves
 end
 
 function Ceroba:setBattleState()
@@ -64,6 +81,12 @@ end
 
 function Ceroba:update()
     super.update(self)
+	if Game.battle.arena and self.arena_damage == true then
+		local ceroba_part = Game.battle.enemies[1].actor:getLightBattlerPart("body")
+		local cur_ceroba_col = 200 - (((ceroba_part.stretch - 1) / 0.1) * 200)
+		local ceroba_color = {1, cur_ceroba_col/255, cur_ceroba_col/255, 1}
+		Game.battle.arena.color = ceroba_color
+	end
     local to_remove = {}
     for _,particle in ipairs(self.ember_particles) do
 		particle.x = particle.x - (particle.speed * math.cos(particle.direction)) * DTMULT
