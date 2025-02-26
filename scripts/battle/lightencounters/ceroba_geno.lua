@@ -71,6 +71,10 @@ function Ceroba:getNextWaves()
     return waves
 end
 
+function Ceroba:onBattleInit()
+	MagicalGlassLib.serious_mode = true
+end
+
 function Ceroba:setBattleState()
     local ceroba = Game.battle:getEnemyBattler("ceroba_geno")
     ceroba:toggleOverlay(true)

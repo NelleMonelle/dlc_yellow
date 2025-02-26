@@ -105,7 +105,7 @@ end
 function Ceroba:getNextWaves()
     if self.attack_cycle == 0 then
         self.attack_cycle = 1
-        return {"ceroba/flower_shooter"} -- Opening Attack
+        return {"ceroba/intro_attack"} -- Opening Attack
     elseif self.health <= 500 and self.phase == 1 then
         if self.attack_cycle == 9 then
             self.attack_cycle = 1
@@ -118,10 +118,10 @@ function Ceroba:getNextWaves()
         return {"ceroba/flower_shooter"} -- Attack 1
     elseif self.attack_cycle == 2 then
         self.attack_cycle = 3
-        return {"ceroba/flower_spiral"} -- Attack 2
+        return {"ceroba/beams"} -- Attack 2
     elseif self.attack_cycle == 3 then
         self.attack_cycle = 4
-        return {"ceroba/flower_shooter"} -- Attack 3
+        return {"ceroba/black_hole"} -- Attack 3
     elseif self.attack_cycle == 4 then
         self.attack_cycle = 5
         return {"ceroba/flower_spiral"} -- Attack 4
