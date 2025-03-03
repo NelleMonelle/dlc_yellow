@@ -153,6 +153,7 @@ function Dunebud:onDefeat(damage, battler)
             Game.battle.music:setPitch(mus_pitch)
         end)
     elseif Game:getFlag("dunes_kills") == 13 and #Game.battle.enemies > 0 then
+        Game.battle.music:stop()
         Game.battle.timer:after(1, function()
             Game.battle.music:play("genobattle_yellow")
         end)

@@ -218,6 +218,7 @@ function Sousborg:onDefeat(damage, battler)
     self.hurt_timer = -1
     local sprite = self:getActiveSprite()
     sprite:stopShake()
+    sprite:setAnimation("lightbattle_spared")
     self:defeat("KILLED", true)
 
     Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
@@ -227,9 +228,51 @@ function Sousborg:onDefeat(damage, battler)
     end
 
     Game.battle.timer:after(0.8, function()
+        self.alpha = 0
         Assets.playSound("ut_explosion")
-        self:remove()
+        local explosion = Sprite("battle/lightenemies/robot_destroy_explosion")
+        explosion:setPosition(self:getRelativePos(self.width / 2, self.height / 2))
+        explosion.layer = LIGHT_BATTLE_LAYERS["above_battlers"]
+        explosion:setOrigin(0.5, 0.5)
+        explosion:setScale(2, 2)
+        Game.battle:addChild(explosion)
+        Game.battle.timer:after(1, function()
+            explosion:fadeOutAndRemove(1)
+        end)
+        self:explodeParts()
     end)
+end
+
+function Sousborg:explodeParts()
+    local function makeSprite(spritepath, x, y)
+        local sprite = Sprite(spritepath)
+        sprite:setPosition(x or self.x, y or self.y)
+        sprite.layer = LIGHT_BATTLE_LAYERS["above_battlers"] + 1
+        sprite:setOrigin(0.5, 0.5)
+        sprite:setScale(2, 2)
+        Game.battle:addChild(sprite)
+        sprite.physics.direction = math.rad(Utils.random(360))
+        sprite.physics.speed = 7
+        sprite.physics.gravity = 0.2
+    end
+    local relative_pos_x, relative_pos_y = self:getRelativePos(self.width / 2, self.height / 2)
+    local path = "battle/lightenemies/sousborg/explosion_parts/"
+    makeSprite(path.."body_bottom", relative_pos_x, relative_pos_y)
+    makeSprite(path.."body_top", relative_pos_x, relative_pos_y)
+    makeSprite(path.."cleaver", relative_pos_x, relative_pos_y)
+    makeSprite(path.."glass", relative_pos_x, relative_pos_y)
+    makeSprite(path.."hand", relative_pos_x, relative_pos_y)
+    makeSprite(path.."hat", relative_pos_x, relative_pos_y)
+    makeSprite(path.."head", relative_pos_x, relative_pos_y)
+    makeSprite(path.."left_arm_1", relative_pos_x, relative_pos_y)
+    makeSprite(path.."left_arm_2", relative_pos_x, relative_pos_y)
+    makeSprite(path.."plate_1", relative_pos_x, relative_pos_y)
+    makeSprite(path.."plate_2", relative_pos_x, relative_pos_y)
+    makeSprite(path.."salt", relative_pos_x, relative_pos_y)
+    makeSprite(path.."shard_1", relative_pos_x, relative_pos_y)
+    makeSprite(path.."shard_2", relative_pos_x, relative_pos_y)
+    makeSprite(path.."shard_3", relative_pos_x, relative_pos_y)
+    makeSprite(path.."spoon", relative_pos_x, relative_pos_y)
 end
 
 function Sousborg:getEncounterText()

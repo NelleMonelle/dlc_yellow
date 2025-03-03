@@ -12,7 +12,7 @@ function Goosic:init()
     self.defense = 8
     self.money = 18
     self.experience = 0
-    
+
     self.dialogue_bubble = "uty_2"
     self.dialogue_offset = {-30, 10}
 
@@ -223,6 +223,7 @@ function Goosic:onDefeat(damage, battler)
     self.hurt_timer = -1
     local sprite = self:getActiveSprite()
     sprite:stopShake()
+    sprite:setAnimation("lightbattle_spared")
     self:defeat("KILLED", true)
 
     Game:setFlag("steamworks_kills", Game:getFlag("steamworks_kills") + 1)
@@ -239,15 +240,50 @@ function Goosic:onDefeat(damage, battler)
             Game.battle.music:setPitch(mus_pitch)
         end)
     elseif Game:getFlag("steamworks_kills") == 13 and #Game.battle.enemies > 0 then
+        Game.battle.music:stop()
         Game.battle.timer:after(1, function()
             Game.battle.music:play("genobattle_yellow")
         end)
     end
 
-    Game.battle.timer:after(1/2, function()
+    Game.battle.timer:after(0.8, function()
+        self.alpha = 0
         Assets.playSound("ut_explosion")
-        self:remove()
+        local explosion = Sprite("battle/lightenemies/robot_destroy_explosion")
+        explosion:setPosition(self:getRelativePos(self.width / 2, self.height / 2))
+        explosion.layer = LIGHT_BATTLE_LAYERS["above_battlers"]
+        explosion:setOrigin(0.5, 0.5)
+        explosion:setScale(2, 2)
+        Game.battle:addChild(explosion)
+        Game.battle.timer:after(1, function()
+            explosion:fadeOutAndRemove(1)
+        end)
+        self:explodeParts()
     end)
+end
+
+function Goosic:explodeParts()
+    local function makeSprite(spritepath, x, y)
+        local sprite = Sprite(spritepath)
+        sprite:setPosition(x or self.x, y or self.y)
+        sprite.layer = LIGHT_BATTLE_LAYERS["above_battlers"] + 1
+        sprite:setOrigin(0.5, 0.5)
+        sprite:setScale(2, 2)
+        Game.battle:addChild(sprite)
+        sprite.physics.direction = math.rad(Utils.random(360))
+        sprite.physics.speed = 7
+        sprite.physics.gravity = 0.2
+    end
+    local relative_pos_x, relative_pos_y = self:getRelativePos(self.width / 2, self.height / 2)
+    local path = "battle/lightenemies/goosic/explosion_parts/"
+    makeSprite(path.."body", relative_pos_x, relative_pos_y)
+    makeSprite(path.."crown", relative_pos_x, relative_pos_y)
+    makeSprite(path.."disc", relative_pos_x, relative_pos_y)
+    makeSprite(path.."head", relative_pos_x, relative_pos_y)
+    makeSprite(path.."leg", relative_pos_x, relative_pos_y)
+    makeSprite(path.."leg_back", relative_pos_x, relative_pos_y)
+    makeSprite(path.."mouth", relative_pos_x, relative_pos_y)
+    makeSprite(path.."neck", relative_pos_x, relative_pos_y)
 end
 
 function Goosic:getEncounterText()
