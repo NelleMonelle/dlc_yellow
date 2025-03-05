@@ -4,7 +4,50 @@ return {
         ceroba:getActiveSprite():setAnimation("intro")
         cutscene:wait(2.5)
         ceroba:toggleOverlay(false)
-        cutscene:battlerText(ceroba, "...")
+        local humans = {"hero", "jamm", "kris"}
+        local noHumans = true
+        for i, v in ipairs(Game.party) do
+            for _, v2 in ipairs(humans) do -- butt-ugly hack because I forgor what the function for checking if a table contains a certain value is
+                if v.id == v2 then
+                    noHumans = false
+                end
+            end
+        end
+        if noHumans == true then
+            cutscene:battlerText(ceroba, "...")
+            cutscene:battlerText(ceroba, "I don't understand...")
+            cutscene:battlerText(ceroba, "Aren't Monsters supposed to be made\nof compassion?")
+            cutscene:battlerText(ceroba, "Why would you\ndo this?")
+            cutscene:battlerText(ceroba, "Did you think those robots had no will or purpose?")
+            cutscene:battlerText(ceroba, "That look in your eyes...")
+            cutscene:battlerText(ceroba, "You...[wait:5] you've killed Monsters too,[wait:5] haven't you?")
+            cutscene:battlerText(ceroba, "What kind of Monster kills their own kind?")
+            cutscene:battlerText(ceroba, "...")
+            cutscene:battlerText(ceroba, "No...")
+            cutscene:battlerText(ceroba, "You're not a Monster.")
+        else
+            cutscene:battlerText(ceroba, "...")
+            cutscene:battlerText(ceroba, "Why...")
+            cutscene:battlerText(ceroba, "Why does everything I love crumble away the moment I think things are going to be fine?")
+            cutscene:battlerText(ceroba, "I was taught that\neven humans have the capacity to show compassion.")
+            cutscene:battlerText(ceroba, "...")
+            cutscene:battlerText(ceroba, "You're clearly not\none of them.")
+            cutscene:battlerText(ceroba, "That look in your eyes...")
+            cutscene:battlerText(ceroba, "You...[wait:5] you've killed Monsters too,[wait:5] haven't you?")
+            cutscene:battlerText(ceroba, "What,[wait:5] did you think\nwe haven't already suffered enough already?")
+            cutscene:battlerText(ceroba, "Is this some way of freeing us from our \"miserable\"\nexistance?")
+            cutscene:battlerText(ceroba, "No...")
+            cutscene:battlerText(ceroba, "You're not a human.")
+        end
+        cutscene:battlerText(ceroba, "You're something\nmuch,[wait:5] much worse.")
+        cutscene:battlerText(ceroba, "A creature hellbent\non our destruction.")
+        cutscene:battlerText(ceroba, "I can't let you leave this mountain.")
+        cutscene:battlerText(ceroba, "What you've done is unforgivable.")
+        cutscene:battlerText(ceroba, "... ")
+        cutscene:battlerText(ceroba, "You WILL know the\npain you have caused.")
+
+        -- Old dialogue
+        --[[cutscene:battlerText(ceroba, "...")
         cutscene:battlerText(ceroba, "...")
         cutscene:battlerText(ceroba, "Why...")
         cutscene:battlerText(ceroba, "Why have you\ndone this?")
@@ -20,7 +63,7 @@ return {
         cutscene:battlerText(ceroba, "Starlo was the...\nthe only friend\nI had left.")
         cutscene:battlerText(ceroba, "What you've done\nis unforgivable.")
         cutscene:battlerText(ceroba, "... ")
-        cutscene:battlerText(ceroba, "You WILL know the\npain you have caused.")
+        cutscene:battlerText(ceroba, "You WILL know the\npain you have caused.")]]
 
         cutscene:after(function()
             Game.battle:setState("ACTIONSELECT")
