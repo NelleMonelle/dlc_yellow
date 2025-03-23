@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,12 +9,13 @@ return {
   height = 23,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 13,
-  nextobjectid = 196,
+  nextlayerid = 12,
+  nextobjectid = 195,
   backgroundcolor = { 21, 27, 73 },
   properties = {
+    ["border"] = "undertale/tundra",
     ["light"] = true,
-    ["music"] = "snowfall"
+    ["music"] = "ambientwater"
   },
   tilesets = {
     {

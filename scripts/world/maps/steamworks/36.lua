@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -12,6 +12,7 @@ return {
   nextlayerid = 9,
   nextobjectid = 18,
   properties = {
+    ["border"] = "undertale/fire",
     ["light"] = true,
     ["name"] = "A Road Ahead"
   },
@@ -30,7 +31,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1537,
+      firstgid = 1540,
       filename = "../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../tilesets/steamworks_objects.lua"
     }
@@ -215,7 +216,7 @@ return {
           width = 68,
           height = 90,
           rotation = 0,
-          gid = 2147485303,
+          gid = 2147485306,
           visible = true,
           properties = {}
         },

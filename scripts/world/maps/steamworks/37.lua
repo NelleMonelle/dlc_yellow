@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,8 +10,9 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 12,
+  nextobjectid = 14,
   properties = {
+    ["border"] = "undertale/fire",
     ["light"] = true
   },
   tilesets = {
