@@ -69,7 +69,7 @@ function actor:init()
             local sprite = Sprite(self.path.."/head", 30, 56)
             sprite:setOrigin(0.5, 1)
             --sprite.layer = 400
-            sprite:play(1/4)
+            sprite:play(1/3)
             return sprite
         end
     })
