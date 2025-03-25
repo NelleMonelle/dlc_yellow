@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="23" height="17" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="17">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="23" height="17" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="19">
  <editorsettings>
   <export target="02b.lua" format="lua"/>
  </editorsettings>
@@ -10,6 +10,14 @@
  </properties>
  <tileset firstgid="1" source="../../tilesets/newhome.tsx"/>
  <tileset firstgid="901" source="../../tilesets/newhome_stuff.tsx"/>
+ <objectgroup id="11" name="objects_parallax">
+  <object id="17" name="newhome_parallax" x="256" y="128">
+   <point/>
+  </object>
+  <object id="18" name="newhome_parallax" x="832" y="128">
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="3" name="objects_bg">
   <object id="11" gid="919" x="306" y="246" width="420" height="546"/>
  </objectgroup>
