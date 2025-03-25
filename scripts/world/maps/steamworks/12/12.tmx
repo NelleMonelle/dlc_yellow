@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="37" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="24">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="37" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="26">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -100,6 +100,8 @@
   <object id="15" name="stw_trapdoor" x="600" y="340">
    <point/>
   </object>
+  <object id="24" name="stw_metalsounds" x="0" y="0" width="40" height="40"/>
+  <object id="25" name="stw_vignette" x="40" y="0" width="40" height="40"/>
  </objectgroup>
  <objectgroup id="10" name="objects_overlay">
   <object id="16" gid="301" x="760" y="360" width="40" height="40"/>

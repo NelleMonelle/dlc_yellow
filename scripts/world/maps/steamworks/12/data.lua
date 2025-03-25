@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 24,
+  nextobjectid = 26,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -331,6 +331,32 @@ return {
           y = 340,
           width = 0,
           height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "stw_metalsounds",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 25,
+          name = "stw_vignette",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 0,
+          width = 40,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}

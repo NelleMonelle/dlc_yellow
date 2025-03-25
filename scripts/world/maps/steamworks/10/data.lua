@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 13,
-  nextobjectid = 20,
+  nextobjectid = 22,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -30,7 +30,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1537,
+      firstgid = 1540,
       filename = "../../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../../tilesets/steamworks_objects.lua"
     }
@@ -320,7 +320,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          gid = 1650,
+          gid = 1653,
           visible = true,
           properties = {}
         },
@@ -334,7 +334,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          gid = 1650,
+          gid = 1653,
           visible = true,
           properties = {}
         }
@@ -453,6 +453,32 @@ return {
             ["map"] = "steamworks/11",
             ["marker"] = "right"
           }
+        },
+        {
+          id = 20,
+          name = "stw_metalsounds",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "stw_vignette",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
