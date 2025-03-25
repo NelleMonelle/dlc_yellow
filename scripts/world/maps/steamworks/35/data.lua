@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 30,
+  nextobjectid = 32,
   properties = {
     ["light"] = true
   },
@@ -23,7 +23,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 41,
+      firstgid = 44,
       filename = "../../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../../tilesets/steamworks_objects.lua"
     }
@@ -159,7 +159,20 @@ return {
           width = 54,
           height = 62,
           rotation = 0,
-          gid = 153,
+          gid = 156,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "shadowarea",
+          type = "",
+          shape = "rectangle",
+          x = 2240,
+          y = 260,
+          width = 560,
+          height = 80,
+          rotation = 0,
           visible = true,
           properties = {}
         }

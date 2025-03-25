@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="23">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="27">
  <editorsettings>
   <export target="../../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/09/data.lua" format="lua"/>
  </editorsettings>
@@ -10,7 +10,7 @@
  </properties>
  <tileset firstgid="1" source="../../../tilesets/steamworks.tsx"/>
  <tileset firstgid="1497" source="../../../tilesets/steamworks_objects_big.tsx"/>
- <tileset firstgid="1537" source="../../../tilesets/steamworks_objects.tsx"/>
+ <tileset firstgid="1540" source="../../../tilesets/steamworks_objects.tsx"/>
  <layer id="13" name="bg" width="50" height="18">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1401,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -78,11 +78,11 @@
 </data>
  </layer>
  <objectgroup id="15" name="objects">
-  <object id="18" gid="1587" x="1880" y="630" width="120" height="70"/>
-  <object id="19" gid="1588" x="1572" y="568" width="150" height="80"/>
-  <object id="20" gid="1577" x="1780" y="594" width="68" height="68"/>
-  <object id="21" gid="1577" x="1070" y="596" width="68" height="68"/>
-  <object id="22" gid="1577" x="506" y="596" width="68" height="68"/>
+  <object id="18" gid="1590" x="1880" y="630" width="120" height="70"/>
+  <object id="19" gid="1591" x="1572" y="568" width="150" height="80"/>
+  <object id="20" gid="1580" x="1780" y="594" width="68" height="68"/>
+  <object id="21" gid="1580" x="1070" y="596" width="68" height="68"/>
+  <object id="22" gid="1580" x="506" y="596" width="68" height="68"/>
  </objectgroup>
  <objectgroup id="14" name="objects_gradient">
   <object id="17" gid="1514" x="0" y="720" width="2000" height="200"/>
@@ -111,6 +111,8 @@
     <property name="marker" value="right"/>
    </properties>
   </object>
+  <object id="25" name="stw_metalsounds" x="0" y="0" width="40" height="40"/>
+  <object id="26" name="stw_vignette" x="40" y="0" width="40" height="40"/>
  </objectgroup>
  <objectgroup id="11" name="markers">
   <object id="11" name="left" x="80" y="420">

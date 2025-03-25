@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="26" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="17">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="19">
  <editorsettings>
   <export target="../../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/11/data.lua" format="lua"/>
  </editorsettings>
@@ -90,6 +90,8 @@ Award: Mr. Chujin Ketsukane</property>
 rest.)</property>
    </properties>
   </object>
+  <object id="17" name="stw_metalsounds" x="0" y="0" width="40" height="40"/>
+  <object id="18" name="stw_vignette" x="40" y="0" width="40" height="40"/>
  </objectgroup>
  <objectgroup id="5" name="markers">
   <object id="6" name="right" x="960" y="320">

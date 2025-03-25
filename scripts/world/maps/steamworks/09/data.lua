@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 23,
+  nextobjectid = 27,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly",
@@ -31,7 +31,7 @@ return {
     },
     {
       name = "steamworks_objects",
-      firstgid = 1537,
+      firstgid = 1540,
       filename = "../../../tilesets/steamworks_objects.tsx",
       exportfilename = "../../../tilesets/steamworks_objects.lua"
     }
@@ -175,7 +175,7 @@ return {
           width = 120,
           height = 70,
           rotation = 0,
-          gid = 1587,
+          gid = 1590,
           visible = true,
           properties = {}
         },
@@ -189,7 +189,7 @@ return {
           width = 150,
           height = 80,
           rotation = 0,
-          gid = 1588,
+          gid = 1591,
           visible = true,
           properties = {}
         },
@@ -203,7 +203,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
-          gid = 1577,
+          gid = 1580,
           visible = true,
           properties = {}
         },
@@ -217,7 +217,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
-          gid = 1577,
+          gid = 1580,
           visible = true,
           properties = {}
         },
@@ -231,7 +231,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
-          gid = 1577,
+          gid = 1580,
           visible = true,
           properties = {}
         }
@@ -445,6 +445,32 @@ return {
             ["map"] = "steamworks/10",
             ["marker"] = "right"
           }
+        },
+        {
+          id = 25,
+          name = "stw_metalsounds",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 26,
+          name = "stw_vignette",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 0,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
