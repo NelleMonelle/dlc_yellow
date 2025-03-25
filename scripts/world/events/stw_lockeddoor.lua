@@ -1,7 +1,7 @@
 local SteamworksLockedDoor, super = Class(Event)
 
 function SteamworksLockedDoor:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data.x, data.y, data.width, data.height)
 end
 
 function SteamworksLockedDoor:onInteract(chara, dir)
