@@ -27,6 +27,10 @@
         "bosses": {}
     },
 
+    "sharedlibs": [
+        "borders"
+    ],
+
     "config": {
         "kristal": {
           "lightCurrency": "Gold",
