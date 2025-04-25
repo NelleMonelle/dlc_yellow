@@ -15,11 +15,14 @@ function Ceroba:init()
     self.experience = 800
     self.spare_percentage = 0
 
+    self.service_mercy = 0
+    self.boss = true
+
     self.phase = 1
     self.attack_cycle = 0
     self.low_health = false
 
-    self.dialogue_bubble = "ut_wide"
+    self.dialogue_bubble = "uty_3"
     self.dialogue_offset = {-40, 20}
 
     self.waves = {
@@ -32,7 +35,7 @@ function Ceroba:init()
     self.text = {
         "* There is no hope.",
         "* She wipes sweat from\nher brow.",
-        --"* The sand swirls around you.",
+        "* The sand swirls around you.",
         "* She stares into your SOUL.",
         "* The fight rages.",
         --"* The atmosphere chills with\nire.",
@@ -139,7 +142,7 @@ function Ceroba:getNextWaves()
         return {"ceroba/flower_spiral"} -- Attack 8
     elseif self.attack_cycle == 9 then
         self.attack_cycle = 1
-        return {"ceroba/flower_shooter"} -- Attack 9
+        return {"ceroba/pillars"} -- Attack 9
     end
     return super.getNextWaves(self)
 end

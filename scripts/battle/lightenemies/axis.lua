@@ -14,11 +14,9 @@ function Axis:init()
     self.experience = 200
     self.spare_percentage = 0
 
-    self.display_damage_on_miss = true
+    self.service_mercy = 0
+    self.boss = true
 
-    self.battle_phase = 1
-    self.axis_protected = false
-    
     self.dialogue_bubble = "uty_2"
     self.dialogue_offset = {-30, 10}
 
@@ -84,8 +82,11 @@ function Axis:onAct(battler, name)
         end
     elseif name == "Cool" then
         return "* You pull on your shirt\nrepeatedly in hopes to beat the\nheat. Your effort fails."
-    elseif name == "Compliment" then
-        Game.battle:startActCutscene("axis", "compliment_one")
+    elseif name == "Red Buster" then
+        Game.battle:powerAct("red_buster", battler, "susie", self)
+        return
+    elseif name == "Dual Heal" then
+        Game.battle:powerAct("dual_heal", battler, "noelle")
         return
     elseif name == "Standard" then
         if battler.chara.id == "susie" then

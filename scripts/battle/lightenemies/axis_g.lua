@@ -14,14 +14,16 @@ function Axis:init()
     self.experience = 200
     self.spare_percentage = 0
 
+    self.service_mercy = 0
+    self.boss = true
+
     if Game:getFlag("steamworks_kills") == 20 then
         self.geno_aborted = false
     else
         self.geno_aborted = true
     end
-	
+
 	self.show_hp = false
-    self.display_damage_on_miss = true
 
     self.dialogue_bubble = "ut_wide"
     self.dialogue_offset = {-30, 10}
