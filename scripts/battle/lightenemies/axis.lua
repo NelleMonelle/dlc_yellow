@@ -82,12 +82,6 @@ function Axis:onAct(battler, name)
         end
     elseif name == "Cool" then
         return "* You pull on your shirt\nrepeatedly in hopes to beat the\nheat. Your effort fails."
-    elseif name == "Red Buster" then
-        Game.battle:powerAct("red_buster", battler, "susie", self)
-        return
-    elseif name == "Dual Heal" then
-        Game.battle:powerAct("dual_heal", battler, "noelle")
-        return
     elseif name == "Standard" then
         if battler.chara.id == "susie" then
             if not self.susie_acted then
