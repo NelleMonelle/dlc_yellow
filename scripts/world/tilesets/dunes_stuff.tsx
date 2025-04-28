@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.11.1" name="dunes_stuff" tilewidth="440" tileheight="586" tilecount="17" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="dunes_stuff" tilewidth="983" tileheight="900" tilecount="24" columns="0">
  <editorsettings>
   <export target="dunes_stuff.lua" format="lua"/>
  </editorsettings>
  <grid orientation="orthogonal" width="1" height="1"/>
+ <tile id="18">
+  <image source="../../../assets/sprites/world/maps/dunes/30c_bg.png" width="983" height="900"/>
+ </tile>
+ <tile id="19">
+  <image source="../../../assets/sprites/world/maps/dunes/30c_corner.png" width="480" height="560"/>
+ </tile>
+ <tile id="20">
+  <image source="../../../assets/sprites/world/maps/dunes/30c_mansion.png" width="660" height="391"/>
+ </tile>
+ <tile id="21">
+  <image source="../../../assets/sprites/world/maps/dunes/30c_path.png" width="983" height="420"/>
+ </tile>
+ <tile id="17">
+  <image source="../../../assets/sprites/world/maps/dunes/30d_background.png" width="320" height="600"/>
+ </tile>
+ <tile id="22">
+  <image source="../../../assets/sprites/world/maps/dunes/31_bg.png" width="442" height="240"/>
+ </tile>
+ <tile id="23">
+  <image source="../../../assets/sprites/world/maps/dunes/31_foreground.png" width="442" height="165"/>
+ </tile>
  <tile id="3">
   <image source="../../../assets/sprites/world/maps/dunes/34_wishing_well.png" width="36" height="59"/>
  </tile>

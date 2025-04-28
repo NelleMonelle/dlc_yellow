@@ -1,11 +1,11 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.1",
+  tiledversion = "1.11.2",
   name = "dunes_stuff",
   class = "",
-  tilewidth = 440,
-  tileheight = 586,
+  tilewidth = 983,
+  tileheight = 900,
   spacing = 0,
   margin = 0,
   columns = 0,
@@ -23,8 +23,50 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 17,
+  tilecount = 24,
   tiles = {
+    {
+      id = 18,
+      image = "../../../assets/sprites/world/maps/dunes/30c_bg.png",
+      width = 983,
+      height = 900
+    },
+    {
+      id = 19,
+      image = "../../../assets/sprites/world/maps/dunes/30c_corner.png",
+      width = 480,
+      height = 560
+    },
+    {
+      id = 20,
+      image = "../../../assets/sprites/world/maps/dunes/30c_mansion.png",
+      width = 660,
+      height = 391
+    },
+    {
+      id = 21,
+      image = "../../../assets/sprites/world/maps/dunes/30c_path.png",
+      width = 983,
+      height = 420
+    },
+    {
+      id = 17,
+      image = "../../../assets/sprites/world/maps/dunes/30d_background.png",
+      width = 320,
+      height = 600
+    },
+    {
+      id = 22,
+      image = "../../../assets/sprites/world/maps/dunes/31_bg.png",
+      width = 442,
+      height = 240
+    },
+    {
+      id = 23,
+      image = "../../../assets/sprites/world/maps/dunes/31_foreground.png",
+      width = 442,
+      height = 165
+    },
     {
       id = 3,
       image = "../../../assets/sprites/world/maps/dunes/34_wishing_well.png",

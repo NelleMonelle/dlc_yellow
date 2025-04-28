@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.1",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 15,
-  nextobjectid = 62,
+  nextobjectid = 63,
   properties = {
     ["light"] = true,
     ["music"] = "sunnyside_ranch"
@@ -25,8 +25,7 @@ return {
     {
       name = "darkruins_corn",
       firstgid = 118,
-      filename = "../../tilesets/darkruins_corn.tsx",
-      exportfilename = "../../tilesets/darkruins_corn.lua"
+      filename = "../../tilesets/darkruins_corn.tsx"
     },
     {
       name = "dunes",
@@ -1099,19 +1098,6 @@ return {
           }
         },
         {
-          id = 57,
-          name = "mail_station_dunes",
-          type = "",
-          shape = "point",
-          x = 1018,
-          y = 238,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 58,
           name = "interactable",
           type = "",
@@ -1138,6 +1124,19 @@ return {
           height = 106,
           rotation = 0,
           gid = 1434,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 62,
+          name = "dunes_mail_station",
+          type = "",
+          shape = "rectangle",
+          x = 970,
+          y = 180,
+          width = 96,
+          height = 58,
+          rotation = 0,
           visible = true,
           properties = {}
         }

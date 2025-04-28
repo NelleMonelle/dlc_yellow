@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="22" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="15">
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="oasis_indoors"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/dunes_stuff.tsx"/>
+ <objectgroup id="2" name="objects_bg">
+  <object id="1" gid="23" x="0" y="480" width="884" height="480"/>
+ </objectgroup>
+ <objectgroup id="3" name="collision">
+  <object id="7" x="0" y="344" width="880" height="30"/>
+  <object id="8" x="0" y="150" width="880" height="30"/>
+  <object id="9" x="96" y="180" width="38" height="20"/>
+  <object id="10" x="256" y="180" width="38" height="20"/>
+  <object id="11" x="636" y="180" width="38" height="20"/>
+  <object id="12" x="796" y="180" width="38" height="20"/>
+  <object id="13" x="418" y="180" width="98" height="38"/>
+ </objectgroup>
+ <objectgroup id="4" name="objects_party">
+  <object id="3" name="transition" x="0" y="180" width="40" height="164">
+   <properties>
+    <property name="map" value="dunes/30"/>
+    <property name="marker" value="downright"/>
+   </properties>
+  </object>
+  <object id="4" name="transition" x="840" y="180" width="40" height="164">
+   <properties>
+    <property name="map" value="dunes/32"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="5" name="right" x="800" y="260">
+   <point/>
+  </object>
+  <object id="6" name="left" x="80" y="260">
+   <point/>
+  </object>
+  <object id="14" name="spawn" x="280" y="260">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="objects_overparty" visible="0">
+  <object id="2" gid="24" x="0" y="344" width="884" height="330"/>
+ </objectgroup>
+</map>

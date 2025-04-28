@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.1",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 26,
+  nextobjectid = 27,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -301,6 +301,19 @@ return {
             ["lightencounter"] = "jandroid_goosic_duo",
             ["once"] = true
           }
+        },
+        {
+          id = 26,
+          name = "stw_mail_station",
+          type = "",
+          shape = "rectangle",
+          x = 612,
+          y = 478,
+          width = 136,
+          height = 90,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

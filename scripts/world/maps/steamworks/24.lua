@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 11,
-  nextobjectid = 19,
+  nextobjectid = 20,
   properties = {
     ["light"] = true,
     ["music"] = "corner_of_a_circle"
@@ -411,6 +411,19 @@ return {
             ["map"] = "steamworks/25",
             ["marker"] = "right"
           }
+        },
+        {
+          id = 19,
+          name = "stw_mail_station",
+          type = "",
+          shape = "rectangle",
+          x = 1094,
+          y = 138,
+          width = 136,
+          height = 90,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
