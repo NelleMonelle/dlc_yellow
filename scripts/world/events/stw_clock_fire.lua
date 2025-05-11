@@ -1,7 +1,7 @@
 local SteamworksClockFire, super = Class(Event)
 
 function SteamworksClockFire:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setSprite("world/maps/steamworks/small_objects/17c_clock_fire", 1/7)
     self:setOrigin(0.5, 1)

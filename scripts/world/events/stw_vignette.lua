@@ -1,7 +1,7 @@
 local SteamworksVignette, super = Class(Event)
 
 function SteamworksVignette:init(data)
-	super.init(self, data.x, data.y, data.width, data.height)
+	super.init(self, data)
     self:setPosition(0,0)
     self:setParallax(0,0)
     self:setSprite("world/maps/steamworks/vignette")

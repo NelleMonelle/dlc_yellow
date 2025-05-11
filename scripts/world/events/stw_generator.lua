@@ -1,7 +1,7 @@
 local SteamworksGenerator, super = Class(Event)
 
 function SteamworksGenerator:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setOrigin(0.5, 0.5)
     self:setSprite("world/maps/steamworks/04_generator_pink_top", 1/15)

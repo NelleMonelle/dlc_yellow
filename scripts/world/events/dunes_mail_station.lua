@@ -1,7 +1,7 @@
 local MailStation, super = Class(Event)
 
 function MailStation:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self.solid = true
     self:setOrigin(0.5, 0.5)

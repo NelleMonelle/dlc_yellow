@@ -1,7 +1,7 @@
 local Acid, super = Class(Event)
 
 function Acid:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setOriginExact(3, 8)
     self:setSprite("world/events/steamworks/hydrochlorid_acid")

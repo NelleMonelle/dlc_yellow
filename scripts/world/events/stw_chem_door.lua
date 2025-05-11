@@ -1,7 +1,7 @@
 local SteamworksChemDoor, super = Class(Event)
 
 function SteamworksChemDoor:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     if Game:getFlag("31_chem_door_opened") then
         self:setSprite("world/maps/steamworks/small_objects/31_door_5")

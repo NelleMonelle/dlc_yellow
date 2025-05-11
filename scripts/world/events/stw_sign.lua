@@ -1,7 +1,7 @@
 local SteamworksSign, super = Class(Event)
 
 function SteamworksSign:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setSprite("world/maps/steamworks/06b_sign", 1/10)
     self:setOrigin(0.5, 1)

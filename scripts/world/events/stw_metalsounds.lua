@@ -1,7 +1,7 @@
 local SteamworksMetalSounds, super = Class(Event)
 
 function SteamworksMetalSounds:init(data)
-	super.init(self, data.x, data.y, data.width, data.height)
+	super.init(self, data)
 	self.sound_chance = 800
 	self.sound_last = nil
 	self.timer = 0

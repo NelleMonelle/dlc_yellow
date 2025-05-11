@@ -1,7 +1,7 @@
 local Elevator, super = Class(Event)
 
 function Elevator:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setOrigin(0.5, 1)
     self:setSprite("world/maps/steamworks/37_elevator_1")

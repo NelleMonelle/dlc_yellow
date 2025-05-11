@@ -1,7 +1,7 @@
 local ShadowArea, super = Class(Event)
 
 function ShadowArea:init(data)
-	super.init(self, data.x, data.y, data.width, data.height)
+	super.init(self, data)
 
 	local properties = data.properties or {}
     self.target_amount = properties["amount"] or 0.5

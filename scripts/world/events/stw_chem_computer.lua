@@ -1,7 +1,7 @@
 local SteamworksChemComputer, super = Class(Event)
 
 function SteamworksChemComputer:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setSprite("world/maps/steamworks/small_objects/chem_05_computer")
     self:setOrigin(0.5, 0.5)

@@ -1,7 +1,7 @@
 local SteamworksHermitCabinet, super = Class(Event)
 
 function SteamworksHermitCabinet:init(data)
-    super.init(self, data.center_x, data.y+data.height, data.width, data.height)
+    super.init(self, data)
 
     self:setSprite("world/events/steamworks/chem_04_cabinet")
     self:setOrigin(0.5, 1)

@@ -1,7 +1,7 @@
 local Elevator, super = Class(Event)
 
 function Elevator:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setOrigin(0.5, 1)
     self:setSprite("world/events/newhome/elevator_1")
@@ -59,7 +59,11 @@ function Elevator:onInteract(chara, dir)
                 party4:fadeOutAndRemove(0.2)
                 cutscene:wait(0.2)
             end
-            Game.world:mapTransition("newhome/01") -- for now
+            if Game.world.map.id == "newhome/01" then
+                Game:swapIntoMod("dpr_underground_dlc", false, "hotland/hotellobby")
+            elseif Game.world.map.id == "newhome/02b" then
+                Game:swapIntoMod("dpr_underground_dlc", false, "hotland/hotellobby") -- placeholder
+            end
         end
     end)
     return true

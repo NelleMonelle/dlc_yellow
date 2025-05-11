@@ -1,7 +1,7 @@
 local SteamworksVent, super = Class(Event)
 
 function SteamworksVent:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
     self:setSprite("world/maps/steamworks/small_objects/13_vent")
     self:setOrigin(0.5, 1)

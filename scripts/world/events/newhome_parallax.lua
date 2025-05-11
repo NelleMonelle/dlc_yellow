@@ -1,7 +1,7 @@
 local NewHomeParallax, super = Class(Event)
 
 function NewHomeParallax:init(data)
-	super.init(self, data.x, data.y, data.width, data.height)
+	super.init(self, data)
     --self:setSprite("world/maps/newhome/parallax_2")
     self:setOrigin(0.5, 1)
 	self.parallax_bg = Assets.getFrames("world/maps/newhome/parallax")

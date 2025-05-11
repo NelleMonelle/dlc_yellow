@@ -1,7 +1,7 @@
 local SteamworksCompound, super = Class(Event)
 
 function SteamworksCompound:init(data)
-    super.init(self, data.center_x, data.center_y, data.width, data.height)
+    super.init(self, data)
 
 	local properties = data.properties or {}
     self.type = properties["type"] or nil

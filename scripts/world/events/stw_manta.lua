@@ -1,7 +1,7 @@
 local SteamworksManta, super = Class(Character)
 
 function SteamworksManta:init(data)
-    super.init(self, "steamworks_manta", data.x, data.y, data.width, data.height)
+    super.init(self, "steamworks_manta", data)
 	self:setOrigin(0.5, 0.5)
 	self.dir = "right"
 	self.checkpoint_collider = nil

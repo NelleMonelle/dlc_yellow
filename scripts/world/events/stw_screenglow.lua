@@ -1,7 +1,7 @@
 local SteamworksScreenGlow, super = Class(Event)
 
 function SteamworksScreenGlow:init(data)
-	super.init(self, data.x, data.y, data.width, data.height)
+	super.init(self, data)
 	local properties = data.properties or {}
     self:setPosition(0,0)
     self:setParallax(0,0)
