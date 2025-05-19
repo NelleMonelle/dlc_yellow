@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="20">
+ <editorsettings>
+  <export target="entrance.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="trapdoor"/>
+  <property name="name" value="Estate"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/mansion_stuff.tsx"/>
+ <objectgroup id="2" name="objects_bg">
+  <object id="1" gid="4" x="0" y="800" width="640" height="794"/>
+ </objectgroup>
+ <objectgroup id="3" name="collision">
+  <object id="4" x="416" y="480" width="20" height="320"/>
+  <object id="5" x="204" y="480" width="20" height="320"/>
+  <object id="6" x="544" y="432" width="44" height="48"/>
+  <object id="9" x="52" y="432" width="44" height="48"/>
+  <object id="7" x="436" y="480" width="152" height="20"/>
+  <object id="10" x="52" y="480" width="152" height="20"/>
+  <object id="11" x="52" y="206" width="536" height="40"/>
+ </objectgroup>
+ <objectgroup id="4" name="objects">
+  <object id="2" name="savepoint" x="322" y="327">
+   <point/>
+  </object>
+  <object id="8" name="transition" x="224" y="760" width="192" height="40">
+   <properties>
+    <property name="map" value="dunes/30c"/>
+    <property name="marker" value="entrance"/>
+   </properties>
+  </object>
+  <object id="12" name="mansion_door" x="544" y="142" width="24" height="344">
+   <properties>
+    <property name="map" value="dunes/mansion/hallway_east_2"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+  <object id="13" name="mansion_door" x="72" y="142" width="24" height="344">
+   <properties>
+    <property name="map" value="dunes/mansion/hallway_west_2"/>
+    <property name="marker" value="right"/>
+   </properties>
+  </object>
+  <object id="16" name="interactable" x="218" y="206" width="204" height="40">
+   <properties>
+    <property name="cutscene" value="mansion.lockeddoor"/>
+   </properties>
+  </object>
+  <object id="17" name="interactable" x="464" y="246" width="70" height="30">
+   <properties>
+    <property name="cutscene" value="mansion.bamboo"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="18" name="interactable" x="104" y="246" width="70" height="30">
+   <properties>
+    <property name="cutscene" value="mansion.bamboo"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="3" name="spawn" x="320" y="380">
+   <point/>
+  </object>
+  <object id="14" name="left" x="136" y="360">
+   <point/>
+  </object>
+  <object id="15" name="right" x="504" y="360">
+   <point/>
+  </object>
+  <object id="19" name="down" x="320" y="720">
+   <point/>
+  </object>
+ </objectgroup>
+</map>
