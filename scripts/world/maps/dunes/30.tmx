@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="47" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="103">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="47" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="103">
  <editorsettings>
   <export target="30.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="dynmtype" type="int" value="1"/>
+  <property name="dynmusic" value="oasis"/>
   <property name="light" type="bool" value="true"/>
   <property name="music" value="oasis"/>
  </properties>
