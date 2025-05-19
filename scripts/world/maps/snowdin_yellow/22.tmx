@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="27" height="23" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#151b49" nextlayerid="12" nextobjectid="195">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="27" height="23" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#151b49" nextlayerid="12" nextobjectid="197">
  <editorsettings>
   <export target="22.lua" format="lua"/>
  </editorsettings>
@@ -146,12 +146,12 @@
   <object id="1" gid="1116" x="158" y="260" width="84" height="340"/>
   <object id="15" gid="1117" x="610" y="246" width="80" height="166"/>
   <object id="20" name="snwdn_snowpalette" x="0" y="0" width="40" height="40"/>
-  <object id="185" name="shadowarea" x="40" y="240" width="60" height="200"/>
-  <object id="186" name="shadowarea" x="100" y="380" width="600" height="60"/>
-  <object id="188" name="shadowarea" x="640" y="440" width="60" height="480"/>
-  <object id="189" name="shadowarea" x="820" y="380" width="220" height="60"/>
-  <object id="190" name="shadowarea" x="980" y="260" width="60" height="120"/>
-  <object id="191" name="shadowarea" x="820" y="440" width="60" height="480"/>
+  <object id="195" name="shadowarea" x="40" y="240">
+   <polygon points="0,0 60,0 60,140 660,140 660,680 600,680 600,200 0,200"/>
+  </object>
+  <object id="196" name="shadowarea" x="980" y="240">
+   <polygon points="0,0 0,140 -160,140 -160,680 -100,680 -100,200 60,200 60,0"/>
+  </object>
  </objectgroup>
  <objectgroup id="6" name="objects_party">
   <object id="3" name="transition" x="160" y="0" width="80" height="40">
