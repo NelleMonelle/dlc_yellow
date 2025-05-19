@@ -8,7 +8,7 @@ function actor:init()
     self.width = 35
     self.height = 45
 
-    self.hitbox = {0, 25, 19, 14}
+    self.hitbox = {9, 31, 17, 14}
 
     self.color = {1, 0, 0}
 
@@ -27,15 +27,15 @@ function actor:init()
 
     self.animations = {
         -- Movement animations
-        ["right"]                 = {"idle/right", 1/15, true},
-        ["left"]                  = {"idle/left", 1/15, true},
-        ["up"]                    = {"idle/up", 1/15, true},
-        ["down"]                  = {"idle/down", 1/15, true},
+        ["right"]                 = {"idle/right", 1/10, true},
+        ["left"]                  = {"idle/left", 1/10, true},
+        ["up"]                    = {"idle/up", 1/10, true},
+        ["down"]                  = {"idle/down", 1/10, true},
 
-        ["damaged_right"]         = {"idle_damaged/right", 1/15, true},
-        ["damaged_left"]          = {"idle_damaged/left", 1/15, true},
-        ["damaged_up"]            = {"idle_damaged/up", 1/15, true},
-        ["damaged_down"]          = {"idle_damaged/down", 1/15, true},
+        ["damaged_right"]         = {"idle_damaged/right", 1/10, true},
+        ["damaged_left"]          = {"idle_damaged/left", 1/10, true},
+        ["damaged_up"]            = {"idle_damaged/up", 1/10, true},
+        ["damaged_down"]          = {"idle_damaged/down", 1/10, true},
 
         -- Cutscene animations
         ["ballthrow"]             = {"ballthrow", 1/20, true},
@@ -57,11 +57,11 @@ function actor:init()
 
         -- Cutscene animations for
         -- Axis' aggressive mode
-        ["redeyes_ball_loop"]     = {"redeyes/ball_loop", 1/15, false},
+        ["redeyes_ball_loop"]     = {"redeyes/ball_loop", 1/15, true},
         ["redeyes_charge"]        = {"redeyes/charge", 1/12, false},
         ["redeyes_right"]         = {"redeyes/right", 1/15, false},
         ["redeyes_shot"]          = {"redeyes/shot", 1/10, false},
-        ["redeyes_shot_end"]      = {"redeyes/shot_end", 1/10, false},
+        ["redeyes_shot_end"]      = {"redeyes/shot_end", 1/10, false, next="damaged_right"},
         ["redeyes_shot_slam"]     = {"redeyes/shot_slam", 1/10, false},
 
         -- Cutscene animations for
@@ -79,15 +79,15 @@ function actor:init()
 
     self.offsets = {
         -- Animations offsets
-        ["idle/right"]            = {0, 0},
-        ["idle/left"]             = {0, 0},
+        ["idle/right"]            = {1, -1},
+        ["idle/left"]             = {0, -1},
         ["idle/up"]               = {0, 0},
         ["idle/down"]             = {0, 0},
 
-        ["idle_damaged/right"]    = {0, 0},
-        ["idle_damaged/left"]     = {0, 0},
-        ["idle_damaged/up"]       = {0, 0},
-        ["idle_damaged/down"]     = {0, 0},
+        ["idle_damaged/right"]    = {1, -1},
+        ["idle_damaged/left"]     = {2, -1},
+        ["idle_damaged/up"]       = {-4, -11},
+        ["idle_damaged/down"]     = {-4, -11},
 
         ["ballthrow"]             = {0, 0},
         ["bonk"]                  = {0, 0},
@@ -107,9 +107,9 @@ function actor:init()
         ["redeyes/ball_loop"]     = {0, 0},
         ["redeyes/charge"]        = {0, 0},
         ["redeyes/right"]         = {0, 0},
-        ["redeyes/shot"]          = {0, 0},
-        ["redeyes/shot_end"]      = {0, 0},
-        ["redeyes/shot_slam"]     = {0, 0},
+        ["redeyes/shot"]          = {-12, -16},
+        ["redeyes/shot_end"]      = {-12, -16},
+        ["redeyes/shot_slam"]     = {-12, -16},
 
         ["ball/ball_loop"]         = {0, 0},
         ["ball/ballthrow_left"]    = {0, 0},
@@ -122,17 +122,17 @@ function actor:init()
         ["ball/uncharge"]          = {0, 0},
 
         -- Sprite offsets
-        ["damaged_trash_down"]    = {0, 0},
+        ["damaged_trash_down"]    = {-4, -11},
         ["damaged_trash_left"]    = {0, 0},
         ["dead"]                  = {0, 0},
-        ["dead_regular"]          = {0, 0},
+        ["dead_regular"]          = {-4, -11},
         ["trash_down"]            = {0, 0},
         ["trash_left"]            = {0, 0},
         ["trash_right"]           = {0, 0},
 
         ["acid/p6"]               = {0, 0},
 
-        ["redeyes/flyback"]       = {0, 0},
+        ["redeyes/flyback"]       = {-12, -16},
     }
 end
 

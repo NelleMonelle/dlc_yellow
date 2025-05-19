@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 32,
+  nextobjectid = 33,
   properties = {
     ["light"] = true
   },
@@ -130,23 +130,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "furnace.axis"
-          }
-        },
-        {
-          id = 25,
-          name = "script",
-          type = "",
-          shape = "rectangle",
-          x = 1720,
-          y = 264,
-          width = 40,
-          height = 78,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "furnace.backtrack_blocker",
-            ["once"] = false
+            ["cutscene"] = "furnace"
           }
         },
         {
@@ -175,38 +159,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 6,
-      name = "controllers",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
+        },
         {
-          id = 26,
-          name = "toggle",
+          id = 32,
+          name = "stw_35_gate",
           type = "",
-          shape = "point",
-          x = 1680,
-          y = 280,
-          width = 0,
-          height = 0,
+          shape = "rectangle",
+          x = 1966,
+          y = 264,
+          width = 66,
+          height = 78,
           rotation = 0,
           visible = true,
-          properties = {
-            ["flag"] = "axis_geno_done",
-            ["target"] = { id = 25 }
-          }
+          properties = {}
         }
       }
     },

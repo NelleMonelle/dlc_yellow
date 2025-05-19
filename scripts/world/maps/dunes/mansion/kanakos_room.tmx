@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="18">
+ <editorsettings>
+  <export target="kanakos_room.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="trapdoor"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/mansion_stuff.tsx"/>
+ <objectgroup id="2" name="objects_bg">
+  <object id="1" gid="15" x="0" y="480" width="640" height="480"/>
+ </objectgroup>
+ <objectgroup id="4" name="collision">
+  <object id="5" x="478" y="378" width="98" height="26"/>
+  <object id="6" x="480" y="360" width="22" height="18"/>
+  <object id="7" x="58" y="452" width="518" height="28"/>
+  <object id="8" x="576" y="208" width="24" height="272"/>
+  <object id="9" x="58" y="208" width="518" height="36"/>
+  <object id="10" x="38" y="208" width="20" height="272"/>
+ </objectgroup>
+ <objectgroup id="5" name="objects">
+  <object id="3" name="kanako_room_light" x="218" y="96" width="198" height="248"/>
+  <object id="4" name="transition" x="480" y="404" width="96" height="48">
+   <properties>
+    <property name="map" value="dunes/mansion/hallway_west_2"/>
+    <property name="marker" value="top"/>
+   </properties>
+  </object>
+  <object id="13" name="interactable" x="272" y="244" width="88" height="80">
+   <properties>
+    <property name="cutscene" value="mansion.kanakobed"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" name="interactable" x="64" y="388" width="42" height="48">
+   <properties>
+    <property name="cutscene" value="mansion.toys"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="16" name="interactable" x="58" y="244" width="32" height="44">
+   <properties>
+    <property name="cutscene" value="mansion.books"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="17" name="interactable" x="90" y="244" width="100" height="32">
+   <properties>
+    <property name="cutscene" value="mansion.dresser"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" name="interactable" x="470" y="244" width="106" height="58">
+   <properties>
+    <property name="cutscene" value="mansion.gameconsole"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="markers">
+  <object id="11" name="spawn" x="320" y="400">
+   <point/>
+  </object>
+  <object id="12" name="down" x="440" y="430">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

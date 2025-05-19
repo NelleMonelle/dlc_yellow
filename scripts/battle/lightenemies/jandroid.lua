@@ -138,9 +138,7 @@ function Jandroid:onAct(battler, name)
             self.dialogue_override = "St_amwrrks\nNeed_/ scruBbed\n0"
             return "* Cleaning Jandroid wouldn't\ndo any good at this point."
         else
-            self.wave_override = "jandroid/garbage_cans"
             if battler.chara.id == "susie" then
-                self.wave_override = nil
                 if not self.susie_acted then
                     Game.battle:startActCutscene(function(cutscene)
                         cutscene:text("* (Man,[wait:5] they look hella dirty...)", "nervous_side", "susie")
@@ -152,6 +150,7 @@ function Jandroid:onAct(battler, name)
                     return "* Susie refuses to touch Jandroid."
                 end
             elseif battler.chara.id == "noelle" then
+                self.wave_override = "jandroid/garbage_cans"
                 if not self.noelle_acted then
                     Game.battle:startActCutscene(function(cutscene)
                         cutscene:text("* Oh,[wait:5] you look so dirty...", "what_smile", "noelle")
@@ -162,9 +161,43 @@ function Jandroid:onAct(battler, name)
                 else
                     return "* Noelle already cleaned Jandroid."
                 end
-			elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
-				return "* Jamm and Marcy offer to give Jandroid a scrub. They seem offended."
+            elseif battler.chara.id == "dess" then
+                self.dialogue_override = "HaHA! FuN!"
+                self:addMercy(50)
+				if not self.dess_acted then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* Dess starts to throw the trash back at Jandroid.")
+                        cutscene:text("* They seem to like that.")
+                        cutscene:text("* The hell do you mean they're happy about it?", "neutral", "dess")
+                    end)
+                    self.dess_acted = true
+			    	return
+                else
+                    return "* Dess continues to throw the trash back at Jandroid."
+                end
+			elseif battler.chara.id == "jamm" then
+				if Game:getFlag("dungeonkiller") then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* ...", "shaded_neutral", "jamm")
+                    end)
+                    return
+                elseif Game:getFlag("marcy_joined") then
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* Papa,[wait:5] Marcy is enjoying the music.", "happy", "marcy")
+                        cutscene:text("* Me too,[wait:5] Marcy...[wait:10] Me too.", "happy", "jamm")
+                    end)
+                    self:addMercy(50)
+                    return
+                else
+                    Game.battle:startActCutscene(function(cutscene)
+                        cutscene:text("* Now that's what I'm talking about.", "smug", "jamm")
+                        cutscene:text("* This new track is quite enjoyable.", "smirk", "jamm")
+                    end)
+                    self:addMercy(50)
+                    return
+                end
             else
+                self.wave_override = "jandroid/garbage_cans"
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
                     self.dialogue_override = "NO YOU!!"

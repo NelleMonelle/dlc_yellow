@@ -59,15 +59,15 @@ end
 
 function Ceroba:getNextWaves()
     local waves = {}
+	if Game.battle:getEnemyBattler("ceroba_geno").phase == 2 then
+		table.insert(waves, "ceroba/arena_damage")
+	end
     for _,enemy in ipairs(Game.battle:getActiveEnemies()) do
         local wave = enemy:selectWave()
         if wave then
             table.insert(waves, wave)
         end
     end
-	if self.arena_damage == true then
-		table.insert(waves, "ceroba/arena_damage")
-	end
     return waves
 end
 

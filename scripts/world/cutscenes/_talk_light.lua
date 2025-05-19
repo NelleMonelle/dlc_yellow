@@ -1,9 +1,16 @@
 return function(cutscene)
     local susie = Game.world:getCharacter("susie_lw")
     local noelle = Game.world:getCharacter("noelle_lw")
+    local ceroba = Game.world:getCharacter("ceroba")
     local jamm = Game.world:getCharacter("jamm_lw")
     local jammarcy = cutscene:getCharacter("jammarcy_light")
-    if Game.world.map.id == "steamworks/01" then
+    if Game.world.map.id == "dunes/mansion/chujins_grave" then
+        if ceroba then
+            cutscene:showNametag("Ceroba")
+            cutscene:text("* [speed:0.1]...", "mourning", "ceroba")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "steamworks/01" then
         if susie then
             cutscene:showNametag("Susie")
             cutscene:text("* Dang,[wait:5] this place is kinda...[wait:10] creepy.", "nervous_side", "susie")
@@ -73,6 +80,7 @@ return function(cutscene)
         elseif noelle then
             cutscene:showNametag("Noelle")
             cutscene:text("* It's really...[wait:10] High in here,[wait:5] haha...", "what_smile", "noelle")
+            cutscene:hideNametag()
         end
     elseif Game.world.map.id == "steamworks/27" then
         if susie then
@@ -116,6 +124,30 @@ return function(cutscene)
             cutscene:text("* Can we hurry up?[wait:5] My eyes are starting to hurt.", "annoyed", "susie")
             cutscene:hideNametag()
         end
+    elseif Game.world.map.id == "steamworks/35" then
+        if not Game:getFlag("axis_done") then
+            if susie then
+                cutscene:showNametag("Susie")
+                cutscene:text("* Is that Axis over there?", "surprise_frown", "susie")
+                cutscene:text("* You better keep your guard up.", "annoyed", "susie")
+                cutscene:hideNametag()
+            end
+        else
+            if Game:getFlag("axis_dead") then
+                if susie then
+                    cutscene:showNametag("Susie")
+                    cutscene:text("* We should...[wait:10] Get moving.", "shy_down", "susie")
+                    cutscene:hideNametag()
+                end
+            else
+                if susie then
+                    cutscene:showNametag("Susie")
+                    cutscene:text("* That was one hell of a battle.", "smile", "susie")
+                    cutscene:text("* Though,[wait:5] I think we better get moving.", "smirk", "susie")
+                    cutscene:hideNametag()
+                end
+            end
+        end
     elseif Game.world.map.id == "steamworks/36" then
         if susie then
             cutscene:showNametag("Susie")
@@ -140,8 +172,59 @@ return function(cutscene)
             cutscene:text("* Let's get moving.", "annoyed", "susie")
             cutscene:hideNametag()
         end
+    elseif Game.world.map.id == "newhome/01" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Looks like this is it.", "neutral", "susie")
+            cutscene:text("* Hopefully that elevator will take us out of here.", "neutral_side", "susie")
+            cutscene:text("* Let's get moving.", "annoyed", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "newhome/02" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Looks like this is it.", "neutral", "susie")
+            cutscene:text("* Hopefully that elevator will take us out of here.", "neutral_side", "susie")
+            cutscene:text("* Let's get moving.", "annoyed", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "newhome/02b" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Looks like this is it.", "neutral", "susie")
+            cutscene:text("* Hopefully that elevator will take us out of here.", "neutral_side", "susie")
+            cutscene:text("* Let's get moving.", "annoyed", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "newhome/03" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Looks like this is it.", "neutral", "susie")
+            cutscene:text("* Hopefully that elevator will take us out of here.", "neutral_side", "susie")
+            cutscene:text("* Let's get moving.", "annoyed", "susie")
+            cutscene:hideNametag()
+        end
     else
-        cutscene:text("* Your voice echoes aimlessly.")
+        if #Game.party > 1 then
+            if susie then
+                cutscene:text("* [speed:0.1]...", "neutral_side", "susie")
+            end
+            if noelle then
+                cutscene:text("* [speed:0.1]...", "frown", "noelle")
+            end
+            if ceroba then
+                cutscene:text("* [speed:0.1]...", "alt_1", "ceroba")
+            end
+            if jamm then
+                if Game:getFlag("dungeonkiller") then
+                    cutscene:text("* [speed:0.1]...", "shaded_neutral", "jamm")
+                else
+                    cutscene:text("* I think we should get going.", "look_left", "jamm")
+                end
+            end
+        else
+            cutscene:text("* Your voice echoes aimlessly.")
+        end
     end
 end
 

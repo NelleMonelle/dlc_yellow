@@ -111,6 +111,40 @@ return {
             ["map"] = "newhome/02",
             ["marker"] = "up"
           }
+        },
+        {
+          id = 24,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 284,
+          y = 880,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "newhome.ceroba_geno",
+            ["flagcheck"] = "ceroba_waiting"
+          }
+        },
+        {
+          id = 25,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 520,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "ceroba",
+            ["cutscene"] = "newhome.ceroba",
+            ["facing"] = "up",
+            ["flagcheck"] = "ceroba_waiting"
+          }
         }
       }
     },

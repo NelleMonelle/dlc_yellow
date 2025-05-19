@@ -46,7 +46,7 @@ function Goosic:init()
     self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* Music drives the mood."
 
     self.text = {
-        "* Goosic slowly scratches a\nrecord with its needle. The\nsound is unbearable.",
+        "* Goosic slowly scratches a\nrecord with its needle.[wait:10] The\nsound is unbearable.",
         "* Goosic begins spinning in\ncircles.",
         "* Goosic blasts battle music from\nits beak.",
         "* Your eardrums do not appreciate\nthe current situation.",
@@ -98,7 +98,7 @@ function Goosic:onAct(battler, name)
                 else
                     self.dialogue_override = "Oh, now THIS\nis groovy !"
                 end
-                return "* You close your eyes and tap\nyour foot to the music. Goosic\njoins you."
+                return "* You close your eyes and tap\nyour foot to the music.[wait:10] Goosic\njoins you."
             end
         end
     elseif name == "Ignore" then
@@ -112,7 +112,7 @@ function Goosic:onAct(battler, name)
                 else
                     self.dialogue_override = "D-D-DISRESPECTFUL !"
                 end
-                return "* You plug your ears in hopes to\nblock the noise. Goosic just\nturns it up."
+                return "* You plug your ears in hopes to\nblock the noise.[wait:10] Goosic just\nturns it up."
             else
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
@@ -136,7 +136,7 @@ function Goosic:onAct(battler, name)
                 else
                     self.dialogue_override = "WAIT !\nI... Oh ?"
                 end
-                return "* You move Goosic's needle to a\nnew, calmer record."
+                return "* You move Goosic's needle to a\nnew,[wait:5] calmer record."
             else
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
@@ -144,7 +144,7 @@ function Goosic:onAct(battler, name)
                 else
                     self.dialogue_override = "I like\nth-this one :)"
                 end
-                return "* Goosic seems to be calming\ndown. Shouldn't change the song\nnow."
+                return "* Goosic seems to be calming\ndown.[wait:10] Shouldn't change the song\nnow."
             end
         end
     elseif name == "Standard" then
@@ -160,8 +160,31 @@ function Goosic:onAct(battler, name)
                     return "* Susie is annoyed by the loud music."
                 elseif battler.chara.id == "noelle" then
                     return "* Noelle can't keep up with the music."
-                elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
-					return "*  Jamm and Marcy try to enjoy the music, but can't keep up."
+                elseif battler.chara.id == "dess" then
+                    if not self.dess_acted_1 then
+                        Game.battle:startActCutscene(function(cutscene)
+                            cutscene:text("* Hell yeah that's what I call good music.", "swag", "dess")
+                            if #Game.party > 1 then
+                                if #Game.party == 2 then
+                                    cutscene:text("* You just have bad taste.", "heckyeah", "dess")
+                                else
+                                    cutscene:text("* Y'all just have bad taste.", "heckyeah", "dess")
+                                end
+                            end
+                        end)
+                        self.dess_acted_1 = true
+                        return
+                    else
+                        return "* Dess is still somehow enjoying the music."
+                    end
+                elseif battler.chara.id == "jamm" then
+					if Game:getFlag("dungeonkiller") then
+					    return "* Jamm doesn't care about the loud music."
+                    elseif Game:getFlag("marcy_joined") then
+                        return "* Jamm and Marcy don't enjoy the music."
+                    else
+                        return "* Jamm doesn't enjoy the music."
+                    end
 				else
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
@@ -172,7 +195,6 @@ function Goosic:onAct(battler, name)
                     return "* "..battler.chara:getName().." tries to enjoy the music\nbut can't keep up."
                 end
             else
-                self:addMercy(50)
                 if battler.chara.id == "susie" then
                     if not self.susie_acted then
                         Game.battle:startActCutscene(function(cutscene)
@@ -180,6 +202,7 @@ function Goosic:onAct(battler, name)
                             cutscene:text("* Susie shows off her dancing skills.")
                             cutscene:text("* Heh,[wait:5] how's that?", "smile", "susie")
                         end)
+                        self:addMercy(50)
                         self.dialogue_override = "Nice dance there :)"
                         self.susie_acted = true
                         return
@@ -193,13 +216,43 @@ function Goosic:onAct(battler, name)
                             cutscene:text("* Noelle compliments Goosic's music taste.")
                             cutscene:text("* That melody seems nice...", "smile_closed", "noelle")
                         end)
+                        self:addMercy(50)
                         self.noelle_acted = true
                         return
                     else
                         return "* Noelle enjoys the music."
                     end
-                elseif battler.chara.id == "jamm" and Game:getFlag("marcy_joined") then
-					return "* Jamm and Marcy close their eyes and tap to the music."
+                elseif battler.chara.id == "dess" then
+                    if not self.dess_acted_2 then
+                        Game.battle:startActCutscene(function(cutscene)
+                            cutscene:text("* It was better before.", "eyebrow", "dess")
+                        end)
+                        self.dess_acted_2 = true
+                        return
+                    else
+                        return "* Dess is not enjoying the music."
+                    end
+                elseif battler.chara.id == "jamm" then
+                    if Game:getFlag("dungeonkiller") then
+                        Game.battle:startActCutscene(function(cutscene)
+                            cutscene:text("* ...", "shaded_neutral", "jamm")
+                        end)
+					    return
+                    elseif Game:getFlag("marcy_joined") then
+                        Game.battle:startActCutscene(function(cutscene)
+                            cutscene:text("* Papa,[wait:5] Marcy is enjoying the music.", "happy", "marcy")
+                            cutscene:text("* Me too,[wait:5] Marcy...[wait:10] Me too.", "happy", "jamm")
+                        end)
+                        self:addMercy(50)
+                        return
+                    else
+                        Game.battle:startActCutscene(function(cutscene)
+                            cutscene:text("* Now that's what I'm talking about.", "smug", "jamm")
+                            cutscene:text("* This new track is quite enjoyable.", "smirk", "jamm")
+                        end)
+                        self:addMercy(50)
+                        return
+                    end
 				else
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
@@ -207,7 +260,7 @@ function Goosic:onAct(battler, name)
                     else
                         self.dialogue_override = "Oh, now THIS\nis groovy !"
                     end
-                    return "* "..battler.chara:getName().." closes their eyes and taps\ntheir foot to the music. Goosic\njoins them."
+                    return "* "..battler.chara:getName().." closes their eyes and taps\ntheir foot to the music.[wait:10] Goosic\njoins them."
                 end
             end
         end

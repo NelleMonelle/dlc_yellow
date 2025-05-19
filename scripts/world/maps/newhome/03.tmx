@@ -20,6 +20,21 @@
     <property name="marker" value="up"/>
    </properties>
   </object>
+  <object id="24" name="script" x="284" y="880" width="80" height="40">
+   <properties>
+    <property name="cutscene" value="newhome.ceroba_geno"/>
+    <property name="flagcheck" value="ceroba_waiting"/>
+   </properties>
+  </object>
+  <object id="25" name="npc" x="320" y="520">
+   <properties>
+    <property name="actor" value="ceroba"/>
+    <property name="cutscene" value="newhome.ceroba"/>
+    <property name="facing" value="up"/>
+    <property name="flagcheck" value="ceroba_waiting"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="5" name="collision">
   <object id="5" x="244" y="800" width="40" height="640"/>

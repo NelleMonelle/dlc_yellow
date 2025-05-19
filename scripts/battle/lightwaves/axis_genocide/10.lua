@@ -11,7 +11,7 @@ function Basic:init()
 end
 
 function Basic:onStart()
-    --Game.battle:swapSoul(GreenSoul())
+    --Game.battle:swapSoul(ShieldSoul())
     self.timer:every(1/2, function()
         self.counter = self.counter + 1
         local ax,ay = Game.battle.arena:getCenter()

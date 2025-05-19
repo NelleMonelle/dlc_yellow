@@ -1,20 +1,48 @@
 local CerobaFlowerLarge, super = Class(Bullet)
 
-function CerobaFlowerLarge:init(x, y, dir, speed)
-    -- Last argument = sprite path
+function CerobaFlowerLarge:init(x, y, dir, speed, grav, explodes, circle)
     super.init(self, x, y, "battle/bullets/ceroba/flower_large")
 
-    -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
-    self.physics.direction = dir
-    -- Speed the bullet moves (pixels per frame at 30FPS)
-    self.physics.speed = speed
+    self.physics.direction = dir or math.rad(0)
+    self.physics.speed = speed or 0
+    self.physics.gravity = grav or 0
+    self.can_explode = explodes or false
+    self.circle = circle or false
+    self.immune = true
 
     self.destroy_on_hit = false
-    self.sprite:setAnimation({"battle/bullets/ceroba/flower_large", 1/10, true})
+    self.sprite:setAnimation({"battle/bullets/ceroba/flower_large", 1/6, true})
     self:setScale(1, 1)
 end
 
+function CerobaFlowerLarge:shootFlowers()
+    Assets.playSound("ceroba_bullet_shot")
+    self.wave:spawnBullet("ceroba/flower", self.x, self.y, math.rad(315), 6) -- right up
+    self.wave:spawnBullet("ceroba/flower", self.x, self.y, math.rad(0), 6) -- right
+    self.wave:spawnBullet("ceroba/flower", self.x, self.y, math.rad(45), 6) -- right down
+    self.wave:spawnBullet("ceroba/flower", self.x, self.y, math.rad(135), 6) -- left down
+    self.wave:spawnBullet("ceroba/flower", self.x, self.y, math.rad(180), 6) -- left
+    self.wave:spawnBullet("ceroba/flower", self.x, self.y, math.rad(225), 6) -- left up
+end
+
+function CerobaFlowerLarge:explodeFlower(BorO)
+    self.wave:spawnBullet("ceroba/explosion", self.x, self.y)
+    Game.battle.camera:shake(4, 2, 0.5)
+    if self.circle then
+        self.wave:spawnBullet("ceroba/ring_"..self.circle, self.x, self.y)
+    elseif BorO then
+        self.wave:spawnBullet("ceroba/ring_"..BorO, self.x, self.y)
+    end
+    self:remove()
+end
+
 function CerobaFlowerLarge:update()
+    Game.battle.timer:after(1, function() self.immune = false end)
+    if self:collidesWith(Game.battle.arena.collider.colliders[3]) then
+        if self.can_explode and not self.immune then
+            self:explodeFlower()
+        end
+    end
 
     super.update(self)
 end
