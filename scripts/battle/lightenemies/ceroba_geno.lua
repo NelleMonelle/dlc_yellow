@@ -35,7 +35,7 @@ function Ceroba:init()
     self.text = {
         "* There is no hope.",
         "* She wipes sweat from\nher brow.",
-        "* The sand swirls around you.",
+        "* The petals swirl around you.",
         "* She stares into your SOUL.",
         "* The fight rages.",
         --"* The atmosphere chills with\nire.",

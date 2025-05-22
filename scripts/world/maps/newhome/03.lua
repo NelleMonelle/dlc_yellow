@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 26,
+  nextobjectid = 27,
   properties = {
     ["border"] = "undertale/castle",
     ["light"] = true
@@ -113,37 +113,20 @@ return {
           }
         },
         {
-          id = 24,
-          name = "script",
-          type = "",
-          shape = "rectangle",
-          x = 284,
-          y = 880,
-          width = 80,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "newhome.ceroba_geno",
-            ["flagcheck"] = "ceroba_waiting"
-          }
-        },
-        {
-          id = 25,
+          id = 26,
           name = "npc",
           type = "",
           shape = "point",
-          x = 320,
-          y = 520,
+          x = 370,
+          y = 500,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           properties = {
             ["actor"] = "ceroba",
-            ["cutscene"] = "newhome.ceroba",
-            ["facing"] = "up",
-            ["flagcheck"] = "ceroba_waiting"
+            ["cutscene"] = "ceroba.newhome",
+            ["facing"] = "up"
           }
         }
       }
