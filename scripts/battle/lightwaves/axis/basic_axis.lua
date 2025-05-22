@@ -1,7 +1,7 @@
 local Basic, super = Class(LightWave)
 
 function Basic:init()
-    super:init(self)
+    super.init(self)
     self.time = 10
     self.soul_start_x = Game.battle.arena.x
     self.soul_start_y = Game.battle.arena.bottom - 2

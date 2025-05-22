@@ -1,7 +1,7 @@
 local Jandroid, super = Class(LightEncounter)
 
 function Jandroid:init()
-    super:init(self)
+    super.init(self)
 
     self.text = "* The robotic duo, Jandroid and\nGoosic, are here!"
 

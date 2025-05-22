@@ -1,7 +1,7 @@
 local Goosic, super = Class(LightEncounter)
 
 function Goosic:init()
-    super:init(self)
+    super.init(self)
 
     self.text = "* Goosic has come to share some\nsounds."
 

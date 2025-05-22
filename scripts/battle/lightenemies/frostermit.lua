@@ -1,7 +1,7 @@
 local Frostermit, super = Class(LightEnemyBattler)
 
 function Frostermit:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Frostermit"
     self:setActor("frostermit_b")
@@ -196,7 +196,7 @@ function Frostermit:onAct(battler, name)
         end
     end
 
-    return super:onAct(self, battler, name)
+    return super.onAct(self, battler, name)
 end
 
 function Frostermit:onDefeat(damage, battler)
@@ -301,7 +301,7 @@ function Frostermit:onHurtEnd()
 end
 
 function Frostermit:update()
-    super:update(self)
+    super.update(self)
     local head = self:getSpritePart("head")
     if self.revealed then
         if self.bubble and self.bubble:isTyping() then

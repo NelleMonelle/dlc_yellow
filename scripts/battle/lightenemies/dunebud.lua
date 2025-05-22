@@ -1,7 +1,7 @@
 local Dunebud, super = Class(LightEnemyBattler)
 
 function Dunebud:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Dunebud"
     self:setActor("dunebud_b")
@@ -130,7 +130,7 @@ function Dunebud:onAct(battler, name)
         end
     end
 
-    return super:onAct(self, battler, name)
+    return super.onAct(self, battler, name)
 end
 
 function Dunebud:onDefeat(damage, battler)

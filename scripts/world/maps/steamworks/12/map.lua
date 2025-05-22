@@ -1,7 +1,7 @@
 local RoomTwelve, super = Class(Map)
 
 function RoomTwelve:load()
-  super:load(self)
+  super.load(self)
 
   if not Game:getFlag("axis_second_met") then
     Game.world:spawnNPC("axis", 321, 280)

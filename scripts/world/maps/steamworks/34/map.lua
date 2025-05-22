@@ -1,7 +1,7 @@
 local RoomThirtyFour, super = Class(Map)
 
 function RoomThirtyFour:load()
-  super:load(self)
+  super.load(self)
   
     for _,pipe in pairs(Game.world.map:getEvents("pipe")) do
         pipe.wrap_texture_x = false

@@ -1,7 +1,7 @@
 local Ceroba, super = Class(LightEncounter)
 
 function Ceroba:init()
-    super:init(self)
+    super.init(self)
 
     self.music = false
 

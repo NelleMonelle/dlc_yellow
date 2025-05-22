@@ -59,7 +59,7 @@ function item:onToss()
 		Game.world:showText("* (It wouldn't be wise to toss\naway the acid right now.)")
 		return false
 	else
-		super:onToss(self)
+		super.onToss(self)
 	end
 end
 

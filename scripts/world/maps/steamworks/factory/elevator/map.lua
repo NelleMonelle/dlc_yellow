@@ -1,7 +1,7 @@
 local Elevator, super = Class(Map)
 
 function Elevator:init(world, data)
-    super:init(self, world, data)
+    super.init(self, world, data)
 
 end
 

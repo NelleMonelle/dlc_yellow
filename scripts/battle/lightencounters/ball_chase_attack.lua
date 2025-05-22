@@ -1,7 +1,7 @@
 local BallChaseAttack, super = Class(LightEncounter)
 
 function BallChaseAttack:init()
-    super:init(self)
+    super.init(self)
 
     self.music = nil
 

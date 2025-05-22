@@ -1,7 +1,7 @@
 local Flowey, super = Class(LightEnemyBattler)
 
 function Flowey:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Flowey"
     self:setActor("flowey_b")
@@ -38,11 +38,11 @@ function Flowey:onAct(battler, name)
         return "* "
     end
 
-    return super:onAct(self, battler, name)
+    return super.onAct(self, battler, name)
 end
 
 function Flowey:update()
-    super:update(self)
+    super.update(self)
     if not self.animation_state then
         if self.bubble and self.bubble:isTyping() then
             if not self.sprite.playing then

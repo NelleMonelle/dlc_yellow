@@ -1,7 +1,7 @@
 local Ceroba, super = Class(LightEnemyBattler)
 
 function Ceroba:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Ceroba"
     self:setActor("cerobadate")
@@ -42,7 +42,7 @@ function Ceroba:onAct(battler, name)
         return "* ..."
     end
 
-    return super:onAct(self, battler, name)
+    return super.onAct(self, battler, name)
 end
 
 return Ceroba

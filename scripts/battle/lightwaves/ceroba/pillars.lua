@@ -1,7 +1,7 @@
 local Basic, super = Class(LightWave)
 
 function Basic:init()
-    super:init(self)
+    super.init(self)
     self:setArenaSize(350, 70)
     --self:setArenaPosition(319, 320) -- orig 320, 385
     self.type = Game.battle:getEnemyBattler("ceroba_geno").phase

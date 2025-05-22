@@ -1,7 +1,7 @@
 local RoomThirtyFive, super = Class(Map)
 
 function RoomThirtyFive:load()
-  super:load(self)
+  super.load(self)
   if not Game:getFlag("axis_done") or Game:getFlag("axis_done") and Game:getFlag("axis_dead") then
     Game.world:spawnNPC("axis", 1401, 200, {text = "* ..."})
   end

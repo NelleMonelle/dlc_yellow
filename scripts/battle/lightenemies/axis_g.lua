@@ -1,7 +1,7 @@
 local Axis, super = Class(LightEnemyBattler)
 
 function Axis:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Axis"
     self:setActor("axisboss_g")
@@ -107,7 +107,7 @@ function Axis:onAct(battler, name)
         end
     end
 
-    return super:onAct(self, battler, name)
+    return super.onAct(self, battler, name)
 end
 
 function Axis:hurt(amount, battler, on_defeat, color, anim, attacked)

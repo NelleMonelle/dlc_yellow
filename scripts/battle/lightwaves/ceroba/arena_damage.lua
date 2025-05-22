@@ -1,7 +1,7 @@
 local Basic, super = Class(LightWave)
 
 function Basic:init()
-    super:init(self)
+    super.init(self)
 	
 	self.danger_collider = nil
 end

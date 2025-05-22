@@ -1,7 +1,7 @@
 local Starlo, super = Class(LightEnemyBattler)
 
 function Starlo:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "North Star"
     self:setActor("starlo_b")
@@ -63,7 +63,7 @@ function Starlo:onAct(battler, name)
         return "* But there was nothing "..battler.chara:getName().."\ncould do."
     end
 
-    return super:onAct(self, battler, name)
+    return super.onAct(self, battler, name)
 end
 
 --[[function Starlo:getNextWaves()
@@ -109,7 +109,7 @@ end
 end]]
 
 function Starlo:update()
-    super:update(self)
+    super.update(self)
     local head = self:getSpritePart("head")
     if self.emotion ~= self.last_emotion then
         self.last_emotion = self.emotion

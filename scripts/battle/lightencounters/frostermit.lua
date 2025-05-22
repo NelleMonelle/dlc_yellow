@@ -1,7 +1,7 @@
 local Frostermit, super = Class(LightEncounter)
 
 function Frostermit:init()
-    super:init(self)
+    super.init(self)
 
     self.text = "* There is an igloo here."
 

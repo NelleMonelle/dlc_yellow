@@ -1,7 +1,7 @@
 local RoomThirteen, super = Class(Map)
 
 function RoomThirteen:load()
-  super:load(self)
+  super.load(self)
 end
 
 function RoomThirteen:onEnter()
