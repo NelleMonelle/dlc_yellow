@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.1",
+  tiledversion = "1.11.2",
   name = "snowdin_stuff",
   class = "",
   tilewidth = 327,
@@ -23,8 +23,68 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 10,
+  tilecount = 20,
   tiles = {
+    {
+      id = 15,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/20_snowdin_bench.png",
+      width = 26,
+      height = 47
+    },
+    {
+      id = 16,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/20_snowdin_lamp.png",
+      width = 16,
+      height = 78
+    },
+    {
+      id = 17,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/20_snowdin_stairs_back.png",
+      width = 48,
+      height = 69
+    },
+    {
+      id = 18,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/20_snowdin_stairs_front.png",
+      width = 49,
+      height = 36
+    },
+    {
+      id = 19,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/20_snowdin_stairs_front_2.png",
+      width = 49,
+      height = 36
+    },
+    {
+      id = 10,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/21_martlet_station.png",
+      width = 88,
+      height = 100
+    },
+    {
+      id = 11,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/21_martlet_station_back.png",
+      width = 51,
+      height = 24
+    },
+    {
+      id = 12,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/21_snowdin_arch_1.png",
+      width = 102,
+      height = 79
+    },
+    {
+      id = 13,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/21_snowdin_arch_2.png",
+      width = 102,
+      height = 75
+    },
+    {
+      id = 14,
+      image = "../../../assets/sprites/world/maps/snowdin_yellow/21_snowdin_arch_3.png",
+      width = 102,
+      height = 75
+    },
     {
       id = 8,
       image = "../../../assets/sprites/world/maps/snowdin_yellow/22_bridge_fixed.png",

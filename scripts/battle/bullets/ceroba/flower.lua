@@ -10,7 +10,7 @@ function CerobaFlower:init(x, y, dir, speed)
     self.physics.speed = speed
 
     self.destroy_on_hit = false
-    self.sprite:setAnimation({"battle/bullets/ceroba/flower", 1/10, true})
+    self.sprite:setAnimation({"battle/bullets/ceroba/flower", 1/6, true})
     self:setScale(1, 1)
 end
 

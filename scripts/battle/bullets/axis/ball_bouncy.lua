@@ -1,6 +1,6 @@
 local AxisBall, super = Class(Bullet)
 
-function AxisBall:init(x, y, dir, speed)
+function AxisBall:init(x, y, dir, speed, expl)
     -- Last argument = sprite path
     super.init(self, x, y, "battle/bullets/axis/ball")
 
@@ -8,6 +8,8 @@ function AxisBall:init(x, y, dir, speed)
     self.physics.direction = dir
     -- Speed the bullet moves (pixels per frame at 30FPS)
     self.physics.speed = speed
+
+    self.can_explode = expl or false
 
     self.destroy_on_hit = false
     self.sprite:setAnimation({"battle/bullets/axis/ball", 1/14, true})
@@ -51,15 +53,21 @@ function AxisBall:update()
     end
 
     if self:collidesWith(Game.battle.arena.collider.colliders[3]) then
-        if self.physics.direction == math.pi / 2 then
-            Assets.playSound("ball_bounce")
-            self.physics.direction = -math.pi / 2
-        elseif self.physics.direction == math.pi * 0.75 then
-            Assets.playSound("ball_bounce")
-            self.physics.direction = -math.pi * 0.75
-        elseif self.physics.direction == math.pi * 0.25 then
-            Assets.playSound("ball_bounce")
-            self.physics.direction = -math.pi * 0.25
+        if self.can_explode then
+            Assets.playSound("ceroba_boom")
+            self.wave:spawnBulletTo(Game.battle.arena, "axis/arenaflash", 0, 0)
+            self:remove()
+        else
+            if self.physics.direction == math.pi / 2 then
+                Assets.playSound("ball_bounce")
+                self.physics.direction = -math.pi / 2
+            elseif self.physics.direction == math.pi * 0.75 then
+                Assets.playSound("ball_bounce")
+                self.physics.direction = -math.pi * 0.75
+            elseif self.physics.direction == math.pi * 0.25 then
+                Assets.playSound("ball_bounce")
+                self.physics.direction = -math.pi * 0.25
+            end
         end
     end
 

@@ -11,7 +11,7 @@ function CerobaDiamond:init(x, y, dir, speed)
 
     self.collider = nil
     self.destroy_on_hit = false
-    self.sprite:setAnimation({"battle/bullets/ceroba/diamond", 1/20, false})
+    self.sprite:setAnimation({"battle/bullets/ceroba/diamond", 1/15, false})
     Assets.playSound("trap")
 end
 
@@ -34,10 +34,10 @@ function CerobaDiamond:onCollide(soul)
 end
 
 function CerobaDiamond:update()
-    Game.battle.timer:after(0.35, function()
+    Game.battle.timer:after(0.46, function()
         self.collider = PolygonCollider(self, {{24.5,4.5},{41.5,21.5},{24.5,38.5},{23.5,38.5},{6.5,21.5},{23.5,4.5}})
     end)
-    Game.battle.timer:after(0.55, function()
+    Game.battle.timer:after(0.66, function()
         self:remove()
     end)
 

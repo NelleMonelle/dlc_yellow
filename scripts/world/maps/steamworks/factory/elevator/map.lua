@@ -112,21 +112,38 @@ function Elevator:onEnter()
             setAllFacing("down")
             Game:setFlag("factory_elevator_intro_done", true)
         end
+        Assets.playSound("bell")
+        local doorR = Rectangle(205, 356, 57, 40)
+        local doorL = Rectangle(376, 356, 57, 40)
+        doorR.color = {0, 0, 0}
+        doorL.color = {0, 0, 0}
+        doorR.layer = WORLD_LAYERS["below_ui"]
+        doorL.layer = WORLD_LAYERS["below_ui"]
+        Game.world:addChild(doorR)
+        Game.world:addChild(doorL)
+        cutscene:slideTo(doorR, doorR.x + 57, doorR.y, 0.5)
+        cutscene:slideTo(doorL, doorL.x - 57, doorL.y, 0.5)
         cutscene:wait(0.5)
         Assets.playSound("elevator_door_shut")
         cutscene:wait(0.5)
         Assets.playSound("elevator")
+        Game.world.graphics.shake_x = 2
         if Game:getFlag("factory_elevator_destination")=="steamworks/32" then
             sf:setAnimation("up")
         elseif Game:getFlag("factory_elevator_destination")=="steamworks/factory/04" then
             sf:setAnimation("down")
         end
         cutscene:wait(3.7)
+        Game.world.graphics.shake_x = 0
         Assets.playSound("ring")
         sf:setAnimation("hello")
         cutscene:wait(0.5)
         Assets.playSound("sliding_door_open")
+        cutscene:slideTo(doorR, doorR.x - 57, doorR.y, 0.5)
+        cutscene:slideTo(doorL, doorL.x + 57, doorL.y, 0.5)
         cutscene:wait(0.5)
+        doorR:remove()
+        doorL:remove()
         if Game.party[4] then
             cutscene:wait(cutscene:walkTo(party1, 320, party1.y, 0.25, "down"))
             cutscene:wait(cutscene:walkTo(party1, party1.x, 390, 0.75, "down"))

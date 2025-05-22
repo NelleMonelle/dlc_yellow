@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="29" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="28">
+ <editorsettings>
+  <export target="hallway_west_2.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="trapdoor"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/mansion_stuff.tsx"/>
+ <objectgroup id="2" name="objects_bg">
+  <object id="1" gid="19" x="0" y="1200" width="1160" height="1200"/>
+ </objectgroup>
+ <objectgroup id="3" name="collision">
+  <object id="3" x="438" y="410" width="30" height="604"/>
+  <object id="4" x="468" y="980" width="692" height="34"/>
+  <object id="5" x="468" y="410" width="128" height="30"/>
+  <object id="14" x="280" y="1088" width="880" height="28"/>
+  <object id="15" x="252" y="410" width="28" height="706"/>
+  <object id="17" x="476" y="214" width="84" height="40"/>
+  <object id="18" x="560" y="214" width="24" height="60"/>
+  <object id="19" x="266" y="112" width="18" height="142"/>
+  <object id="20" x="160" y="112" width="18" height="142"/>
+  <object id="21" x="140" y="240" width="20" height="200"/>
+  <object id="22" x="160" y="410" width="92" height="30"/>
+  <object id="23" x="284" y="214" width="112" height="40"/>
+ </objectgroup>
+ <objectgroup id="4" name="objects">
+  <object id="6" name="stw_lockeddoor" x="838" y="980" width="80" height="34"/>
+  <object id="7" name="interactable" x="396" y="214" width="80" height="40">
+   <properties>
+    <property name="cutscene" value="mansion.officedoor"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="8" name="transition" x="178" y="112" width="88" height="40">
+   <properties>
+    <property name="map" value="dunes/mansion/kanakos_room"/>
+    <property name="marker" value="down"/>
+   </properties>
+  </object>
+  <object id="9" name="transition" x="560" y="274" width="36" height="136">
+   <properties>
+    <property name="map" value="dunes/mansion/hallway_west"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+  <object id="13" name="transition" x="1120" y="1014" width="40" height="74">
+   <properties>
+    <property name="map" value="dunes/mansion/entrance"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+  <object id="25" name="interactable" x="988" y="992" width="112" height="30">
+   <properties>
+    <property name="cutscene" value="mansion.bamboo"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="26" name="interactable" x="652" y="996" width="52" height="36">
+   <properties>
+    <property name="cutscene" value="mansion.drawerWH"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="27" name="interactable" x="290" y="232" width="52" height="36">
+   <properties>
+    <property name="cutscene" value="mansion.talldrawer"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="10" name="topright" x="520" y="342">
+   <point/>
+  </object>
+  <object id="11" name="office" x="436" y="294">
+   <point/>
+  </object>
+  <object id="12" name="top" x="222" y="192">
+   <point/>
+  </object>
+  <object id="16" name="right" x="1080" y="1060">
+   <point/>
+  </object>
+  <object id="24" name="spawn" x="960" y="1060">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

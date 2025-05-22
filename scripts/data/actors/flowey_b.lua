@@ -33,6 +33,7 @@ function actor:init()
         ["plainside"] = 0.15,
         ["sad"] = 0.15,
         ["smirk"] = 0.15,
+        ["snarky"] = 0.15,
         ["worried"] = 0.15,
         ["worriedside"] = 0.15
     }
@@ -41,12 +42,14 @@ function actor:init()
         ["riseanim"] = {"riseanim", 1/10, false, next = "nice"},
         ["riseanim2"] = {"riseanim2", 1/10, false, next = "plain"},
         ["sinkanim"] = {"sinkanim", 1/10, false},
+        ["sinkanim2"] = {"sinkanim2", 1/10, false},
     }
 
     self.offsets = {
         ["riseanim"] = {0, -4},
         ["riseanim2"] = {0, -4},
         ["sinkanim"] = {0, -4},
+        ["sinkanim2"] = {0, -4},
     }
 end
 

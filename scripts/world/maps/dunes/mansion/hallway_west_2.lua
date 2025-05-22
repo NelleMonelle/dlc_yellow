@@ -1,0 +1,452 @@
+return {
+  version = "1.11",
+  luaversion = "5.1",
+  tiledversion = "1.11.2",
+  class = "",
+  orientation = "orthogonal",
+  renderorder = "right-down",
+  width = 29,
+  height = 30,
+  tilewidth = 40,
+  tileheight = 40,
+  nextlayerid = 6,
+  nextobjectid = 28,
+  properties = {
+    ["light"] = true,
+    ["music"] = "trapdoor"
+  },
+  tilesets = {
+    {
+      name = "mansion_stuff",
+      firstgid = 1,
+      filename = "../../../tilesets/mansion_stuff.tsx",
+      exportfilename = "../../../tilesets/mansion_stuff.lua"
+    }
+  },
+  layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 2,
+      name = "objects_bg",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 1,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 1200,
+          width = 1160,
+          height = 1200,
+          rotation = 0,
+          gid = 19,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 3,
+      name = "collision",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 3,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 438,
+          y = 410,
+          width = 30,
+          height = 604,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 4,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 468,
+          y = 980,
+          width = 692,
+          height = 34,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 5,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 468,
+          y = 410,
+          width = 128,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 14,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 1088,
+          width = 880,
+          height = 28,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 15,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 252,
+          y = 410,
+          width = 28,
+          height = 706,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 17,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 476,
+          y = 214,
+          width = 84,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 18,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 214,
+          width = 24,
+          height = 60,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 19,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 266,
+          y = 112,
+          width = 18,
+          height = 142,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 20,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 112,
+          width = 18,
+          height = 142,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 140,
+          y = 240,
+          width = 20,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 410,
+          width = 92,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 23,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 284,
+          y = 214,
+          width = 112,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 4,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 6,
+          name = "stw_lockeddoor",
+          type = "",
+          shape = "rectangle",
+          x = 838,
+          y = 980,
+          width = 80,
+          height = 34,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 7,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 396,
+          y = 214,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "mansion.officedoor",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 8,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 178,
+          y = 112,
+          width = 88,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "dunes/mansion/kanakos_room",
+            ["marker"] = "down"
+          }
+        },
+        {
+          id = 9,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 274,
+          width = 36,
+          height = 136,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "dunes/mansion/hallway_west",
+            ["marker"] = "left"
+          }
+        },
+        {
+          id = 13,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 1014,
+          width = 40,
+          height = 74,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "dunes/mansion/entrance",
+            ["marker"] = "left"
+          }
+        },
+        {
+          id = 25,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 988,
+          y = 992,
+          width = 112,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "mansion.bamboo",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 26,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 652,
+          y = 996,
+          width = 52,
+          height = 36,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "mansion.drawerWH",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 27,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 290,
+          y = 232,
+          width = 52,
+          height = 36,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "mansion.talldrawer",
+            ["solid"] = true
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "markers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 10,
+          name = "topright",
+          type = "",
+          shape = "point",
+          x = 520,
+          y = 342,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 11,
+          name = "office",
+          type = "",
+          shape = "point",
+          x = 436,
+          y = 294,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 12,
+          name = "top",
+          type = "",
+          shape = "point",
+          x = 222,
+          y = 192,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 16,
+          name = "right",
+          type = "",
+          shape = "point",
+          x = 1080,
+          y = 1060,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 960,
+          y = 1060,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    }
+  }
+}

@@ -48,10 +48,10 @@ return {
         cutscene:wait(0.1)
         cutscene:setAnimation(axis, "right")
         cutscene:wait(cutscene:slideTo(axis, axis.x + 100, leader.y, 0.2))
-        Game.world.music:play("enter_axis")
-        cutscene:showNametag("Axis")
-        cutscene:text("* FOUND YOU.", "normal", "axis")
         if Game:isDessMode() then
+            Game.world.music:play("enter_axis")
+            cutscene:showNametag("Axis")
+            cutscene:text("* FOUND YOU.", "normal", "axis")
             cutscene:showNametag("Dess")
             cutscene:text("* dang not you again.", "angry", "dess")
             cutscene:showNametag("Axis")
@@ -86,38 +86,67 @@ return {
                 Game:setFlag("basement_trapped", true)
             end
         else
-            if cutscene:getCharacter("susie_lw") then
-                cutscene:showNametag("Susie")
-                cutscene:text("* The hell do you need from us?!", "angry", "susie")
-                cutscene:text("* Just piss off,[wait:5] dude.", "annoyed", "susie")
+            if Game:getFlag("EMPTIED_DUNES") then
                 cutscene:showNametag("Axis")
-            end
-            cutscene:text("* YOUR CRIMES ARE AS\nFOLLOWS:", "normal", "axis")
-            cutscene:text("* - TRESPASSING ON\nPRIVATE PROPERTY.", "normal", "axis")
-            cutscene:text("* - RESISTING ARREST.", "normal", "axis")
-            if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
-                cutscene:text("* - HUMAN.", "normal", "axis")
-                if cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
-                    cutscene:showNametag("Jamm")
-                    cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
-                    cutscene:showNametag("Axis")
-                    cutscene:text("[color:FF00FF]* ACCESSING MEMORY BANK_", nil, "axis")
-                    cutscene:hideNametag()
-                    Assets.playSound("uty_cant_select", 2)
-                    cutscene:wait(1)
-                    cutscene:showNametag("Axis")
-                    cutscene:text("[color:FF00FF]* MEMORY BANK BLOCKED_", nil, "axis")
-                    cutscene:text("* SORRY,[wait:5] BUT I AM UNABLE TO PROVIDE THE EXACT DATE.", "normal", "axis")
-                    cutscene:showNametag("Jamm")
-                    cutscene:text("* That was a rethorical question.", "nervous_left", "jamm")
-                    cutscene:showNametag("Axis")
-                    cutscene:text("* . . .", "normal", "axis")
-                    cutscene:text("* ANYWAYS.", "normal", "axis")
+                cutscene:text("* FOUND YOU[wait:5]", "normal", "axis", {auto=true})
+                cutscene:hideNametag()
+                cutscene:wait(cutscene:walkTo(leader, axis.x + 40, leader.y, 0.2, "left"))
+                cutscene:startLightEncounter("axis_beatup")
+                axis:setSprite("redeyes/flyback")
+                cutscene:wait(cutscene:slideTo(axis, 151, axis.y, 0.4))
+                axis:setAnimation("redeyes_shot_slam")
+                Assets.playSound("impact")
+                Game.world.camera:shake(6, 2)
+                cutscene:wait(4)
+                axis:setAnimation("redeyes_shot_end")
+                cutscene:wait(1.5)
+                cutscene:showNametag("Axis")
+                cutscene:text("* AH.. .", "damaged", "axis")
+                cutscene:text("[color:FF00FF]* DAMAGE CRITICAL_", nil, "axis")
+                cutscene:text("[color:FF00FF]* t-zzz THReAT . ..", nil, "axis")
+                cutscene:text("[color:FF00FF]* thReat L-LeVEL 99;99\n9999 99_9. .", nil, "axis")
+                cutscene:text("* . . .", "damaged", "axis")
+                cutscene:hideNametag()
+                cutscene:walkTo(leader, leader.x - 120, leader.y, 2, "left")
+                if #Game.world.followers >= 1 then
+                    for _,follower in ipairs(Game.world.followers) do
+                        cutscene:walkTo(follower, follower.x - 200, follower.y, 2, "left")
+                    end
                 end
-            end
-            if Game:getFlag("some_dessimation_condition") then -- idk WIP
-                cutscene:text("* DESSIMATION LINE OR WHATEVER.", "normal", "axis")
+                cutscene:wait(2.5)
             else
+                Game.world.music:play("enter_axis")
+                cutscene:showNametag("Axis")
+                cutscene:text("* FOUND YOU.", "normal", "axis")
+                if cutscene:getCharacter("susie_lw") then
+                    cutscene:showNametag("Susie")
+                    cutscene:text("* The hell do you need from us?!", "angry", "susie")
+                    cutscene:text("* Just piss off,[wait:5] dude.", "annoyed", "susie")
+                    cutscene:showNametag("Axis")
+                end
+                cutscene:text("* YOUR CRIMES ARE AS\nFOLLOWS:", "normal", "axis")
+                cutscene:text("* - TRESPASSING ON\nPRIVATE PROPERTY.", "normal", "axis")
+                cutscene:text("* - RESISTING ARREST.", "normal", "axis")
+                if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
+                    cutscene:text("* - HUMAN.", "normal", "axis")
+                    if cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
+                        cutscene:showNametag("Jamm")
+                        cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
+                        cutscene:showNametag("Axis")
+                        cutscene:text("[color:FF00FF]* ACCESSING MEMORY BANK_", nil, "axis")
+                        cutscene:hideNametag()
+                        Assets.playSound("uty_cant_select", 2)
+                        cutscene:wait(1)
+                        cutscene:showNametag("Axis")
+                        cutscene:text("[color:FF00FF]* MEMORY BANK BLOCKED_", nil, "axis")
+                        cutscene:text("* SORRY,[wait:5] BUT I AM UNABLE TO PROVIDE THE EXACT DATE.", "normal", "axis")
+                        cutscene:showNametag("Jamm")
+                        cutscene:text("* That was a rethorical question.", "nervous_left", "jamm")
+                        cutscene:showNametag("Axis")
+                        cutscene:text("* . . .", "normal", "axis")
+                        cutscene:text("* ANYWAYS.", "normal", "axis")
+                    end
+                end
                 cutscene:showNametag("Axis")
                 local opinion = cutscene:textChoicer("* HOW TO YOU PLEAD TO\nTHESE ACCUSATIONS?", {"Not guilty", "Guilty"}, "normal", "axis")
                 if opinion == 1 then

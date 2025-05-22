@@ -61,7 +61,7 @@ function Ceroba:onDefeat(damage, battler)
         Game.battle.battle_ui:endAttack()
     end
     Game.battle:setState("NONE")
-    Game.battle:startCutscene("ceroba_geno", "death")
+    Game.battle:startCutscene("ceroba_geno", "death_fake")
 end
 
 function Ceroba:onAct(battler, name)
@@ -106,10 +106,13 @@ function Ceroba:spare(pacify)
 end
 
 function Ceroba:getNextWaves()
-    if self.attack_cycle == 0 then
+    if self.final_attack then
+        return {"ceroba/finale"} -- Final Attack
+    elseif self.attack_cycle == 0 then
         self.attack_cycle = 1
         return {"ceroba/intro_attack"} -- Opening Attack
-    elseif self.health <= 500 and self.phase == 1 then
+    elseif self.switch_attack then
+        self.switch_attack = false
         if self.attack_cycle == 9 then
             self.attack_cycle = 1
         else
@@ -130,7 +133,7 @@ function Ceroba:getNextWaves()
         return {"ceroba/flower_spiral"} -- Attack 4
     elseif self.attack_cycle == 5 then
         self.attack_cycle = 6
-        return {"ceroba/flower_shooter"} -- Attack 5
+        return {"ceroba/movingarena"} -- Attack 5
     elseif self.attack_cycle == 6 then
         self.attack_cycle = 7
         return {"ceroba/flower_spiral"} -- Attack 6
