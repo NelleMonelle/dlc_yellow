@@ -1,7 +1,7 @@
 local ShieldSoulShield, super = Class(Object)
 
 function ShieldSoulShield:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.layer = BATTLE_LAYERS["above_bullets"]
     self:setSprite("player/shield")

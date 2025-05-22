@@ -1,7 +1,7 @@
 local ShieldSoul, super = Class(Soul)
 
 function ShieldSoul:init(x, y, color)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.color = color or {1, 0, 0}
 

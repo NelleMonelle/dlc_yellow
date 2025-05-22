@@ -1,7 +1,7 @@
 local Basic, super = Class(LightWave)
 
 function Basic:init()
-    super:init(self)
+    super.init(self)
     --[[self:setArenaSize(160, 160)
     self:setArenaPosition(319, 360)
     self.time = 8]]

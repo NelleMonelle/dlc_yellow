@@ -1,7 +1,7 @@
 local Axis, super = Class(LightEncounter)
 
 function Axis:init()
-    super:init(self)
+    super.init(self)
 
     self.text = ""
 

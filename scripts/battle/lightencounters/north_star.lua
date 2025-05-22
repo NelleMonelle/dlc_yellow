@@ -1,7 +1,7 @@
 local Starlo, super = Class(LightEncounter)
 
 function Starlo:init()
-    super:init(self)
+    super.init(self)
 
     self.text = "* The enemy engages the battle."
 

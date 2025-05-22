@@ -1,7 +1,7 @@
 local RoomChemOne, super = Class(Map)
 
 function RoomChemOne:load()
-  super:load(self)
+  super.load(self)
 end
 
 function RoomChemOne:onEnter()

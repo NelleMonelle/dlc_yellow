@@ -189,7 +189,7 @@ function LightStatusDisplay:drawStatusStrip()
 			end
 		end
 	else
-		super:drawStatusStrip()
+		super.drawStatusStrip()
 	end
 end
 

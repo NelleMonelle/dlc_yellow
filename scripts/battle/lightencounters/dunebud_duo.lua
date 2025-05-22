@@ -1,7 +1,7 @@
 local Dunebud, super = Class(LightEncounter)
 
 function Dunebud:init()
-    super:init(self)
+    super.init(self)
 
     self.text = "* Double trouble!"
 
