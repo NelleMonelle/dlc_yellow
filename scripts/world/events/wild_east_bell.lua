@@ -4,7 +4,7 @@ function MailStation:init(data)
     super.init(self, data)
 
     self.solid = true
-    self:setOrigin(0.5, 0.5)
+    self:setOrigin(0, 0)
     self:setSprite("world/events/dunes/wild_east_bell")
     self.collider = Hitbox(self, 0, 94, 132, 68)
     self.ringing = false

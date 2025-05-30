@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   name = "dunes_stuff",
   class = "",
   tilewidth = 983,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 24,
+  tilecount = 25,
   tiles = {
     {
       id = 18,
@@ -168,6 +168,12 @@ return {
       image = "../../../assets/sprites/world/maps/dunes/43_pipe.png",
       width = 21,
       height = 103
+    },
+    {
+      id = 25,
+      image = "../../../assets/sprites/world/maps/dunes/30c_path_top.png",
+      width = 983,
+      height = 88
     }
   }
 }

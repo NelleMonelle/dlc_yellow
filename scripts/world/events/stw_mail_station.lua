@@ -4,13 +4,9 @@ function MailStation:init(data)
     super.init(self, data)
 
     self.solid = true
-    self:setOrigin(0.5, 0.5)
+    self:setOrigin(0, 0)
     self:setSprite("world/events/steamworks/mail_station")
     self.collider = Hitbox(self, 28, 4, 92, 66)
-
-    Game.world.timer:after(1/30, function()
-        self.layer = 0.3
-    end)
 end
 
 function MailStation:onInteract(chara, dir)

@@ -1,10 +1,10 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   name = "oasis_stuff",
   class = "",
-  tilewidth = 533,
+  tilewidth = 572,
   tileheight = 289,
   spacing = 0,
   margin = 0,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 22,
+  tilecount = 25,
   tiles = {
     {
       id = 0,
@@ -118,7 +118,7 @@ return {
     {
       id = 16,
       image = "../../../assets/sprites/world/maps/dunes/oasis/rocks.png",
-      width = 533,
+      width = 572,
       height = 73
     },
     {
@@ -156,6 +156,24 @@ return {
       image = "../../../assets/sprites/world/maps/dunes/oasis/welcome_sign.png",
       width = 81,
       height = 36
+    },
+    {
+      id = 23,
+      image = "../../../assets/sprites/world/maps/dunes/oasis/rocks4.png",
+      width = 97,
+      height = 40
+    },
+    {
+      id = 24,
+      image = "../../../assets/sprites/world/maps/dunes/oasis/house4_chimneytop.png",
+      width = 21,
+      height = 34
+    },
+    {
+      id = 25,
+      image = "../../../assets/sprites/world/maps/dunes/oasis/fence_top.png",
+      width = 8,
+      height = 13
     }
   }
 }

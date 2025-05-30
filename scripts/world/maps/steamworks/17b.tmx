@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="62" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="74">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="62" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="74">
  <editorsettings>
   <export target="17b.lua" format="lua"/>
  </editorsettings>
@@ -9,7 +9,7 @@
  </properties>
  <tileset firstgid="1" source="../../tilesets/steamworks.tsx"/>
  <tileset firstgid="1497" source="../../tilesets/steamworks_objects.tsx"/>
- <tileset firstgid="1606" source="../../tilesets/steamworks_objects_big.tsx"/>
+ <tileset firstgid="1634" source="../../tilesets/steamworks_objects_big.tsx"/>
  <layer id="1" name="lake" width="62" height="24">
   <data encoding="csv">
 177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,
@@ -38,6 +38,7 @@
 177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177,177
 </data>
  </layer>
+ <objectgroup id="17" name="objects_below"/>
  <layer id="2" name="ground" width="62" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -137,7 +138,7 @@
   <object id="35" gid="1537" x="226" y="572" width="68" height="68"/>
   <object id="36" gid="1541" x="1658" y="616" width="162" height="134"/>
   <object id="37" gid="1506" x="82" y="846" width="76" height="88"/>
-  <object id="38" gid="1637" x="646" y="534" width="232" height="386"/>
+  <object id="38" gid="1665" x="646" y="534" width="232" height="386"/>
   <object id="40" name="stw_screenglow" x="0" y="0" width="40" height="40"/>
   <object id="41" name="stw_lavapalette" x="40" y="0" width="40" height="40"/>
   <object id="49" name="stw_manta_checkpoint" x="1900" y="300" width="40" height="40">

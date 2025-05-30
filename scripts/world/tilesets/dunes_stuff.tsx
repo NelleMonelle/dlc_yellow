@@ -1,79 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="dunes_stuff" tilewidth="983" tileheight="900" tilecount="24" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="dunes_stuff" tilewidth="983" tileheight="900" tilecount="25" columns="0">
  <editorsettings>
   <export target="dunes_stuff.lua" format="lua"/>
  </editorsettings>
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="18">
-  <image source="../../../assets/sprites/world/maps/dunes/30c_bg.png" width="983" height="900"/>
+  <image width="983" height="900" source="../../../assets/sprites/world/maps/dunes/30c_bg.png"/>
  </tile>
  <tile id="19">
-  <image source="../../../assets/sprites/world/maps/dunes/30c_corner.png" width="480" height="560"/>
+  <image width="480" height="560" source="../../../assets/sprites/world/maps/dunes/30c_corner.png"/>
  </tile>
  <tile id="20">
-  <image source="../../../assets/sprites/world/maps/dunes/30c_mansion.png" width="660" height="391"/>
+  <image width="660" height="391" source="../../../assets/sprites/world/maps/dunes/30c_mansion.png"/>
  </tile>
  <tile id="21">
-  <image source="../../../assets/sprites/world/maps/dunes/30c_path.png" width="983" height="420"/>
+  <image width="983" height="420" source="../../../assets/sprites/world/maps/dunes/30c_path.png"/>
  </tile>
  <tile id="17">
-  <image source="../../../assets/sprites/world/maps/dunes/30d_background.png" width="320" height="600"/>
+  <image width="320" height="600" source="../../../assets/sprites/world/maps/dunes/30d_background.png"/>
  </tile>
  <tile id="22">
-  <image source="../../../assets/sprites/world/maps/dunes/31_bg.png" width="442" height="240"/>
+  <image width="442" height="240" source="../../../assets/sprites/world/maps/dunes/31_bg.png"/>
  </tile>
  <tile id="23">
-  <image source="../../../assets/sprites/world/maps/dunes/31_foreground.png" width="442" height="165"/>
+  <image width="442" height="165" source="../../../assets/sprites/world/maps/dunes/31_foreground.png"/>
  </tile>
  <tile id="3">
-  <image source="../../../assets/sprites/world/maps/dunes/34_wishing_well.png" width="36" height="59"/>
+  <image width="36" height="59" source="../../../assets/sprites/world/maps/dunes/34_wishing_well.png"/>
  </tile>
  <tile id="0">
-  <image source="../../../assets/sprites/world/maps/dunes/36_shadow.png" width="160" height="224"/>
+  <image width="160" height="224" source="../../../assets/sprites/world/maps/dunes/36_shadow.png"/>
  </tile>
  <tile id="1">
-  <image source="../../../assets/sprites/world/maps/dunes/36_tracks.png" width="161" height="586"/>
+  <image width="161" height="586" source="../../../assets/sprites/world/maps/dunes/36_tracks.png"/>
  </tile>
  <tile id="2">
-  <image source="../../../assets/sprites/world/maps/dunes/36_wagon.png" width="146" height="131"/>
+  <image width="146" height="131" source="../../../assets/sprites/world/maps/dunes/36_wagon.png"/>
  </tile>
  <tile id="4">
-  <image source="../../../assets/sprites/world/maps/dunes/39_bg.png" width="252" height="231"/>
+  <image width="252" height="231" source="../../../assets/sprites/world/maps/dunes/39_bg.png"/>
  </tile>
  <tile id="5">
-  <image source="../../../assets/sprites/world/maps/dunes/39_fg.png" width="228" height="124"/>
+  <image width="228" height="124" source="../../../assets/sprites/world/maps/dunes/39_fg.png"/>
  </tile>
  <tile id="6">
-  <image source="../../../assets/sprites/world/maps/dunes/39_transition.png" width="222" height="206"/>
+  <image width="222" height="206" source="../../../assets/sprites/world/maps/dunes/39_transition.png"/>
  </tile>
  <tile id="7">
-  <image source="../../../assets/sprites/world/maps/dunes/40_bg.png" width="320" height="480"/>
+  <image width="320" height="480" source="../../../assets/sprites/world/maps/dunes/40_bg.png"/>
  </tile>
  <tile id="8">
-  <image source="../../../assets/sprites/world/maps/dunes/41_overlay_bottom.png" width="251" height="212"/>
+  <image width="251" height="212" source="../../../assets/sprites/world/maps/dunes/41_overlay_bottom.png"/>
  </tile>
  <tile id="9">
-  <image source="../../../assets/sprites/world/maps/dunes/41_overlay_fade.png" width="280" height="128"/>
+  <image width="280" height="128" source="../../../assets/sprites/world/maps/dunes/41_overlay_fade.png"/>
  </tile>
  <tile id="10">
-  <image source="../../../assets/sprites/world/maps/dunes/42_cellar_door.png" width="31" height="49"/>
+  <image width="31" height="49" source="../../../assets/sprites/world/maps/dunes/42_cellar_door.png"/>
  </tile>
  <tile id="11">
-  <image source="../../../assets/sprites/world/maps/dunes/42_pump.png" width="43" height="53"/>
+  <image width="43" height="53" source="../../../assets/sprites/world/maps/dunes/42_pump.png"/>
  </tile>
  <tile id="12">
-  <image source="../../../assets/sprites/world/maps/dunes/42_starlo_house.png" width="260" height="258"/>
+  <image width="260" height="258" source="../../../assets/sprites/world/maps/dunes/42_starlo_house.png"/>
  </tile>
  <tile id="13">
-  <image source="../../../assets/sprites/world/maps/dunes/43_cone.png" width="24" height="27"/>
+  <image width="24" height="27" source="../../../assets/sprites/world/maps/dunes/43_cone.png"/>
  </tile>
  <tile id="14">
-  <image source="../../../assets/sprites/world/maps/dunes/43_gate.png" width="231" height="159"/>
+  <image width="231" height="159" source="../../../assets/sprites/world/maps/dunes/43_gate.png"/>
  </tile>
  <tile id="15">
-  <image source="../../../assets/sprites/world/maps/dunes/43_overlay_fade.png" width="440" height="72"/>
+  <image width="440" height="72" source="../../../assets/sprites/world/maps/dunes/43_overlay_fade.png"/>
  </tile>
  <tile id="16">
-  <image source="../../../assets/sprites/world/maps/dunes/43_pipe.png" width="21" height="103"/>
+  <image width="21" height="103" source="../../../assets/sprites/world/maps/dunes/43_pipe.png"/>
+ </tile>
+ <tile id="25">
+  <image width="983" height="88" source="../../../assets/sprites/world/maps/dunes/30c_path_top.png"/>
  </tile>
 </tileset>

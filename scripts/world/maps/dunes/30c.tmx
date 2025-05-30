@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="49" height="45" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="38">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="49" height="45" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="40">
  <editorsettings>
   <export target="30c.lua" format="lua"/>
  </editorsettings>
@@ -8,7 +8,7 @@
   <property name="music" value="mart_geno_wind_yellow"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/dunes_stuff.tsx"/>
- <tileset firstgid="25" source="../../tilesets/dunes.tsx"/>
+ <tileset firstgid="27" source="../../tilesets/dunes.tsx"/>
  <objectgroup id="2" name="objects_bg">
   <object id="1" gid="19" x="0" y="1800" width="1966" height="1800"/>
  </objectgroup>
@@ -21,8 +21,8 @@
  </objectgroup>
  <layer id="1" name="Tile Layer 1" width="49" height="45" offsetx="0" offsety="-16">
   <data encoding="csv">
-0,663,0,0,0,661,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,663,0,0,0,661,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,665,0,0,0,663,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,665,0,0,0,663,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -87,6 +87,7 @@
     <property name="marker" value="down"/>
    </properties>
   </object>
+  <object id="39" gid="26" x="0" y="1142" width="1966" height="176"/>
  </objectgroup>
  <objectgroup id="5" name="collision">
   <object id="10" x="1040" y="1600" width="40" height="200"/>

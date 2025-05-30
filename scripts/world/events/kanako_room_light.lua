@@ -3,7 +3,7 @@ local Cake, super = Class(Event)
 function Cake:init(data)
     super.init(self, data)
 
-    self:setOrigin(0.5, 0.5)
+    self:setOrigin(0, 0)
     self:setSprite("world/events/dunes/kanako_room_light")
     self.sprite.alpha = 0.5
 

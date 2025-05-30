@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 15,
+  nextobjectid = 19,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -231,6 +231,21 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 18,
+          name = "stw_chasevent",
+          type = "",
+          shape = "rectangle",
+          x = 152,
+          y = 240,
+          width = 70,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "steamworks/22"
+          }
         }
       }
     },
@@ -280,6 +295,19 @@ return {
           type = "",
           shape = "point",
           x = 820,
+          y = 320,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 17,
+          name = "vent",
+          type = "",
+          shape = "point",
+          x = 200,
           y = 320,
           width = 0,
           height = 0,

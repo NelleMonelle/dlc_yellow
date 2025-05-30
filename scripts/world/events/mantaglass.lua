@@ -1,7 +1,7 @@
 local MantaGlass, super = Class(Event)
 
-function MantaGlass:init(x, y, w, h)
-    super.init(self, x, y, w, h)
+function MantaGlass:init(data)
+    super.init(self, data)
 
     self.texture = Assets.getTexture("world/events/magical_glass")
 
