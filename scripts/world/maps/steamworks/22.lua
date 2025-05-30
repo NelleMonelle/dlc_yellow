@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 16,
+  nextobjectid = 18,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly"
@@ -328,6 +328,21 @@ return {
             ["lightencounter"] = "jandroid_duo",
             ["once"] = true
           }
+        },
+        {
+          id = 16,
+          name = "stw_chasevent",
+          type = "",
+          shape = "rectangle",
+          x = 4606,
+          y = 200,
+          width = 70,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "steamworks/20"
+          }
         }
       }
     },
@@ -378,6 +393,19 @@ return {
           shape = "point",
           x = 4640,
           y = 320,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 17,
+          name = "vent",
+          type = "",
+          shape = "point",
+          x = 4640,
+          y = 280,
           width = 0,
           height = 0,
           rotation = 0,

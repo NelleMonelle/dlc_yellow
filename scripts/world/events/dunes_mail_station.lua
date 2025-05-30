@@ -4,7 +4,7 @@ function MailStation:init(data)
     super.init(self, data)
 
     self.solid = true
-    self:setOrigin(0.5, 0.5)
+    self:setOrigin(0, 0)
     self:setSprite("world/events/dunes/mail_station")
 end
 

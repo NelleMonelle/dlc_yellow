@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="120" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="16">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="120" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="18">
  <editorsettings>
   <export target="22.lua" format="lua"/>
  </editorsettings>
@@ -114,6 +114,11 @@
    </properties>
    <point/>
   </object>
+  <object id="16" name="stw_chasevent" x="4606" y="200" width="70" height="40">
+   <properties>
+    <property name="map" value="steamworks/20"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="4" name="markers">
   <object id="5" name="left" x="80" y="300">
@@ -123,6 +128,9 @@
    <point/>
   </object>
   <object id="8" name="spawn" x="4640" y="320">
+   <point/>
+  </object>
+  <object id="17" name="vent" x="4640" y="280">
    <point/>
   </object>
  </objectgroup>

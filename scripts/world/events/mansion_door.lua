@@ -14,7 +14,7 @@ function MansionDoor:init(data)
     }
 
     self:setSprite("world/events/dunes/mansion_door_1")
-    self:setOrigin(0.5, 0.5)
+    self:setOrigin(0, 0)
 
     self.solid = true
 
