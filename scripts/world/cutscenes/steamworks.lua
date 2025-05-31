@@ -425,9 +425,6 @@ return {
         cutscene:text("* It's WIP.", "irked", "ceroba")
         cutscene:hideNametag()]]
     end,
-    vendy_shop = function(cutscene, event)
-        Game.world:lightShopTransition("vendy")
-    end,
     noel_06 = function(cutscene, event) -- okay now you are
         if Game.world:getCharacter("noel") then
             cutscene:text("* Oh,[wait:5] I'm pink now.", "neutral", "noel")

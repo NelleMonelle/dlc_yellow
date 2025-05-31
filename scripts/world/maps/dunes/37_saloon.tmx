@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="22" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="45">
+ <editorsettings>
+  <export target="37_saloon.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="happy_hour"/>
+  <property name="name" value="Wild East - Saloon"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/wild_east_buildings.tsx"/>
+ <objectgroup id="8" name="objects_bg">
+  <object id="42" gid="12" x="0" y="880" width="800" height="880"/>
+ </objectgroup>
+ <objectgroup id="2" name="collision">
+  <object id="3" x="528" y="102" width="18" height="176"/>
+  <object id="4" x="260" y="102" width="18" height="176"/>
+  <object id="5" x="260" y="100" width="286" height="92"/>
+  <object id="6" x="112" y="42" width="582" height="20"/>
+  <object id="7" x="478" y="820" width="216" height="20"/>
+  <object id="35" x="112" y="820" width="206" height="20"/>
+  <object id="8" x="294" y="640" width="216" height="44"/>
+  <object id="26" x="294" y="424" width="216" height="32"/>
+  <object id="9" x="114" y="748" width="48" height="58"/>
+  <object id="10" x="286" y="666" width="42" height="48"/>
+  <object id="14" x="474" y="664" width="42" height="48"/>
+  <object id="11" x="638" y="422" width="56" height="194"/>
+  <object id="12" x="694" y="42" width="16" height="798"/>
+  <object id="13" x="96" y="42" width="16" height="798"/>
+  <object id="15" x="582" y="764" width="44" height="42"/>
+  <object id="16" x="618" y="720" width="44" height="40"/>
+  <object id="17" x="666" y="704" width="44" height="40"/>
+  <object id="18" x="112" y="274" width="70" height="68"/>
+  <object id="25" x="624" y="276" width="70" height="66"/>
+  <object id="21" x="160" y="110" width="22" height="164"/>
+  <object id="24" x="624" y="112" width="20" height="164"/>
+  <object id="22" x="154" y="98" width="18" height="12"/>
+  <object id="23" x="632" y="100" width="18" height="12"/>
+  <object id="27" x="286" y="424" width="32" height="236"/>
+  <object id="28" x="484" y="424" width="36" height="236"/>
+ </objectgroup>
+ <objectgroup id="3" name="objects_party">
+  <object id="33" name="interactable" x="360" y="630" width="80" height="40">
+   <properties>
+    <property name="cutscene" value="shops.saloon"/>
+   </properties>
+  </object>
+  <object id="36" name="transition" x="318" y="820" width="160" height="20">
+   <properties>
+    <property name="map" value="dunes/37"/>
+    <property name="marker" value="saloon"/>
+   </properties>
+  </object>
+  <object id="44" gid="14" x="286" y="684" width="234" height="292"/>
+ </objectgroup>
+ <objectgroup id="4" name="markers">
+  <object id="31" name="spawn" x="400" y="360">
+   <point/>
+  </object>
+  <object id="37" name="down" x="400" y="780">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="objects_fg">
+  <object id="43" gid="13" x="0" y="880" width="800" height="880"/>
+ </objectgroup>
+</map>

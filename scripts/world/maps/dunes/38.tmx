@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="54" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="56">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="54" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="56">
  <editorsettings>
   <export target="38.lua" format="lua"/>
  </editorsettings>
@@ -375,7 +375,7 @@ who needs them.)</property>
   </object>
   <object id="48" name="script" x="654" y="680" width="134" height="24">
    <properties>
-    <property name="cutscene" value="wildeast.gunshop"/>
+    <property name="cutscene" value="shops.gunshop"/>
     <property name="once" type="bool" value="false"/>
    </properties>
   </object>
