@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 23,
-  nextobjectid = 96,
+  nextobjectid = 99,
   properties = {
     ["dynmtype"] = 1,
     ["dynmusic"] = "the_wild_east",
@@ -871,6 +871,20 @@ return {
           height = 614,
           rotation = 0,
           gid = 1295,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 98,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1650,
+          y = 1442,
+          width = 52,
+          height = 464,
+          rotation = 0,
+          gid = 1305,
           visible = true,
           properties = {}
         }

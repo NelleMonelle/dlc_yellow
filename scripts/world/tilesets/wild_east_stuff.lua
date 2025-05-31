@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.10.2",
   name = "wild_east_stuff",
   class = "",
   tilewidth = 400,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 29,
+  tilecount = 30,
   tiles = {
     {
       id = 0,
@@ -58,8 +58,8 @@ return {
     {
       id = 5,
       image = "../../../assets/sprites/world/maps/dunes/wild_east/bg_feistyhouse_foreground.png",
-      width = 53,
-      height = 84
+      width = 49,
+      height = 35
     },
     {
       id = 6,
@@ -198,6 +198,12 @@ return {
       image = "../../../assets/sprites/world/maps/dunes/wild_east/weapons_store_fence.png",
       width = 175,
       height = 22
+    },
+    {
+      id = 29,
+      image = "../../../assets/sprites/world/maps/dunes/wild_east/house_2_side.png",
+      width = 26,
+      height = 232
     }
   }
 }
