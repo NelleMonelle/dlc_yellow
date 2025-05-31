@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   name = "mansion_stuff",
   class = "",
   tilewidth = 580,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 20,
+  tilecount = 25,
   tiles = {
     {
       id = 0,
@@ -170,6 +170,36 @@ return {
       image = "../../../assets/sprites/world/maps/dunes/mansion/westhall.png",
       width = 580,
       height = 600
+    },
+    {
+      id = 20,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/light_overlay_1.png",
+      width = 33,
+      height = 36
+    },
+    {
+      id = 21,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/light_overlay_2.png",
+      width = 58,
+      height = 15
+    },
+    {
+      id = 22,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/light_overlay_entrance.png",
+      width = 96,
+      height = 37
+    },
+    {
+      id = 23,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/side_window_light_1.png",
+      width = 67,
+      height = 50
+    },
+    {
+      id = 24,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/side_window_light_2.png",
+      width = 67,
+      height = 50
     }
   }
 }

@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -12,8 +12,10 @@ return {
   nextlayerid = 10,
   nextobjectid = 25,
   properties = {
+    ["dynmtype"] = 2,
+    ["dynmusic"] = "the_wild_east",
     ["light"] = true,
-    ["music"] = "the_wild_east_barn",
+    ["music"] = "the_wild_east",
     ["name"] = "Wild East - Barn"
   },
   tilesets = {

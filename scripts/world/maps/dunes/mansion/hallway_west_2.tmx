@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="29" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="28">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="29" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="38">
  <editorsettings>
   <export target="hallway_west_2.lua" format="lua"/>
  </editorsettings>
@@ -10,6 +10,12 @@
  <tileset firstgid="1" source="../../../tilesets/mansion_stuff.tsx"/>
  <objectgroup id="2" name="objects_bg">
   <object id="1" gid="19" x="0" y="1200" width="1160" height="1200"/>
+ </objectgroup>
+ <objectgroup id="6" name="objects_light">
+  <object id="34" gid="2147483673" x="284" y="620" width="134" height="100"/>
+  <object id="35" gid="2147483673" x="278" y="952" width="134" height="100"/>
+  <object id="36" name="lightarea" x="284" y="546" width="56" height="74"/>
+  <object id="37" name="lightarea" x="278" y="878" width="56" height="74"/>
  </objectgroup>
  <objectgroup id="3" name="collision">
   <object id="3" x="438" y="410" width="30" height="604"/>
@@ -86,5 +92,12 @@
   <object id="24" name="spawn" x="960" y="1060">
    <point/>
   </object>
+ </objectgroup>
+ <objectgroup id="7" name="objects_light_overlay">
+  <object id="28" gid="22" x="300" y="1088" width="116" height="30"/>
+  <object id="29" gid="22" x="560" y="1088" width="116" height="30"/>
+  <object id="31" gid="22" x="822" y="1088" width="116" height="30"/>
+  <object id="32" gid="2147483672" x="284" y="620" width="134" height="100"/>
+  <object id="33" gid="2147483672" x="278" y="952" width="134" height="100"/>
  </objectgroup>
 </map>
