@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="25">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="25">
  <editorsettings>
   <export target="../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/dunes/37_barn.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="dynmtype" type="int" value="2"/>
+  <property name="dynmusic" value="the_wild_east"/>
   <property name="light" type="bool" value="true"/>
-  <property name="music" value="the_wild_east_barn"/>
+  <property name="music" value="the_wild_east"/>
   <property name="name" value="Wild East - Barn"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/wild_east_buildings.tsx"/>

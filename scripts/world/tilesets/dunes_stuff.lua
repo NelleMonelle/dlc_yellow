@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 25,
+  tilecount = 28,
   tiles = {
     {
       id = 18,
@@ -174,6 +174,24 @@ return {
       image = "../../../assets/sprites/world/maps/dunes/30c_path_top.png",
       width = 983,
       height = 88
+    },
+    {
+      id = 26,
+      image = "../../../assets/sprites/world/maps/dunes/pillar_2.png",
+      width = 40,
+      height = 60
+    },
+    {
+      id = 27,
+      image = "../../../assets/sprites/world/maps/dunes/pillar_3.png",
+      width = 40,
+      height = 80
+    },
+    {
+      id = 28,
+      image = "../../../assets/sprites/world/maps/dunes/pillar_6.png",
+      width = 40,
+      height = 100
     }
   }
 }

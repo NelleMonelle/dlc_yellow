@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 25,
+  tilecount = 29,
   tiles = {
     {
       id = 0,
@@ -164,16 +164,40 @@ return {
       height = 40
     },
     {
-      id = 24,
-      image = "../../../assets/sprites/world/maps/dunes/oasis/house4_chimneytop.png",
-      width = 21,
-      height = 34
+      id = 29,
+      image = "../../../assets/sprites/world/maps/dunes/oasis/house4_top.png",
+      width = 201,
+      height = 91
     },
     {
       id = 25,
       image = "../../../assets/sprites/world/maps/dunes/oasis/fence_top.png",
       width = 8,
       height = 13
+    },
+    {
+      id = 26,
+      image = "../../../assets/sprites/world/maps/dunes/oasis/tree_base.png",
+      width = 82,
+      height = 107
+    },
+    {
+      id = 27,
+      image = "../../../assets/sprites/world/maps/dunes/oasis/tree_leaves.png",
+      width = 82,
+      height = 107
+    },
+    {
+      id = 28,
+      image = "../../../assets/sprites/world/maps/dunes/oasis/house2_treecover.png",
+      width = 13,
+      height = 78
+    },
+    {
+      id = 30,
+      image = "../../../assets/sprites/world/maps/dunes/chomped_cactus.png",
+      width = 29,
+      height = 49
     }
   }
 }

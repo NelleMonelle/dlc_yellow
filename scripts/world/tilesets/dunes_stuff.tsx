@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="dunes_stuff" tilewidth="983" tileheight="900" tilecount="25" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="dunes_stuff" tilewidth="983" tileheight="900" tilecount="28" columns="0">
  <editorsettings>
   <export target="dunes_stuff.lua" format="lua"/>
  </editorsettings>
@@ -78,5 +78,14 @@
  </tile>
  <tile id="25">
   <image width="983" height="88" source="../../../assets/sprites/world/maps/dunes/30c_path_top.png"/>
+ </tile>
+ <tile id="26">
+  <image width="40" height="60" source="../../../assets/sprites/world/maps/dunes/pillar_2.png"/>
+ </tile>
+ <tile id="27">
+  <image width="40" height="80" source="../../../assets/sprites/world/maps/dunes/pillar_3.png"/>
+ </tile>
+ <tile id="28">
+  <image width="40" height="100" source="../../../assets/sprites/world/maps/dunes/pillar_6.png"/>
  </tile>
 </tileset>

@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 30,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 28,
+  nextlayerid = 8,
+  nextobjectid = 38,
   properties = {
     ["light"] = true,
     ["music"] = "trapdoor"
@@ -57,10 +57,54 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 6,
+      name = "objects_light",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 32,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 742,
+          y = 856,
+          width = 134,
+          height = 100,
+          rotation = 0,
+          gid = 25,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 35,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 742,
+          y = 618,
+          width = 134,
+          height = 100,
+          rotation = 0,
+          gid = 25,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 3,
       name = "collision",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -373,6 +417,32 @@ return {
             ["cutscene"] = "mansion.bamboo",
             ["solid"] = true
           }
+        },
+        {
+          id = 36,
+          name = "lightarea",
+          type = "",
+          shape = "rectangle",
+          x = 820,
+          y = 544,
+          width = 56,
+          height = 74,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 37,
+          name = "lightarea",
+          type = "",
+          shape = "rectangle",
+          x = 820,
+          y = 782,
+          width = 56,
+          height = 74,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -439,6 +509,92 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects_light_overlay",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 28,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 224,
+          y = 1088,
+          width = 116,
+          height = 30,
+          rotation = 0,
+          gid = 22,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 29,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 488,
+          y = 1088,
+          width = 116,
+          height = 30,
+          rotation = 0,
+          gid = 22,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 30,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 744,
+          y = 1088,
+          width = 116,
+          height = 30,
+          rotation = 0,
+          gid = 22,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 742,
+          y = 856,
+          width = 134,
+          height = 100,
+          rotation = 0,
+          gid = 24,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 34,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 742,
+          y = 618,
+          width = 134,
+          height = 100,
+          rotation = 0,
+          gid = 24,
           visible = true,
           properties = {}
         }

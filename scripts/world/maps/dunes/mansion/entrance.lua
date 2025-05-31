@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 20,
+  nextlayerid = 7,
+  nextobjectid = 25,
   properties = {
     ["light"] = true,
     ["music"] = "trapdoor",
@@ -283,6 +283,32 @@ return {
             ["cutscene"] = "mansion.bamboo",
             ["solid"] = true
           }
+        },
+        {
+          id = 23,
+          name = "lightarea",
+          type = "",
+          shape = "rectangle",
+          x = 130,
+          y = 430,
+          width = 66,
+          height = 50,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "lightarea",
+          type = "",
+          shape = "rectangle",
+          x = 444,
+          y = 430,
+          width = 66,
+          height = 50,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -349,6 +375,64 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "objects_light",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 20,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 444,
+          y = 476,
+          width = 66,
+          height = 72,
+          rotation = 0,
+          gid = 21,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 130,
+          y = 476,
+          width = 66,
+          height = 72,
+          rotation = 0,
+          gid = 21,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 224,
+          y = 800,
+          width = 192,
+          height = 74,
+          rotation = 0,
+          gid = 23,
           visible = true,
           properties = {}
         }

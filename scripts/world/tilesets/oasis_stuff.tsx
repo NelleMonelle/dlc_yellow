@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="oasis_stuff" tilewidth="572" tileheight="289" tilecount="25" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="oasis_stuff" tilewidth="572" tileheight="289" tilecount="29" columns="0">
+ <editorsettings>
+  <export target="oasis_stuff.lua" format="lua"/>
+ </editorsettings>
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="249" height="254" source="../../../assets/sprites/world/maps/dunes/oasis/building1.png"/>
@@ -70,10 +73,22 @@
  <tile id="23">
   <image width="97" height="40" source="../../../assets/sprites/world/maps/dunes/oasis/rocks4.png"/>
  </tile>
- <tile id="24">
-  <image width="21" height="34" source="../../../assets/sprites/world/maps/dunes/oasis/house4_chimneytop.png"/>
+ <tile id="29">
+  <image width="201" height="91" source="../../../assets/sprites/world/maps/dunes/oasis/house4_top.png"/>
  </tile>
  <tile id="25">
   <image width="8" height="13" source="../../../assets/sprites/world/maps/dunes/oasis/fence_top.png"/>
+ </tile>
+ <tile id="26">
+  <image width="82" height="107" source="../../../assets/sprites/world/maps/dunes/oasis/tree_base.png"/>
+ </tile>
+ <tile id="27">
+  <image width="82" height="107" source="../../../assets/sprites/world/maps/dunes/oasis/tree_leaves.png"/>
+ </tile>
+ <tile id="28">
+  <image width="13" height="78" source="../../../assets/sprites/world/maps/dunes/oasis/house2_treecover.png"/>
+ </tile>
+ <tile id="30">
+  <image width="29" height="49" source="../../../assets/sprites/world/maps/dunes/chomped_cactus.png"/>
  </tile>
 </tileset>
