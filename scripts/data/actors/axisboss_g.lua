@@ -20,8 +20,6 @@ function actor:init()
     self.default = "idle_shield"
 
     self.voice = "axis"
-    self.portrait_path = "face/axis"
-    self.portrait_offset = {-26, -18}
 
     self.can_blush = false
 

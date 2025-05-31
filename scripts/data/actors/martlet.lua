@@ -17,7 +17,7 @@ function actor:init()
 
     self.voice = "martlet"
     self.portrait_path = "face/martlet"
-    self.portrait_offset = {-18, -16}
+    self.portrait_offset = {-17, -21}
 
     self.can_blush = false
 
