@@ -1,4 +1,4 @@
-local LightStatusDisplay, super = Class("LightStatusDisplay", true)
+local LightStatusDisplay, super = Utils.hookScript("LightStatusDisplay")
 
 function LightStatusDisplay:init(x, y, event)
     super.init(self, x, y, SCREEN_WIDTH + 1, 43)

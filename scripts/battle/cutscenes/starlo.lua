@@ -17,6 +17,7 @@ return {
         cutscene:after(function()
             Game.battle.encounter:onBattleStart()
             Game.battle.encounter.background = true
+            Game.battle.encounter.bg_state = 1
             Game.battle:setState("ACTIONSELECT")
         end, true)
     end,

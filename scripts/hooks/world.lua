@@ -1,4 +1,4 @@
-local World, super = Class("World", true)
+local World, super = Utils.hookScript(World)
 
 function World:mapTransition(...)
     local args = {...}
