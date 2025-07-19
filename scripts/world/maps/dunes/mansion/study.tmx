@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="34">
+ <editorsettings>
+  <export target="study.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="light" type="bool" value="true"/>
+  <property name="music" value="computer_ambience"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/mansion_stuff.tsx"/>
+ <objectgroup id="6" name="objects_bg2">
+  <object id="2" gid="28" x="176" y="52" width="46" height="52"/>
+  <object id="3" gid="27" x="232" y="52" width="46" height="52"/>
+  <object id="4" gid="29" x="290" y="52" width="46" height="52"/>
+  <object id="5" gid="30" x="348" y="52" width="46" height="52"/>
+  <object id="6" gid="32" x="406" y="52" width="46" height="52"/>
+ </objectgroup>
+ <objectgroup id="2" name="objects_bg">
+  <object id="1" gid="26" x="40" y="960" width="560" height="960"/>
+ </objectgroup>
+ <objectgroup id="7" name="objects_bg3">
+  <object id="7" gid="33" x="284" y="218" width="56" height="44"/>
+ </objectgroup>
+ <objectgroup id="3" name="collision">
+  <object id="10" x="220" y="380" width="40" height="540"/>
+  <object id="11" x="360" y="380" width="40" height="540"/>
+  <object id="12" x="460" y="380">
+   <polygon points="0,0 40,0 40,-40"/>
+  </object>
+  <object id="20" x="480" y="260">
+   <polygon points="0,0 40,0 40,40"/>
+  </object>
+  <object id="15" x="220" y="380">
+   <polygon points="0,0 -40,0 -40,-40"/>
+  </object>
+  <object id="13" x="400" y="380" width="140" height="40"/>
+  <object id="14" x="500" y="340" width="60" height="40"/>
+  <object id="16" x="108" y="340" width="72" height="40"/>
+  <object id="17" x="68" y="220" width="40" height="174"/>
+  <object id="18" x="108" y="220" width="412" height="40"/>
+  <object id="19" x="520" y="220" width="40" height="120"/>
+  <object id="21" x="250" y="260" width="204" height="36"/>
+  <object id="22" x="400" y="296" width="22" height="6"/>
+  <object id="23" x="108" y="260" width="18" height="46"/>
+  <object id="24" x="236" y="282" width="38" height="46"/>
+ </objectgroup>
+ <objectgroup id="4" name="objects">
+  <object id="8" name="transition" x="260" y="880" width="100" height="40">
+   <properties>
+    <property name="map" value="dunes/mansion/kotatsu"/>
+    <property name="marker" value="basement"/>
+   </properties>
+  </object>
+  <object id="9" name="shadowarea" x="260" y="420" width="100" height="500"/>
+  <object id="27" name="interactable" x="252" y="242" width="120" height="52">
+   <properties>
+    <property name="cutscene" value="mansion.tv"/>
+   </properties>
+  </object>
+  <object id="28" name="interactable" x="98" y="340" width="82" height="60">
+   <properties>
+    <property name="cutscene" value="mansion.scraps"/>
+   </properties>
+  </object>
+  <object id="29" name="interactable" x="90" y="264" width="36" height="42">
+   <properties>
+    <property name="cutscene" value="mansion.trash"/>
+   </properties>
+  </object>
+  <object id="30" name="interactable" x="120" y="208" width="54" height="52">
+   <properties>
+    <property name="cutscene" value="mansion.study_bookshelf_left"/>
+   </properties>
+  </object>
+  <object id="33" name="interactable" x="454" y="202" width="68" height="70">
+   <properties>
+    <property name="cutscene" value="mansion.study_bookshelf_right"/>
+   </properties>
+  </object>
+  <object id="31" name="interactable" x="174" y="200" width="68" height="60">
+   <properties>
+    <property name="cutscene" value="mansion.study_drawer"/>
+   </properties>
+  </object>
+  <object id="32" name="interactable" x="372" y="242" width="82" height="60">
+   <properties>
+    <property name="cutscene" value="mansion.study_box"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="25" name="down" x="310" y="860">
+   <point/>
+  </object>
+  <object id="26" name="spawn" x="310" y="400">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

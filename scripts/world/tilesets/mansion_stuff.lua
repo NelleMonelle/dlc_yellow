@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   name = "mansion_stuff",
   class = "",
   tilewidth = 580,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 25,
+  tilecount = 38,
   tiles = {
     {
       id = 0,
@@ -175,7 +175,7 @@ return {
       id = 20,
       image = "../../../assets/sprites/world/maps/dunes/mansion/light_overlay_1.png",
       width = 33,
-      height = 36
+      height = 35
     },
     {
       id = 21,
@@ -200,6 +200,240 @@ return {
       image = "../../../assets/sprites/world/maps/dunes/mansion/side_window_light_2.png",
       width = 67,
       height = 50
+    },
+    {
+      id = 25,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study.png",
+      width = 280,
+      height = 480
+    },
+    {
+      id = 26,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_machines_1.png",
+      width = 23,
+      height = 26,
+      animation = {
+        {
+          tileid = 26,
+          duration = 1000
+        },
+        {
+          tileid = 27,
+          duration = 1000
+        },
+        {
+          tileid = 28,
+          duration = 1000
+        },
+        {
+          tileid = 29,
+          duration = 1000
+        },
+        {
+          tileid = 30,
+          duration = 1000
+        },
+        {
+          tileid = 31,
+          duration = 1000
+        }
+      }
+    },
+    {
+      id = 27,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_machines_2.png",
+      width = 23,
+      height = 26,
+      animation = {
+        {
+          tileid = 27,
+          duration = 1000
+        },
+        {
+          tileid = 28,
+          duration = 1000
+        },
+        {
+          tileid = 29,
+          duration = 1000
+        },
+        {
+          tileid = 30,
+          duration = 1000
+        },
+        {
+          tileid = 31,
+          duration = 1000
+        },
+        {
+          tileid = 26,
+          duration = 1000
+        }
+      }
+    },
+    {
+      id = 28,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_machines_3.png",
+      width = 23,
+      height = 26,
+      animation = {
+        {
+          tileid = 28,
+          duration = 1000
+        },
+        {
+          tileid = 29,
+          duration = 1000
+        },
+        {
+          tileid = 30,
+          duration = 1000
+        },
+        {
+          tileid = 31,
+          duration = 1000
+        },
+        {
+          tileid = 26,
+          duration = 1000
+        },
+        {
+          tileid = 27,
+          duration = 1000
+        }
+      }
+    },
+    {
+      id = 29,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_machines_4.png",
+      width = 23,
+      height = 26,
+      animation = {
+        {
+          tileid = 29,
+          duration = 1000
+        },
+        {
+          tileid = 30,
+          duration = 1000
+        },
+        {
+          tileid = 31,
+          duration = 1000
+        },
+        {
+          tileid = 26,
+          duration = 1000
+        },
+        {
+          tileid = 27,
+          duration = 1000
+        },
+        {
+          tileid = 28,
+          duration = 1000
+        }
+      }
+    },
+    {
+      id = 30,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_machines_5.png",
+      width = 23,
+      height = 26
+    },
+    {
+      id = 31,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_machines_6.png",
+      width = 23,
+      height = 26,
+      animation = {
+        {
+          tileid = 31,
+          duration = 1000
+        },
+        {
+          tileid = 26,
+          duration = 1000
+        },
+        {
+          tileid = 27,
+          duration = 1000
+        },
+        {
+          tileid = 28,
+          duration = 1000
+        },
+        {
+          tileid = 29,
+          duration = 1000
+        },
+        {
+          tileid = 30,
+          duration = 1000
+        }
+      }
+    },
+    {
+      id = 32,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_tv_1.png",
+      width = 28,
+      height = 22,
+      animation = {
+        {
+          tileid = 32,
+          duration = 100
+        },
+        {
+          tileid = 33,
+          duration = 100
+        },
+        {
+          tileid = 34,
+          duration = 100
+        },
+        {
+          tileid = 35,
+          duration = 100
+        },
+        {
+          tileid = 36,
+          duration = 100
+        },
+        {
+          tileid = 37,
+          duration = 100
+        }
+      }
+    },
+    {
+      id = 33,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_tv_2.png",
+      width = 28,
+      height = 22
+    },
+    {
+      id = 34,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_tv_3.png",
+      width = 28,
+      height = 22
+    },
+    {
+      id = 35,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_tv_4.png",
+      width = 28,
+      height = 22
+    },
+    {
+      id = 36,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_tv_5.png",
+      width = 28,
+      height = 22
+    },
+    {
+      id = 37,
+      image = "../../../assets/sprites/world/maps/dunes/mansion/study_tv_6.png",
+      width = 28,
+      height = 22
     }
   }
 }

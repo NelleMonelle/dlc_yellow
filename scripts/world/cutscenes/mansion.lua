@@ -291,4 +291,37 @@ return {
         cutscene:text("* Chujin Ketsukane")
         cutscene:text("* The best of us.")
     end,
+
+    -- Basement (aka the Study)
+    tv = function(cutscene, event)
+        cutscene:text("* (An old,[wait:5] dusty monitor with\nnothing but static hissing at\nyou.)")
+        cutscene:text("* (This only brings you unease.)")
+    end,
+
+    scraps = function(cutscene, event)
+        cutscene:text("* (A cobweb-ridden box of\nscraps.)")
+    end,
+
+    trash = function(cutscene, event)
+        cutscene:text("* (Dozens of crumpled up\nformulas lie in the bin.)")
+    end,
+
+    study_bookshelf_left = function(cutscene, event)
+        cutscene:text("* (A prototype of a familiar\nface rests on the shelf.)")
+    end,
+
+    study_drawer = function(cutscene, event)
+        cutscene:text("* (A drawer full of\nvideotapes.)")
+        cutscene:text("* (A label on the front reads:\n\"Legacy.\")")
+    end,
+
+    study_box = function(cutscene, event)
+        cutscene:text("* (Forgotten fragments of\nvarious robots.)")
+        cutscene:text("* (All of their soulless eyes\nstare through you.)")
+    end,
+
+    study_bookshelf_right = function(cutscene, event)
+        cutscene:text("* (On the shelf sits many books,[wait:5]\ntheses,[wait:5] and illustrations of\nscience...)")
+        cutscene:text("* (...Most on the subject of\nhumans and their SOULs.)")
+    end,
 }
