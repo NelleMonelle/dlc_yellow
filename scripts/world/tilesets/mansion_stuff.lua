@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   name = "mansion_stuff",
   class = "",
   tilewidth = 580,
@@ -215,27 +215,27 @@ return {
       animation = {
         {
           tileid = 26,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 27,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 28,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 29,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 30,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 31,
-          duration = 1000
+          duration = 100
         }
       }
     },
@@ -247,27 +247,27 @@ return {
       animation = {
         {
           tileid = 27,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 28,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 29,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 30,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 31,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 26,
-          duration = 1000
+          duration = 100
         }
       }
     },
@@ -279,27 +279,27 @@ return {
       animation = {
         {
           tileid = 28,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 29,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 30,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 31,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 26,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 27,
-          duration = 1000
+          duration = 100
         }
       }
     },
@@ -311,27 +311,27 @@ return {
       animation = {
         {
           tileid = 29,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 30,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 31,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 26,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 27,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 28,
-          duration = 1000
+          duration = 100
         }
       }
     },
@@ -349,27 +349,27 @@ return {
       animation = {
         {
           tileid = 31,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 26,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 27,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 28,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 29,
-          duration = 1000
+          duration = 100
         },
         {
           tileid = 30,
-          duration = 1000
+          duration = 100
         }
       }
     },
