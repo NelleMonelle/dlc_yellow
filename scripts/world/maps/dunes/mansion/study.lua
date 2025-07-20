@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 24,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 8,
-  nextobjectid = 34,
+  nextlayerid = 9,
+  nextobjectid = 38,
   properties = {
     ["light"] = true,
     ["music"] = "computer_ambience"
@@ -400,7 +400,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 4,
-      name = "objects",
+      name = "objects_party",
       class = "",
       visible = true,
       opacity = 1,
@@ -580,6 +580,48 @@ return {
           shape = "point",
           x = 310,
           y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 8,
+      name = "objects_overlay",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 36,
+          name = "filter",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 37,
+          name = "mansion_studyparticles",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,

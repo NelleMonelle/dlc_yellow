@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="34">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="38">
  <editorsettings>
   <export target="study.lua" format="lua"/>
  </editorsettings>
@@ -44,7 +44,7 @@
   <object id="23" x="108" y="260" width="18" height="46"/>
   <object id="24" x="236" y="282" width="38" height="46"/>
  </objectgroup>
- <objectgroup id="4" name="objects">
+ <objectgroup id="4" name="objects_party">
   <object id="8" name="transition" x="260" y="880" width="100" height="40">
    <properties>
     <property name="map" value="dunes/mansion/kotatsu"/>
@@ -93,6 +93,14 @@
    <point/>
   </object>
   <object id="26" name="spawn" x="310" y="400">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="objects_overlay">
+  <object id="36" name="filter" x="0" y="0">
+   <point/>
+  </object>
+  <object id="37" name="mansion_studyparticles" x="40" y="0">
    <point/>
   </object>
  </objectgroup>
