@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 21,
+  nextobjectid = 23,
   properties = {
     ["light"] = true,
     ["music"] = "vigorous_terrain",
@@ -238,6 +238,38 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 21,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 780,
+          y = 280,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "_THISDLCISUNFINISHED",
+            ["once"] = false
+          }
+        },
+        {
+          id = 22,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 180,
+          y = 280,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "nuhuh",
+            ["once"] = false
+          }
         }
       }
     },

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="21">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="23">
  <editorsettings>
   <export target="34.lua" format="lua"/>
  </editorsettings>
@@ -102,6 +102,18 @@ amount of G inside.)</property>
   </object>
   <object id="19" name="savepoint" x="520" y="321">
    <point/>
+  </object>
+  <object id="21" name="script" x="780" y="280" width="40" height="160">
+   <properties>
+    <property name="cutscene" value="_THISDLCISUNFINISHED"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="22" name="script" x="180" y="280" width="40" height="160">
+   <properties>
+    <property name="cutscene" value="nuhuh"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
   </object>
  </objectgroup>
  <objectgroup id="3" name="collision">
