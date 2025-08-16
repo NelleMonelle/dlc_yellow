@@ -118,6 +118,33 @@ function Axis:onAct(battler, name)
             else
                 return "* Noelle doesn't have anything more to say."
             end
+        elseif battler.chara.id == "jamm" then
+            if not self.jamm_acted then
+                Game.battle:startActCutscene(function(cutscene)
+                    cutscene:text("* Alright,[wait:5] let me think...", "look_left", "jamm")
+                    cutscene:text("* Hmm...[wait:5] How would one go about dealing with an aggressive robot?", "suspicious", "jamm")
+                    cutscene:text("* Oh![wait:5] I know.", "smug", "jamm")
+                    cutscene:text("* Hey,[wait:5] Axis!", "smirk", "jamm")
+                    cutscene:battlerText(self, {
+                        "WHAT IS IT.",
+                        "IT BETTER BE\nIMPORTANT."
+                    })
+                    cutscene:text("* This.[wait:5] Sentance.[wait:5] Is.[wait:5] False!", "smirk", "jamm")
+                    cutscene:battlerText(self, {
+                        ".  .  .",
+                        "[color:FF00FF]PARADOX\nDETECTED.",
+                        "[color:FF00FF]ERASING THE\nMEMORY ABOUT\nRECIEVING THE\nPARADOX."
+                    })
+                    cutscene:text("* Damn it.[wait:5] His creator was smart...", "suspicious", "jamm")
+                end)
+                self.jamm_acted = true
+                return
+            else
+                Game.battle:startActCutscene(function(cutscene)
+                    cutscene:text("* Sorry.[wait:5] Outta ideas.", "look_left", "jamm")
+                end)
+                return
+            end
         else
             return "* But "..battler.chara:getName().." didn't know what to do."
         end
