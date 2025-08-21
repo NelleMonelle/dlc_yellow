@@ -49,6 +49,7 @@ function Axis:init()
     self:registerAct("Scrutinize")
     self:registerAct("Cool")
     --self:registerAct("Compliment")
+	self:registerMarcyAct("Marcy's Idea")
 
     self.gauge_size = {250, 18}
 
@@ -82,6 +83,28 @@ function Axis:onAct(battler, name)
         end
     elseif name == "Cool" then
         return "* You pull on your shirt\nrepeatedly in hopes to beat the\nheat. Your effort fails."
+    elseif name == "Marcy's Idea" then
+        if not self.marcy_acted then
+			Game.battle:startActCutscene(function(cutscene)
+				cutscene:text("* Marcy has an idea...", "neutral", "marcy")
+				cutscene:text("* Hey, Axis?", "neutral", "marcy")
+				cutscene:battlerText(self, {
+                    "WHAT IS IT.",
+                    "IT BETTER BE\nIMPORTANT."
+                })
+				cutscene:text("* Y-you wouldn't h-hurt a poor child l-like Marcy, would you?", "frown", "marcy")
+				cutscene:text("* M-Marcy just wants t-to go home...", "frown", "marcy")
+				cutscene:battlerText(self, {
+                    "SCANNING ENTITY...",
+                    "FAKE TEARS DETECTED.\nRESUMING PROTOCOL.",
+                })
+				cutscene:text("* Drat...", "disturbed", "marcy")
+			end)
+			self.marcy_acted = true
+			return
+		else
+			return "* Marcy seems to be out of ideas."
+		end
     elseif name == "Standard" then
         if battler.chara.id == "susie" then
             if not self.susie_acted then
@@ -129,7 +152,7 @@ function Axis:onAct(battler, name)
                         "WHAT IS IT.",
                         "IT BETTER BE\nIMPORTANT."
                     })
-                    cutscene:text("* This.[wait:5] Sentance.[wait:5] Is.[wait:5] False!", "smirk", "jamm")
+                    cutscene:text("* This sentence is false!", "smirk", "jamm")
                     cutscene:battlerText(self, {
                         ".  .  .",
                         "[color:FF00FF]PARADOX\nDETECTED.",
