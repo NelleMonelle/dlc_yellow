@@ -130,7 +130,7 @@ function Ceroba:getNextWaves()
         return {"ceroba/black_hole"} -- Attack 3
     elseif self.attack_cycle == 4 then
         self.attack_cycle = 5
-        return {"ceroba/flower_spiral"} -- Attack 4
+        return {"ceroba/flower_slider"} -- Attack 4
     elseif self.attack_cycle == 5 then
         self.attack_cycle = 6
         return {"ceroba/movingarena"} -- Attack 5
