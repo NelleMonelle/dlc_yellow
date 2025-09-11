@@ -33,8 +33,12 @@
 
     "config": {
         "kristal": {
-          "lightCurrency": "Gold",
-          "lightCurrencyShort": "G"
+            "lightCurrency": "Gold",
+            "lightCurrencyShort": "G",
+            "growStronger": false,
+		    "pacifyGlow": true,
+			"tiredMessages": true,
+			"awakeMessages": true
         },
         "magical-glass": {
             "default_battle_system": ["undertale", true],
