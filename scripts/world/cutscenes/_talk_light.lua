@@ -14,6 +14,7 @@ return function(cutscene)
         if susie then
             cutscene:showNametag("Susie")
             cutscene:text("* Dang,[wait:5] this place is kinda...[wait:10] creepy.", "nervous_side", "susie")
+            cutscene:text("* Dark,[wait:5] dusty,[wait:5] silent...", "suspicious", "susie")
             if noelle then
                 cutscene:showNametag("Noelle")
                 cutscene:text("* I agree...", "what_smile", "noelle")
@@ -26,10 +27,59 @@ return function(cutscene)
             end
             cutscene:hideNametag()
         end
+    elseif Game.world.map.id == "steamworks/02" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Oh hey,[wait:5] there's some computers right here!", "surprise", "susie")
+            cutscene:text("* Think they have some games on them?", "smile", "susie")
+            cutscene:text("* ...", "nervous", "susie")
+            cutscene:text("* Actually,[wait:5] scratch that.[wait:5] They're like a bajillion years old.", "nervous_side", "susie")
+            cutscene:text("* I doubt they even work.", "annoyed", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "steamworks/03" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* A big doorway...", "neutral_side", "susie")
+            cutscene:text("* Hey,[wait:5] I think it's actually brighter there.", "surprise", "susie")
+            cutscene:text("* Let's get going.[wait:5] Don't wanna stay in here for too long.", "neutral", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "steamworks/03" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* A big doorway...", "neutral_side", "susie")
+            cutscene:text("* Hey,[wait:5] I think it's actually brighter there.", "surprise", "susie")
+            cutscene:text("* Let's get going.[wait:5] Don't wanna stay in here for too long.", "neutral", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "steamworks/04" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Woah,[wait:5] that's a huge thing.", "surprise", "susie")
+            cutscene:text("* Looks like some sorta generator or something...", "nervous", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "steamworks/05" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Split path.[wait:5] Great.", "nervous_side", "susie")
+            cutscene:text("* If I had to guess...", "neutral_side", "susie")
+            cutscene:text("* I'd say we should go into the door with pink glow.", "small_smile", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "steamworks/05b" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Ugh,[wait:5] seriously?", "suspicious", "susie")
+            cutscene:text("* Laundry room?[wait:5] Here of all places?", "annoyed", "susie")
+            cutscene:text("* Whatever.[wait:5] Let's just not get stuck here for long.", "neutral_side", "susie")
+            cutscene:hideNametag()
+        end
     elseif Game.world.map.id == "steamworks/06" then
         if susie then
             cutscene:showNametag("Susie")
-            cutscene:text("* Woah,[wait:5] it's kinda hot in here...", "surprise", "susie")
+            cutscene:text("* Woah,[wait:5] it's like...[wait:5] Boiling hot in here.", "surprise_frown", "susie")
             if noelle then
                 cutscene:showNametag("Noelle")
                 cutscene:text("* Totally.", "frown", "noelle")
@@ -37,16 +87,23 @@ return function(cutscene)
                 cutscene:text("* Ever.", "confused_surprise", "noelle")
                 cutscene:showNametag("Susie")
             end
-            cutscene:text("* Also,[wait:5] what is this pink goo...?", "suspicious", "susie")
+            cutscene:text("* Is it because of that goo?[wait:5] What even is that?", "nervous_side", "susie")
             if (jamm and not Game:getFlag("dungeonkiller")) or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Maybe the coolant?", "look_left", "jamm")
-                cutscene:text("* Anything complex has to cool down somehow...", "look_left", "jamm")
+                cutscene:text("* Anything huge like this place has to cool down somehow...", "look_left", "jamm")
             end
             cutscene:hideNametag()
         end
     elseif Game.world.map.id == "steamworks/06b" then
-        if Game.world:getCharacter("noel") then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* \"STEAMWORKS\"?", "neutral_side", "susie")
+            cutscene:text("* Guess this must the name of this place.", "neutral", "susie")
+            cutscene:text("* Though,[wait:5] it would've been more useful...", "nervous", "susie")
+            cutscene:text("* To have that sign at the entrance,[wait:5] you know?", "annoyed", "susie")
+            cutscene:hideNametag()
+        elseif Game.world:getCharacter("noel") then
             if Game:getFlag("talk_stw_06b_noel") ~= 1 then
                 cutscene:showNametag("Noel")
                 cutscene:text("* ... Steamworks...[wait:5] Just steamworks...", "neutral", "noel")
@@ -61,10 +118,24 @@ return function(cutscene)
                 cutscene:text("* What?", "neutral", "noel")
             end
         end
+    elseif Game.world.map.id == "steamworks/07" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Kinda glad those vents on the floor aren't working.", "nervous", "susie")
+            cutscene:text("* Wouldn't wanna get burned by a stream of hot steam or anything.", "nervous_side", "susie")
+            cutscene:hideNametag()
+        end
+    elseif Game.world.map.id == "steamworks/08" then
+        if susie then
+            cutscene:showNametag("Susie")
+            cutscene:text("* Guess our only way is up.", "nervous_side", "susie")
+            cutscene:text("* Damn it,[wait:5] I hate long stairs...", "annoyed", "susie")
+            cutscene:hideNametag()
+        end
     elseif Game.world.map.id == "steamworks/09" then
         if susie then
             cutscene:showNametag("Susie")
-            cutscene:text("* Dang,[wait:5] we're kinda high up...", "nervous_side", "susie")
+            cutscene:text("* Huh,[wait:5] we're kinda high up...", "nervous_side", "susie")
             if (jamm and not Game:getFlag("dungeonkiller")) or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Then I hope nobody here is scared of heights.", "look_left", "jamm")
@@ -73,9 +144,13 @@ return function(cutscene)
                     cutscene:text("* ...", "what_smile", "noelle")
                 end
 				if jammarcy then
+                    cutscene:showNametag("Jamm")
 					cutscene:text("* (Don't look down,[wait:5] Marcy...)", "nervous_left", "jamm")
 				end
+                cutscene:showNametag("Susie")
             end
+            cutscene:text("* At least we're back to normal temperatures.", "neutral", "susie")
+            cutscene:text("* It felt like literal hell down there.", "annoyed", "susie")
             cutscene:hideNametag()
         elseif noelle then
             cutscene:showNametag("Noelle")
@@ -156,7 +231,7 @@ return function(cutscene)
             if noelle then
                 cutscene:showNametag("Noelle")
                 cutscene:text("* I gotta admit...", "confused_surprise_b", "noelle")
-                cutscene:text("* That place really tired me out, haha...", "what_smile", "noelle")
+                cutscene:text("* That place really tired me out,[wait:5] haha...", "what_smile", "noelle")
             end
             if (jamm and not Game:getFlag("dungeonkiller")) or jammarcy then
                 cutscene:showNametag("Jamm")
