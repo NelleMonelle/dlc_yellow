@@ -45,14 +45,6 @@ return function(cutscene)
             cutscene:text("* Let's get going.[wait:5] Don't wanna stay in here for too long.", "neutral", "susie")
             cutscene:hideNametag()
         end
-    elseif Game.world.map.id == "steamworks/03" then
-        if susie then
-            cutscene:showNametag("Susie")
-            cutscene:text("* A big doorway...", "neutral_side", "susie")
-            cutscene:text("* Hey,[wait:5] I think it's actually brighter there.", "surprise", "susie")
-            cutscene:text("* Let's get going.[wait:5] Don't wanna stay in here for too long.", "neutral", "susie")
-            cutscene:hideNametag()
-        end
     elseif Game.world.map.id == "steamworks/04" then
         if susie then
             cutscene:showNametag("Susie")
