@@ -187,10 +187,20 @@ end
 function Ceroba:beforeStateChange(old, new)
     local ceroba = Game.battle:getEnemyBattler("ceroba_geno")
     if ceroba then
-        if old == "DEFENDINGEND" and new ~= "DEFENDINGEND" and not self.intro_finished then
+        if old == "DEFENDING" and new ~= "DEFENDING" and not self.intro_finished then
+            -- clears the wave if you skip it using debug
+            for _,wave in ipairs(Game.battle.waves) do
+                if not wave:onEnd(false) then
+                    wave:clear()
+                    wave:remove()
+                end
+            end
             self.intro_finished = true
-            Game.battle:setState("NONE")
-            Game.battle:startCutscene("ceroba_geno", "intro")
+            Game.battle:setState("DEFENDINGEND", "NONE")
+            Game.battle.timer:afterCond(function() return Game.battle.substate == "ARENARESET" end, function()
+                Game.battle:setSubState("NONE")
+                Game.battle:startCutscene("ceroba_geno", "intro")
+            end)
         end
         if old == "ENEMYDIALOGUE" and new ~= "ENEMYDIALOGUE" and ceroba.health <= 500 and ceroba.phase == 1 then
             ceroba.phase = 2

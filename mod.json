@@ -28,7 +28,8 @@
     },
 
     "sharedlibs": [
-        "borders"
+        "borders",
+        "engine-fixes"
     ],
 
     "config": {
