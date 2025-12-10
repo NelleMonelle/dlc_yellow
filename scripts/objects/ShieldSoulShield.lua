@@ -1,19 +1,20 @@
-local ShieldSoulShield, super = Class(Object)
+local ShieldSoulShield, super = Class(Sprite)
 
 function ShieldSoulShield:init(x, y)
-    super.init(self, x, y)
-
-    self.layer = BATTLE_LAYERS["above_bullets"]
-    self:setSprite("player/shield")
+    super.init(self, "player/shield", x, y)
+    self:setOriginExact(9, 0)
     self:setScale(2)
+    self.layer = BATTLE_LAYERS["above_bullets"]
     self.collider = Hitbox(self, 0, 0, self.width, 1)
-    self.physics = nil
-
 end
 
 function ShieldSoulShield:resolveBulletCollision(bullet)
-	Assets.playSound("trash_can_hit")
-	bullet:remove()
+    if bullet.shield_immune then
+        return
+    end
+    bullet:onShieldCollision()
+	Assets.playSound("trash_can_hit", 1, MathUtils.random(0.7, 1.3))
+    Game.battle.soul:offsetShield()
 end
 
 function ShieldSoulShield:update()
@@ -31,16 +32,6 @@ function ShieldSoulShield:update()
     for _,bullet in ipairs(collided_bullets) do
         self:resolveBulletCollision(bullet)
     end
-end
-
-function ShieldSoulShield:setSprite(sprite)
-    if self.sprite then
-        self.sprite:remove()
-    end
-
-    self.sprite = Sprite(sprite, 0, 0)
-    self:addChild(self.sprite)
-    self:setSize(self.sprite:getSize())
 end
 
 function ShieldSoulShield:draw()

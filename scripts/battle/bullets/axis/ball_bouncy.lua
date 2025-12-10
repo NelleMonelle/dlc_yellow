@@ -16,6 +16,13 @@ function AxisBall:init(x, y, dir, speed, expl)
     self:setScale(1, 1)
 end
 
+function AxisBall:onShieldCollision()
+    if Game.battle.encounter.trash_meter then
+        Game.battle.encounter.trash_meter = Utils.clamp(Game.battle.encounter.trash_meter + 10, 0, 100)
+    end
+    self:remove()
+end
+
 function AxisBall:update()
     if self:collidesWith(Game.battle.arena.collider.colliders[1]) then
         if self.physics.direction == -math.pi / 2 then
@@ -55,7 +62,7 @@ function AxisBall:update()
     if self:collidesWith(Game.battle.arena.collider.colliders[3]) then
         if self.can_explode then
             Assets.playSound("ceroba_boom")
-            self.wave:spawnBulletTo(Game.battle.arena, "axis/arenaflash", 0, 0)
+            self.wave:spawnBulletTo(Game.battle.arena.mask, "axis/arenaflash", 0, 0)
             self:remove()
         else
             if self.physics.direction == math.pi / 2 then

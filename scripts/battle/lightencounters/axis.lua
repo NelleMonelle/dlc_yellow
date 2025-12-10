@@ -11,6 +11,8 @@ function Axis:init()
     self:addEnemy("axis")
 
     self.can_flee = false
+
+    self.trash_meter = 0
 end
 
 function Axis:setBattleState()
@@ -21,10 +23,10 @@ end
 function Axis:drawBackground() end -- leave it empty to NOT draw the rectangle background
 
 function Axis:onBattleInit()
-    self.battery_meter = Game.battle:addChild(AxisBatteryMeter())
-    self.battery_meter.sprite:setPosition(20, -60)
-    self.tick_o_bar = Game.battle:addChild(AxisTickOBar())
-    self.tick_o_bar.sprite:setPosition(557, -60)
+    self.battery_meter = AxisBatteryMeter(20, -80)
+    Game.battle:addChild(self.battery_meter)
+    self.tick_o_bar = AxisTickOBar(557, -80)
+    Game.battle:addChild(self.tick_o_bar)
 	self.bg = Game.battle:addChild(AxisBattleBackground())
 	self.bg:setLayer(LIGHT_BATTLE_LAYERS["below_battlers"])
 end
@@ -34,12 +36,12 @@ function Axis:onReturnToWorld(events)
 end
 
 function Axis:beforeStateChange(old, new)
-    if old ~= "DEFENDING" and new == "DEFENDING" then
-		self.battery_meter:slideTo(self.battery_meter.x, 70, 0.5)
-        self.tick_o_bar:slideTo(self.tick_o_bar.x, 70, 0.5)
-    elseif old == "DEFENDING" and new ~= "DEFENDING" then
-		self.battery_meter:slideTo(self.battery_meter.x, -50, 0.5)
-        self.tick_o_bar:slideTo(self.tick_o_bar.x, -50, 0.5)
+    if new == "DEFENDINGBEGIN" then
+		self.battery_meter.move_up = false
+        self.tick_o_bar.move_up = false
+    elseif new == "DEFENDINGEND" then
+		self.battery_meter.move_up = true
+        self.tick_o_bar.move_up = true
     end
 end
 

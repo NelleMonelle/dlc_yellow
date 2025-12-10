@@ -5,13 +5,11 @@ function ShieldSoul:init(x, y, color)
 
     self.color = color or {1, 0, 0}
 
-	-- internal stuff
-	self.tween = nil
-
-	self.shield = ShieldSoulShield((-self.width * 1.5) + 12, (-self.height * 1.5) + 2)
-
+    self.shield_offset = 10
+    self.shield_offset_max = 10
+    self.shield_offset_min = 5
+	self.shield = ShieldSoulShield(0, -self.height - self.shield_offset)
 	self:addChild(self.shield)
-
 end
 
 function ShieldSoul:doMovement()
@@ -36,6 +34,17 @@ function ShieldSoul:doMovement()
             self.moving_x = 0
         end
     end
+end
+
+function ShieldSoul:offsetShield()
+	self.shield_offset = self.shield_offset_min
+end
+
+function ShieldSoul:update()
+    super.update(self)
+
+    self.shield.y = -self.height - self.shield_offset
+    self.shield_offset = MathUtils.lerp(self.shield_offset, self.shield_offset_max, 0.1*DTMULT)
 end
 
 return ShieldSoul
