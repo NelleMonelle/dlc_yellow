@@ -176,26 +176,11 @@ function Jandroid:onAct(battler, name)
                     return "* Dess continues to throw the trash back at Jandroid."
                 end
 			elseif battler.chara.id == "jamm" then
-				if Game:getFlag("dungeonkiller") then
-                    Game.battle:startActCutscene(function(cutscene)
-                        cutscene:text("* ...", "shaded_neutral", "jamm")
-                    end)
-                    return
-                elseif Game:getFlag("marcy_joined") then
-                    Game.battle:startActCutscene(function(cutscene)
-                        cutscene:text("* Papa,[wait:5] Marcy is enjoying the music.", "happy", "marcy")
-                        cutscene:text("* Me too,[wait:5] Marcy...[wait:10] Me too.", "happy", "jamm")
-                    end)
-                    self:addMercy(50)
-                    return
-                else
-                    Game.battle:startActCutscene(function(cutscene)
-                        cutscene:text("* Now that's what I'm talking about.", "smug", "jamm")
-                        cutscene:text("* This new track is quite enjoyable.", "smirk", "jamm")
-                    end)
-                    self:addMercy(50)
-                    return
-                end
+                Game.battle:startActCutscene(function(cutscene)
+                    cutscene:text("* Jamm slings the trash away...")
+                    cutscene:text("* Jandroid doesn't seem to like that.")
+                end)
+				return
             else
                 self.wave_override = "jandroid/garbage_cans"
                 local rnd = Utils.pick({1, 2})
