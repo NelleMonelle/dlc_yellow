@@ -129,7 +129,7 @@ return {
                 cutscene:text("* - RESISTING ARREST.", "normal", "axis")
                 if cutscene:getCharacter("kris") or cutscene:getCharacter("hero") or cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
                     cutscene:text("* - HUMAN.", "normal", "axis")
-                    if (cutscene:getCharacter("jamm_lw") and not Game:getFlag("dungeonkiller")) or cutscene:getCharacter("jammarcy_light") then
+                    if cutscene:getCharacter("jamm_lw") or cutscene:getCharacter("jammarcy_light") then
                         cutscene:showNametag("Jamm")
                         cutscene:text("* Since when is being a human a crime?", "determined", "jamm")
                         cutscene:showNametag("Axis")
@@ -171,7 +171,7 @@ return {
                         cutscene:text("* I WILL JUST HAVE TO GO\nWITH MY NON-EXISTENT GUT\nAND SAY YOU WERE LYING.", "normal", "axis")
                     else
                         cutscene:text("* AHA.[wait:5] I SEE NERVOUSNESS IN YOUR FACE.", "normal", "axis")
-						if Game.party[1].id == "jamm" and not Game:getFlag("dungeonkiller") then
+						if Game.party[1].id == "jamm" then
 							cutscene:text("* THAT MEANS YOU WERE LYING.[react:1]", "normal", "axis", {reactions={
 								{"(Stay quiet,\nLuthane...)", 352, 61, "nervous_left", "jamm"}
 							}})

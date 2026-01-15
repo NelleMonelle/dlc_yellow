@@ -178,9 +178,7 @@ function Goosic:onAct(battler, name)
                         return "* Dess is still somehow enjoying the music."
                     end
                 elseif battler.chara.id == "jamm" then
-					if Game:getFlag("dungeonkiller") then
-					    return "* Jamm doesn't care about the loud music."
-                    elseif Game:getFlag("marcy_joined") then
+					if Game:getFlag("marcy_joined") then
                         return "* Jamm and Marcy don't enjoy the music."
                     else
                         return "* Jamm doesn't enjoy the music."
@@ -233,12 +231,7 @@ function Goosic:onAct(battler, name)
                         return "* Dess is not enjoying the music."
                     end
                 elseif battler.chara.id == "jamm" then
-                    if Game:getFlag("dungeonkiller") then
-                        Game.battle:startActCutscene(function(cutscene)
-                            cutscene:text("* ...", "shaded_neutral", "jamm")
-                        end)
-					    return
-                    elseif Game:getFlag("marcy_joined") then
+                    if Game:getFlag("marcy_joined") then
                         Game.battle:startActCutscene(function(cutscene)
                             cutscene:text("* Papa,[wait:5] Marcy is enjoying the music.", "happy", "marcy")
                             cutscene:text("* Me too,[wait:5] Marcy...[wait:10] Me too.", "happy", "jamm")

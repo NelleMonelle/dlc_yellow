@@ -80,7 +80,7 @@ return function(cutscene)
                 cutscene:showNametag("Susie")
             end
             cutscene:text("* Is it because of that goo?[wait:5] What even is that?", "nervous_side", "susie")
-            if (jamm and not Game:getFlag("dungeonkiller")) or jammarcy then
+            if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Maybe the coolant?", "look_left", "jamm")
                 cutscene:text("* Anything huge like this place has to cool down somehow...", "look_left", "jamm")
@@ -128,7 +128,7 @@ return function(cutscene)
         if susie then
             cutscene:showNametag("Susie")
             cutscene:text("* Huh,[wait:5] we're kinda high up...", "nervous_side", "susie")
-            if (jamm and not Game:getFlag("dungeonkiller")) or jammarcy then
+            if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Then I hope nobody here is scared of heights.", "look_left", "jamm")
                 if noelle then
@@ -177,7 +177,7 @@ return function(cutscene)
             cutscene:text("* Did they just suddenly turned off and were left here?", "suspicious", "susie")
             cutscene:text("* Why would anybody just leave those things lying around?", "suspicious", "susie")
             cutscene:text("* That's just weird.", "annoyed", "susie")
-			if (jamm and not Game:getFlag("dungeonkiller")) or jammarcy then
+			if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* You have to keep in mind this place is abandoned.", "neutral", "jamm")
                 cutscene:text("* Can't imagine the bots can self-sustain for...[wait:5] How long now?", "nervous_left", "jamm")
@@ -225,7 +225,7 @@ return function(cutscene)
                 cutscene:text("* I gotta admit...", "confused_surprise_b", "noelle")
                 cutscene:text("* That place really tired me out,[wait:5] haha...", "what_smile", "noelle")
             end
-            if (jamm and not Game:getFlag("dungeonkiller")) or jammarcy then
+            if jamm or jammarcy then
                 cutscene:showNametag("Jamm")
                 cutscene:text("* Can't believe I'm saying this,[wait:5] but...[wait:5] Same.", "stern", "jamm")
             end
@@ -287,11 +287,7 @@ return function(cutscene)
                 cutscene:text("* [speed:0.1]...", "alt_1", "ceroba")
             end
             if jamm or jammarcy then
-                if Game:getFlag("dungeonkiller") then
-                    cutscene:text("* [speed:0.1]...", "shaded_neutral", "jamm")
-                else
-                    cutscene:text("* I think we should get going.", "look_left", "jamm")
-                end
+                cutscene:text("* I think we should get going.", "look_left", "jamm")
             end
         else
             cutscene:text("* Your voice echoes aimlessly.")
