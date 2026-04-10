@@ -39,4 +39,9 @@ function actor:init()
     }
 end
 
+function actor:onTextSound()
+    Assets.stopAndPlaySound("voice/axis", 1, Game:getFlag("axis_voice_pitch", 1))
+    return true
+end
+
 return actor

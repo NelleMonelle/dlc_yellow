@@ -59,4 +59,9 @@ end
     end
 end]]
 
+function actor:onTextSound()
+    Assets.stopAndPlaySound("voice/martlet")
+    return true
+end
+
 return actor

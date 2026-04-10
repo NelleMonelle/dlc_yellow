@@ -1,7 +1,7 @@
 return {
   version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -48,6 +48,7 @@ return {
           width = 640,
           height = 1446,
           rotation = 0,
+          opacity = 1,
           gid = 7,
           visible = true,
           properties = {}
@@ -78,6 +79,7 @@ return {
           width = 244,
           height = 16,
           rotation = 0,
+          opacity = 1,
           gid = 8,
           visible = true,
           properties = {}
@@ -92,6 +94,7 @@ return {
           width = 310,
           height = 58,
           rotation = 0,
+          opacity = 1,
           gid = 9,
           visible = true,
           properties = {}
@@ -106,6 +109,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "newhome/02",
@@ -122,9 +126,10 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
-            ["actor"] = "ceroba",
+            ["actor"] = "ceroba_lw",
             ["cutscene"] = "ceroba.newhome",
             ["facing"] = "up"
           }
@@ -155,6 +160,7 @@ return {
           width = 40,
           height = 640,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -168,6 +174,7 @@ return {
           width = 40,
           height = 640,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -181,6 +188,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -199,6 +207,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -217,6 +226,7 @@ return {
           width = 44,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -230,6 +240,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -243,6 +254,7 @@ return {
           width = 116,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -256,6 +268,7 @@ return {
           width = 114,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -269,6 +282,7 @@ return {
           width = 40,
           height = 320,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -282,6 +296,7 @@ return {
           width = 40,
           height = 320,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -295,6 +310,7 @@ return {
           width = 310,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -308,6 +324,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -326,6 +343,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -344,6 +362,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -362,6 +381,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -391,6 +411,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -404,6 +425,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }

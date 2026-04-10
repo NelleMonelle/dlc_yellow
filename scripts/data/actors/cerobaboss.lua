@@ -298,7 +298,11 @@ function actor:init()
             part.sprite.y = 112 * part.stretch
         end
     })
+end
 
+function actor:onTextSound()
+    Assets.stopAndPlaySound("voice/ceroba")
+    return true
 end
 
 return actor

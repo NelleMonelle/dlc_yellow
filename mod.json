@@ -7,7 +7,7 @@
     "version": "v0.0.1",
     "engineVer": "v0.9.0-dev",
 
-    "chapter": 2,
+    "chapter": 4,
 
     "map": "dunes/34",
 
@@ -36,10 +36,7 @@
         "kristal": {
             "lightCurrency": "Gold",
             "lightCurrencyShort": "G",
-            "growStronger": false,
-		    "pacifyGlow": true,
-			"tiredMessages": true,
-			"awakeMessages": true
+            "growStronger": false
         },
         "magical-glass": {
             "default_battle_system": ["undertale", true],
