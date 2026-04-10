@@ -1,18 +1,13 @@
 local CerobaDiamond, super = Class(Bullet)
 
-function CerobaDiamond:init(x, y, dir, speed)
-    -- Last argument = sprite path
+function CerobaDiamond:init(x, y)
     super.init(self, x, y, "battle/bullets/ceroba/diamond")
 
-    -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
-    self.physics.direction = dir
-    -- Speed the bullet moves (pixels per frame at 30FPS)
-    self.physics.speed = speed
-
     self.collider = nil
+    self.can_graze = false
     self.destroy_on_hit = false
-    self.sprite:setAnimation({"battle/bullets/ceroba/diamond", 1/15, false})
-    Assets.playSound("trap")
+    self.sprite:play(1/15, false, function() self:fadeOutAndRemove(0.25) end)
+    Assets.playSound("ceroba_trap")
 end
 
 function CerobaDiamond:onCollide(soul)
@@ -34,12 +29,12 @@ function CerobaDiamond:onCollide(soul)
 end
 
 function CerobaDiamond:update()
-    Game.battle.timer:after(0.46, function()
-        self.collider = PolygonCollider(self, {{24.5,4.5},{41.5,21.5},{24.5,38.5},{23.5,38.5},{6.5,21.5},{23.5,4.5}})
-    end)
-    Game.battle.timer:after(0.66, function()
-        self:remove()
-    end)
+    if self.sprite.frame >= 8 and self.collider == nil then
+        self.collider = PolygonCollider(self, {{24,4},{41,21},{24,38},{23,38},{6,21},{23,4}})
+    end
+    if self.alpha < 1 and self.collider ~= nil then
+        self.collider = nil
+    end
 
     super.update(self)
 end
