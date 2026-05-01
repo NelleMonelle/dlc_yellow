@@ -4,7 +4,7 @@ return function(cutscene, event)
     cutscene:text("* So here you go")
     Music("fanfare", 1, 1, false)
     Game.world:spawnNPC("ceroba_lw", Game.world.player.x+100, Game.world.player.y-320)
-    local roba = cutscene:getCharacter("ceroba")
+    local roba = cutscene:getCharacter("ceroba_lw")
     cutscene:wait(cutscene:slideTo(roba, roba.x, Game.world.player.y, 10))
     cutscene:wait(1)
     if #Game.party >= 4 then
