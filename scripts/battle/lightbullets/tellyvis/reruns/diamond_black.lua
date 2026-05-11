@@ -65,7 +65,7 @@ function RerunDiamondBlack:draw()
 			Draw.setColor(1,1,1,1 - self.alpha)
 			love.graphics.push()
 			love.graphics.origin()
-			Draw.draw(self.sprite.texture, self.x, self.y, futuredir, 3 - (self.alpha * 2), 3 - (self.alpha * 2), 16, 15)
+			Draw.draw(self.sprite.texture, self.x, self.y, futuredir, 3 - (self.alpha * 2), 3 - (self.alpha * 2), 16, 9)
 			love.graphics.pop()
 		end
 	end
