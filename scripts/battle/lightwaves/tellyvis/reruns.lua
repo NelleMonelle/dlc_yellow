@@ -27,7 +27,7 @@ local function doRerun(self, wait, enemy, atk)
             local x = math.cos(math.rad(-dir)) * radius
             local y = math.sin(math.rad(-dir)) * radius
 		
-            local diamond = self:spawnBullet("rudinn/diamond_black", soul.x + x, soul.y + y)
+            local diamond = self:spawnBullet("tellyvis/reruns/diamond_black", soul.x + x, soul.y + y)
         end
     end)
 		wait(2.75)

@@ -5,7 +5,7 @@ function RerunDiamondBlack:init(x, y)
 
 	self.alpha = 0
 	self:fadeToSpeed(1, 0.1)
-    self.rotation = Utils.angle(self.x, self.y, Game.battle.soul.x, Game.battle.soul.y)
+    self.rotation = MathUtils.angle(self.x, self.y, Game.battle.soul.x, Game.battle.soul.y)
     self.physics.speed = 0
 	self.physics.match_rotation = true
     self.grazed = false
