@@ -69,7 +69,7 @@ function RerunSpinHeart:update()
 			if self.x < Game.battle.arena.left + 30 then
 				table.insert(rejected, 37.5)
 			end
-			self.spinmax = MathUtils.pick({26.25,30,33.75,37.5}, (function(value) return not Utils.containsValue(rejected, value) end))
+			self.spinmax = TableUtils.pick({26.25,30,33.75,37.5}, (function(value) return not TableUtils.contains(rejected, value) end))
             self.con = 2
             self.htimer = 0
         end
