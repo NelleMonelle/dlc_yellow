@@ -39,7 +39,7 @@ local function doRerun(self, wait, enemy, atk)
 		wait(2.5)
 	end
 	if atk == "jigsawry" then
-		if Utils.pick({0,1}) == 0 then
+		if TableUtils.pick({0,1}) == 0 then
 			local x = Game.battle.soul.x
 			local y1 = Game.battle.arena.y - 150
 			local y2 = Game.battle.arena.y + 150
@@ -67,7 +67,7 @@ local function doRerun(self, wait, enemy, atk)
 			self.bulletid = self.bulletid + 1
 		end
 		self.rerun_timer = self.timer:every(0.75, function()
-			if Utils.pick({0,1}) == 0 then
+			if TableUtils.pick({0,1}) == 0 then
 				local x = Game.battle.soul.x
 				local y1 = Game.battle.arena.y - 150
 				local y2 = Game.battle.arena.y + 150
@@ -99,9 +99,9 @@ local function doRerun(self, wait, enemy, atk)
 	end
 	if atk == "bloxer" then
 		self.rerun_timer = self.timer:every(0.5, function()
-			local pos = Utils.pick({0,1,2,3,4})
+			local pos = TableUtils.pick({0,1,2,3,4})
 			if pos == self.block_prevpos then
-				pos = Utils.pick({0,1,2,3,4})
+				pos = TableUtils.pick({0,1,2,3,4})
 			end
 			self.block_prevpos = pos
 			local bullet = self:spawnBullet("tellyvis/reruns/blockfall", 100, 100)
@@ -121,7 +121,7 @@ local function doRerun(self, wait, enemy, atk)
 		wait(3.5)
 	end
 	if atk == "clover" then
-		local dir = Utils.pick({225, 315})
+		local dir = TableUtils.pick({225, 315})
 		local xx = math.cos(math.rad(dir))*400
 		local yy = math.sin(math.rad(dir))*400
 		local bullet = self:spawnBullet("tellyvis/reruns/clubs_black", Game.battle.soul.x+xx, Game.battle.soul.y+yy)
@@ -141,7 +141,7 @@ local function doRerun(self, wait, enemy, atk)
 			bullet:fadeOutAndRemove(0.2)
 		end)
 		self.rerun_timer = self.timer:every(1.0, function()
-			local dir = Utils.pick({225, 315})
+			local dir = TableUtils.pick({225, 315})
 			local xx = math.cos(math.rad(dir))*400
 			local yy = math.sin(math.rad(dir))*400
 			local bullet = self:spawnBullet("tellyvis/reruns/clubs_black", Game.battle.soul.x+xx, Game.battle.soul.y+yy)
@@ -169,7 +169,7 @@ local function doRerun(self, wait, enemy, atk)
 			if self.side == 1 then
 				xx = Game.battle.arena.right+80
 			end
-			local yy = Utils.random(Game.battle.arena.top, Game.battle.arena.bottom)
+			local yy = MathUtils.random(Game.battle.arena.top, Game.battle.arena.bottom)
 			local rot = 0
 			if self.side == 1 then
 				rot = math.rad(180)
@@ -227,7 +227,7 @@ function Basic:onStart()
 				self.bubble = enemy:spawnSpeechBubble(self.dialogue[((self.attack_count - 1) % 4) + 1])
 				self.bubble:setSkippable(false)
 				self.bubble:setAdvance(false)
-				doRerun(self, wait, enemy, Utils.pick({"rudinn", "hathy", "jigsawry", "bloxer", "rabbick", "clover", "lancer"}))
+				doRerun(self, wait, enemy, TableUtils.pick({"rudinn", "hathy", "jigsawry", "bloxer", "rabbick", "clover", "lancer"}))
 				--doRerun(self, wait, enemy, "lancer")
 				if self.rerun_timer then
 					self.timer:cancel(self.rerun_timer)
