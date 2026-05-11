@@ -12,9 +12,15 @@ function Goosic:init()
             mus_pitch = (enemies_left / 7)
         end
         MUSIC_PITCHES["genobattle_yellow"] = mus_pitch
+        MUSIC_PITCHES["gby_leftpan"] = mus_pitch
+        MUSIC_PITCHES["gby_rightpan"] = mus_pitch
         self.music = "genobattle_yellow"
+		self.left_music = "gby_leftpan"
+		self.right_music = "gby_rightpan"
     else
         self.music = "heatwave_approaching"
+		self.left_music = "hwa_leftpan"
+		self.right_music = "hwa_rightpan"
     end
 
     self:addEnemy("goosic", 303, 214)
