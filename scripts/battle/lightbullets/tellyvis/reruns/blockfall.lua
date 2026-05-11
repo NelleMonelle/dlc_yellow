@@ -23,8 +23,8 @@ function RerunBlockFall:update()
 		self.fall_timer = self.fall_timer + DTMULT
 		if self.fall_timer >= 5 then
 			Object.startCache()
-			for _,block in ipairs(Game.stage:getObjects(LightBullet)) do
-				if self.ypos > 0 or (self.fall_collider:collidesWith(block) and block:isBullet("tellyvis/reruns/blockfall") and block.collidable) then
+			for _,block in ipairs(Game.stage:getObjects(Mod.libs["magical-glass"]:getLightBullet("tellyvis/reruns/blockfall"))) do
+				if self.ypos > 0 or (self.fall_collider:collidesWith(block) and block.collidable) then
 					self.halt = true
 				end
 			end

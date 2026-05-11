@@ -7,11 +7,11 @@ function RerunRabbit:init(x, y)
 	self:setOrigin(0.5,0.5)
 	self.alpha = 0
 	self:fadeTo(1, 0.1)
-	self.physics.speed_x = -3 + Utils.random(1)
-	self.jumpsiner = Utils.random(100)
-	self.jumpspeed = 8 + Utils.random(4)
-	self.jumpheight = 50 + Utils.random(10)
-	self.collider = Hitbox(self, 8, 25, 17, 5)
+	self.physics.speed_x = -3 + MathUtils.random(1)
+	self.jumpsiner = MathUtils.random(100)
+	self.jumpspeed = 8 + MathUtils.random(4)
+	self.jumpheight = 50 + MathUtils.random(10)
+    self.collider = CircleCollider(self, 15, 20, 5)
 	self.fading_out = false
 end
 

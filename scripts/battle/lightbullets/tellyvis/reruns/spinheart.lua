@@ -7,7 +7,30 @@ function RerunSpinHeart:init(x, y, dir, speed)
     self.physics.direction = dir
     self.physics.speed = speed
     self.destroy_on_hit = false
-    self.collider = PolygonCollider(self, {{3,20},{0,16},{0,7},{7,0},{20,0},{40,20},{20,40},{7,40},{0,33},{0,24},{3,20},{8,20},{4,15},{4,8},{9,4},{18,4},{36,20},{18,36},{9,36},{4,32},{4,25},{8,20}})
+    self.collider = PolygonCollider(self, {
+        {3,20},
+        {0,16},
+        {0,7},
+        {7,0},
+        {20,0},
+        {41,20.5},
+        {22,40},
+        {7,40},
+        {0,33},
+        {0,24},
+        {3,20},
+        {8,20},
+        {4,15},
+        {4,8},
+        {9,5},
+        {19,5},
+        {36,20.5},
+        {19,36},
+        {9,36},
+        {4,32},
+        {4,25},
+        {8,20}
+    })
     self.damage = 0
 
     self.con = 0
@@ -34,19 +57,19 @@ function RerunSpinHeart:update()
         self.htimer = self.htimer + 1 * DTMULT
         if self.htimer >= 10 then
 			local rejected = {}
-			if self.y < Game.battle.arena.top + 25 then
+			if self.y < Game.battle.arena.top + 30 then
 				table.insert(rejected, 26.25)
 			end
-			if self.x > Game.battle.arena.right - 25 then
+			if self.x > Game.battle.arena.right - 30 then
 				table.insert(rejected, 30)
 			end
-			if self.y > Game.battle.arena.bottom - 25 then
+			if self.y > Game.battle.arena.bottom - 30 then
 				table.insert(rejected, 33.75)
 			end
-			if self.x < Game.battle.arena.left + 25 then
+			if self.x < Game.battle.arena.left + 30 then
 				table.insert(rejected, 37.5)
 			end
-			self.spinmax = Utils.pick({26.25,30,33.75,37.5}, (function(value) return not Utils.containsValue(rejected, value) end))
+			self.spinmax = MathUtils.pick({26.25,30,33.75,37.5}, (function(value) return not Utils.containsValue(rejected, value) end))
             self.con = 2
             self.htimer = 0
         end

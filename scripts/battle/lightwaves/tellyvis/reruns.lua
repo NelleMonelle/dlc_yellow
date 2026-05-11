@@ -18,23 +18,18 @@ end
 local function doRerun(self, wait, enemy, atk)
 	-- local enemy = self.enemy
 	if atk == "rudinn" then
-		self.rerun_timer = self.timer:every(2/5, function()
-			local x = Utils.random(Game.battle.arena.left - 100, Game.battle.arena.right + 100)
-			local y = Utils.random(Game.battle.arena.top - 20, Game.battle.arena.top - 70)
-
-			local bullet = self:spawnBullet("tellyvis/reruns/diamond_black", x, y)
-			self.rerun_timer_2 = self.timer:script(function(wait)
-				wait(1/3)
-				bullet.targeting = false
-				bullet.graphics.grow = 0
-				wait(1/3)
-				local bullet2 = self:spawnBullet("tellyvis/reruns/diamond_white", bullet.x, bullet.y, bullet.rotation)
-				bullet2:setLayer(self.layer + 0.01)
-				wait(1/4)
-				bullet.graphics.grow = 0.2
-				bullet:fadeOutAndRemove(0.2)
-			end)
-		end)
+		self.rerun_timer = self.timer:every(12/30, function()
+        for _, attacker in ipairs(self:getAttackers()) do
+            local soul = Game.battle.soul
+			
+            local dir = 30 + MathUtils.random(120)
+            local radius = 140 + MathUtils.random(80)
+            local x = math.cos(math.rad(-dir)) * radius
+            local y = math.sin(math.rad(-dir)) * radius
+		
+            local diamond = self:spawnBullet("rudinn/diamond_black", soul.x + x, soul.y + y)
+        end
+    end)
 		wait(2.75)
 	end
 	if atk == "hathy" then

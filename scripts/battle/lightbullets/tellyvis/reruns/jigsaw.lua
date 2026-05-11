@@ -45,8 +45,8 @@ function RerunJigsaw:update()
 		end
 	end
     Object.startCache()
-	for _,jigsaw in ipairs(Game.stage:getObjects(LightBullet)) do
-		if jigsaw:collidesWith(self) and jigsaw.bid ~= self.bid and jigsaw:isBullet("tellyvis/reruns/jigsaw") and jigsaw.can_collide then
+	for _,jigsaw in ipairs(Game.stage:getObjects(Mod.libs["magical-glass"]:getLightBullet("tellyvis/reruns/jigsaw"))) do
+		if jigsaw:collidesWith(self) and jigsaw.bid ~= self.bid and jigsaw.can_collide then
 			self.physics.speed = 0
 			jigsaw.physics.speed = 0
 			self.can_collide = false

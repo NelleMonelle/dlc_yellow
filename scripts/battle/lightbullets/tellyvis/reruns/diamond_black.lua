@@ -4,19 +4,75 @@ function RerunDiamondBlack:init(x, y)
     super.init(self, x, y, "battle/bullets/tellyvis/reruns/diamond_black")
 
 	self.alpha = 0
-	self:fadeTo(1, 0.1)
+	self:fadeToSpeed(1, 0.1)
     self.rotation = Utils.angle(self.x, self.y, Game.battle.soul.x, Game.battle.soul.y)
     self.physics.speed = 0
 	self.physics.match_rotation = true
-	self.graphics.grow = -0.1
-	self.targeting = true
+    self.grazed = false
+    self.collider = PolygonCollider(self, {{11, 16}, {16, 14}, {21, 16}, {16, 18}, {11, 16}})
+    self.collidable = false
+    self.activetimer = 0
+    self.difficulty = 1
+    self.times = 0
+    self.dont = 0
 end
 
 function RerunDiamondBlack:update()
-	if self.targeting then
-		self.rotation = Utils.angle(self.x, self.y, Game.battle.soul.x, Game.battle.soul.y)
-	end
 	super.update(self)
+
+    if self.collidable == false then
+        self.rotation = MathUtils.angle(self.x, self.y, Game.battle.soul.x, Game.battle.soul.y)
+
+        if self.alpha < 1 then
+        else
+            self.physics.direction = MathUtils.angle(self.x, self.y, Game.battle.soul.x, Game.battle.soul.y)
+            self.rotation = self.physics.direction
+            self.collidable = true
+            self.physics.speed = 0
+        end
+    end
+	
+    if self.collidable == true then
+        self.activetimer = self.activetimer + DTMULT
+
+        if self.activetimer >= 5 and self.times < self.difficulty then
+            local bul = self.wave:spawnBullet("tellyvis/reruns/diamond_white", self.x, self.y, self.rotation)
+            bul.tp = self.tp
+            bul.physics.direction = self.rotation
+
+            self.times = self.times + 1
+            self.activetimer = 0
+        end
+
+        if self.activetimer >= 5 and self.times >= self.difficulty then
+            self:fadeToSpeed(0, 0.2)
+
+            if self.alpha <= 0 then
+                self:remove()
+            end
+        end
+    end
+
+	if self.y < 40 then
+	    self.y = 40
+	end
+end
+
+function RerunDiamondBlack:draw()
+	if self.dont == 0 then
+		if self.collidable == false then
+			local futuredir = MathUtils.angle(self.x, self.y, Game.battle.soul.x, Game.battle.soul.y)
+			Draw.setColor(1,1,1,1 - self.alpha)
+			love.graphics.push()
+			love.graphics.origin()
+			Draw.draw(self.sprite.texture, self.x, self.y, futuredir, 3 - (self.alpha * 2), 3 - (self.alpha * 2), 16, 15)
+			love.graphics.pop()
+		end
+	end
+	Draw.setColor(1,1,1,self.alpha)
+	self.scale_x = 2 - self.alpha
+	self.scale_y = 2 - self.alpha
+	super.draw(self)
 end
 
 return RerunDiamondBlack
