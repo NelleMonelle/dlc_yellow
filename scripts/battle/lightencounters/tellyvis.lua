@@ -24,6 +24,27 @@ function TellyVis:init()
     self.kill_count = 0
 end
 
+function TellyVis:onStateChange(old,new)
+	super.onStateChange(self,old,new)
+	if new == "ENEMYDIALOGUE" then
+		for _,enemy in ipairs(Game.battle:getActiveEnemies()) do
+			if enemy.name == "Telly-Vis" then
+				local dialogue = enemy:getVisEnemyDialogue()
+				if dialogue then
+					local x, y = enemy.sprite:getRelativePos(0, enemy.actor:getHeight()/2, Game.battle)
+					x, y = x - enemy.dialogue_offset[1], y + enemy.dialogue_offset[2] + 40
+					local bubble = SpeechBubble(dialogue, x, y, {no_sound_overlap = true, style = "uty_large", right=false})
+					Game.battle:addChild(bubble)
+					bubble:setCallback(function()
+						bubble:remove()
+					end)
+					table.insert(Game.battle.enemy_dialogue, bubble)
+				end
+			end
+        end
+	end
+end
+
 function TellyVis:createBackground()
     if self.background then
         local background = Sprite("ui/lightbattle/backgrounds/standard", 0, 0, SCREEN_HEIGHT, SCREEN_WIDTH)

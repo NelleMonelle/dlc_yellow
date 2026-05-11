@@ -17,8 +17,8 @@ function Jandroid:init()
     self.dialogue_offset = {-30, 10}
 
     self.waves = {
-        "jandroid/slippery_floor",
-        "jandroid/spray_bottle"
+        "jandroid/floor_buckets",
+        "jandroid/spray_bottle",
     }
 
     self.dialogue = {
@@ -212,7 +212,7 @@ function Jandroid:onDefeat(damage, battler)
     if Game:getFlag("steamworks_kills") == 20 then
         Game:setFlag("EMPTIED_STEAMWORKS", true)
         MUSIC_PITCHES["steamworks_overworld"] = 0.25
-    elseif Game:getFlag("steamworks_kills") > 13 and Game:getFlag("steamworks_kills") < 20 and #Game.battle:getActiveEnemies() > 0 then
+    elseif Game:getFlag("steamworks_kills") > 13 and Game:getFlag("steamworks_kills") < 20 and #Game.battle.enemies > 0 then
         Game.battle.timer:after(1, function()
             local enemies_left = 20 - Game:getFlag("steamworks_kills")
             local mus_pitch = 1
@@ -221,17 +221,29 @@ function Jandroid:onDefeat(damage, battler)
             end
             Game.battle.music:setPitch(mus_pitch)
         end)
-    elseif Game:getFlag("steamworks_kills") == 13 and #Game.battle:getActiveEnemies() > 0 then
+    elseif Game:getFlag("steamworks_kills") == 13 and #Game.battle.enemies > 0 then
         Game.battle.music:stop()
+		if Game.battle.encounter.left_music_src then Game.battle.encounter.left_music_src:stop() end
+		if Game.battle.encounter.right_music_src then Game.battle.encounter.right_music_src:stop() end
         Game.battle.timer:after(1, function()
             Game.battle.music:play("genobattle_yellow")
+			if Game.battle.encounter.left_music_src then Game.battle.encounter.left_music_src:play("gby_leftpan", 0) end
+			if Game.battle.encounter.right_music_src then Game.battle.encounter.right_music_src:play("gby_rightpan", 0) end
         end)
     end
 
     Game.battle.timer:after(0.8, function()
         self.alpha = 0
         Assets.playSound("ut_explosion")
-        Game.battle:addChild(RobotDestroyExplosion(self.x, self.y-self.height/2))
+        local explosion = Sprite("battle/lightenemies/robot_destroy_explosion")
+        explosion:setPosition(self:getRelativePos(self.width / 2, self.height / 2))
+        explosion.layer = LIGHT_BATTLE_LAYERS["above_battlers"]
+        explosion:setOrigin(0.5, 0.5)
+        explosion:setScale(2, 2)
+        Game.battle:addChild(explosion)
+        Game.battle.timer:after(1, function()
+            explosion:fadeOutAndRemove(1)
+        end)
         self:explodeParts()
     end)
 end
@@ -240,7 +252,6 @@ function Jandroid:explodeParts()
     local x, y = self:getRelativePos(self.width / 2, self.height / 2)
     -- weird fix to weird problem
     y = y + 60
-    local path = "battle/lightenemies/jandroid/explosion_parts/"
     Game.battle:addChild(RobotDestroyPartParent(path.."body_bottom", x,      y,      26, 28))
     Game.battle:addChild(RobotDestroyPartParent(path.."body_top",    x - 10, y - 43, 16, 15))
     Game.battle:addChild(RobotDestroyPartParent(path.."broom",       x + 67, y - 47, 37, 87))

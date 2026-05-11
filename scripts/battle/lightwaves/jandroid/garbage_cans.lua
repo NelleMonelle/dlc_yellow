@@ -1,14 +1,18 @@
-local GarbageCans, super = Class(LightWave)
+local Basic, super = Class(LightWave)
 
-function GarbageCans:init()
+function Basic:init()
     super.init(self)
-    self:setArenaPosition(319, 310)
-    self:setArenaSize(80, 118)
-    self.time = 7 -- room_speed * 7
-    self.darken = true
+    --[[self:setArenaSize(160, 160)
+    self:setArenaPosition(319, 360)
+    self.time = 8]]
 end
 
-function GarbageCans:onStart()
+function Basic:onEnd()
+	local jandroids = Game.battle:getEnemyBattler("jandroid")
+	jandroids.bubble:remove()
+end
+
+function Basic:onStart()
     self.timer:every(1/3, function()
         self:spawnBullet("jandroid/garbage", Game.battle.soul.x, Game.battle.arena.top - 80, math.rad(90), 4)
     end)
@@ -17,9 +21,9 @@ function GarbageCans:onStart()
     end)
 end
 
-function GarbageCans:update()
+function Basic:update()
 
     super.update(self)
 end
 
-return GarbageCans
+return Basic

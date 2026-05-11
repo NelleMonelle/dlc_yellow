@@ -69,6 +69,8 @@ function Sousborg:init()
     --self.gauge_size = {250, 20}
 
     self.damage_offset = {0, 80}
+	
+	self.show_sparing_dialogue = true
 end
 
 function Sousborg:onAct(battler, name)
@@ -86,6 +88,7 @@ function Sousborg:onAct(battler, name)
             self:registerAct("Boil")
             self:registerAct("Fry")
             self:registerAct("Bake")
+			self.show_sparing_dialogue = true
             return "* You tell Sousborg to take the\negg and crack it over a pan."
         end
     elseif name == "Criticize" then
@@ -118,6 +121,7 @@ function Sousborg:onAct(battler, name)
         self:registerAct("Refrigerate")
         self:registerAct("Pet")
         self:registerAct("Season")
+		self.show_sparing_dialogue = true
         return "* You tell Sousborg to heat the\nstove until the egg begins to\nsizzle."
     elseif name == "Bake" then
         local rnd = math.random(1, 2)
@@ -150,6 +154,7 @@ function Sousborg:onAct(battler, name)
         self:removeAct("Refrigerate")
         self:removeAct("Pet")
         self:removeAct("Season")
+		self.show_sparing_dialogue = true
         return "* You tell Sousborg to grab some\npepper and sprinkle it over the\negg."
     elseif name == "Standard" then
         if self.low_health then
@@ -317,6 +322,7 @@ function Sousborg:onHurtEnd()
             self:removeAct("Pet")
             self:removeAct("Season")
         end
+		self.show_sparing_dialogue = false
         self.low_health = true
         self:setActor("sousborg_b_hurt")
     end

@@ -25,6 +25,18 @@ function Jandroid:init()
     self.kill_count = 0
 end
 
+function Jandroid:getNextWaves()
+    local waves = {}
+    for _,enemy in ipairs(Game.battle:getActiveEnemies()) do
+        local wave = enemy:selectWave()
+        if wave then
+            table.insert(waves, wave)
+        end
+    end
+	table.insert(waves, "jandroid/slippery")
+    return waves
+end
+
 function Jandroid:createBackground()
     if self.background then
         local background = Sprite("ui/lightbattle/backgrounds/standard", 0, 0, SCREEN_HEIGHT, SCREEN_WIDTH)

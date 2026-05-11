@@ -12,12 +12,12 @@ function TellyVis:init()
     self.defense = 12
     self.money = 25
     self.experience = 0
-
+    
     self.dialogue_bubble = "uty_large"
     self.dialogue_offset = {-30, 10}
 
     self.waves = {
-        "basic"
+        "tellyvis/reruns"
     }
 
     self.dialogue = {
@@ -27,8 +27,19 @@ function TellyVis:init()
         "Network TV? Yeah,\nI do the work,\nand they net\nthe profits!"
     }
 
+    self.vis_dialogue = {
+        "Ugh, Telly's\nentertainment\nis so...\ntemporary.",
+		"Word of advice,\nplease rewind\nyour tapes before\nfeeding me.",
+		"Can someone\nplease shut\nMs. Tube-brain\nup?",
+		"Just... end it\nall."
+    }
+
     self.low_health_dialogue = {
         "T/Time to;?\nGo on coMmercial\nbreak. ... ."
+    }
+
+    self.vis_low_health_dialogue = {
+        "*Bzzztt(//\nsz/_-__"
     }
 
     self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* Can't live with or without\none another."
@@ -72,17 +83,22 @@ function TellyVis:onAct(battler, name)
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
                     self.dialogue_override = "What are you\nstaring at?"
+                    self.vis_dialogue_override = "Nothing worth it,\nthat's for sure."
                 else
                     self.dialogue_override = "There's nothing\non yet!"
+                    self.vis_dialogue_override = "Because your\nantennas are\ncrooked. Tapes\nwin again."
                 end
                 return "* While this IS your favorite\nchannel,[wait:5] Telly-Vis don't look\namused."
             else
                 self:addMercy(50)
+				self.next_face = "dance"
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
                     self.dialogue_override = "Oh![wait:5] Check\nthis out!"
+					self.vis_dialogue_override = "I'll admit,\nthis one\nis good."
                 else
                     self.dialogue_override = "Here comes the\nbest part!"
+					self.vis_dialogue_override = "Hard disagree."
                 end
                 return "* Telly finds a show she thinks\nyou'll love."
             end
@@ -92,10 +108,13 @@ function TellyVis:onAct(battler, name)
             return "* You couldn't sleep if you\nwanted to."
         else
             local rnd = Utils.pick({1, 2})
+			self.next_face = "sad"
             if rnd == 1 then
                 self.dialogue_override = "Am...[wait:5] Am I\nboring you?"
+				self.vis_dialogue_override = "Ha!"
             else
                 self.dialogue_override = "Hey,[wait:5] buddy![wait:5]\nI'm still here!"
+				self.vis_dialogue_override = "Don't remind\nme."
             end
             return "* You begin to drift off to the\ndismay of Telly.. "
         end
@@ -107,19 +126,24 @@ function TellyVis:onAct(battler, name)
             if not self.switched_channel then
                 self:addMercy(50)
                 self.switched_channel = true
+				self.next_face = "smug"
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
                     self.dialogue_override = "Just what\nI needed!"
+					self.vis_dialogue_override = "Can you detach\nme while you're\nat it?"
                 else
                     self.dialogue_override = "Whoa,[wait:5] hey![wait:5]\nI'm picking\nsomething up!"
+					self.vis_dialogue_override = "Oh?"
                 end
                 return "* You help Telly finagle her\nantennas to find some\nprogramming."
             else
                 local rnd = Utils.pick({1, 2})
                 if rnd == 1 then
                     self.dialogue_override = "They're good\nwhere they are!"
+					self.vis_dialogue_override = "Can't say\nthe same."
                 else
                     self.dialogue_override = "Hey, don't ruin\nmy electrical\nflow!"
+					self.vis_dialogue_override = "She's been\ntrying to get\na signal\nforever."
                 end
                 return "* You attempt to touch Telly's\nantennas again but she motions\nyou away."
             end
@@ -157,8 +181,10 @@ function TellyVis:onAct(battler, name)
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
                         self.dialogue_override = "What are you\nstaring at?"
+						self.vis_dialogue_override = "Nothing worth it,\nthat's for sure."
                     else
                         self.dialogue_override = "There's nothing\non yet!"
+						self.vis_dialogue_override = "Because your\nantennas are\ncrooked. Tapes\nwin again."
                     end
                     return "* While this IS "..battler.chara:getName().."'s favorite\nchannel,[wait:5] Telly-Vis don't look\namused."
                 end
@@ -169,11 +195,14 @@ function TellyVis:onAct(battler, name)
                 elseif battler.chara.id == "noelle" then
                     return "* Noelle enjoys the program."
                 else
+					self.next_face = "dance"
                     local rnd = Utils.pick({1, 2})
                     if rnd == 1 then
                         self.dialogue_override = "Oh![wait:5] Check\nthis out!"
+						self.vis_dialogue_override = "I'll admit,\nthis one\nis good."
                     else
                         self.dialogue_override = "Here comes the\nbest part!"
+						self.vis_dialogue_override = "Hard disagree."
                     end
                     return "* Telly finds a show she thinks\n"..battler.chara:getName().." will love."
                 end
@@ -203,23 +232,37 @@ function TellyVis:onDefeat(damage, battler)
         self:toggleOverlay(true)
         self.alpha = 0
         Assets.playSound("ut_explosion")
-        Game.battle:addChild(RobotDestroyExplosion(self.x, self.y-self.height/2))
+        local explosion = Sprite("battle/lightenemies/robot_destroy_explosion")
+        explosion:setPosition(self:getRelativePos(self.width / 2, self.height / 2))
+        explosion.layer = LIGHT_BATTLE_LAYERS["above_battlers"]
+        explosion:setOrigin(0.5, 0.5)
+        explosion:setScale(2, 2)
+        Game.battle:addChild(explosion)
+        Game.battle.timer:after(1, function()
+            explosion:fadeOutAndRemove(1)
+        end)
         self:explodeParts()
     end)
 end
 
 function TellyVis:explodeParts()
-    local x, y = self:getRelativePos(self.width / 2, self.height / 2)
-    -- weird fix to weird problem
-    y = y + 60
+    local function makeSprite(spritepath, x, y)
+        local sprite = Sprite(spritepath)
+        sprite:setPosition(x or self.x, y or self.y)
+        sprite.layer = LIGHT_BATTLE_LAYERS["above_battlers"] + 1
+        sprite:setOrigin(0.5, 0.5)
+        sprite:setScale(2, 2)
+        Game.battle:addChild(sprite)
+        sprite.physics.direction = math.rad(Utils.random(360))
+        sprite.physics.speed = 7
+        sprite.physics.gravity = 0.2
+    end
+    local relative_pos_x, relative_pos_y = self:getRelativePos(self.width / 2, self.height / 2)
     local path = "battle/lightenemies/tellyvis/explosion_parts/"
-    Game.battle:addChild(RobotDestroyPartParent(path.."body", x - 2, y - 72, 78, 68))
-    local lefth = Game.battle:addChild(RobotDestroyPartParent(path.."hand", x - 64, y - 60, 27, 38))
-    lefth.scale_x = -1
-    Game.battle:addChild(RobotDestroyPartParent(path.."hand", x + 64, y - 60, 27, 38))
-    local leftl = Game.battle:addChild(RobotDestroyPartParent(path.."leg", x - 24, y - 15, 16, 11))
-    leftl.scale_x = -1
-    Game.battle:addChild(RobotDestroyPartParent(path.."leg", x + 23, y - 15, 16, 11))
+    makeSprite(path.."antena", relative_pos_x, relative_pos_y)
+    makeSprite(path.."body", relative_pos_x, relative_pos_y)
+    makeSprite(path.."hand", relative_pos_x, relative_pos_y)
+    makeSprite(path.."leg", relative_pos_x, relative_pos_y)
 end
 
 function TellyVis:getEncounterText()
@@ -231,7 +274,7 @@ function TellyVis:getEncounterText()
     end
 
     if self.low_health_text and self.health <= (self.max_health * self.low_health_percentage) then
-        return Utils.pick(self.low_health_text)
+        return TableUtils.pick(self.low_health_text)
 
     elseif self.tired_text and self.tired then
         return self.tired_text
@@ -240,19 +283,41 @@ function TellyVis:getEncounterText()
         return self.spareable_text
     end
 
-    return Utils.pick(self.text)
+    return TableUtils.pick(self.text)
 end
 
 function TellyVis:getEnemyDialogue()
+	if self.next_face then
+		self.actor:setFace(self.next_face)
+		self.next_face = nil
+	end
     if self.dialogue_override then
         local dialogue = self.dialogue_override
         self.dialogue_override = nil
         return dialogue
     end
     if self.low_health_dialogue and self.health <= (self.max_health * self.low_health_percentage) then
-        return Utils.pick(self.low_health_dialogue)
+		self.actor:setFace("sad")
+        return TableUtils.pick(self.low_health_dialogue)
     end
-    return Utils.pick(self.dialogue)
+	local dialogue = TableUtils.pick(self.dialogue)
+	-- This is an awful way to do this but fuck it
+	if dialogue == "I live life in\nglorious standard\ndefinition!\nNothing better!" then
+		self.actor:setFace("smug")
+	end
+    return dialogue
+end
+
+function TellyVis:getVisEnemyDialogue()
+    if self.vis_dialogue_override then
+        local dialogue = self.vis_dialogue_override
+        self.vis_dialogue_override = nil
+        return dialogue
+    end
+    if self.vis_low_health_dialogue and self.health <= (self.max_health * self.low_health_percentage) then
+        return TableUtils.pick(self.vis_low_health_dialogue)
+    end
+	return TableUtils.pick(self.vis_dialogue)
 end
 
 function TellyVis:onHurtEnd()
@@ -262,7 +327,11 @@ function TellyVis:onHurtEnd()
     end
     if self.low_health == false and self.health <= (self.max_health * self.low_health_percentage) then
         self.low_health = true
+		
+		local old_face = self.actor.new_face
         self:setActor("tellyvis_b_hurt")
+		self.actor:setFace(old_face)
+		self.actor:setOldFace(old_face)
     end
 end
 
