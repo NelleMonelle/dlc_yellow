@@ -9,9 +9,11 @@ end
 function SteamworksLavaPalette:onAdd(parent)
     super.onAdd(self,parent)
 	Game.world.timer:after(1/30, function()
-		for _, obj in ipairs(Game.world.children) do
-			if obj:includes(Character) then
-				obj:addFX(PaletteFX(obj.actor, self.palette_id), "steamworks_pal")
+		for _, chara in ipairs(Game.stage:getObjects(Character)) do
+			if Game:getFlag("SHINY")[chara.party] == true then
+				chara:addFX(PaletteFX(chara.actor:getSpritePath().."/area_palette_shiny", self.palette_id, nil, 2), "area_pal")
+			else
+				chara:addFX(PaletteFX(chara.actor:getSpritePath().."/area_palette", self.palette_id), "area_pal")
 			end
 		end
 	end)
