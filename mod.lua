@@ -218,7 +218,9 @@ function Mod:startDynMusic(dynmusic, dynmtype)
 	end
 	for i, v in ipairs(self.dyn_music) do
 		self.dyn_music[i]:setVolume(0)
-		self.dyn_music[i]:seek(0)
+		if self.dyn_music[i]:isPlaying() then
+			self.dyn_music[i]:seek(0)
+		end
 	end
 	self.dyn_music[dynmtype]:setVolume(1)
 	self.dyn_music_name = dynmusic
