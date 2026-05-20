@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="59" height="23" tilewidth="40" tileheight="40" infinite="0" nextlayerid="24" nextobjectid="107">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="59" height="23" tilewidth="40" tileheight="40" infinite="0" nextlayerid="25" nextobjectid="113">
  <editorsettings>
   <export target="18.lua" format="lua"/>
  </editorsettings>
@@ -152,6 +152,11 @@
   <object id="64" gid="1555" x="998" y="348" width="74" height="58"/>
   <object id="67" name="stw_screenglow" x="0" y="0" width="40" height="40"/>
   <object id="68" name="stw_lavapalette" x="40" y="0" width="40" height="40"/>
+ </objectgroup>
+ <objectgroup id="24" name="objects_platformoverlay">
+  <object id="109" gid="1634" x="840" y="664" width="122" height="40"/>
+  <object id="111" gid="1634" x="1560" y="664" width="122" height="40"/>
+  <object id="112" gid="1634" x="1960" y="664" width="122" height="40"/>
  </objectgroup>
  <objectgroup id="8" name="collision">
   <object id="1" x="680" y="280" width="40" height="200"/>

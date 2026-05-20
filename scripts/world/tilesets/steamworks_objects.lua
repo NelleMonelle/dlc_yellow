@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   name = "steamworks_objects",
   class = "",
   tilewidth = 300,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 135,
+  tilecount = 139,
   tiles = {
     {
       id = 13,
@@ -1142,6 +1142,48 @@ return {
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/bubbles_c_10.png",
       width = 19,
       height = 22
+    },
+    {
+      id = 137,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/platform_overlay_1.png",
+      width = 61,
+      height = 20,
+      animation = {
+        {
+          tileid = 137,
+          duration = 200
+        },
+        {
+          tileid = 138,
+          duration = 200
+        },
+        {
+          tileid = 139,
+          duration = 200
+        },
+        {
+          tileid = 140,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 138,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/platform_overlay_2.png",
+      width = 61,
+      height = 20
+    },
+    {
+      id = 139,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/platform_overlay_3.png",
+      width = 61,
+      height = 20
+    },
+    {
+      id = 140,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/platform_overlay_4.png",
+      width = 61,
+      height = 20
     }
   }
 }
