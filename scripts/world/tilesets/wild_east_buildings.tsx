@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="wild_east_buildings" tilewidth="400" tileheight="440" tilecount="15" columns="0">
+<tileset version="1.11" tiledversion="1.12.1" name="wild_east_buildings" tilewidth="400" tileheight="440" tilecount="15" columns="0">
  <editorsettings>
   <export target="wild_east_buildings.lua" format="lua"/>
  </editorsettings>
@@ -23,7 +23,7 @@
   <image source="../../../assets/sprites/world/maps/dunes/wild_east/bg_feistyhouse_foreground_2.png" width="104" height="19"/>
  </tile>
  <tile id="15">
-  <image source="../../../assets/sprites/world/maps/dunes/wild_east/bg_feistyhouse_foreground2.png" width="53" height="15"/>
+  <image source="../../../assets/sprites/world/maps/dunes/wild_east/bg_feistyhouse_foreground_3.png" width="53" height="15"/>
  </tile>
  <tile id="6">
   <image source="../../../assets/sprites/world/maps/dunes/wild_east/bg_hospital.png" width="320" height="240"/>

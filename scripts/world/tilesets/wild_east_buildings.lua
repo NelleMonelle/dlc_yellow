@@ -1,7 +1,7 @@
 return {
   version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   name = "wild_east_buildings",
   class = "",
   tilewidth = 400,
@@ -63,7 +63,7 @@ return {
     },
     {
       id = 15,
-      image = "../../../assets/sprites/world/maps/dunes/wild_east/bg_feistyhouse_foreground2.png",
+      image = "../../../assets/sprites/world/maps/dunes/wild_east/bg_feistyhouse_foreground_3.png",
       width = 53,
       height = 15
     },
