@@ -227,7 +227,7 @@ end
 
 function Mod:swapDynMusic(dynmtype, time)
 	local time = time or 10/30
-	self.dyn_music[dynmtype]:seek(self.dyn_music[self.dyn_music_type]:tell())
+	self.dyn_music[dynmtype]:seek(math.max(self.dyn_music[self.dyn_music_type]:tell(), 0))
 	self.dyn_music[dynmtype]:fade(1, time)
 	self.dyn_music[self.dyn_music_type]:fade(0, time)
 	self.dyn_music_type = dynmtype
