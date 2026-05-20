@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 139,
+  tilecount = 143,
   tiles = {
     {
       id = 13,
@@ -1183,6 +1183,30 @@ return {
       id = 140,
       image = "../../../assets/sprites/world/maps/steamworks/small_objects/platform_overlay_4.png",
       width = 61,
+      height = 20
+    },
+    {
+      id = 141,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_1.png",
+      width = 32,
+      height = 20
+    },
+    {
+      id = 142,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_2.png",
+      width = 32,
+      height = 20
+    },
+    {
+      id = 143,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_3.png",
+      width = 32,
+      height = 20
+    },
+    {
+      id = 144,
+      image = "../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_4.png",
+      width = 32,
       height = 20
     }
   }

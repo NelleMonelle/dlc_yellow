@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.12.1" name="steamworks_objects" tilewidth="300" tileheight="240" tilecount="139" columns="0">
+<tileset version="1.11" tiledversion="1.12.1" name="steamworks_objects" tilewidth="300" tileheight="240" tilecount="143" columns="0">
  <editorsettings>
   <export target="steamworks_objects.lua" format="lua"/>
  </editorsettings>
@@ -521,5 +521,17 @@
  </tile>
  <tile id="140">
   <image source="../../../assets/sprites/world/maps/steamworks/small_objects/platform_overlay_4.png" width="61" height="20"/>
+ </tile>
+ <tile id="141">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_1.png" width="32" height="20"/>
+ </tile>
+ <tile id="142">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_2.png" width="32" height="20"/>
+ </tile>
+ <tile id="143">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_3.png" width="32" height="20"/>
+ </tile>
+ <tile id="144">
+  <image source="../../../assets/sprites/world/maps/steamworks/small_objects/puzzle_arrows_4.png" width="32" height="20"/>
  </tile>
 </tileset>
