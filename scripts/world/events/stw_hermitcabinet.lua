@@ -4,7 +4,7 @@ function SteamworksHermitCabinet:init(data)
     super.init(self, data)
 
     self:setSprite("world/events/steamworks/chem_04_cabinet")
-    self:setOrigin(0.5, 1)
+    self:setOrigin(0, 0)
 	self.solid = true
 	if Game:getFlag("chem_moved_cabinet") then
 		self.x = self.x - 80

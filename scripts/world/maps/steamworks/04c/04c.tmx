@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="17" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="13">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="17" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="19">
  <editorsettings>
-  <export target="../../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/04c/data.lua" format="lua"/>
+  <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
   <property name="light" type="bool" value="true"/>
@@ -64,6 +64,15 @@
  </objectgroup>
  <objectgroup id="8" name="objects">
   <object id="11" gid="1514" x="172" y="428" width="400" height="400"/>
+  <object id="15" gid="1638" x="168" y="200" width="64" height="40"/>
+  <object id="16" gid="1639" x="528" y="120" width="64" height="40"/>
+  <object id="17" gid="1640" x="288" y="120" width="64" height="40"/>
+ </objectgroup>
+ <objectgroup id="10" name="objects_goo">
+  <object id="14" name="stw_04c_puzzle" x="200" y="40">
+   <point/>
+  </object>
+  <object id="18" gid="1641" x="448" y="280" width="64" height="40"/>
  </objectgroup>
  <objectgroup id="9" name="objects_2">
   <object id="12" gid="1513" x="222" y="378" width="300" height="300"/>

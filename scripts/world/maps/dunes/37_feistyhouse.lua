@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 33,
+  nextobjectid = 36,
   properties = {
     ["dynmtype"] = 4,
     ["dynmusic"] = "the_wild_east",
@@ -51,6 +51,7 @@ return {
           width = 640,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 4,
           visible = true,
           properties = {}
@@ -81,6 +82,7 @@ return {
           width = 14,
           height = 404,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -94,6 +96,7 @@ return {
           width = 18,
           height = 402,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -107,6 +110,7 @@ return {
           width = 50,
           height = 22,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -120,6 +124,7 @@ return {
           width = 436,
           height = 20,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -133,6 +138,7 @@ return {
           width = 16,
           height = 28,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -146,6 +152,7 @@ return {
           width = 16,
           height = 26,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -159,6 +166,7 @@ return {
           width = 208,
           height = 26,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -172,6 +180,7 @@ return {
           width = 48,
           height = 94,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -185,6 +194,7 @@ return {
           width = 98,
           height = 44,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -198,6 +208,7 @@ return {
           width = 576,
           height = 12,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -227,6 +238,7 @@ return {
           width = 146,
           height = 96,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -243,6 +255,7 @@ return {
           width = 62,
           height = 86,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -259,6 +272,7 @@ return {
           width = 74,
           height = 108,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -276,6 +290,7 @@ return {
           width = 46,
           height = 24,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (Weird... You haven't seen\nany cats around.)"
@@ -291,6 +306,7 @@ return {
           width = 48,
           height = 20,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (A target with darts of\nvarious shapes and sizes suck\ninto it.)"
@@ -306,6 +322,7 @@ return {
           width = 20,
           height = 20,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (Some kind of berry-plant. You\nnotice a few berries are\nmissing.)"
@@ -321,6 +338,7 @@ return {
           width = 46,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -340,6 +358,7 @@ return {
           width = 118,
           height = 96,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -356,6 +375,7 @@ return {
           width = 132,
           height = 48,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -372,6 +392,7 @@ return {
           width = 98,
           height = 36,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "feistyhouse.tv"
@@ -387,6 +408,7 @@ return {
           width = 150,
           height = 24,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -403,6 +425,7 @@ return {
           width = 90,
           height = 20,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "dunes/37",
@@ -419,6 +442,7 @@ return {
           width = 208,
           height = 38,
           rotation = 0,
+          opacity = 1,
           gid = 6,
           visible = true,
           properties = {}
@@ -433,6 +457,7 @@ return {
           width = 106,
           height = 30,
           rotation = 0,
+          opacity = 1,
           gid = 16,
           visible = true,
           properties = {}
@@ -463,6 +488,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -476,6 +502,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -505,6 +532,7 @@ return {
           width = 98,
           height = 70,
           rotation = 0,
+          opacity = 1,
           gid = 15,
           visible = true,
           properties = {}

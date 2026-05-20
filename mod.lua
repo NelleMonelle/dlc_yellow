@@ -207,17 +207,18 @@ end
 
 function Mod:startDynMusic(dynmusic, dynmtype)
 	if dynmusic == "oasis" then
-		self.dyn_music[1]:play("oasis")
-		self.dyn_music[2]:play("oasis_indoors")
+		self.dyn_music[1]:play("oasis", 0)
+		self.dyn_music[2]:play("oasis_indoors", 0)
 	elseif dynmusic == "the_wild_east" then
-		self.dyn_music[1]:play("the_wild_east")
-		self.dyn_music[2]:play("the_wild_east_barn")
-		self.dyn_music[3]:play("the_wild_east_hospital")
-		self.dyn_music[4]:play("the_wild_east_house")
-		self.dyn_music[5]:play("the_wild_east_jail")
+		self.dyn_music[1]:play("the_wild_east", 0)
+		self.dyn_music[2]:play("the_wild_east_barn", 0)
+		self.dyn_music[3]:play("the_wild_east_hospital", 0)
+		self.dyn_music[4]:play("the_wild_east_house", 0)
+		self.dyn_music[5]:play("the_wild_east_jail", 0)
 	end
 	for i, v in ipairs(self.dyn_music) do
 		self.dyn_music[i]:setVolume(0)
+		self.dyn_music[i]:seek(0)
 	end
 	self.dyn_music[dynmtype]:setVolume(1)
 	self.dyn_music_name = dynmusic
@@ -227,7 +228,7 @@ end
 
 function Mod:swapDynMusic(dynmtype, time)
 	local time = time or 10/30
-	self.dyn_music[dynmtype]:seek(self.dyn_music[self.dyn_music_type]:tell())
+	self.dyn_music[dynmtype]:seek(math.max(self.dyn_music[self.dyn_music_type]:tell(), 0))
 	self.dyn_music[dynmtype]:fade(1, time)
 	self.dyn_music[self.dyn_music_type]:fade(0, time)
 	self.dyn_music_type = dynmtype

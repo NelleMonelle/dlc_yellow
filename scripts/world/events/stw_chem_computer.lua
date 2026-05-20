@@ -4,7 +4,7 @@ function SteamworksChemComputer:init(data)
     super.init(self, data)
 
     self:setSprite("world/maps/steamworks/small_objects/chem_05_computer")
-    self:setOrigin(0.5, 0.5)
+    self:setOrigin(0, 0)
 	self:setHitbox(24,22,300,166)
 	self.font = Assets.getFont("chem")
     self.last_font = Assets.getFont("main")
