@@ -10,7 +10,7 @@ function SteamworksChem05Door:init(data)
 		self:setSprite("world/maps/steamworks/small_objects/chem_05_door_1")
 		self.solid = true
 	end
-    self:setOrigin(0.5, 0.5)
+    self:setOrigin(0, 0)
 end
 
 return SteamworksChem05Door
