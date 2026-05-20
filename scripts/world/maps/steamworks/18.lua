@@ -86,7 +86,38 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 49,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1560,
+          y = 664,
+          width = 120,
+          height = 228,
+          rotation = 0,
+          opacity = 1,
+          gid = 1557,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 50,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1960,
+          y = 664,
+          width = 120,
+          height = 228,
+          rotation = 0,
+          opacity = 1,
+          gid = 1557,
+          visible = true,
+          properties = {}
+        }
+      }
     },
     {
       type = "tilelayer",
@@ -452,36 +483,6 @@ return {
           type = "",
           shape = "rectangle",
           x = 840,
-          y = 664,
-          width = 120,
-          height = 228,
-          rotation = 0,
-          opacity = 1,
-          gid = 1557,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 49,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1560,
-          y = 664,
-          width = 120,
-          height = 228,
-          rotation = 0,
-          opacity = 1,
-          gid = 1557,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 50,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1960,
           y = 664,
           width = 120,
           height = 228,
