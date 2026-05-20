@@ -116,6 +116,21 @@ return {
           gid = 1557,
           visible = true,
           properties = {}
+        },
+        {
+          id = 48,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 840,
+          y = 664,
+          width = 120,
+          height = 228,
+          rotation = 0,
+          opacity = 1,
+          gid = 1557,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -474,21 +489,6 @@ return {
           rotation = 0,
           opacity = 1,
           gid = 1558,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 48,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 840,
-          y = 664,
-          width = 120,
-          height = 228,
-          rotation = 0,
-          opacity = 1,
-          gid = 1557,
           visible = true,
           properties = {}
         },

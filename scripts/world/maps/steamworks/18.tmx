@@ -39,6 +39,7 @@
  <objectgroup id="23" name="objects_below">
   <object id="49" gid="1557" x="1560" y="664" width="120" height="228"/>
   <object id="50" gid="1557" x="1960" y="664" width="120" height="228"/>
+  <object id="48" gid="1557" x="840" y="664" width="120" height="228"/>
  </objectgroup>
  <layer id="2" name="ground" width="59" height="23">
   <data encoding="csv">
@@ -138,7 +139,6 @@
   <object id="45" gid="1556" x="878" y="414" width="44" height="68"/>
   <object id="46" gid="1558" x="874" y="280" width="52" height="92"/>
   <object id="47" gid="1558" x="1594" y="280" width="52" height="92"/>
-  <object id="48" gid="1557" x="840" y="664" width="120" height="228"/>
   <object id="51" gid="1537" x="866" y="170" width="68" height="68"/>
   <object id="53" gid="1537" x="400" y="168" width="68" height="68"/>
   <object id="54" gid="1537" x="70" y="254" width="68" height="68"/>
