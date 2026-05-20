@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.12.1",
   name = "steamworks",
   class = "",
   tilewidth = 20,
@@ -71,6 +71,27 @@ return {
       }
     },
     {
+      id = 107,
+      animation = {
+        {
+          tileid = 1275,
+          duration = 200
+        },
+        {
+          tileid = 1276,
+          duration = 200
+        },
+        {
+          tileid = 1277,
+          duration = 200
+        },
+        {
+          tileid = 1276,
+          duration = 200
+        }
+      }
+    },
+    {
       id = 115,
       animation = {
         {
@@ -113,6 +134,69 @@ return {
       }
     },
     {
+      id = 125,
+      animation = {
+        {
+          tileid = 976,
+          duration = 200
+        },
+        {
+          tileid = 977,
+          duration = 200
+        },
+        {
+          tileid = 978,
+          duration = 200
+        },
+        {
+          tileid = 977,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 126,
+      animation = {
+        {
+          tileid = 979,
+          duration = 200
+        },
+        {
+          tileid = 980,
+          duration = 200
+        },
+        {
+          tileid = 981,
+          duration = 200
+        },
+        {
+          tileid = 980,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 141,
+      animation = {
+        {
+          tileid = 1278,
+          duration = 200
+        },
+        {
+          tileid = 1279,
+          duration = 200
+        },
+        {
+          tileid = 1280,
+          duration = 200
+        },
+        {
+          tileid = 1279,
+          duration = 200
+        }
+      }
+    },
+    {
       id = 149,
       animation = {
         {
@@ -129,6 +213,212 @@ return {
         },
         {
           tileid = 1343,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 159,
+      animation = {
+        {
+          tileid = 982,
+          duration = 200
+        },
+        {
+          tileid = 983,
+          duration = 200
+        },
+        {
+          tileid = 984,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 160,
+      animation = {
+        {
+          tileid = 1004,
+          duration = 200
+        },
+        {
+          tileid = 1005,
+          duration = 200
+        },
+        {
+          tileid = 1006,
+          duration = 200
+        },
+        {
+          tileid = 1005,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 164,
+      animation = {
+        {
+          tileid = 1281,
+          duration = 200
+        },
+        {
+          tileid = 1282,
+          duration = 200
+        },
+        {
+          tileid = 1283,
+          duration = 200
+        },
+        {
+          tileid = 1282,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 165,
+      animation = {
+        {
+          tileid = 1284,
+          duration = 200
+        },
+        {
+          tileid = 1285,
+          duration = 200
+        },
+        {
+          tileid = 1286,
+          duration = 200
+        },
+        {
+          tileid = 1285,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 198,
+      animation = {
+        {
+          tileid = 1287,
+          duration = 200
+        },
+        {
+          tileid = 1288,
+          duration = 200
+        },
+        {
+          tileid = 1289,
+          duration = 200
+        },
+        {
+          tileid = 1288,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 199,
+      animation = {
+        {
+          tileid = 1309,
+          duration = 200
+        },
+        {
+          tileid = 1310,
+          duration = 200
+        },
+        {
+          tileid = 1311,
+          duration = 200
+        },
+        {
+          tileid = 1310,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 200,
+      animation = {
+        {
+          tileid = 1318,
+          duration = 200
+        },
+        {
+          tileid = 1319,
+          duration = 200
+        },
+        {
+          tileid = 1318,
+          duration = 200
+        },
+        {
+          tileid = 1319,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 201,
+      animation = {
+        {
+          tileid = 1312,
+          duration = 200
+        },
+        {
+          tileid = 1313,
+          duration = 200
+        },
+        {
+          tileid = 1314,
+          duration = 200
+        },
+        {
+          tileid = 1313,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 202,
+      animation = {
+        {
+          tileid = 1315,
+          duration = 200
+        },
+        {
+          tileid = 1316,
+          duration = 200
+        },
+        {
+          tileid = 1317,
+          duration = 200
+        },
+        {
+          tileid = 1316,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 203,
+      animation = {
+        {
+          tileid = 1320,
+          duration = 200
+        },
+        {
+          tileid = 1321,
+          duration = 200
+        },
+        {
+          tileid = 1322,
+          duration = 200
+        },
+        {
+          tileid = 1321,
           duration = 200
         }
       }
@@ -281,6 +571,27 @@ return {
       }
     },
     {
+      id = 325,
+      animation = {
+        {
+          tileid = 1348,
+          duration = 200
+        },
+        {
+          tileid = 1349,
+          duration = 200
+        },
+        {
+          tileid = 1350,
+          duration = 200
+        },
+        {
+          tileid = 1349,
+          duration = 200
+        }
+      }
+    },
+    {
       id = 348,
       animation = {
         {
@@ -423,6 +734,27 @@ return {
         },
         {
           tileid = 1248,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 393,
+      animation = {
+        {
+          tileid = 1351,
+          duration = 200
+        },
+        {
+          tileid = 1352,
+          duration = 200
+        },
+        {
+          tileid = 1353,
+          duration = 200
+        },
+        {
+          tileid = 1352,
           duration = 200
         }
       }
@@ -722,6 +1054,27 @@ return {
       }
     },
     {
+      id = 461,
+      animation = {
+        {
+          tileid = 1354,
+          duration = 200
+        },
+        {
+          tileid = 1355,
+          duration = 200
+        },
+        {
+          tileid = 1356,
+          duration = 200
+        },
+        {
+          tileid = 1355,
+          duration = 200
+        }
+      }
+    },
+    {
       id = 489,
       animation = {
         {
@@ -885,6 +1238,282 @@ return {
         },
         {
           tileid = 1242,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 529,
+      animation = {
+        {
+          tileid = 1357,
+          duration = 200
+        },
+        {
+          tileid = 1358,
+          duration = 200
+        },
+        {
+          tileid = 1359,
+          duration = 200
+        },
+        {
+          tileid = 1358,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 582,
+      animation = {
+        {
+          tileid = 1250,
+          duration = 200
+        },
+        {
+          tileid = 1251,
+          duration = 200
+        },
+        {
+          tileid = 1252,
+          duration = 200
+        },
+        {
+          tileid = 1251,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 1270,
+      animation = {
+        {
+          tileid = 1270,
+          duration = 200
+        },
+        {
+          tileid = 1377,
+          duration = 200
+        },
+        {
+          tileid = 1378,
+          duration = 200
+        },
+        {
+          tileid = 1379,
+          duration = 200
+        },
+        {
+          tileid = 1380,
+          duration = 200
+        },
+        {
+          tileid = 1381,
+          duration = 200
+        },
+        {
+          tileid = 1382,
+          duration = 200
+        },
+        {
+          tileid = 1383,
+          duration = 200
+        },
+        {
+          tileid = 1384,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 1304,
+      animation = {
+        {
+          tileid = 1410,
+          duration = 200
+        },
+        {
+          tileid = 1411,
+          duration = 200
+        },
+        {
+          tileid = 1412,
+          duration = 200
+        },
+        {
+          tileid = 1413,
+          duration = 200
+        },
+        {
+          tileid = 1414,
+          duration = 200
+        },
+        {
+          tileid = 1415,
+          duration = 200
+        },
+        {
+          tileid = 1416,
+          duration = 200
+        },
+        {
+          tileid = 1417,
+          duration = 200
+        },
+        {
+          tileid = 1418,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 1337,
+      animation = {
+        {
+          tileid = 1444,
+          duration = 200
+        },
+        {
+          tileid = 1445,
+          duration = 200
+        },
+        {
+          tileid = 1446,
+          duration = 200
+        },
+        {
+          tileid = 1447,
+          duration = 200
+        },
+        {
+          tileid = 1448,
+          duration = 200
+        },
+        {
+          tileid = 1449,
+          duration = 200
+        },
+        {
+          tileid = 1450,
+          duration = 200
+        },
+        {
+          tileid = 1451,
+          duration = 200
+        },
+        {
+          tileid = 1452,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 1338,
+      animation = {
+        {
+          tileid = 1385,
+          duration = 200
+        },
+        {
+          tileid = 1386,
+          duration = 200
+        },
+        {
+          tileid = 1387,
+          duration = 200
+        },
+        {
+          tileid = 1388,
+          duration = 200
+        },
+        {
+          tileid = 1389,
+          duration = 200
+        },
+        {
+          tileid = 1390,
+          duration = 200
+        },
+        {
+          tileid = 1391,
+          duration = 200
+        },
+        {
+          tileid = 1392,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 1339,
+      animation = {
+        {
+          tileid = 1453,
+          duration = 200
+        },
+        {
+          tileid = 1454,
+          duration = 200
+        },
+        {
+          tileid = 1455,
+          duration = 200
+        },
+        {
+          tileid = 1456,
+          duration = 200
+        },
+        {
+          tileid = 1457,
+          duration = 200
+        },
+        {
+          tileid = 1458,
+          duration = 200
+        },
+        {
+          tileid = 1459,
+          duration = 200
+        },
+        {
+          tileid = 1460,
+          duration = 200
+        }
+      }
+    },
+    {
+      id = 1372,
+      animation = {
+        {
+          tileid = 1419,
+          duration = 200
+        },
+        {
+          tileid = 1420,
+          duration = 200
+        },
+        {
+          tileid = 1421,
+          duration = 200
+        },
+        {
+          tileid = 1422,
+          duration = 200
+        },
+        {
+          tileid = 1423,
+          duration = 200
+        },
+        {
+          tileid = 1424,
+          duration = 200
+        },
+        {
+          tileid = 1425,
+          duration = 200
+        },
+        {
+          tileid = 1426,
           duration = 200
         }
       }
