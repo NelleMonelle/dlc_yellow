@@ -72,7 +72,7 @@ function CerobaBattleBackground:update()
         self.diamond_width_current = 0
     end
     self.diamond_width_current = self.diamond_width_current + 0.5 * DTMULT
-    if Game.battle:getEnemyBattler("ceroba_genocide") then
+    if Game.battle:getEnemyBattler("ceroba_geno") then
         local breath_percentage = (Game.battle:getEnemyBattler("ceroba_geno").actor.anim_stretch_current - 1) / (Game.battle:getEnemyBattler("ceroba_geno").actor.anim_stretch_max - 1)
         self.diamond_alpha = 0.35 + breath_percentage * 0.65
     end
