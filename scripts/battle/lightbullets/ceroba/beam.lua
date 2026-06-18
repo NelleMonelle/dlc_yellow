@@ -3,41 +3,43 @@ local CerobaBeam, super = Class(LightBullet)
 function CerobaBeam:init(x, y, rot, dur, wid)
     super.init(self, x, y)
 
-    self.damage = 3
     self.destroy_on_hit = false
     self.rotation_num = rot or 0
     self.duration = dur or 0.5
 
 	self.rotation = math.rad(self.rotation_num)
-	
+
 	self.beam_stage = 0
 	self.beam_width = wid or 40
 	self.beam_width_cur = 0
 	self.beam_width_inc = self.beam_width / (0.4 * 30)
 	self.beam_width_fluc = 4
 	self.beam_grow = true
-	self.beam_color = {1,1,1}
-	
+	self.beam_color = {1, 1, 1}
+
 	self.collider = nil
+
     Assets.playSound("kamehamehacharge")
 end
 
+function CerobaBeam:getDamage()
+	return Game:isLight() and 3 or 5
+end
+
 function CerobaBeam:onDamage(soul)
-    if soul.inv_timer > 0 or not self.collider then else
-        soul.inv_timer = self.inv_timer
-        Assets.playSound("ceroba_hurt_red")
-        local alive_battlers = Utils.filter(Game.battle.party, function(battler) return not battler.is_down end)
-        for _,battler in ipairs(alive_battlers) do
-            battler:hurt(3, true)
-			Assets.stopSound("hurt")
-			if battler.chara:getHealth() <= 0 then
-				battler.chara:setHealth(0)
-				local zero_health = (battler.chara:getBaseStat("health") or 0) + battler.chara:getEquipmentBonus("health")
-				battler.chara:setStatBuff("health", -zero_health)
-			else
-				battler.chara:addStatBuff("health", -3)
-			end
-        end
+    soul.inv_timer = self:getInvulnTime()
+    Assets.playSound("ceroba_hurt_red")
+    local alive_battlers = TableUtils.filter(Game.battle.party, function(battler) return not battler.is_down end)
+    for _, battler in ipairs(alive_battlers) do
+        battler:hurt(self:getDamage(), true)
+		Assets.stopSound("hurt")
+		if battler.chara:getHealth() <= 0 and ((battler.chara:getBaseStat("health") + battler.chara:getEquipmentBonus("health")) + battler.chara:getStatBuff("health") + -self:getDamage()) <= 0 then
+			battler.chara:setHealth(0)
+			local zero_health = (battler.chara:getBaseStat("health") or 0) + battler.chara:getEquipmentBonus("health")
+			battler.chara:setStatBuff("health", -zero_health)
+		else
+			battler.chara:addStatBuff("health", -self:getDamage())
+		end
     end
     return {}
 end
