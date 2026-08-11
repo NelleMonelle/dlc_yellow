@@ -23,7 +23,7 @@ function GarbageCan:init(x, y)
     self.spawn_offset_inc = self.spawn_offset_max / self.spawn_number
 
     self.green_spawned = false
-    self.pseudo_random = 150
+    self.pseudo_random = 60
 end
 
 function GarbageCan:update()
