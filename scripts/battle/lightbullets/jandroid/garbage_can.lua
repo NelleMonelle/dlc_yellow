@@ -11,6 +11,8 @@ function GarbageCan:init(x, y)
 
     self.scene = 0
     self.state_timer = 0
+	self.layer = self.layer + 1 
+
 
     self.spawn_timer_max = 9
     self.spawn_timer = self.spawn_timer_max
