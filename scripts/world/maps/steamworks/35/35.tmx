@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="70" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="33">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="70" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="34">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -11,6 +11,11 @@
  <objectgroup id="2" name="objects">
   <object id="1" gid="11" x="0" y="480" width="2800" height="480"/>
   <object id="27" name="stw_room35embers" x="0" y="0" width="40" height="40"/>
+ </objectgroup>
+ <objectgroup id="7" name="objects2">
+  <object id="33" name="stw_furnace_overlay" x="818" y="0">
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="objects_party">
   <object id="2" name="transition" x="2032" y="264" width="40" height="78">

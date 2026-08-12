@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 33,
+  nextlayerid = 8,
+  nextobjectid = 34,
   properties = {
     ["light"] = true
   },
@@ -53,6 +53,7 @@ return {
           width = 2800,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 11,
           visible = true,
           properties = {}
@@ -67,6 +68,37 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects2",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 33,
+          name = "stw_furnace_overlay",
+          type = "",
+          shape = "point",
+          x = 818,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -96,6 +128,7 @@ return {
           width = 40,
           height = 78,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/34",
@@ -112,6 +145,7 @@ return {
           width = 40,
           height = 78,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/36",
@@ -128,6 +162,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "furnace"
@@ -143,6 +178,7 @@ return {
           width = 54,
           height = 62,
           rotation = 0,
+          opacity = 1,
           gid = 156,
           visible = true,
           properties = {}
@@ -157,6 +193,7 @@ return {
           width = 560,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -170,6 +207,7 @@ return {
           width = 66,
           height = 78,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -199,6 +237,7 @@ return {
           width = 488,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -212,6 +251,7 @@ return {
           width = 488,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -225,6 +265,7 @@ return {
           width = 220,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -238,6 +279,7 @@ return {
           width = 268,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -251,6 +293,7 @@ return {
           width = 488,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -264,6 +307,7 @@ return {
           width = 488,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -277,6 +321,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -295,6 +340,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -313,6 +359,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -331,6 +378,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -349,6 +397,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -367,6 +416,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -385,6 +435,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -403,6 +454,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -421,6 +473,7 @@ return {
           width = 38,
           height = 24,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -450,6 +503,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -463,6 +517,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -476,6 +531,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
