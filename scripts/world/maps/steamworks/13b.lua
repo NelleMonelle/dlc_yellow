@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.0",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -84,6 +84,7 @@ return {
           width = 40,
           height = 680,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -97,6 +98,7 @@ return {
           width = 40,
           height = 680,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -126,6 +128,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/13",
@@ -142,6 +145,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "steamworks.basement_axis",
@@ -158,6 +162,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "axis"
@@ -189,6 +194,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }

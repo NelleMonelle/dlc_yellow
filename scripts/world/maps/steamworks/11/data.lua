@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -118,6 +118,7 @@ return {
           width = 800,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -131,6 +132,7 @@ return {
           width = 960,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -144,6 +146,7 @@ return {
           width = 40,
           height = 200,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -173,6 +176,7 @@ return {
           width = 42,
           height = 46,
           rotation = 0,
+          opacity = 1,
           gid = 1549,
           visible = true,
           properties = {}
@@ -187,6 +191,7 @@ return {
           width = 52,
           height = 38,
           rotation = 0,
+          opacity = 1,
           gid = 1550,
           visible = true,
           properties = {}
@@ -201,6 +206,7 @@ return {
           width = 44,
           height = 34,
           rotation = 0,
+          opacity = 1,
           gid = 1551,
           visible = true,
           properties = {}
@@ -215,6 +221,7 @@ return {
           width = 62,
           height = 56,
           rotation = 0,
+          opacity = 1,
           gid = 1552,
           visible = true,
           properties = {}
@@ -245,6 +252,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/10",
@@ -261,6 +269,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/12",
@@ -277,6 +286,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* Excellence in Engineering\nAward: Dr. Rutherford-Oscar"
@@ -292,6 +302,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* Decency in Engineering Award:\nProf. Daniels"
@@ -307,6 +318,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* You Tried in Engineering\nAward: Mr. Chujin Ketsukane"
@@ -322,6 +334,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* Greatness in C--",
@@ -338,6 +351,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -351,6 +365,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -380,6 +395,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -393,6 +409,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -406,6 +423,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }

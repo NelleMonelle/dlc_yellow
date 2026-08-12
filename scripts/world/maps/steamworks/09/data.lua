@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -175,6 +175,7 @@ return {
           width = 120,
           height = 70,
           rotation = 0,
+          opacity = 1,
           gid = 1590,
           visible = true,
           properties = {}
@@ -189,6 +190,7 @@ return {
           width = 150,
           height = 80,
           rotation = 0,
+          opacity = 1,
           gid = 1591,
           visible = true,
           properties = {}
@@ -203,6 +205,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
+          opacity = 1,
           gid = 1580,
           visible = true,
           properties = {}
@@ -217,6 +220,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
+          opacity = 1,
           gid = 1580,
           visible = true,
           properties = {}
@@ -231,6 +235,7 @@ return {
           width = 68,
           height = 68,
           rotation = 0,
+          opacity = 1,
           gid = 1580,
           visible = true,
           properties = {}
@@ -261,6 +266,7 @@ return {
           width = 2000,
           height = 200,
           rotation = 0,
+          opacity = 1,
           gid = 1514,
           visible = true,
           properties = {}
@@ -291,6 +297,7 @@ return {
           width = 360,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -304,6 +311,7 @@ return {
           width = 1480,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -317,6 +325,7 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -330,6 +339,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -343,6 +353,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -356,6 +367,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -369,6 +381,7 @@ return {
           width = 1920,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -382,6 +395,7 @@ return {
           width = 116,
           height = 68,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -411,6 +425,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -424,6 +439,7 @@ return {
           width = 18,
           height = 68,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/08",
@@ -440,6 +456,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/10",
@@ -456,6 +473,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -469,6 +487,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -498,6 +517,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -511,6 +531,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -524,6 +545,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }

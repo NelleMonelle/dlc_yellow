@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="16" height="17" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="7">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="17" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="7">
  <editorsettings>
-  <export target="../../../../../../../kristal/mods/Dark-Place/scripts/world/maps/steamworks/13b.lua" format="lua"/>
+  <export target="13b.lua" format="lua"/>
  </editorsettings>
  <properties>
   <property name="light" type="bool" value="true"/>

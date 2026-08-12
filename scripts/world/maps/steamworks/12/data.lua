@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -159,6 +159,7 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -172,6 +173,7 @@ return {
           width = 1240,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -185,6 +187,7 @@ return {
           width = 840,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -198,6 +201,7 @@ return {
           width = 40,
           height = 240,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -211,6 +215,7 @@ return {
           width = 40,
           height = 440,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -224,6 +229,7 @@ return {
           width = 40,
           height = 200,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -237,6 +243,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -255,6 +262,7 @@ return {
           width = 32,
           height = 36,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -284,6 +292,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "steamworks.axis_second_meeting",
@@ -300,6 +309,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/14",
@@ -316,24 +326,12 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/11",
             ["marker"] = "down"
           }
-        },
-        {
-          id = 15,
-          name = "stw_trapdoor",
-          type = "",
-          shape = "point",
-          x = 600,
-          y = 340,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
         },
         {
           id = 24,
@@ -345,6 +343,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -358,6 +357,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -387,6 +387,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           gid = 301,
           visible = true,
           properties = {}
@@ -401,6 +402,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           gid = 335,
           visible = true,
           properties = {}
@@ -415,6 +417,7 @@ return {
           width = 38,
           height = 38,
           rotation = 0,
+          opacity = 1,
           gid = 1527,
           visible = true,
           properties = {}
@@ -429,6 +432,7 @@ return {
           width = 38,
           height = 38,
           rotation = 0,
+          opacity = 1,
           gid = 1527,
           visible = true,
           properties = {}
@@ -443,6 +447,7 @@ return {
           width = 38,
           height = 38,
           rotation = 0,
+          opacity = 1,
           gid = 1527,
           visible = true,
           properties = {}
@@ -457,6 +462,7 @@ return {
           width = 38,
           height = 38,
           rotation = 0,
+          opacity = 1,
           gid = 1527,
           visible = true,
           properties = {}
@@ -487,6 +493,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -500,6 +507,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -513,6 +521,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }

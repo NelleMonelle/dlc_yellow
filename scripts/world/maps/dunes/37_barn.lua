@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -51,6 +51,7 @@ return {
           width = 570,
           height = 664,
           rotation = 0,
+          opacity = 1,
           gid = 1,
           visible = true,
           properties = {}
@@ -81,6 +82,7 @@ return {
           width = 570,
           height = 664,
           rotation = 0,
+          opacity = 1,
           gid = 2,
           visible = true,
           properties = {}
@@ -111,6 +113,7 @@ return {
           width = 570,
           height = 664,
           rotation = 0,
+          opacity = 1,
           gid = 3,
           visible = true,
           properties = {}
@@ -141,6 +144,7 @@ return {
           width = 146,
           height = 62,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -154,6 +158,7 @@ return {
           width = 146,
           height = 62,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -167,6 +172,7 @@ return {
           width = 448,
           height = 20,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -180,6 +186,7 @@ return {
           width = 16,
           height = 374,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -193,6 +200,7 @@ return {
           width = 16,
           height = 374,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -206,6 +214,7 @@ return {
           width = 124,
           height = 294,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -219,6 +228,7 @@ return {
           width = 124,
           height = 294,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -232,6 +242,7 @@ return {
           width = 30,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -245,6 +256,7 @@ return {
           width = 28,
           height = 18,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -274,6 +286,7 @@ return {
           width = 156,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "dunes/37",
@@ -290,6 +303,7 @@ return {
           width = 74,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -306,6 +320,7 @@ return {
           width = 10,
           height = 52,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (The gate is locked.)"
@@ -321,6 +336,7 @@ return {
           width = 10,
           height = 52,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (The gate is locked.)"
@@ -336,6 +352,7 @@ return {
           width = 10,
           height = 52,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (The gate is locked.)"
@@ -351,6 +368,7 @@ return {
           width = 10,
           height = 52,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (The gate is locked.)"
@@ -366,6 +384,7 @@ return {
           width = 10,
           height = 52,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (The gate is locked.)"
@@ -381,6 +400,7 @@ return {
           width = 10,
           height = 52,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (The gate is locked.)"
@@ -396,6 +416,7 @@ return {
           width = 60,
           height = 60,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -413,6 +434,7 @@ return {
           width = 38,
           height = 46,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -446,6 +468,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -459,6 +482,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
