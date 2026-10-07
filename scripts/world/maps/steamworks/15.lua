@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,11 +10,12 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 31,
+  nextobjectid = 32,
   properties = {
     ["light"] = true,
     ["music"] = "steamworks_overworld",
-    ["name"] = "Steamworks - Lake"
+    ["name"] = "Steamworks - Lake",
+    ["spawn_party"] = true
   },
   tilesets = {
     {
@@ -98,6 +99,7 @@ return {
           width = 36,
           height = 30,
           rotation = 0,
+          opacity = 1,
           gid = 1629,
           visible = true,
           properties = {}
@@ -165,6 +167,7 @@ return {
           width = 624,
           height = 520,
           rotation = 0,
+          opacity = 1,
           gid = 1516,
           visible = true,
           properties = {}
@@ -179,6 +182,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -192,6 +196,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -205,6 +210,7 @@ return {
           width = 36,
           height = 30,
           rotation = 0,
+          opacity = 1,
           gid = 1629,
           visible = true,
           properties = {}
@@ -219,6 +225,7 @@ return {
           width = 36,
           height = 30,
           rotation = 0,
+          opacity = 1,
           gid = 1629,
           visible = true,
           properties = {}
@@ -233,6 +240,7 @@ return {
           width = 34,
           height = 24,
           rotation = 0,
+          opacity = 1,
           gid = 1619,
           visible = true,
           properties = {}
@@ -247,6 +255,7 @@ return {
           width = 34,
           height = 24,
           rotation = 0,
+          opacity = 1,
           gid = 1619,
           visible = true,
           properties = {}
@@ -261,6 +270,7 @@ return {
           width = 38,
           height = 44,
           rotation = 0,
+          opacity = 1,
           gid = 1639,
           visible = true,
           properties = {}
@@ -275,6 +285,7 @@ return {
           width = 38,
           height = 44,
           rotation = 0,
+          opacity = 1,
           gid = 1639,
           visible = true,
           properties = {}
@@ -305,6 +316,7 @@ return {
           width = 560,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -318,6 +330,7 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -331,6 +344,7 @@ return {
           width = 440,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -344,6 +358,7 @@ return {
           width = 440,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -357,6 +372,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polyline = {
             { x = -25.5, y = -11.5 },
@@ -374,6 +390,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polyline = {
             { x = 11.6667, y = 6.33333 },
@@ -407,6 +424,7 @@ return {
           width = 63.3333,
           height = 19,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/14",
@@ -423,6 +441,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/16",
@@ -439,6 +458,7 @@ return {
           width = 63.3333,
           height = 19,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "steamworks/14",
@@ -455,6 +475,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -468,6 +489,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = 2
@@ -499,6 +521,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -512,6 +535,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -525,6 +549,21 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "jamm",
+          type = "",
+          shape = "point",
+          x = 560,
+          y = 380,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
