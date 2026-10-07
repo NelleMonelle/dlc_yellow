@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="25" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="27">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="25" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="28">
  <editorsettings>
   <export target="34.lua" format="lua"/>
  </editorsettings>
@@ -7,6 +7,7 @@
   <property name="light" type="bool" value="true"/>
   <property name="music" value="vigorous_terrain"/>
   <property name="name" value="Dunes - Well"/>
+  <property name="spawn_party" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/dunes.tsx"/>
  <tileset firstgid="1276" source="../../tilesets/dunes_stuff.tsx"/>
@@ -129,6 +130,9 @@ amount of G inside.)</property>
    <point/>
   </object>
   <object id="20" name="spawn" x="520" y="380">
+   <point/>
+  </object>
+  <object id="27" name="jamm" x="368" y="520">
    <point/>
   </object>
  </objectgroup>

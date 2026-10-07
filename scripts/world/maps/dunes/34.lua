@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,12 +9,13 @@ return {
   height = 24,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 27,
+  nextlayerid = 7,
+  nextobjectid = 28,
   properties = {
     ["light"] = true,
     ["music"] = "vigorous_terrain",
-    ["name"] = "Dunes - Well"
+    ["name"] = "Dunes - Well",
+    ["spawn_party"] = true
   },
   tilesets = {
     {
@@ -477,6 +478,20 @@ return {
           shape = "point",
           x = 520,
           y = 380,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 27,
+          name = "jamm",
+          type = "",
+          shape = "point",
+          x = 368,
+          y = 520,
           width = 0,
           height = 0,
           rotation = 0,

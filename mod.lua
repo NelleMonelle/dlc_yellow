@@ -264,7 +264,15 @@ function Mod:getPartyNPCProperties(map, pm_id)
 	if pm_id == "dess" then
 		return { script = "party.dess_missle", sprite = "teehee" }
 	end
-	if map.id == "dunes/37" then
+	if map.id == "dunes/30" then
+		if pm_id == "jamm" then
+			return { cutscene = "party.jamm", facing = "up" }
+		end
+	elseif map.id == "dunes/34" then
+		if pm_id == "jamm" then
+			return { cutscene = "party.jamm", sprite = "sit" }
+		end
+	elseif map.id == "dunes/37" then
 		if pm_id == "susie" then
 			return { cutscene = "party.susie", sprite = "wild_east" }
 		elseif pm_id == "ceroba" then
@@ -273,6 +281,18 @@ function Mod:getPartyNPCProperties(map, pm_id)
 	elseif map.id == "steamworks/09" then
 		if pm_id == "jamm" then
 			return { cutscene = "party.jamm", sprite = "sit" }
+		end
+	elseif map.id == "steamworks/19" then
+		if pm_id == "jamm" then
+			return { cutscene = "party.jamm", sprite = "maid" }
+		end
+	elseif map.id == "steamworks/23" then
+		if pm_id == "jamm" then
+			return { cutscene = "party.jamm", sprite = "sit" }
+		end
+	elseif map.id == "steamworks/chem/03" then
+		if pm_id == "jamm" then
+			return { cutscene = "party.jamm", facing = "up" }
 		end
 	end
 
