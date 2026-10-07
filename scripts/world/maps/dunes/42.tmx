@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="35" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="63">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="35" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="68">
  <editorsettings>
   <export target="42.lua" format="lua"/>
  </editorsettings>
  <properties>
   <property name="light" type="bool" value="true"/>
   <property name="music" value="sunnyside_ranch"/>
+  <property name="spawn_party" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/starlo_farm.tsx"/>
  <tileset firstgid="118" source="../../tilesets/darkruins_corn.tsx"/>
@@ -243,7 +244,7 @@
   <object id="59" gid="1433" x="428" y="508" width="62" height="98"/>
   <object id="61" gid="1435" x="606" y="904" width="520" height="516"/>
  </objectgroup>
- <objectgroup id="9" name="collision">
+ <objectgroup color="#0000ff" id="9" name="collision">
   <object id="1" x="520" y="1080" width="40" height="280"/>
   <object id="2" x="240" y="800" width="40" height="320"/>
   <object id="3" x="720" y="1080" width="40" height="280"/>
@@ -277,16 +278,16 @@
   <object id="43" x="652" y="786">
    <polygon points="0,0 -46.1818,0 -46.1818,40"/>
   </object>
-  <object id="42" x="698" y="742">
-   <polygon points="0,0 31.875,0 31.875,32"/>
-  </object>
   <object id="38" x="826" y="694" width="254" height="26"/>
   <object id="39" x="738" y="602" width="32" height="84"/>
   <object id="40" x="698" y="686" width="128" height="56"/>
   <object id="41" x="730" y="742" width="96" height="32"/>
   <object id="44" x="640" y="600" width="12" height="40"/>
+  <object id="66" x="698" y="742">
+   <polygon points="0,0 32,32 32,0"/>
+  </object>
  </objectgroup>
- <objectgroup id="10" name="objects_party">
+ <objectgroup color="#ff00ff" id="10" name="objects_party">
   <object id="32" name="transition" x="560" y="1320" width="160" height="40">
    <properties>
     <property name="map" value="dunes/41"/>
@@ -330,7 +331,7 @@ where the harvest is stored.)</property>
   <object id="60" gid="1434" x="290" y="1066" width="86" height="106"/>
   <object id="62" name="dunes_mail_station" x="970" y="180" width="96" height="58"/>
  </objectgroup>
- <objectgroup id="11" name="markers">
+ <objectgroup color="#7f00ff" id="11" name="markers">
   <object id="34" name="up" x="1200" y="80">
    <point/>
   </object>
@@ -338,6 +339,18 @@ where the harvest is stored.)</property>
    <point/>
   </object>
   <object id="36" name="spawn" x="640" y="1000">
+   <point/>
+  </object>
+  <object id="63" name="susie" x="300" y="820">
+   <point/>
+  </object>
+  <object id="64" name="jamm" x="1000" y="740">
+   <point/>
+  </object>
+  <object id="65" name="dess" x="956" y="440">
+   <point/>
+  </object>
+  <object id="67" name="ceroba" x="560" y="820">
    <point/>
   </object>
  </objectgroup>

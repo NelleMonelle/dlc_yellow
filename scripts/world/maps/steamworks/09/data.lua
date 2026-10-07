@@ -10,11 +10,12 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 27,
+  nextobjectid = 28,
   properties = {
     ["light"] = true,
     ["music"] = "treading_lightly",
-    ["name"] = "Steamworks - Raised Path"
+    ["name"] = "Steamworks - Raised Path",
+    ["spawn_party"] = true
   },
   tilesets = {
     {
@@ -542,6 +543,20 @@ return {
           shape = "point",
           x = 1540,
           y = 528,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 27,
+          name = "jamm",
+          type = "",
+          shape = "point",
+          x = 1820,
+          y = 380,
           width = 0,
           height = 0,
           rotation = 0,

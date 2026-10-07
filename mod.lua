@@ -63,31 +63,31 @@ function Mod:postInit(new_file)
 	if not Game:getFlag("SHINY") or Game:getFlag("SHINY")["ceroba"] == nil then
 		Game:rollShiny("ceroba")
 	end
-    if not Game:getFlag("snowdin_yellow_kills") then
-        Game:setFlag("snowdin_yellow_kills", 0)
-    end
-    if not Game:getFlag("dunes_kills") then
-        Game:setFlag("dunes_kills", 0)
-    end
-    if not Game:getFlag("steamworks_kills") then
-        Game:setFlag("steamworks_kills", 0)
-    end
-    if Game:getFlag("EMPTIED_STEAMWORKS") then
-        MUSIC_PITCHES["snowfall"] = 0.25
-        MUSIC_PITCHES["vigorous_terrain"] = 0.25
-        MUSIC_PITCHES["steamworks_overworld"] = 0.25
-    elseif Game:getFlag("EMPTIED_DUNES") then
-        MUSIC_PITCHES["snowfall"] = 0.25
-        MUSIC_PITCHES["vigorous_terrain"] = 0.25
-        MUSIC_PITCHES["steamworks_overworld"] = 0.5
-    elseif Game:getFlag("EMPTIED_SNOWDIN_YELLOW") then
-        MUSIC_PITCHES["snowfall"] = 0.25
-        MUSIC_PITCHES["vigorous_terrain"] = 0.5
-    end
 end
 
 -- This dynamic music system kinda sucks ass but fuck it I already wrote it like this
 function Mod:onMapMusic(map, music, fade_out, nextmap)
+	local snowdin_music = { "snowfall" }
+	local dunes_music = { "vigorous_terrain" }
+	local steamworks_music = { "abandoned", "steamworks_overworld", "treading_lightly", "detainment", "corner_of_a_circle", "greenhouse" }
+	if TableUtils.contains(snowdin_music, music) and Game:getFlag("snowdin_yellow_kills", 0) >= 20 then
+		return { music, 1, 0.25 }
+	end
+	if TableUtils.contains(dunes_music, music) then
+		if Game:getFlag("dunes_kills", 0) >= 20 then
+			return { music, 1, 0.25 }
+		elseif Game:getFlag("snowdin_yellow_kills", 0) >= 20 then
+			return { music, 1, 0.5 }
+		end
+	end
+	if TableUtils.contains(steamworks_music, music) then
+		if Game:getFlag("steamworks_kills", 0) >= 20 then
+			return { music, 1, 0.25 }
+		elseif Game:getFlag("dunes_kills", 0) >= 20 then
+			return { music, 1, 0.5 }
+		end
+	end
+
 	local dynmusic = map.data and map.data.properties and map.data.properties["dynmusic"] or ""
 	local dynmtype = map.data and map.data.properties and map.data.properties["dynmtype"] or 0
 	local fade_out = fade_out or false
@@ -256,8 +256,25 @@ function Mod:ctrlMOnDynMusic()
 end
 
 function Mod:load(data, new_file)
-    Game.money = Kristal.getLibConfig("magical-glass", "debug") and 1000 or 0
-    Game.lw_money = Kristal.getLibConfig("magical-glass", "debug") and 1000 or 0
     MagicalGlassLib:setLightBattleShakingText(true)
     MagicalGlassLib:setCellCallsRearrangement(true)
+end
+
+function Mod:getPartyNPCProperties(map, pm_id)
+	if pm_id == "dess" then
+		return { script = "party.dess_missle", sprite = "teehee" }
+	end
+	if map.id == "dunes/37" then
+		if pm_id == "susie" then
+			return { cutscene = "party.susie", sprite = "wild_east" }
+		elseif pm_id == "ceroba" then
+			return { cutscene = "party.ceroba", sprite = "cool" }
+		end
+	elseif map.id == "steamworks/09" then
+		if pm_id == "jamm" then
+			return { cutscene = "party.jamm", sprite = "sit" }
+		end
+	end
+
+	return { cutscene = "party." .. pm_id, turn = true }
 end
