@@ -12,12 +12,16 @@ return {
     end,
     jamm = function(cutscene, event)
         if Game.world.map.id == "dunes/37" then
-            cutscene:text("* Feels like I'm in one of those western movies.", "look_left", "jamm")
+            cutscene:text("* Feels like I'm in one of those old western movies.", "look_left", "jamm")
             cutscene:text("* Like,[wait:5] really.[wait:5] Everything looks JUST like in them.", "nervous", "jamm")
+            cutscene:text("* ...Hey,[wait:5] how much longer until High Noon[wait:5] anyways?", "sling_ready", "jamm")
         elseif Game.world.map.id == "dunes/42" then
             cutscene:text("* This is a nice house.", "side_smile", "jamm")
+            cutscene:text("* Maybe I'll ask these folks if I can buy some corn from them.", "smile", "jamm")
+            cutscene:text("* Who knows?[wait:10]\n* I could cook something great from it.", "drool", "jamm")
         elseif Game.world.map.id == "steamworks/09" then
-            -- couldn't think of anything as of the moment
+            cutscene:text("* Jeez,[wait:5] it's pretty hot...", "look_left", "jamm")
+            cutscene:text("* Guess they don't call it the Steamworks for nothing,[wait:5] huh?", "nervous", "jamm")
         end
     end,
     ceroba = function(cutscene, event)
