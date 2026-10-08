@@ -1,9 +1,12 @@
 return {
-    intro = function(cutscene, battler, enemy)
-        local ceroba = Game.battle:getEnemyBattler("ceroba_geno")
-        ceroba:getActiveSprite():setAnimation("intro")
-        cutscene:wait(2.5)
-        ceroba:toggleOverlay(false)
+    intro = function(cutscene, ceroba, encounter)
+        local animation_done = false
+        ceroba:getActiveSprite():setAnimation("intro", function() animation_done = true end)
+        cutscene:wait(function() return animation_done == true end)
+        ceroba.actor.anim_stretch_current = 1
+        ceroba.actor.anim_stage = 1
+        ceroba.actor.anim_inc_multiplier = 2
+        ceroba:toggleOverlay(false, true)
         local humans = {"hero", "jamm", "kris"}
         local noHumans = true
         for i, v in ipairs(Game.party) do
@@ -65,10 +68,8 @@ return {
         cutscene:battlerText(ceroba, "... ")
         cutscene:battlerText(ceroba, "You WILL know the\npain you have caused.")]]
 
-        cutscene:after(function()
-            Game.battle.seen_encounter_text = false
-            Game.battle:setState("ACTIONSELECT")
-        end, true)
+        encounter.intro_cutscene_done = true
+        cutscene:after(function() Game.battle:setState("ACTIONSELECT") end)
     end,
     death_fake = function(cutscene, battler, enemy)
         Game.battle.music:stop()
@@ -120,24 +121,24 @@ return {
             Game.battle:setState("VICTORY")
         end, true)
     end,
-    phase_switch = function(cutscene, battler, enemy)
-        Game.battle.music:stop()
-        local ceroba = Game.battle:getEnemyBattler("ceroba_geno")
-        cutscene:wait(0.2)
+    phase_switch = function(cutscene, ceroba)
+        ceroba.phase = 2
+        ceroba.actor.phase = 2
+        ceroba.actor.anim_loop_time = 30 * 3 --room_speed * 3
+        Game.battle.music:fade(0, 500/1000)
+        Assets.playSound("ceroba_staff_spin")
+        local can_proceed = false
         ceroba:toggleOverlay(true)
-        ceroba:getActiveSprite():setAnimation("phase_switch")
-        Assets.playSound("staff_spin")
-        cutscene:wait(2)
+        ceroba:getActiveSprite():setAnimation("phase_switch", function() can_proceed = true end)
+        cutscene:wait(function() return ceroba:getActiveSprite().frame >= 20 end)
         Assets.playSound("ceroba_yell")
-        Game.battle.music:play("trial_by_fury_2")
-        cutscene:wait(2)
-        ceroba:setActor("cerobaboss_p2")
-        Game.battle:setState("DEFENDINGEND")
-        cutscene:wait(0.5)
-
-        cutscene:after(function()
-            Game.battle:setState("ENEMYDIALOGUE")
-        end, true)
+        Game.battle.music:play("trial_by_fury_2", 1)
+        Game.battle:shakeCamera(6, 2)
+        cutscene:wait(function() return can_proceed == true end)
+        ceroba.actor.anim_stretch_current = 1
+        ceroba.actor.anim_stage = 1
+        ceroba.actor.anim_inc_multiplier = 2
+        ceroba:toggleOverlay(false, true)
     end,
     pacify = function(cutscene, battler, enemy)
         Game.battle.battle_ui:clearEncounterText()

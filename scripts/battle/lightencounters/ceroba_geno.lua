@@ -7,7 +7,7 @@ function Ceroba:init()
 
     self.music = "trial_by_fury"
 
-    self:addEnemy("ceroba_geno")
+    self.ceroba = self:addEnemy("ceroba_geno", 305, 236)
 
     self.background = true
 
@@ -15,8 +15,8 @@ function Ceroba:init()
 
     self.can_flee = false
 
-    self.intro_finished = false
-	
+    self.intro_cutscene_done = false
+
 	self.is_ceroba = true
 	self.arena_damage = false
 end
@@ -40,11 +40,25 @@ function Ceroba:onBattleInit()
 end
 
 function Ceroba:onBattleStart()
-    local ceroba = Game.battle:getEnemyBattler("ceroba_geno")
-    ceroba:toggleOverlay(true)
-    ceroba:getActiveSprite():setSprite("animations/intro_1")
-    Game.battle.music:play(self.music)
+    self.arena_start_color = Game.battle.arena.color
     Game.battle:setState("ENEMYDIALOGUE")
+end
+
+function Ceroba:onTurnEnd()
+    if not self.intro_cutscene_done then
+        Game.battle:startCutscene("ceroba_geno", "intro", self.ceroba, self)
+        return true
+    end
+end
+
+function Ceroba:getInitialEncounterText()
+    return TableUtils.pick(self.ceroba.text)
+end
+
+function Ceroba:getDialogueCutscene()
+    if self.ceroba.health > 0 and self.ceroba.health <= (self.ceroba.max_health * 0.5) and self.ceroba.phase == 1 then
+        return "ceroba_geno", "phase_switch", self.ceroba
+    end
 end
 
 function Ceroba:update()
@@ -60,32 +74,6 @@ end
 function Ceroba:createBackground()
     local background = CerobaBattleBackground()
     return Game.battle:addChild(background)
-end
-
-function Ceroba:beforeStateChange(old, new)
-    local ceroba = Game.battle:getEnemyBattler("ceroba_geno")
-    if ceroba then
-        if old == "DEFENDING" and new ~= "DEFENDING" and not self.intro_finished then
-            -- clears the wave if you skip it using debug
-            for _,wave in ipairs(Game.battle.waves) do
-                if not wave:onEnd(false) then
-                    wave:clear()
-                    wave:remove()
-                end
-            end
-            self.intro_finished = true
-            Game.battle:setState("DEFENDINGEND", "NONE")
-            Game.battle.timer:afterCond(function() return Game.battle.substate == "ARENARESET" end, function()
-                Game.battle:setSubState("NONE")
-                Game.battle:startCutscene("ceroba_geno", "intro")
-            end)
-        end
-        if old == "ENEMYDIALOGUE" and new ~= "ENEMYDIALOGUE" and ceroba.health <= 500 and ceroba.phase == 1 then
-            ceroba.phase = 2
-            Game.battle:setState("NONE")
-            Game.battle:startCutscene("ceroba_geno", "phase_switch")
-        end
-    end
 end
 
 function Ceroba:getVictoryMoney(money)

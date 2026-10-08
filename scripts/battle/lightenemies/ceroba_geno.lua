@@ -4,8 +4,12 @@ function Ceroba:init()
     super.init(self)
 
     self.name = "Ceroba"
-    self:setActor("cerobaboss")
+    self:setActor("ceroba_b")
+    self:setScale(1)
     self.color = {215/255, 166/255, 166/255}
+    self.actor.do_red_tint = true
+    self:toggleOverlay(true)
+    self:getActiveSprite():setSprite("intro")
 
     self.max_health = 1000
     self.health = 1000
@@ -18,19 +22,13 @@ function Ceroba:init()
     self.service_mercy = 0
     self.boss = true
 
-    self.phase = 1
-    self.attack_cycle = 0
-    self.low_health = false
-
     self.dialogue_bubble = "uty_largest"
-    self.dialogue_offset = {-40, 20}
+    self.dialogue_offset = {-16, -4}
 
     self.waves = {
         "ceroba/flower_shooter",
         "ceroba/flower_spiral"
     }
-
-    self.check = "ATK "..self.attack.." DEF "..self.defense.."\n* Nothing left."
 
     self.text = {
         "* There is no hope.",
@@ -42,7 +40,7 @@ function Ceroba:init()
         --"* No mercy."
     }
 
-    --self.low_health_text = "* The dummy looks like it's\nabout to fall over."
+    self.tired_percentage = 0.3
 
     self:registerAct("Resist")
     self:registerAct("Calm")
@@ -53,6 +51,10 @@ function Ceroba:init()
     self.gauge_size = {250, 18}
 
     self.damage_offset = {0, 30}
+
+    self.attack_cycle = 0
+    self.attack_cycle_max = 7
+    self.phase = 1
 end
 
 function Ceroba:onDefeat(damage, battler)
@@ -66,7 +68,7 @@ end
 
 function Ceroba:onAct(battler, name)
     if name == "Check" then
-        return "* CEROBA -- "..self.check
+        return "* CEROBA -- ATK " .. self.attack .. " DEF " .. self.defense .. "\n* Nothing left."
     elseif name == "Resist" then
         return "* You hold your ground against\nthe magic."
     elseif name == "Calm" then
@@ -83,15 +85,19 @@ function Ceroba:onAct(battler, name)
     return super.onAct(self, battler, name)
 end
 
-function Ceroba:onHurtEnd()
-    self:getActiveSprite():stopShake()
-    if self.health > 0 or not self.exit_on_defeat then
-        self:toggleOverlay(false, true)
+function Ceroba:onTurnEnd()
+    self.attack_cycle = self.attack_cycle + 1
+    if self.attack_cycle > self.attack_cycle_max then
+        self.attack_cycle = 1
     end
-    if not self.low_health and self.health <= 250 and self.health > 0 then
-        self.low_health = true
-        self.tired = true
-        self:setActor("cerobaboss_p2_hurt")
+end
+
+function Ceroba:onHurtEnd()
+    if self.health > 0 or not self.exit_on_defeat then
+        if self.health < (self.max_health * 0.3) and not self.actor.hurt then
+            self.actor.hurt = true
+        end
+        self:toggleOverlay(false, true)
     end
 end
 
@@ -108,43 +114,27 @@ end
 function Ceroba:getNextWaves()
     if self.final_attack then
         return {"ceroba/finale"} -- Final Attack
-    elseif self.attack_cycle == 0 then
-        self.attack_cycle = 1
-        return {"ceroba/intro_attack"} -- Opening Attack
-    elseif self.switch_attack then
-        self.switch_attack = false
-        if self.attack_cycle == 9 then
-            self.attack_cycle = 1
-        else
-            self.attack_cycle = self.attack_cycle + 1
-        end
+    elseif self.health <= (self.max_health * 0.5) and self.phase == 1 then
         return {"ceroba/flower_spiral"} -- Phase Switch Attack
+    elseif self.attack_cycle == 0 then
+        return {"ceroba/intro_attack"} -- Opening Attack
     elseif self.attack_cycle == 1 then
-        self.attack_cycle = 2
         return {"ceroba/flower_shooter"} -- Attack 1
     elseif self.attack_cycle == 2 then
-        self.attack_cycle = 3
         return {"ceroba/beams"} -- Attack 2
     elseif self.attack_cycle == 3 then
-        self.attack_cycle = 4
         return {"ceroba/black_hole"} -- Attack 3
     elseif self.attack_cycle == 4 then
-        self.attack_cycle = 5
         return {"ceroba/flower_slider"} -- Attack 4
     elseif self.attack_cycle == 5 then
-        self.attack_cycle = 6
         return {"ceroba/movingarena"} -- Attack 5
     elseif self.attack_cycle == 6 then
-        self.attack_cycle = 7
         return {"ceroba/flower_spiral"} -- Attack 6
     elseif self.attack_cycle == 7 then
-        self.attack_cycle = 8
         return {"ceroba/flower_shooter"} -- Attack 7
     elseif self.attack_cycle == 8 then
-        self.attack_cycle = 9
         return {"ceroba/flower_spiral"} -- Attack 8
     elseif self.attack_cycle == 9 then
-        self.attack_cycle = 1
         return {"ceroba/pillars"} -- Attack 9
     end
     return super.getNextWaves(self)
